@@ -1,0 +1,21 @@
+<% title "Editoras" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Cidade</th>
+    <th>Pais</th>
+  </tr>
+  <% for editora in @editoras %>
+    <tr>
+      <td><%=h editora.nome %></td>
+      <td><%=h editora.cidade %></td>
+      <td><%=h editora.pais %></td>
+      <td><%= link_to "Show", editora %></td>
+      <td><%= link_to "Edit", edit_editora_path(editora) %></td>
+      <td><%= link_to "Destroy", editora, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Editora", new_editora_path %></p>

@@ -1,0 +1,12 @@
+<% form_for @musica do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :interprete %><br />
+    <%= f.text_field :interprete %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,19 @@
+<% title "Itens Assuntos" %>
+
+<table>
+  <tr>
+    <th>Assunto</th>
+    <th>Sub Assunto</th>
+  </tr>
+  <% for itens_assunto in @itens_assuntos %>
+    <tr>
+      <td><%=h itens_assunto.assunto %></td>
+      <td><%=h itens_assunto.sub_assunto %></td>
+      <td><%= link_to "Show", itens_assunto %></td>
+      <td><%= link_to "Edit", edit_itens_assunto_path(itens_assunto) %></td>
+      <td><%= link_to "Destroy", itens_assunto, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Itens Assunto", new_itens_assunto_path %></p>

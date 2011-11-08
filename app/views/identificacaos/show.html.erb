@@ -1,0 +1,24 @@
+<% title "Identificacao" %>
+
+<p>
+  <strong>Codigo:</strong>
+  <%=h @identificacao.codigo %>
+</p>
+<p>
+  <strong>Livro:</strong>
+  <%=h @identificacao.livro %>
+</p>
+<p>
+  <strong>Subtitulo:</strong>
+  <%=h @identificacao.subtitulo %>
+</p>
+<p>
+  <strong>Obs:</strong>
+  <%=h @identificacao.obs %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_identificacao_path(@identificacao) %> |
+  <%= link_to "Destroy", @identificacao, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", identificacaos_path %>
+</p>

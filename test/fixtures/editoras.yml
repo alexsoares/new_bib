@@ -1,0 +1,9 @@
+one:
+  nome: MyString
+  cidade: MyString
+  pais: MyString
+
+two:
+  nome: MyString
+  cidade: MyString
+  pais: MyString

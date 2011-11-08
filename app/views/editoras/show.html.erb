@@ -1,0 +1,20 @@
+<% title "Editora" %>
+
+<p>
+  <strong>Nome:</strong>
+  <%=h @editora.nome %>
+</p>
+<p>
+  <strong>Cidade:</strong>
+  <%=h @editora.cidade %>
+</p>
+<p>
+  <strong>Pais:</strong>
+  <%=h @editora.pais %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_editora_path(@editora) %> |
+  <%= link_to "Destroy", @editora, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", editoras_path %>
+</p>

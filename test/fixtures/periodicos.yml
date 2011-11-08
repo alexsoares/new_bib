@@ -1,0 +1,29 @@
+one:
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  tipo: MyString
+  titulo: MyString
+  subtitulo: MyString
+  colecao: MyString
+  producao: MyString
+  periodicidade: MyString
+  issn: 1
+  local_producao: MyString
+  data_producao: 2011-11-04
+  obs: MyString
+
+two:
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  tipo: MyString
+  titulo: MyString
+  subtitulo: MyString
+  colecao: MyString
+  producao: MyString
+  periodicidade: MyString
+  issn: 1
+  local_producao: MyString
+  data_producao: 2011-11-04
+  obs: MyString

@@ -1,0 +1,16 @@
+<% form_for @editora do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade %>
+  </p>
+  <p>
+    <%= f.label :pais %><br />
+    <%= f.text_field :pais %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,52 @@
+<% form_for @dicionario_enciclopedia do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :editora %><br />
+    <%= f.text_field :editora %>
+  </p>
+  <p>
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </p>
+  <p>
+    <%= f.label :localizacao %><br />
+    <%= f.text_field :localizacao %>
+  </p>
+  <p>
+    <%= f.label :identificacao %><br />
+    <%= f.text_field :identificacao %>
+  </p>
+  <p>
+    <%= f.label :tombo_seduc %><br />
+    <%= f.text_field :tombo_seduc %>
+  </p>
+  <p>
+    <%= f.label :tombo_l %><br />
+    <%= f.text_field :tombo_l %>
+  </p>
+  <p>
+    <%= f.label :colecao %><br />
+    <%= f.text_field :colecao %>
+  </p>
+  <p>
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </p>
+  <p>
+    <%= f.label :volume %><br />
+    <%= f.text_field :volume %>
+  </p>
+  <p>
+    <%= f.label :data_edicao %><br />
+    <%= f.date_select :data_edicao %>
+  </p>
+  <p>
+    <%= f.label :local_edicao %><br />
+    <%= f.text_field :local_edicao %>
+  </p>
+  <p>
+    <%= f.label :obs %><br />
+    <%= f.text_area :obs %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

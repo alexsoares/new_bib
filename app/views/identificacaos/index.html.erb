@@ -1,0 +1,23 @@
+<% title "Identificacaos" %>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Livro</th>
+    <th>Subtitulo</th>
+    <th>Obs</th>
+  </tr>
+  <% for identificacao in @identificacaos %>
+    <tr>
+      <td><%=h identificacao.codigo %></td>
+      <td><%=h identificacao.livro %></td>
+      <td><%=h identificacao.subtitulo %></td>
+      <td><%=h identificacao.obs %></td>
+      <td><%= link_to "Show", identificacao %></td>
+      <td><%= link_to "Edit", edit_identificacao_path(identificacao) %></td>
+      <td><%= link_to "Destroy", identificacao, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Identificacao", new_identificacao_path %></p>

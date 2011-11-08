@@ -1,0 +1,17 @@
+<% title "Autores" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+  </tr>
+  <% for autor in @autores %>
+    <tr>
+      <td><%=h autor.nome %></td>
+      <td><%= link_to "Show", autor %></td>
+      <td><%= link_to "Edit", edit_autor_path(autor) %></td>
+      <td><%= link_to "Destroy", autor, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Autor", new_autor_path %></p>

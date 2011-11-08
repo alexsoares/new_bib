@@ -1,0 +1,29 @@
+one:
+  assunto: 
+  identificacao: 
+  area: 
+  editora: 
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  colecao: MyString
+  edicao: MyString
+  data_edicao: 2011-11-03
+  local_edicao: MyString
+  resumo: MyText
+  obs: MyText
+
+two:
+  assunto: 
+  identificacao: 
+  area: 
+  editora: 
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  colecao: MyString
+  edicao: MyString
+  data_edicao: 2011-11-03
+  local_edicao: MyString
+  resumo: MyText
+  obs: MyText

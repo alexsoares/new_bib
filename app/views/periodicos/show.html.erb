@@ -1,0 +1,60 @@
+<% title "Periodicos" %>
+
+<p>
+  <strong>Localizacao:</strong>
+  <%=h @periodicos.localizacao %>
+</p>
+<p>
+  <strong>Tombo Seduc:</strong>
+  <%=h @periodicos.tombo_seduc %>
+</p>
+<p>
+  <strong>Tombo L:</strong>
+  <%=h @periodicos.tombo_l %>
+</p>
+<p>
+  <strong>Tipo:</strong>
+  <%=h @periodicos.tipo %>
+</p>
+<p>
+  <strong>Titulo:</strong>
+  <%=h @periodicos.titulo %>
+</p>
+<p>
+  <strong>Subtitulo:</strong>
+  <%=h @periodicos.subtitulo %>
+</p>
+<p>
+  <strong>Colecao:</strong>
+  <%=h @periodicos.colecao %>
+</p>
+<p>
+  <strong>Producao:</strong>
+  <%=h @periodicos.producao %>
+</p>
+<p>
+  <strong>Periodicidade:</strong>
+  <%=h @periodicos.periodicidade %>
+</p>
+<p>
+  <strong>Issn:</strong>
+  <%=h @periodicos.issn %>
+</p>
+<p>
+  <strong>Local Producao:</strong>
+  <%=h @periodicos.local_producao %>
+</p>
+<p>
+  <strong>Data Producao:</strong>
+  <%=h @periodicos.data_producao %>
+</p>
+<p>
+  <strong>Obs:</strong>
+  <%=h @periodicos.obs %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_periodicos_path(@periodicos) %> |
+  <%= link_to "Destroy", @periodicos, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", periodicos_path %>
+</p>

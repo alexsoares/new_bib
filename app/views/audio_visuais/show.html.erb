@@ -1,0 +1,52 @@
+<% title "Audio Visual" %>
+
+<p>
+  <strong>Genero Midia:</strong>
+  <%=h @audio_visual.genero_midia %>
+</p>
+<p>
+  <strong>Localizacao:</strong>
+  <%=h @audio_visual.localizacao %>
+</p>
+<p>
+  <strong>Tombo Seduc:</strong>
+  <%=h @audio_visual.tombo_seduc %>
+</p>
+<p>
+  <strong>Tombo L:</strong>
+  <%=h @audio_visual.tombo_l %>
+</p>
+<p>
+  <strong>Tipo:</strong>
+  <%=h @audio_visual.tipo %>
+</p>
+<p>
+  <strong>Titulo:</strong>
+  <%=h @audio_visual.titulo %>
+</p>
+<p>
+  <strong>Subtitulo:</strong>
+  <%=h @audio_visual.subtitulo %>
+</p>
+<p>
+  <strong>Producao:</strong>
+  <%=h @audio_visual.producao %>
+</p>
+<p>
+  <strong>Local Producao:</strong>
+  <%=h @audio_visual.local_producao %>
+</p>
+<p>
+  <strong>Data Producao:</strong>
+  <%=h @audio_visual.data_producao %>
+</p>
+<p>
+  <strong>Obs:</strong>
+  <%=h @audio_visual.obs %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_audio_visual_path(@audio_visual) %> |
+  <%= link_to "Destroy", @audio_visual, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", audio_visuais_path %>
+</p>

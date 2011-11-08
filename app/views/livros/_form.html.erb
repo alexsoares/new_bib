@@ -1,0 +1,64 @@
+  <% form_for @livro do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :assunto_id, "Assunto" %><br />
+    <%= f.collection_select :assunto_id ,@assuntos,:id,:descricao, :include_blank => "Selecione" %>
+  </p>
+  <p>
+    <%= check_box_tag :livro, :check %>
+               <%= observe_field 'acervo_tipo',
+               :update => "cadastrar",
+               :url    => { :action => 'cadastrar' },
+               :with   => 'acervo_tipo' %>
+
+  </p>
+  <p>
+    <%= f.label :identificacao_id,"ID" %><br />
+    <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
+  </p>
+  <p>
+    <%= f.label :area_id %><br />
+    <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
+  </p>
+  <p>
+    <%= f.label :editora_id %><br />
+    <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
+  </p>
+  <p>
+    <%= f.label :localizacao_id %><br />
+    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
+  </p>
+  <p>
+    <%= f.label :tombo_seduc %><br />
+    <%= f.text_field :tombo_seduc %>
+  </p>
+  <p>
+    <%= f.label :tombo_l %><br />
+    <%= f.text_field :tombo_l %>
+  </p>
+  <p>
+    <%= f.label :colecao %><br />
+    <%= f.text_field :colecao %>
+  </p>
+  <p>
+    <%= f.label :edicao %><br />
+    <%= f.text_field :edicao %>
+  </p>
+  <p>
+    <%= f.label :data_edicao %><br />
+    <%= f.date_select :data_edicao %>
+  </p>
+  <p>
+    <%= f.label :local_edicao %><br />
+    <%= f.text_field :local_edicao %>
+  </p>
+  <p>
+    <%= f.label :resumo %><br />
+    <%= f.text_area :resumo %>
+  </p>
+  <p>
+    <%= f.label :obs %><br />
+    <%= f.text_area :obs %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

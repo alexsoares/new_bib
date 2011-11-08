@@ -1,0 +1,41 @@
+<% title "Livros" %>
+
+<table>
+  <tr>
+    <th>Assunto</th>
+    <th>Identificacao</th>
+    <th>Area</th>
+    <th>Editora</th>
+    <th>Localizacao</th>
+    <th>Tombo Seduc</th>
+    <th>Tombo L</th>
+    <th>Colecao</th>
+    <th>Edicao</th>
+    <th>Data Edicao</th>
+    <th>Local Edicao</th>
+    <th>Resumo</th>
+    <th>Obs</th>
+  </tr>
+  <% for livro in @livros %>
+    <tr>
+      <td><%=h livro.assunto %></td>
+      <td><%=h livro.identificacao %></td>
+      <td><%=h livro.area %></td>
+      <td><%=h livro.editora %></td>
+      <td><%=h livro.localizacao %></td>
+      <td><%=h livro.tombo_seduc %></td>
+      <td><%=h livro.tombo_l %></td>
+      <td><%=h livro.colecao %></td>
+      <td><%=h livro.edicao %></td>
+      <td><%=h livro.data_edicao %></td>
+      <td><%=h livro.local_edicao %></td>
+      <td><%=h livro.resumo %></td>
+      <td><%=h livro.obs %></td>
+      <td><%= link_to "Show", livro %></td>
+      <td><%= link_to "Edit", edit_livro_path(livro) %></td>
+      <td><%= link_to "Destroy", livro, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Livro", new_livro_path %></p>

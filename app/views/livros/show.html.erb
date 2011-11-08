@@ -1,0 +1,60 @@
+<% title "Livro" %>
+
+<p>
+  <strong>Assunto:</strong>
+  <%=h @livro.assunto %>
+</p>
+<p>
+  <strong>Identificacao:</strong>
+  <%=h @livro.identificacao %>
+</p>
+<p>
+  <strong>Area:</strong>
+  <%=h @livro.area %>
+</p>
+<p>
+  <strong>Editora:</strong>
+  <%=h @livro.editora %>
+</p>
+<p>
+  <strong>Localizacao:</strong>
+  <%=h @livro.localizacao %>
+</p>
+<p>
+  <strong>Tombo Seduc:</strong>
+  <%=h @livro.tombo_seduc %>
+</p>
+<p>
+  <strong>Tombo L:</strong>
+  <%=h @livro.tombo_l %>
+</p>
+<p>
+  <strong>Colecao:</strong>
+  <%=h @livro.colecao %>
+</p>
+<p>
+  <strong>Edicao:</strong>
+  <%=h @livro.edicao %>
+</p>
+<p>
+  <strong>Data Edicao:</strong>
+  <%=h @livro.data_edicao %>
+</p>
+<p>
+  <strong>Local Edicao:</strong>
+  <%=h @livro.local_edicao %>
+</p>
+<p>
+  <strong>Resumo:</strong>
+  <%=h @livro.resumo %>
+</p>
+<p>
+  <strong>Obs:</strong>
+  <%=h @livro.obs %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_livro_path(@livro) %> |
+  <%= link_to "Destroy", @livro, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", livros_path %>
+</p>

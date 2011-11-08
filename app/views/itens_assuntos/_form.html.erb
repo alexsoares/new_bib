@@ -1,0 +1,12 @@
+<% form_for @itens_assunto do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :assunto %><br />
+    <%= f.text_field :assunto %>
+  </p>
+  <p>
+    <%= f.label :sub_assunto %><br />
+    <%= f.text_field :sub_assunto %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

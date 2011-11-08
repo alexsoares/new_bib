@@ -1,0 +1,27 @@
+one:
+  editora: 
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  tipo: MyString
+  subtitulo: MyString
+  ano: 2011-11-03
+  formato: MyString
+  data_edicao: 2011-11-03
+  local_edicao: MyString
+  edicao: MyString
+  obs: MyText
+
+two:
+  editora: 
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  tipo: MyString
+  subtitulo: MyString
+  ano: 2011-11-03
+  formato: MyString
+  data_edicao: 2011-11-03
+  local_edicao: MyString
+  edicao: MyString
+  obs: MyText

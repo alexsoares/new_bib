@@ -1,0 +1,2 @@
+module AudioVisuaisHelper
+end

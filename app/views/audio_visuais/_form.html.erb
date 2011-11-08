@@ -1,0 +1,48 @@
+<% form_for @audio_visual do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :genero_midia %><br />
+    <%= f.text_field :genero_midia %>
+  </p>
+  <p>
+    <%= f.label :localizacao %><br />
+    <%= f.text_field :localizacao %>
+  </p>
+  <p>
+    <%= f.label :tombo_seduc %><br />
+    <%= f.text_field :tombo_seduc %>
+  </p>
+  <p>
+    <%= f.label :tombo_l %><br />
+    <%= f.text_field :tombo_l %>
+  </p>
+  <p>
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </p>
+  <p>
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :subtitulo %><br />
+    <%= f.text_field :subtitulo %>
+  </p>
+  <p>
+    <%= f.label :producao %><br />
+    <%= f.text_field :producao %>
+  </p>
+  <p>
+    <%= f.label :local_producao %><br />
+    <%= f.text_field :local_producao %>
+  </p>
+  <p>
+    <%= f.label :data_producao %><br />
+    <%= f.date_select :data_producao %>
+  </p>
+  <p>
+    <%= f.label :obs %><br />
+    <%= f.text_field :obs %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

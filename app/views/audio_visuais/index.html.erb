@@ -1,0 +1,37 @@
+<% title "Audio Visuais" %>
+
+<table>
+  <tr>
+    <th>Genero Midia</th>
+    <th>Localizacao</th>
+    <th>Tombo Seduc</th>
+    <th>Tombo L</th>
+    <th>Tipo</th>
+    <th>Titulo</th>
+    <th>Subtitulo</th>
+    <th>Producao</th>
+    <th>Local Producao</th>
+    <th>Data Producao</th>
+    <th>Obs</th>
+  </tr>
+  <% for audio_visual in @audio_visuais %>
+    <tr>
+      <td><%=h audio_visual.genero_midia %></td>
+      <td><%=h audio_visual.localizacao %></td>
+      <td><%=h audio_visual.tombo_seduc %></td>
+      <td><%=h audio_visual.tombo_l %></td>
+      <td><%=h audio_visual.tipo %></td>
+      <td><%=h audio_visual.titulo %></td>
+      <td><%=h audio_visual.subtitulo %></td>
+      <td><%=h audio_visual.producao %></td>
+      <td><%=h audio_visual.local_producao %></td>
+      <td><%=h audio_visual.data_producao %></td>
+      <td><%=h audio_visual.obs %></td>
+      <td><%= link_to "Show", audio_visual %></td>
+      <td><%= link_to "Edit", edit_audio_visual_path(audio_visual) %></td>
+      <td><%= link_to "Destroy", audio_visual, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Audio Visual", new_audio_visual_path %></p>

@@ -1,0 +1,40 @@
+<% title "Jogos" %>
+
+<p>
+  <strong>Localizacao:</strong>
+  <%=h @jogos.localizacao %>
+</p>
+<p>
+  <strong>Tombo Seduc:</strong>
+  <%=h @jogos.tombo_seduc %>
+</p>
+<p>
+  <strong>Tombo L:</strong>
+  <%=h @jogos.tombo_l %>
+</p>
+<p>
+  <strong>Nome:</strong>
+  <%=h @jogos.nome %>
+</p>
+<p>
+  <strong>Faixa Etaria:</strong>
+  <%=h @jogos.faixa_etaria %>
+</p>
+<p>
+  <strong>Tipo:</strong>
+  <%=h @jogos.tipo %>
+</p>
+<p>
+  <strong>Fabricante:</strong>
+  <%=h @jogos.fabricante %>
+</p>
+<p>
+  <strong>Obs:</strong>
+  <%=h @jogos.obs %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_jogo_path(@jogos) %> |
+  <%= link_to "Destroy", @jogos, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", jogos_path %>
+</p>

@@ -1,0 +1,41 @@
+<% title "Periodicos" %>
+
+<table>
+  <tr>
+    <th>Localizacao</th>
+    <th>Tombo Seduc</th>
+    <th>Tombo L</th>
+    <th>Tipo</th>
+    <th>Titulo</th>
+    <th>Subtitulo</th>
+    <th>Colecao</th>
+    <th>Producao</th>
+    <th>Periodicidade</th>
+    <th>Issn</th>
+    <th>Local Producao</th>
+    <th>Data Producao</th>
+    <th>Obs</th>
+  </tr>
+  <% for periodico in @periodicos %>
+    <tr>
+      <td><%=h periodico.localizacao %></td>
+      <td><%=h periodico.tombo_seduc %></td>
+      <td><%=h periodico.tombo_l %></td>
+      <td><%=h periodico.tipo %></td>
+      <td><%=h periodico.titulo %></td>
+      <td><%=h periodico.subtitulo %></td>
+      <td><%=h periodico.colecao %></td>
+      <td><%=h periodico.producao %></td>
+      <td><%=h periodico.periodicidade %></td>
+      <td><%=h periodico.issn %></td>
+      <td><%=h periodico.local_producao %></td>
+      <td><%=h periodico.data_producao %></td>
+      <td><%=h periodico.obs %></td>
+      <td><%= link_to "Show", periodico %></td>
+      <td><%= link_to "Edit", edit_periodico_path(periodico) %></td>
+      <td><%= link_to "Destroy", periodico, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Periodico", new_periodico_path %></p>

@@ -1,0 +1,11 @@
+one:
+  codigo: 1
+  livro: MyString
+  subtitulo: MyString
+  obs: MyText
+
+two:
+  codigo: 1
+  livro: MyString
+  subtitulo: MyString
+  obs: MyText

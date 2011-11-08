@@ -1,0 +1,20 @@
+<% form_for @localizacao do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :unidade %><br />
+    <%= f.text_field :unidade %>
+  </p>
+  <p>
+    <%= f.label :local_guardado %><br />
+    <%= f.text_field :local_guardado %>
+  </p>
+  <p>
+    <%= f.label :aquisicao %><br />
+    <%= f.text_field :aquisicao %>
+  </p>
+  <p>
+    <%= f.label :data_aquisicao %><br />
+    <%= f.date_select :data_aquisicao %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

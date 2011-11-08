@@ -1,0 +1,16 @@
+<% title "Itens Assunto" %>
+
+<p>
+  <strong>Assunto:</strong>
+  <%=h @itens_assunto.assunto %>
+</p>
+<p>
+  <strong>Sub Assunto:</strong>
+  <%=h @itens_assunto._assunto %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_itens_assunto_path(@itens_assunto) %> |
+  <%= link_to "Destroy", @itens_assunto, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", itens_assuntos_path %>
+</p>

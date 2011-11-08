@@ -1,0 +1,27 @@
+one:
+  editora: 
+  area: 
+  localizacao: 
+  identificacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  colecao: MyString
+  tipo: MyString
+  volume: 1
+  data_edicao: 2011-11-03
+  local_edicao: MyString
+  obs: MyText
+
+two:
+  editora: 
+  area: 
+  localizacao: 
+  identificacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  colecao: MyString
+  tipo: MyString
+  volume: 1
+  data_edicao: 2011-11-03
+  local_edicao: MyString
+  obs: MyText

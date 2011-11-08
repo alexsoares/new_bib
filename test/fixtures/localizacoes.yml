@@ -1,0 +1,11 @@
+one:
+  unidade: 
+  local_guardado: MyString
+  aquisicao: MyString
+  data_aquisicao: 2011-11-03
+
+two:
+  unidade: 
+  local_guardado: MyString
+  aquisicao: MyString
+  data_aquisicao: 2011-11-03

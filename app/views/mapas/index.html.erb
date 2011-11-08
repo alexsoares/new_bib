@@ -1,0 +1,39 @@
+<% title "Mapas" %>
+
+<table>
+  <tr>
+    <th>Editora</th>
+    <th>Localizacao</th>
+    <th>Tombo Seduc</th>
+    <th>Tombo L</th>
+    <th>Tipo</th>
+    <th>Subtitulo</th>
+    <th>Ano</th>
+    <th>Formato</th>
+    <th>Data Edicao</th>
+    <th>Local Edicao</th>
+    <th>Edicao</th>
+    <th>Obs</th>
+  </tr>
+  <% for mapas in @mapas %>
+    <tr>
+      <td><%=h mapas.editora %></td>
+      <td><%=h mapas.localizacao %></td>
+      <td><%=h mapas.tombo_seduc %></td>
+      <td><%=h mapas.tombo_l %></td>
+      <td><%=h mapas.tipo %></td>
+      <td><%=h mapas.subtitulo %></td>
+      <td><%=h mapas.ano %></td>
+      <td><%=h mapas.formato %></td>
+      <td><%=h mapas.data_edicao %></td>
+      <td><%=h mapas.local_edicao %></td>
+      <td><%=h mapas.edicao %></td>
+      <td><%=h mapas.obs %></td>
+      <td><%= link_to "Show", mapas %></td>
+      <td><%= link_to "Edit", edit_mapas_path(mapas) %></td>
+      <td><%= link_to "Destroy", mapas, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Mapas", new_mapas_path %></p>

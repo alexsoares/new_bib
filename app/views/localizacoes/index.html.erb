@@ -1,0 +1,23 @@
+<% title "Localizacoes" %>
+
+<table>
+  <tr>
+    <th>Unidade</th>
+    <th>Local Guardado</th>
+    <th>Aquisicao</th>
+    <th>Data Aquisicao</th>
+  </tr>
+  <% for localizacao in @localizacoes %>
+    <tr>
+      <td><%=h localizacao.unidade %></td>
+      <td><%=h localizacao.local_guardado %></td>
+      <td><%=h localizacao.aquisicao %></td>
+      <td><%=h localizacao.data_aquisicao %></td>
+      <td><%= link_to "Show", localizacao %></td>
+      <td><%= link_to "Edit", edit_localizacao_path(localizacao) %></td>
+      <td><%= link_to "Destroy", localizacao, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Localizacao", new_localizacao_path %></p>

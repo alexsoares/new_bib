@@ -1,0 +1,19 @@
+one:
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  nome: MyString
+  faixa_etaria: MyString
+  tipo: MyString
+  fabricante: MyString
+  obs: MyString
+
+two:
+  localizacao: 
+  tombo_seduc: MyString
+  tombo_l: MyString
+  nome: MyString
+  faixa_etaria: MyString
+  tipo: MyString
+  fabricante: MyString
+  obs: MyString

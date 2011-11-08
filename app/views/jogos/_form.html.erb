@@ -1,0 +1,36 @@
+<% form_for @jogos do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :localizacao %><br />
+    <%= f.text_field :localizacao %>
+  </p>
+  <p>
+    <%= f.label :tombo_seduc %><br />
+    <%= f.text_field :tombo_seduc %>
+  </p>
+  <p>
+    <%= f.label :tombo_l %><br />
+    <%= f.text_field :tombo_l %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :faixa_etaria %><br />
+    <%= f.text_field :faixa_etaria %>
+  </p>
+  <p>
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </p>
+  <p>
+    <%= f.label :fabricante %><br />
+    <%= f.text_field :fabricante %>
+  </p>
+  <p>
+    <%= f.label :obs %><br />
+    <%= f.text_field :obs %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

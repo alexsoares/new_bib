@@ -1,0 +1,12 @@
+<% title "Autor" %>
+
+<p>
+  <strong>Nome:</strong>
+  <%=h @autor.nome %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_autor_path(@autor) %> |
+  <%= link_to "Destroy", @autor, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", autores_path %>
+</p>
