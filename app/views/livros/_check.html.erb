@@ -1,0 +1,12 @@
+<script>
+  $(document).ready(function()
+    {
+      $("#assuntos").click(function ()
+        {
+          $("#mais_assuntos").slideToggle("high");
+        });
+     });
+</script>
+  <p>
+    <a href="#" id="assuntos"><%= check_box_tag "livro[check]" %></a>
+  </p>

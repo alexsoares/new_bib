@@ -3,15 +3,19 @@
   <p>
     <%= f.label :assunto_id, "Assunto" %><br />
     <%= f.collection_select :assunto_id ,@assuntos,:id,:descricao, :include_blank => "Selecione" %>
+               <%= observe_field 'livro_assunto_id',
+               :update => "check_box",
+               :url    => { :action => 'visualizar_check' },
+               :with   => 'livro_assunto_id' %>
   </p>
-  <p>
-    <%= check_box_tag :livro, :check %>
-               <%= observe_field 'acervo_tipo',
-               :update => "cadastrar",
-               :url    => { :action => 'cadastrar' },
-               :with   => 'acervo_tipo' %>
-
-  </p>
+  <div id="check_box"></div>
+  <div id="mais_assuntos" style="display:none">
+    <p>
+      <% f.fields_for :perguntas do |builder| %>
+        <%= render "campos_assunto", :f => builder %>
+      <%end%>
+    </p>
+  </div>
   <p>
     <%= f.label :identificacao_id,"ID" %><br />
     <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>

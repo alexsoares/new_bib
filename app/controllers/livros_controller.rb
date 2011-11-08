@@ -43,7 +43,13 @@ class LivrosController < ApplicationController
     flash[:notice] = "Successfully destroyed livro."
     redirect_to livros_url
   end
-
+  def visualizar_check
+    u = params[:livro_assunto_id]
+    if params[:livro_assunto_id].to_i == 1
+      t = 0
+      render partial => "check"
+    end
+  end
   protected
 
   def load_resources
