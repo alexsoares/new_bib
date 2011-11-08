@@ -1,22 +1,8 @@
-  <% form_for @livro do |f| %>
+    <%= javascript_include_tag "jquery.colorbox","colorbox.js"%>
+<% form_for @livro do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :assunto_id, "Assunto" %><br />
-    <%= f.collection_select :assunto_id ,@assuntos,:id,:descricao, :include_blank => "Selecione" %>
-               <%= observe_field 'livro_assunto_id',
-               :update => "check_box",
-               :url    => { :action => 'visualizar_check' },
-               :with   => 'livro_assunto_id' %>
-  </p>
-  <div id="check_box"></div>
-  <div id="mais_assuntos" style="display:none">
+  <div id="mais_assuntos" style="display:none"></div>
     <p>
-      <% f.fields_for :perguntas do |builder| %>
-        <%= render "campos_assunto", :f => builder %>
-      <%end%>
-    </p>
-  </div>
-  <p>
     <%= f.label :identificacao_id,"ID" %><br />
     <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
   </p>
@@ -64,5 +50,39 @@
     <%= f.label :obs %><br />
     <%= f.text_area :obs %>
   </p>
+  <p>
+    <% f.fields_for :assuntos do |builder| %>
+      <%= render "campos_assunto", :f => builder %>
+    <%end%>
+  </p>
+
   <p><%= f.submit %></p>
 <% end %>
+
+
+    <p><a class='inline' href="#inline_content">Localizaçao</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div style='display:none'>
+		<div id='inline_content' style='padding:10px; background:#fff;'>                
+                  <h2><%= current_user.unidade.nome %></h2>
+                  <hr>
+        </div>
+	</div>
+

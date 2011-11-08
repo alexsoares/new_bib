@@ -1,5 +1,9 @@
 <div class="fields">
-    <%= f.label :sub_assunto, "Sub-Assunto:"%>
-    <%= f.text_field :sub_assunto%>
-    <%= link_to_remove_fields "remove",f %>
+    <%= f.label :descricao, "Assunto:"%>
+    <%= f.text_field :descricao%>
+  <% f.fields_for :itens_assuntos do |builder| %>
+    <%= render "campos_itens_assunto", :f => builder %>    
+  <%end%>
+<p><%= link_to_add_fields "Adiciona Sub", f, :itens_assuntos %></p>
+
 </div>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111108120056) do
+ActiveRecord::Schema.define(:version => 20111108172431) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20111108120056) do
   end
 
   create_table "assuntos", :force => true do |t|
+    t.integer  "livro_id"
     t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -100,7 +101,6 @@ ActiveRecord::Schema.define(:version => 20111108120056) do
   end
 
   create_table "livros", :force => true do |t|
-    t.integer  "assunto_id"
     t.integer  "identificacao_id"
     t.integer  "area_id"
     t.integer  "editora_id"
@@ -181,6 +181,13 @@ ActiveRecord::Schema.define(:version => 20111108120056) do
   add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
   add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
 
+  create_table "unidades", :force => true do |t|
+    t.string   "nome"
+    t.integer  "tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
     t.string   "name",                      :limit => 100, :default => ""
@@ -193,6 +200,7 @@ ActiveRecord::Schema.define(:version => 20111108120056) do
     t.datetime "remember_token_expires_at"
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
+    t.integer  "unidade_id"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true

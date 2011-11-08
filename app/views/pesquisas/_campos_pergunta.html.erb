@@ -1,0 +1,11 @@
+<div class="fields">
+    <%= f.label :conteudo, "Questão:"%>
+    <% if logged_in? && current_user.has_role?('administrador') %>
+      <%= link_to_remove_fields "remove",f %><br/>
+    <%end%>
+    <%= f.text_area :conteudo, :rows => 3 %>
+  <% f.fields_for :respostas do |builder| %>
+    <%= render "campos_resposta", :f => builder %>
+  <%end%>
+  <p><%= link_to_add_fields "Adiciona Sugestão", f, :respostas %></p>
+</div>

@@ -1,0 +1,7 @@
+<p class="fields">
+    <%= f.label :conteudo, "Sugestão"%>
+    <%= f.text_field :conteudo %>
+    <% if logged_in? && current_user.has_role?('administrador') %>
+      <%= link_to_remove_fields "remove",f %>
+    <%end%>
+</p>

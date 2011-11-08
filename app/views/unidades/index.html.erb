@@ -1,0 +1,19 @@
+<% title "Unidades" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Tipo</th>
+  </tr>
+  <% for unidade in @unidades %>
+    <tr>
+      <td><%=h unidade.nome %></td>
+      <td><%=h unidade.tipo %></td>
+      <td><%= link_to "Show", unidade %></td>
+      <td><%= link_to "Edit", edit_unidade_path(unidade) %></td>
+      <td><%= link_to "Destroy", unidade, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Unidade", new_unidade_path %></p>

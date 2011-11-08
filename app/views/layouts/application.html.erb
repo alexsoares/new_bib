@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
-    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'application','colorbox' %>
     <%= javascript_include_tag 'jquery-1.4.2.js','jquery-ui','jrails','application.js' %>
     <%= yield(:head) %>
   </head>

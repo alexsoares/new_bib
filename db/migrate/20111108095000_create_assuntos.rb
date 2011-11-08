@@ -1,6 +1,7 @@
 class CreateAssuntos < ActiveRecord::Migration
   def self.up
     create_table :assuntos do |t|
+      t.references :livro
       t.string :descricao
       t.timestamps
     end

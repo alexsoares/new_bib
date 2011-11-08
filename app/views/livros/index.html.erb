@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Assunto</th>
+    
     <th>Identificacao</th>
     <th>Area</th>
     <th>Editora</th>
@@ -18,7 +18,6 @@
   </tr>
   <% for livro in @livros %>
     <tr>
-      <td><%=h livro.assunto %></td>
       <td><%=h livro.identificacao %></td>
       <td><%=h livro.area %></td>
       <td><%=h livro.editora %></td>

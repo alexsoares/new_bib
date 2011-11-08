@@ -11,6 +11,10 @@ class LivrosController < ApplicationController
 
   def new
     @livro = Livro.new
+    1.times do
+      assunto = @livro.assuntos.build
+    end
+
   end
 
   def create
@@ -44,10 +48,8 @@ class LivrosController < ApplicationController
     redirect_to livros_url
   end
   def visualizar_check
-    u = params[:livro_assunto_id]
     if params[:livro_assunto_id].to_i == 1
-      t = 0
-      render partial => "check"
+      render :partial => "check"
     end
   end
   protected
