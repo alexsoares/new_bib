@@ -1,4 +1,8 @@
 class JogosController < ApplicationController
+
+  before_filter :login_required
+  before_filter :load_resources
+
   def index
     @jogos = Jogo.all
   end
@@ -41,4 +45,12 @@ class JogosController < ApplicationController
     flash[:notice] = "Successfully destroyed jogos."
     redirect_to jogos_url
   end
+
+    protected
+
+  def load_resources
+
+    @localizacoes = Localizacao.all
+  end
+
 end

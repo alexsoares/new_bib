@@ -1,4 +1,8 @@
 class PeriodicosController < ApplicationController
+
+  before_filter :login_required
+  before_filter :load_resources
+
   def index
     @periodicos = Periodico.all
   end
@@ -12,7 +16,7 @@ class PeriodicosController < ApplicationController
   end
 
   def create
-    @periodicos = Periodico.new(params[:periodicos])
+    @periodicos = Periodico.new(params[:periodico])
     if @periodicos.save
       flash[:notice] = "Successfully created periodicos."
       redirect_to @periodicos
@@ -27,7 +31,7 @@ class PeriodicosController < ApplicationController
 
   def update
     @periodicos = Periodico.find(params[:id])
-    if @periodicos.update_attributes(params[:periodicos])
+    if @periodicos.update_attributes(params[:periodico])
       flash[:notice] = "Successfully updated periodicos."
       redirect_to @periodicos
     else
@@ -40,5 +44,9 @@ class PeriodicosController < ApplicationController
     @periodicos.destroy
     flash[:notice] = "Successfully destroyed periodicos."
     redirect_to periodicos_url
+  end
+
+  def load_resources
+    @localizacoes = Localizacao.all
   end
 end

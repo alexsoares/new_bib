@@ -1,10 +1,6 @@
 <% title "Mapas" %>
 
 <p>
-  <strong>Editora:</strong>
-  <%=h @mapas.editora %>
-</p>
-<p>
   <strong>Localizacao:</strong>
   <%=h @mapas.localizacao %>
 </p>
@@ -17,32 +13,36 @@
   <%=h @mapas.tombo_l %>
 </p>
 <p>
-  <strong>Tipo:</strong>
-  <%=h @mapas.tipo %>
+  <strong>Titulo:</strong>
+  <%=h @mapas.titulo %>
 </p>
 <p>
   <strong>Subtitulo:</strong>
   <%=h @mapas.subtitulo %>
 </p>
+  <p>
+  <strong>Tipo:</strong>
+  <%=h @mapas.tipo %>
+</p>
 <p>
   <strong>Ano:</strong>
-  <%=h @mapas.ano %>
+  <%=h @mapas.ano.strftime("%Y") %>
 </p>
 <p>
   <strong>Formato:</strong>
   <%=h @mapas.formato %>
 </p>
 <p>
-  <strong>Data Edicao:</strong>
-  <%=h @mapas.data_edicao %>
-</p>
-<p>
-  <strong>Local Edicao:</strong>
-  <%=h @mapas.local_edicao %>
+  <strong>Editora:</strong>
+  <%=h @mapas.editora.nome %>
 </p>
 <p>
   <strong>Edicao:</strong>
   <%=h @mapas.edicao %>
+</p>
+<p>
+  <strong>Local Edicao:</strong>
+  <%=h @mapas.local_edicao %>
 </p>
 <p>
   <strong>Obs:</strong>
@@ -50,7 +50,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_mapas_path(@mapas) %> |
+  <%= link_to "Edit", edit_mapa_path(@mapas) %> |
   <%= link_to "Destroy", @mapas, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", mapas_path %>
 </p>

@@ -1,10 +1,6 @@
 <% form_for @periodicos do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :localizacao %><br />
-    <%= f.text_field :localizacao %>
-  </p>
-  <p>
     <%= f.label :tombo_seduc %><br />
     <%= f.text_field :tombo_seduc %>
   </p>
@@ -13,8 +9,8 @@
     <%= f.text_field :tombo_l %>
   </p>
   <p>
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
+    <%= f.label :issn %><br />
+    <%= f.text_field :issn %>
   </p>
   <p>
     <%= f.label :titulo %><br />
@@ -29,16 +25,18 @@
     <%= f.text_field :colecao %>
   </p>
   <p>
-    <%= f.label :producao %><br />
-    <%= f.text_field :producao %>
+    <%= f.label :tipo %><br />
+    <%= f.select :tipo, Periodico::TIPO_PERIODICO, :include_blank => '---Selecione---'%>
   </p>
   <p>
     <%= f.label :periodicidade %><br />
-    <%= f.text_field :periodicidade %>
+    <%= f.select :periodicidade, Periodico::PERIODICIDADE, :include_blank => '---Selecione---'%>
+
   </p>
+
   <p>
-    <%= f.label :issn %><br />
-    <%= f.text_field :issn %>
+    <%= f.label :producao %><br />
+    <%= f.text_field :producao %>
   </p>
   <p>
     <%= f.label :local_producao %><br />
@@ -46,11 +44,15 @@
   </p>
   <p>
     <%= f.label :data_producao %><br />
-    <%= f.date_select :data_producao %>
+    <%= f.date_select(:data_producao, :order => [:day, :month, :year], :start_year => (Date.today.year)-50) %>
+  </p>
+  <p>
+    <%= f.label :localizacao_id %><br />
+    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
   </p>
   <p>
     <%= f.label :obs %><br />
-    <%= f.text_field :obs %>
+    <%= f.text_area :obs %>
   </p>
   <p><%= f.submit %></p>
 <% end %>

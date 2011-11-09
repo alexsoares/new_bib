@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(:version => 20111108172431) do
   end
 
   create_table "assuntos", :force => true do |t|
-    t.integer  "livro_id"
     t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -101,6 +100,7 @@ ActiveRecord::Schema.define(:version => 20111108172431) do
   end
 
   create_table "livros", :force => true do |t|
+    t.integer  "assunto_id"
     t.integer  "identificacao_id"
     t.integer  "area_id"
     t.integer  "editora_id"
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(:version => 20111108172431) do
     t.text     "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "titulo"
   end
 
   create_table "musicas", :force => true do |t|

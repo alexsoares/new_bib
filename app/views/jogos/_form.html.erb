@@ -1,10 +1,6 @@
 <% form_for @jogos do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :localizacao %><br />
-    <%= f.text_field :localizacao %>
-  </p>
-  <p>
     <%= f.label :tombo_seduc %><br />
     <%= f.text_field :tombo_seduc %>
   </p>
@@ -18,8 +14,8 @@
   </p>
   <p>
     <%= f.label :faixa_etaria %><br />
-    <%= f.text_field :faixa_etaria %>
-  </p>
+    <%= f.select :faixa_etaria, Jogo::FAIXA_ETARIA, :include_blank => '---Selecione---'%>
+ </p>
   <p>
     <%= f.label :tipo %><br />
     <%= f.text_field :tipo %>
@@ -27,6 +23,10 @@
   <p>
     <%= f.label :fabricante %><br />
     <%= f.text_field :fabricante %>
+  </p>
+  <p>
+    <%= f.label :localizacao_id %><br />
+    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
   </p>
   <p>
     <%= f.label :obs %><br />

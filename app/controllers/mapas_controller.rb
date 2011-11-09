@@ -1,4 +1,8 @@
 class MapasController < ApplicationController
+
+  before_filter :login_required
+  before_filter :load_resources
+
   def index
     @mapas = Mapas.all
   end
@@ -41,4 +45,12 @@ class MapasController < ApplicationController
     flash[:notice] = "Successfully destroyed mapas."
     redirect_to mapas_url
   end
+
+    protected
+
+  def load_resources
+    @editoras = Editora.all(:order => 'nome ASC')
+    @localizacoes = Localizacao.all
+  end
+
 end
