@@ -2,24 +2,24 @@
 
 <table>
   <tr>
-    <th>Localizacao</th>
     <th>Tombo Seduc</th>
     <th>Tombo L</th>
     <th>Nome</th>
     <th>Faixa Etaria</th>
     <th>Tipo</th>
     <th>Fabricante</th>
+    <th>Localizacao</th>
     <th>Obs</th>
   </tr>
   <% for jogo in @jogos %>
     <tr>
-      <td><%=h jogo.localizacao %></td>
       <td><%=h jogo.tombo_seduc %></td>
       <td><%=h jogo.tombo_l %></td>
       <td><%=h jogo.nome %></td>
       <td><%=h jogo.faixa_etaria %></td>
       <td><%=h jogo.tipo %></td>
       <td><%=h jogo.fabricante %></td>
+      <td><%=h jogo.localizacao %></td>
       <td><%=h jogo.obs %></td>
       <td><%= link_to "Show", jogo %></td>
       <td><%= link_to "Edit", edit_jogo_path(jogo) %></td>

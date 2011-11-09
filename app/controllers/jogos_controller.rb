@@ -16,7 +16,7 @@ class JogosController < ApplicationController
   end
 
   def create
-    @jogos = Jogo.new(params[:jogos])
+    @jogos = Jogo.new(params[:jogo])
     if @jogos.save
       flash[:notice] = "Successfully created jogos."
       redirect_to @jogos
@@ -31,7 +31,7 @@ class JogosController < ApplicationController
 
   def update
     @jogos = Jogo.find(params[:id])
-    if @jogos.update_attributes(params[:jogos])
+    if @jogos.update_attributes(params[:jogo])
       flash[:notice] = "Successfully updated jogos."
       redirect_to @jogos
     else
