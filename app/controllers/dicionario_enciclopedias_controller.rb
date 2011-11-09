@@ -47,6 +47,13 @@ class DicionarioEnciclopediasController < ApplicationController
     redirect_to dicionario_enciclopedias_url
   end
 
+ def subtitulo
+  session[:subtitulo] = params[:dicionario_enciclopedia_identificacao_id]
+  @dicionario_enciclopedia = DicionarioEnciclopedia.find_by_identificacao_id(session[:subtitulo])
+  render :partial => 'subtitulo'
+  end
+
+
     protected
 
   def load_resources

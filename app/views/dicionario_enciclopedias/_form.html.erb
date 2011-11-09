@@ -19,7 +19,12 @@
   <p>
     <%= f.label :identificacao_id,"ID" %><br />
     <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
+    <div id= 'subtitulo'></div>
   </p>
+   <%= observe_field 'dicionario_enciclopedia_identificacao_id',
+                          :update => "subtitulo",
+                          :with => :dicionario_enciclopedia_identificacao_id,
+                          :url => { :action => 'subtitulo' } %>
   <p>
     <%= f.label :colecao %><br />
     <%= f.text_field :colecao %>
@@ -34,7 +39,7 @@
   </p>
   <p>
     <%= f.label :data_edicao %><br />
-    <%= f.date_select(:data_edicao, :order => [:day, :month, :year], :start_year => (Date.today.year)-50) %>
+    <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
   </p>
   <p>
     <%= f.label :local_edicao %><br />
