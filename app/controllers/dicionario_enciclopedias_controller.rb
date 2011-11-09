@@ -1,4 +1,9 @@
 class DicionarioEnciclopediasController < ApplicationController
+
+  before_filter :login_required
+  before_filter :load_resources
+
+  
   def index
     @dicionario_enciclopedias = DicionarioEnciclopedia.all
   end
@@ -41,4 +46,14 @@ class DicionarioEnciclopediasController < ApplicationController
     flash[:notice] = "Successfully destroyed dicionario enciclopedia."
     redirect_to dicionario_enciclopedias_url
   end
+
+    protected
+
+  def load_resources
+    @areas = Area.all(:order => 'nome ASC')
+    @editoras = Editora.all(:order => 'nome ASC')
+    @localizacoes = Localizacao.all
+    @identificacoes  = Identificacao.all(:order => 'livro ASC')
+  end
+
 end

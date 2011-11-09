@@ -1,20 +1,8 @@
 <% form_for @dicionario_enciclopedia do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :editora %><br />
-    <%= f.text_field :editora %>
-  </p>
-  <p>
     <%= f.label :area %><br />
-    <%= f.text_field :area %>
-  </p>
-  <p>
-    <%= f.label :localizacao %><br />
-    <%= f.text_field :localizacao %>
-  </p>
-  <p>
-    <%= f.label :identificacao %><br />
-    <%= f.text_field :identificacao %>
+    <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
   </p>
   <p>
     <%= f.label :tombo_seduc %><br />
@@ -25,24 +13,36 @@
     <%= f.text_field :tombo_l %>
   </p>
   <p>
-    <%= f.label :colecao %><br />
-    <%= f.text_field :colecao %>
+    <%= f.label :tipo %><br />
+    <%= f.select :tipo, DicionarioEnciclopedia::TIPO_DIC_ENC, :include_blank => '---Selecione---'%>
   </p>
   <p>
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
+    <%= f.label :identificacao_id,"ID" %><br />
+    <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
+  </p>
+  <p>
+    <%= f.label :colecao %><br />
+    <%= f.text_field :colecao %>
   </p>
   <p>
     <%= f.label :volume %><br />
     <%= f.text_field :volume %>
   </p>
   <p>
+    <%= f.label :editora_id %><br />
+    <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
+  </p>
+  <p>
     <%= f.label :data_edicao %><br />
-    <%= f.date_select :data_edicao %>
+    <%= f.date_select(:data_edicao, :order => [:day, :month, :year], :start_year => (Date.today.year)-50) %>
   </p>
   <p>
     <%= f.label :local_edicao %><br />
     <%= f.text_field :local_edicao %>
+  </p>
+  <p>
+    <%= f.label :localizacao_id %><br />
+    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
   </p>
   <p>
     <%= f.label :obs %><br />

@@ -2,32 +2,35 @@
 
 <table>
   <tr>
-    <th>Editora</th>
+
     <th>Area</th>
-    <th>Localizacao</th>
-    <th>Identificacao</th>
     <th>Tombo Seduc</th>
     <th>Tombo L</th>
-    <th>Colecao</th>
     <th>Tipo</th>
+    <th>Título</th>
+    <th>Subtítulo</th>
+    <th>Colecao</th>
     <th>Volume</th>
-    <th>Data Edicao</th>
+    <th>Editora</th>
     <th>Local Edicao</th>
+    <th>Data Edicao</th>
+    <th>Localizacao</th>
     <th>Obs</th>
   </tr>
   <% for dicionario_enciclopedia in @dicionario_enciclopedias %>
     <tr>
-      <td><%=h dicionario_enciclopedia.editora %></td>
-      <td><%=h dicionario_enciclopedia.area %></td>
-      <td><%=h dicionario_enciclopedia.localizacao %></td>
-      <td><%=h dicionario_enciclopedia.identificacao %></td>
+      <td><%=h dicionario_enciclopedia.area.nome %></td>
       <td><%=h dicionario_enciclopedia.tombo_seduc %></td>
       <td><%=h dicionario_enciclopedia.tombo_l %></td>
-      <td><%=h dicionario_enciclopedia.colecao %></td>
       <td><%=h dicionario_enciclopedia.tipo %></td>
+      <td><%=h dicionario_enciclopedia.identificacao.livro %></td>
+      <td><%=h dicionario_enciclopedia.identificacao.subtitulo %></td>
+      <td><%=h dicionario_enciclopedia.colecao %></td>
       <td><%=h dicionario_enciclopedia.volume %></td>
+      <td><%=h dicionario_enciclopedia.editora.nome %></td>
       <td><%=h dicionario_enciclopedia.data_edicao %></td>
       <td><%=h dicionario_enciclopedia.local_edicao %></td>
+      <td><%=h dicionario_enciclopedia.localizacao %></td>
       <td><%=h dicionario_enciclopedia.obs %></td>
       <td><%= link_to "Show", dicionario_enciclopedia %></td>
       <td><%= link_to "Edit", edit_dicionario_enciclopedia_path(dicionario_enciclopedia) %></td>

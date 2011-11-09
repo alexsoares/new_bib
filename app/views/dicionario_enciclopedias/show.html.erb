@@ -1,20 +1,13 @@
 <% title "Dicionario Enciclopedia" %>
 
-<p>
-  <strong>Editora:</strong>
-  <%=h @dicionario_enciclopedia.editora %>
-</p>
+
 <p>
   <strong>Area:</strong>
-  <%=h @dicionario_enciclopedia.area %>
+  <%=h @dicionario_enciclopedia.area.nome %>
 </p>
 <p>
-  <strong>Localizacao:</strong>
-  <%=h @dicionario_enciclopedia.localizacao %>
-</p>
-<p>
-  <strong>Identificacao:</strong>
-  <%=h @dicionario_enciclopedia.identificacao %>
+  <strong>Tipo:</strong>
+  <%=h @dicionario_enciclopedia.tipo %>
 </p>
 <p>
   <strong>Tombo Seduc:</strong>
@@ -24,17 +17,26 @@
   <strong>Tombo L:</strong>
   <%=h @dicionario_enciclopedia.tombo_l %>
 </p>
+
+<p>
+  <strong>Título:</strong>
+  <%=h @dicionario_enciclopedia.identificacao.livro %>
+</p>
+<p>
+  <strong>Sub-título:</strong>
+  <%=h @dicionario_enciclopedia.identificacao.subtitulo %>
+</p>
 <p>
   <strong>Colecao:</strong>
   <%=h @dicionario_enciclopedia.colecao %>
 </p>
 <p>
-  <strong>Tipo:</strong>
-  <%=h @dicionario_enciclopedia.tipo %>
-</p>
-<p>
   <strong>Volume:</strong>
   <%=h @dicionario_enciclopedia.volume %>
+</p>
+<p>
+  <strong>Editora:</strong>
+  <%=h @dicionario_enciclopedia.editora.nome %>
 </p>
 <p>
   <strong>Data Edicao:</strong>
@@ -43,6 +45,10 @@
 <p>
   <strong>Local Edicao:</strong>
   <%=h @dicionario_enciclopedia.local_edicao %>
+</p>
+<p>
+  <strong>Localizacao:</strong>
+  <%=h @dicionario_enciclopedia.localizacao %>
 </p>
 <p>
   <strong>Obs:</strong>
