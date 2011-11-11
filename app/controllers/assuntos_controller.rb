@@ -15,7 +15,8 @@ class AssuntosController < ApplicationController
     @assunto = Assunto.new(params[:assunto])
     if @assunto.save
       flash[:notice] = "Successfully created assunto."
-      redirect_to @assunto
+      render :action => 'livros/new'
+      
     else
       render :action => 'new'
     end

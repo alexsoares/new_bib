@@ -1,6 +1,17 @@
 <% title "Livro" %>
 
 <p>
+  <strong>Assuntos relacionados:</strong><br />
+  <ul>
+  <% @livro.assuntos.each do |assunto| %>
+    <li>
+      <%= assunto.descricao %>
+    </li>
+  <%end%>
+  </ul>
+</p>
+
+<p>
   <strong>Identificacao:</strong>
   <%=h @livro.identificacao %>
 </p>

@@ -1,9 +1,14 @@
-    <%= javascript_include_tag "jquery.colorbox","colorbox.js"%>
+
+<%= javascript_include_tag "jquery.colorbox","colorbox.js"%>
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
   <div id="mais_assuntos" style="display:none"></div>
-    <p>
-    <%= f.label :identificacao_id,"ID" %><br />
+  <p>   
+      <%= render "campos_assunto", :f => f %>    
+      <%= link_to "Cadastrar Assuntos", "#inline_content", :class =>"inline" %>
+  </p>
+  <p>
+    <%= f.label :identificacao_id,"Identificação do Livro" %><br />
     <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
   </p>
   <p>
@@ -50,21 +55,13 @@
     <%= f.label :obs %><br />
     <%= f.text_area :obs %>
   </p>
-  <p>
-    <% f.fields_for :assuntos do |builder| %>
-      <%= render "campos_assunto", :f => builder %>
-    <%end%>
-  </p>
 
   <p><%= f.submit %></p>
 <% end %>
 
 
     <p><a class='inline' href="#inline_content">Localizaçao</a></p>
-
-
-
-
+    
 
 
 
@@ -82,7 +79,21 @@
 	<div style='display:none'>
 		<div id='inline_content' style='padding:10px; background:#fff;'>                
                   <h2><%= current_user.unidade.nome %></h2>
-                  <hr>
+      <%= form_tag({ :method => 'post', :action => 'create_assunto' })%>
+        <%= error_messages_for 'contact' %>
+        <table>
+            <tr>
+              <th width="30%">
+                <div class="botao">Assunto</div>
+              </th>
+              <td width="20%" align="center">
+                <%= text_field_tag :descricao %>
+              </td>
+              <td><div class="botao"><%= submit_tag 'Criar!' %></div></td>
+            </tr>
+
+          </table>
+              <hr>
         </div>
 	</div>
 

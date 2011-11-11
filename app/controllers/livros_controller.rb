@@ -1,6 +1,11 @@
 class LivrosController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
+  def teste
+    t = 0
+    y = 0
+    render :text => 'hg'
+  end
   def index
     @livros = Livro.all
   end
@@ -11,14 +16,16 @@ class LivrosController < ApplicationController
 
   def new
     @livro = Livro.new
-    1.times do
-      assunto = @livro.assuntos.build
-    end
-
+    #1.times do
+    #  assunto = @livro.assuntos.build
+    #end
+    #@assunto = Assunto.new
   end
 
   def create
     @livro = Livro.new(params[:livro])
+    #p = params[:livro][:assuntos]
+    #@assunto = @livro.assuntos.build(params[:assuntos]) unless params[:assuntos][:descricao].blank?
     if @livro.save
       flash[:notice] = "Successfully created livro."
       redirect_to @livro
@@ -52,6 +59,18 @@ class LivrosController < ApplicationController
       render :partial => "check"
     end
   end
+
+
+  def create_assunto
+    @assunto = Assunto.new
+    @assunto.descricao = params[:descricao]
+    @livro = Livro.new
+    if @assunto.save
+      flash[:notice] = "Assunto Criado, continue o cadastro. Lembre-se selecione o assunto."
+      redirect_to :controller => "livros", :action => "new"
+    end
+  end
+
   protected
 
   def load_resources

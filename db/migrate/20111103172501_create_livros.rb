@@ -2,6 +2,7 @@ class CreateLivros < ActiveRecord::Migration
   def self.up
     create_table :livros do |t|
       t.references :identificacao
+      #t.references :assunto
       t.references :area
       t.references :editora
       t.references :localizacao

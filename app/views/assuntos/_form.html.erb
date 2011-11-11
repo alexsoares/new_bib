@@ -4,11 +4,5 @@
     <%= f.label :descricao %><br />
     <%= f.text_field :descricao %>
   </p>
-  <p>
-    <% f.fields_for :itens_assuntos do |builder| %>
-      <%= render "campos_itens_assunto", :f => builder %>
-    <%end%>
-  </p>
-  <p><%= link_to_add_fields "Adicionar Sub-Assunto", f, :itens_assuntos %></p>
   <p><%= f.submit %></p>
 <% end %>
