@@ -11,6 +11,7 @@ class Jogo < ActiveRecord::Base
     self.tombo_l.upcase!
     self.nome.upcase!
     self.fabricante.upcase!
+    self.tipo.upcase!
     self.obs.upcase!
 end
 
