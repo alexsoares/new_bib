@@ -1,4 +1,3 @@
 <div class="fields">
         <%= collection_select :livro, :assunto_ids, @assuntos, :id, :descricao, { :selected => @livro.assunto_ids }, { :multiple => true, :name => 'livro[assunto_ids][]', :size => 6 } -%>
-
 </div>

@@ -62,12 +62,27 @@ class LivrosController < ApplicationController
 
 
   def create_assunto
-    @assunto = Assunto.new
-    @assunto.descricao = params[:descricao]
-    @livro = Livro.new
+    @assunto = Assunto.new(params[:assunto])
     if @assunto.save
-      flash[:notice] = "Assunto Criado, continue o cadastro. Lembre-se selecione o assunto."
-      redirect_to :controller => "livros", :action => "new"
+      @assuntos = Assunto.all
+      @livro = Livro.new
+      render :update do |page|
+        page.replace_html 'assuntos', :partial => "campos_assunto"
+        page.replace_html 'aviso', :text => "Assunto Criado, continue o cadastro. Lembre-se selecione o assunto."
+      end
+
+    end
+  end
+  def create_local
+    @localizacao = Localizacao.new(params[:localizacao])
+    if @localizacao.save
+      @localizacoes = Localizacao.all
+      @livro = Livro.new
+      render :update do |page|
+        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'aviso', :text => "Nova localização Cadastrada, continue o cadastro."
+      end
+
     end
   end
 
@@ -79,5 +94,6 @@ class LivrosController < ApplicationController
     @areas = Area.all
     @editoras = Editora.all
     @localizacoes = Localizacao.all
+    
   end
 end

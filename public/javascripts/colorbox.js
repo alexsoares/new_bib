@@ -1,6 +1,6 @@
 		$(document).ready(function(){
 			//Examples of how to assign the ColorBox event to elements
-			$(".inline").colorbox({inline:true, width:"60%", height:"60%"});
+			$(".inline").colorbox({inline:true, width:"80%"});
 			$(".callbacks").colorbox({
 				onOpen:function(){ alert('onOpen: colorbox is about to open'); },
 				onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },

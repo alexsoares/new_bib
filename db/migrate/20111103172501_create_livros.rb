@@ -6,7 +6,7 @@ class CreateLivros < ActiveRecord::Migration
       t.references :area
       t.references :editora
       t.references :localizacao
-      t.string :tombo_seduc
+      t.integer :tombo_seduc, :default => 0
       t.string :tombo_l
       t.string :colecao
       t.string :edicao

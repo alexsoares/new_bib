@@ -1,4 +1,5 @@
 class Livro < ActiveRecord::Base
+  before_create :auto_inc_tombo_seduc
   #attr_accessible :assunto, :identificacao, :area, :editora, :localizacao, :tombo_seduc, :tombo_l, :colecao, :edicao, :data_edicao, :local_edicao, :resumo, :obs
   has_and_belongs_to_many :assuntos
   
@@ -7,7 +8,13 @@ class Livro < ActiveRecord::Base
   belongs_to :editora
   belongs_to :localizacao
   #accepts_nested_attributes_for :assuntos, :reject_if => lambda {|a| a[:descricao].blank?}, :allow_destroy => true
-  accepts_nested_attributes_for :localizacao, :reject_if => lambda {|a| a[:local_guardado].blank?}, :allow_destroy => true
+  #accepts_nested_attributes_for :localizacao, :reject_if => lambda {|a| a[:local_guardado].blank?}, :allow_destroy => true
+
+
+  def auto_inc_tombo_seduc
+    self.tombo_seduc =+ 1
+  end
+
 end
 
 

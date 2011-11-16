@@ -2,10 +2,11 @@
 <%= javascript_include_tag "jquery.colorbox","colorbox.js"%>
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
-  <div id="mais_assuntos" style="display:none"></div>
-  <p>   
-      <%= render "campos_assunto", :f => f %>    
-      <%= link_to "Cadastrar Assuntos", "#inline_content", :class =>"inline" %>
+  <p><div id="aviso"></div></p>
+  <p>
+      <%= f.label :assunto_id %>
+      <div id="assuntos"><%= render "campos_assunto"%></div>
+      <%= link_to "Cadastrar Assuntos", "#inline_assunto", :class =>"inline" %>
   </p>
   <p>
     <%= f.label :identificacao_id,"Identificação do Livro" %><br />
@@ -20,12 +21,9 @@
     <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
   </p>
   <p>
-    <%= f.label :localizacao_id %><br />
-    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :tombo_seduc %><br />
-    <%= f.text_field :tombo_seduc %>
+    <%= f.label :localizacao_id,"Localização" %>
+    <div id="local"><%= render "campos_local"%></div>
+    <%= link_to "Cadastrar localizacao", "#inline_local", :class =>"inline" %>
   </p>
   <p>
     <%= f.label :tombo_l %><br />
@@ -58,42 +56,7 @@
 
   <p><%= f.submit %></p>
 <% end %>
-
-
-    <p><a class='inline' href="#inline_content">Localizaçao</a></p>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div style='display:none'>
-		<div id='inline_content' style='padding:10px; background:#fff;'>                
-                  <h2><%= current_user.unidade.nome %></h2>
-      <%= form_tag({ :method => 'post', :action => 'create_assunto' })%>
-        <%= error_messages_for 'contact' %>
-        <table>
-            <tr>
-              <th width="30%">
-                <div class="botao">Assunto</div>
-              </th>
-              <td width="20%" align="center">
-                <%= text_field_tag :descricao %>
-              </td>
-              <td><div class="botao"><%= submit_tag 'Criar!' %></div></td>
-            </tr>
-
-          </table>
-              <hr>
-        </div>
-	</div>
-
+    
+    <%= render "form_assunto" %>
+    <%= render "form_local" %>
