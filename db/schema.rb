@@ -105,12 +105,11 @@ ActiveRecord::Schema.define(:version => 20111110175329) do
   end
 
   create_table "livros", :force => true do |t|
-    t.integer  "assunto_id",       :null => false
     t.integer  "identificacao_id"
     t.integer  "area_id"
     t.integer  "editora_id"
     t.integer  "localizacao_id"
-    t.string   "tombo_seduc"
+    t.integer  "tombo_seduc",      :default => 0
     t.string   "tombo_l"
     t.string   "colecao"
     t.string   "edicao"

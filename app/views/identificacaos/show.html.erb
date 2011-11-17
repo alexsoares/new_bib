@@ -1,24 +1,20 @@
-<% title "Identificacao" %>
+<% title "LIVROS & TÍTULOS" %>
 
 <p>
-  <strong>Codigo:</strong>
-  <%=h @identificacao.codigo %>
+  <strong>Código:</strong><%=h @identificacao.codigo %>
 </p>
 <p>
-  <strong>Livro:</strong>
-  <%=h @identificacao.livro %>
+  <strong>Título:</strong><%=h @identificacao.livro %>
 </p>
 <p>
-  <strong>Subtitulo:</strong>
-  <%=h @identificacao.subtitulo %>
+  <strong>Subtítulo:</strong><%=h @identificacao.subtitulo %>
 </p>
 <p>
-  <strong>Obs:</strong>
-  <%=h @identificacao.obs %>
+  <strong>Observação:</strong><%=h @identificacao.obs %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_identificacao_path(@identificacao) %> |
-  <%= link_to "Destroy", @identificacao, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", identificacaos_path %>
+  | <%= link_to "Editar", edit_identificacao_path(@identificacao) %> |
+  <%= link_to "Apagar", @identificacao, :confirm => 'Tem certeza?', :method => :delete %> |
+  <%= link_to "Listar", identificacaos_path %> |
 </p>

@@ -14,7 +14,7 @@ class AutoresController < ApplicationController
   def create
     @autor = Autor.new(params[:autor])
     if @autor.save
-      flash[:notice] = "Successfully created autor."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @autor
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class AutoresController < ApplicationController
   def update
     @autor = Autor.find(params[:id])
     if @autor.update_attributes(params[:autor])
-      flash[:notice] = "Successfully updated autor."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @autor
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class AutoresController < ApplicationController
   def destroy
     @autor = Autor.find(params[:id])
     @autor.destroy
-    flash[:notice] = "Successfully destroyed autor."
+    flash[:notice] = "APAGADO COM SUCESSO."
     redirect_to autores_url
   end
 end
