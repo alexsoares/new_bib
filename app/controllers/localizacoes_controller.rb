@@ -13,6 +13,7 @@ class LocalizacoesController < ApplicationController
 
   def create
     @localizacao = Localizacao.new(params[:localizacao])
+    @localizacao.add_unidade(current_user.unidade_id)   
     if @localizacao.save
       flash[:notice] = "Successfully created localizacao."
       redirect_to @localizacao

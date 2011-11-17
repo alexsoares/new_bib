@@ -26,7 +26,7 @@
   </p>
   <p>
     <%= f.label :localizacao_id %><br />
-    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
+    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:local_guardado, :include_blank => "Selecione" %>
   </p>
   <p>
     <%= f.label :obs %><br />

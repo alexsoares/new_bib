@@ -75,6 +75,7 @@ class LivrosController < ApplicationController
   end
   def create_local
     @localizacao = Localizacao.new(params[:localizacao])
+    @localizacao.add_unidade(current_user.unidade_id)
     if @localizacao.save
       @localizacoes = Localizacao.all
       @livro = Livro.new
@@ -93,7 +94,7 @@ class LivrosController < ApplicationController
     @identificacoes  = Identificacao.all
     @areas = Area.all(:order => 'nome ASC')
     @editoras = Editora.all(:order => 'nome ASC') 
-    @localizacoes = Localizacao.all
+    @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id])
     
   end
 end

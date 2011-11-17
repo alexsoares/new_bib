@@ -3,4 +3,5 @@ class Unidade < ActiveRecord::Base
   has_many :users
   belongs_to :unidades_gpd
   belongs_to :tipo
+  has_many :localizacoes
 end
