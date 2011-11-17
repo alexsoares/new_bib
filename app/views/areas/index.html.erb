@@ -1,4 +1,4 @@
-<% title "Areas" %>
+<% title "AREA DO CONHECIMENTO" %>
 
 <table>
   <tr>
@@ -7,11 +7,11 @@
   <% for area in @areas %>
     <tr>
       <td><%=h area.nome %></td>
-      <td><%= link_to "Exibir", area %></td>
-      <td><%= link_to "Alterar", edit_area_path(area) %></td>
-      <td><%= link_to "Apagar", area, :confirm => 'Tem certeza?', :method => :delete %></td>
+      <td>| <%= link_to "Exibir", area %></td>
+      <td>| <%= link_to "Alterar", edit_area_path(area) %></td>
+      <td>| <%= link_to "Apagar", area, :confirm => 'Tem certeza?', :method => :delete %> |</td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "Novo", new_area_path %></p>
+<p>| <%= link_to "Cadastrar", new_area_path %> |</p>

@@ -14,7 +14,7 @@ class EditorasController < ApplicationController
   def create
     @editora = Editora.new(params[:editora])
     if @editora.save
-      flash[:notice] = "Successfully created editora."
+      flash[:notice] = "CASTRADO COM SUCESSO."
       redirect_to @editora
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class EditorasController < ApplicationController
   def update
     @editora = Editora.find(params[:id])
     if @editora.update_attributes(params[:editora])
-      flash[:notice] = "Successfully updated editora."
+      flash[:notice] = "CASTRADO COM SUCESSO."
       redirect_to @editora
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class EditorasController < ApplicationController
   def destroy
     @editora = Editora.find(params[:id])
     @editora.destroy
-    flash[:notice] = "Successfully destroyed editora."
+    flash[:notice] = "APAGADO COM SUCESSO."
     redirect_to editoras_url
   end
 end

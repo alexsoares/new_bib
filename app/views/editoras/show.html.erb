@@ -1,20 +1,17 @@
-<% title "Editora" %>
+<% title "EDITORA" %>
 
 <p>
-  <strong>Nome:</strong>
-  <%=h @editora.nome %>
+  <strong>Nome:</strong><%=h @editora.nome %>
 </p>
 <p>
-  <strong>Cidade:</strong>
-  <%=h @editora.cidade %>
+  <strong>Cidade:</strong><%=h @editora.cidade %>
 </p>
 <p>
-  <strong>Pais:</strong>
-  <%=h @editora.pais %>
+  <strong>Pais:</strong><%=h @editora.pais %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_editora_path(@editora) %> |
-  <%= link_to "Destroy", @editora, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", editoras_path %>
+  | <%= link_to "Editar", edit_editora_path(@editora) %> |
+  <%= link_to "Apagar", @editora, :confirm => 'Tem certeza?', :method => :delete %> |
+  <%= link_to "Listar", editoras_path %> |
 </p>

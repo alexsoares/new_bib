@@ -27,7 +27,7 @@ class LivrosController < ApplicationController
     #p = params[:livro][:assuntos]
     #@assunto = @livro.assuntos.build(params[:assuntos]) unless params[:assuntos][:descricao].blank?
     if @livro.save
-      flash[:notice] = "Successfully created livro."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @livro
     else
       render :action => 'new'
@@ -41,7 +41,7 @@ class LivrosController < ApplicationController
   def update
     @livro = Livro.find(params[:id])
     if @livro.update_attributes(params[:livro])
-      flash[:notice] = "Successfully updated livro."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @livro
     else
       render :action => 'edit'
@@ -51,7 +51,7 @@ class LivrosController < ApplicationController
   def destroy
     @livro = Livro.find(params[:id])
     @livro.destroy
-    flash[:notice] = "Successfully destroyed livro."
+    flash[:notice] = "APAGADO COM SUCESSO."
     redirect_to livros_url
   end
   def visualizar_check
@@ -68,7 +68,7 @@ class LivrosController < ApplicationController
       @livro = Livro.new
       render :update do |page|
         page.replace_html 'assuntos', :partial => "campos_assunto"
-        page.replace_html 'aviso', :text => "Assunto Criado, continue o cadastro. Lembre-se selecione o assunto."
+        page.replace_html 'aviso', :text => "ASSUNTO CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O ASSUNTO"
       end
 
     end
@@ -80,7 +80,7 @@ class LivrosController < ApplicationController
       @livro = Livro.new
       render :update do |page|
         page.replace_html 'local', :partial => "campos_local"
-        page.replace_html 'aviso', :text => "Nova localização Cadastrada, continue o cadastro."
+        page.replace_html 'aviso', :text => "NOVA LOCALIZAÇÃO CADASTRADA, CONTINUE O CADASTRO"
       end
 
     end
@@ -91,8 +91,8 @@ class LivrosController < ApplicationController
   def load_resources
     @assuntos = Assunto.all
     @identificacoes  = Identificacao.all
-    @areas = Area.all
-    @editoras = Editora.all
+    @areas = Area.all(:order => 'nome ASC')
+    @editoras = Editora.all(:order => 'nome ASC') 
     @localizacoes = Localizacao.all
     
   end

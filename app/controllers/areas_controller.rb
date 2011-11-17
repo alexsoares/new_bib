@@ -14,7 +14,7 @@ class AreasController < ApplicationController
   def create
     @area = Area.new(params[:area])
     if @area.save
-      flash[:notice] = "Successfully created area."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @area
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class AreasController < ApplicationController
   def update
     @area = Area.find(params[:id])
     if @area.update_attributes(params[:area])
-      flash[:notice] = "Successfully updated area."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @area
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class AreasController < ApplicationController
   def destroy
     @area = Area.find(params[:id])
     @area.destroy
-    flash[:notice] = "Successfully destroyed area."
+    flash[:notice] = "APAGADO COM SUCESSO."
     redirect_to areas_url
   end
 end

@@ -1,4 +1,4 @@
-<% title "Autor" %>
+<% title "AUTOR" %>
 
 <p>
   <strong>Nome:</strong>
@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_autor_path(@autor) %> |
-  <%= link_to "Destroy", @autor, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", autores_path %>
+  | <%= link_to "Editar", edit_autor_path(@autor) %> |
+  <%= link_to "Apagar", @autor, :confirm => 'Tem certeza?', :method => :delete %> |
+  <%= link_to "Listar", autores_path %> |
 </p>

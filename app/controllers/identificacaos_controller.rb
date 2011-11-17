@@ -14,7 +14,7 @@ class IdentificacaosController < ApplicationController
   def create
     @identificacao = Identificacao.new(params[:identificacao])
     if @identificacao.save
-      flash[:notice] = "Successfully created identificacao."
+      flash[:notice] = "CASTRADO COM SUCESSO."
       redirect_to @identificacao
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class IdentificacaosController < ApplicationController
   def update
     @identificacao = Identificacao.find(params[:id])
     if @identificacao.update_attributes(params[:identificacao])
-      flash[:notice] = "Successfully updated identificacao."
+      flash[:notice] = "CASTRADO COM SUCESSO."
       redirect_to @identificacao
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class IdentificacaosController < ApplicationController
   def destroy
     @identificacao = Identificacao.find(params[:id])
     @identificacao.destroy
-    flash[:notice] = "Successfully destroyed identificacao."
+    flash[:notice] = "APAGADO COM SUCESSO."
     redirect_to identificacaos_url
   end
 end
