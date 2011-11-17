@@ -1,13 +1,12 @@
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
   <p><div id="aviso"></div></p>
-  <table>
+  <table border="2">
     <tr>
-      <td>
+      <td colspan="2">
         <%= f.label :assunto_id, "Selecione o(s) assunto(s). " %>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => "Novo Assunto" %>
         <div id="assuntos"><%= render "campos_assunto"%></div>        
-        
       </td>
     </tr>
     <tr>
@@ -15,6 +14,7 @@
         <%= f.label :identificacao_id,"Identificação do Livro: " %>
         <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
       </td>
+
       <td>
         <%= f.label :area_id,"Area abordada: " %>
         <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
@@ -22,8 +22,8 @@
     </tr>
     <tr>
       <td>
-        <%= f.label :localizacao_id,"Selecione a localização. Se necessário => " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline" %>
+        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => "Nova Localização" %>
         <div id="local"><%= render "campos_local"%></div>        
       </td>
       <td>
