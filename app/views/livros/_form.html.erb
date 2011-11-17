@@ -1,62 +1,76 @@
-
-<%= javascript_include_tag "jquery.colorbox","colorbox.js"%>
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
   <p><div id="aviso"></div></p>
-  <p>
-      <%= f.label :assunto_id %>
-      <div id="assuntos"><%= render "campos_assunto"%></div>
-      <%= link_to "Cadastrar Assuntos", "#inline_assunto", :class =>"inline" %>
-  </p>
-  <p>
-    <%= f.label :identificacao_id,"Identificação do Livro" %><br />
-    <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :area_id %><br />
-    <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :editora_id %><br />
-    <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :localizacao_id,"Localização" %>
-    <div id="local"><%= render "campos_local"%></div>
-    <%= link_to "Cadastrar localizacao", "#inline_local", :class =>"inline" %>
-  </p>
-  <p>
-    <%= f.label :tombo_l %><br />
-    <%= f.text_field :tombo_l %>
-  </p>
-  <p>
-    <%= f.label :colecao %><br />
-    <%= f.text_field :colecao %>
-  </p>
-  <p>
-    <%= f.label :edicao %><br />
-    <%= f.text_field :edicao %>
-  </p>
-  <p>
-    <%= f.label :data_edicao %><br />
-    <%= f.date_select :data_edicao %>
-  </p>
-  <p>
-    <%= f.label :local_edicao %><br />
-    <%= f.text_field :local_edicao %>
-  </p>
-  <p>
-    <%= f.label :resumo %><br />
-    <%= f.text_area :resumo %>
-  </p>
-  <p>
-    <%= f.label :obs %><br />
-    <%= f.text_area :obs %>
-  </p>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :assunto_id, "Selecione o(s) assunto(s). Se necessário => " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline" %>
+        <div id="assuntos"><%= render "campos_assunto"%></div>        
+        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :identificacao_id,"Identificação do Livro: " %>
+        <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
+      </td>
+      <td>
+        <%= f.label :area_id,"Area abordada: " %>
+        <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :localizacao_id,"Selecione a localização. Se necessário => " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline" %>
+        <div id="local"><%= render "campos_local"%></div>        
+      </td>
+      <td>
+        <%= f.label :tombo_l %><br />
+        <%= f.text_field :tombo_l %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :colecao %><br />
+        <%= f.text_field :colecao %>        
+      </td>
+      <td>
+        <%= f.label :edicao %><br />
+        <%= f.text_field :edicao %>        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :editora_id %><br />
+        <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
+      </td>
+      <td>
+        <%= f.label :data_edicao %><br />
+        <%= f.date_select :data_edicao %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <%= f.label :local_edicao %><br />
+        <%= f.text_field :local_edicao %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :resumo %><br />
+        <%= f.text_area :resumo %>
+      </td>
+      <td>
+        <%= f.label :obs %><br />
+        <%= f.text_area :obs %>
+      </td>
+    </tr>
 
-  <p><%= f.submit %></p>
-<% end %>
-    
+    <tr><td colspan="2"><%= f.submit %></td></tr>
+  <% end %>
+</table>
     
     <%= render "form_assunto" %>
     <%= render "form_local" %>

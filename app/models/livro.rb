@@ -9,7 +9,7 @@ class Livro < ActiveRecord::Base
   belongs_to :localizacao
   #accepts_nested_attributes_for :assuntos, :reject_if => lambda {|a| a[:descricao].blank?}, :allow_destroy => true
   #accepts_nested_attributes_for :localizacao, :reject_if => lambda {|a| a[:local_guardado].blank?}, :allow_destroy => true
-
+  
 
   def auto_inc_tombo_seduc
     self.tombo_seduc =+ 1

@@ -3,8 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
-    <%= stylesheet_link_tag 'application','colorbox','geral' %>
-    <%= javascript_include_tag 'jquery-1.4.2.js','jquery-ui','jrails','application.js' %>
+    <%= stylesheet_link_tag 'application','colorbox','geral',"jquery-ui-1.8.16.custom","jquery.multiselect","ui.selectmenu" %>
+    <%= javascript_include_tag 'jquery-1.6.2.min.js','jquery-ui-1.8.16.custom.min','jrails',"jquery.colorbox","colorbox.js","jquery.multiselect.min","ui.selectmenu",'application.js' %>
+
     <%= yield(:head) %>
   </head>
   <body>
@@ -15,8 +16,6 @@
         <li><%= link_to "Livros", new_livro_path %></li>
         <li><%= link_to "Mapas", new_mapa_path %></li>
         <li><%= link_to "Periodicos", new_periodico_path %></li>
-      </ul>
-      <ul>
         <li><%= link_to "Áreas", new_area_path %></li>
         <li><%= link_to "Identificador", new_identificacao_path %></li>
       </ul>
