@@ -1,4 +1,4 @@
 <div class="fields">
         <%= select_tag("livro[assunto_ids][]", options_for_select(@assuntos.collect { |ff| [ff.descricao, ff.id] }, @livro.assuntos.collect { |fs| fs.id }),
-                   {:multiple=>true, :id => "livro_assunto_ids", :size => 6) %>
+                   {:multiple=>true, :id => "livro_assunto_ids"}) %>
 </div>

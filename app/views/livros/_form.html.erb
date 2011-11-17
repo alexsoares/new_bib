@@ -4,8 +4,8 @@
   <table>
     <tr>
       <td>
-        <%= f.label :assunto_id, "Selecione o(s) assunto(s). Se necessário => " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline" %>
+        <%= f.label :assunto_id, "Selecione o(s) assunto(s). " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => "Novo Assunto" %>
         <div id="assuntos"><%= render "campos_assunto"%></div>        
         
       </td>
