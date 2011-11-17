@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tipos
+
   map.resources :unidades
 
   map.resources :musicas

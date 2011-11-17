@@ -46,3 +46,14 @@ production:
   username: root
   password: s3inf0
   socket: /var/run/mysqld/mysqld.sock
+
+common: &common
+  adapter: postgresql
+  encoding: latin1
+  username: biblos
+  password: b!bl0s2011seduc # from psql setup, see Postgresql
+
+autenticacao_development:
+  <<: *common
+  database: gpd_americana
+  host: 187.17.113.200

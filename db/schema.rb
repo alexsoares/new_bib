@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111110175329) do
+ActiveRecord::Schema.define(:version => 20111117161434) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -105,12 +105,11 @@ ActiveRecord::Schema.define(:version => 20111110175329) do
   end
 
   create_table "livros", :force => true do |t|
-    t.integer  "assunto_id",       :null => false
     t.integer  "identificacao_id"
     t.integer  "area_id"
     t.integer  "editora_id"
     t.integer  "localizacao_id"
-    t.string   "tombo_seduc"
+    t.integer  "tombo_seduc",      :default => 0
     t.string   "tombo_l"
     t.string   "colecao"
     t.string   "edicao"
@@ -187,9 +186,33 @@ ActiveRecord::Schema.define(:version => 20111110175329) do
   add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
   add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
 
+  create_table "tipos", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "unidades", :force => true do |t|
     t.string   "nome"
-    t.integer  "tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "unidades_gpd_id"
+    t.string   "endereco"
+    t.integer  "num"
+    t.string   "complemento"
+    t.string   "bairro"
+    t.string   "cidade"
+    t.string   "fone"
+    t.string   "email"
+    t.string   "diretor"
+    t.string   "coordenador"
+    t.string   "responsavel_bib"
+    t.text     "obs"
+    t.integer  "tipo_id"
+  end
+
+  create_table "unidades_gpds", :force => true do |t|
+    t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
