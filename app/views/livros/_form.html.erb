@@ -1,7 +1,7 @@
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
   <p><div id="aviso"></div></p>
-  <table border="2">
+  <table align="center" >
     <tr>
       <td colspan="2">
         <%= f.label :assunto_id, "Selecione o(s) assunto(s). " %>
@@ -28,17 +28,17 @@
       </td>
       <td>
         <%= f.label :tombo_l %><br />
-        <%= f.text_field :tombo_l %>
+        <%= f.text_field :tombo_l, :size => "25" %>
       </td>
     </tr>
     <tr>
       <td>
         <%= f.label :colecao %><br />
-        <%= f.text_field :colecao %>        
+        <%= f.text_field :colecao, :size => "25" %>
       </td>
       <td>
         <%= f.label :edicao %><br />
-        <%= f.text_field :edicao %>        
+        <%= f.text_field :edicao, :size => "25" %>
       </td>
     </tr>
     <tr>
@@ -48,27 +48,27 @@
       </td>
       <td>
         <%= f.label :data_edicao %><br />
-        <%= f.date_select :data_edicao %>
+        <%= datepicker_tag(:livro,:data_edicao,{ :size => 10},{:dateFormat => "'dd-mm-yy'", :changeYear => true, :changeMonth => true, :yearRange => "'-60:+0'", :buttonImage => "'/stylesheets/images/datepicker.gif'",:showOn => "'both'" }) %>
       </td>
     </tr>
     <tr>
       <td colspan="2">
         <%= f.label :local_edicao %><br />
-        <%= f.text_field :local_edicao %>
+        <%= f.text_field :local_edicao, :size => "25" %>
       </td>
     </tr>
     <tr>
       <td>
         <%= f.label :resumo %><br />
-        <%= f.text_area :resumo %>
+        <%= f.text_area :resumo, :size => "25x5" %>
       </td>
       <td>
         <%= f.label :obs %><br />
-        <%= f.text_area :obs %>
+        <%= f.text_area :obs, :size => "25x5" %>
       </td>
     </tr>
 
-    <tr><td colspan="2"><%= f.submit %></td></tr>
+    <tr><td colspan="2" align="center"><%= f.submit "Salvar" %></td></tr>
   <% end %>
 </table>
     

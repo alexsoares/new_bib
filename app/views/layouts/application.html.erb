@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <title><%= "Sistema de Biblioteca - BibliOS. Você está em: #{h(yield(:title) || 'Sem titulo')}" %></title>
     <%= stylesheet_link_tag 'application','colorbox','geral',"jquery-ui-1.8.16.custom","jquery.multiselect","ui.selectmenu" %>
     <%= javascript_include_tag 'jquery-1.6.2.min.js','jquery-ui-1.8.16.custom.min','jrails',"jquery.colorbox","colorbox.js","jquery.multiselect.min","ui.selectmenu",'application.js' %>
 

@@ -1,40 +1,32 @@
-<% title "Livros" %>
-
-<table>
+<% title "Livros Cadastrados" %>
+<div class="tabs">
+<table border="1">
   <tr>
     
     <th>Identificacao</th>
     <th>Area</th>
     <th>Editora</th>
-    <th>Localizacao</th>
     <th>Tombo Seduc</th>
     <th>Tombo L</th>
     <th>Colecao</th>
     <th>Edicao</th>
-    <th>Data Edicao</th>
-    <th>Local Edicao</th>
-    <th>Resumo</th>
-    <th>Obs</th>
   </tr>
   <% for livro in @livros %>
     <tr>
-      <td><%=h livro.identificacao %></td>
-      <td><%=h livro.area %></td>
-      <td><%=h livro.editora %></td>
-      <td><%=h livro.localizacao %></td>
+      <td><%= link_to livro.identificacao.livro, "#inline_livro", :class =>"inline", :title => "Informações livro" %></td>
+      <td><%=h livro.area.nome %></td>
+      <td><%=h livro.editora.nome %></td>
       <td><%=h livro.tombo_seduc %></td>
       <td><%=h livro.tombo_l %></td>
       <td><%=h livro.colecao %></td>
       <td><%=h livro.edicao %></td>
-      <td><%=h livro.data_edicao %></td>
-      <td><%=h livro.local_edicao %></td>
-      <td><%=h livro.resumo %></td>
-      <td><%=h livro.obs %></td>
-      <td><%= link_to "Show", livro %></td>
-      <td><%= link_to "Edit", edit_livro_path(livro) %></td>
-      <td><%= link_to "Destroy", livro, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "25x25"), livro, :title => "Exibir livro" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_livro_path(livro), :title => "Editar livro" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), livro, :confirm => 'Are you sure?', :method => :delete, :title => "Excluir livro" %></td>
     </tr>
+    <%= render "form_livro", :livro => livro %>
   <% end %>
 </table>
+<p><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "25x25"), new_livro_path, :title => "Cadastrar livro" %></p>
+</div>
 
-<p><%= link_to "New Livro", new_livro_path %></p>

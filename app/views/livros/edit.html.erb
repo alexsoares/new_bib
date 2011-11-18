@@ -1,8 +1,8 @@
-<% title "Edit Livro" %>
-
-<%= render :partial => 'form' %>
-
+<% title "Alterar Cadastro do livro" %>
+<div class="tabs">
+  <%= render :partial => 'form' %>
+</div>
 <p>
-  <%= link_to "Show", @livro %> |
-  <%= link_to "View All", livros_path %>
+  <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "25x25"), @livro %> |
+  <%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), livros_path %>
 </p>

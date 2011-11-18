@@ -4,6 +4,9 @@ $("#livro_assunto_ids").multiselect({
    selectedText: "# of # selected",
    noneSelectedText: 'Selecione os assuntos'
 });
+$( "input:submit" ).button();
+$( "#datepicker" ).datepicker();
+$( ".tabs" ).tabs();
 
 function remove_fields(link) {
   $(link).prev("input[type=hidden]").val("1");
