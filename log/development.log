@@ -6198,3 +6198,321 @@ Rendered livros/_form_livro (10.8ms)
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
 Rendered livros/_form_livro (9.5ms)
 Completed in 507ms (View: 279, DB: 14) | 200 OK [http://localhost/livros]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#index (for 127.0.0.1 at 2011-11-18 12:04:46) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;36;1mLivro Load (0.1ms)[0m   [0;1mSELECT * FROM `livros` [0m
+Rendering template within layouts/application
+Rendering livros/index
+  [4;35;1mLivro Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mIdentificacao Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.7ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mArea Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mEditora Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1massuntos_livros Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 1 ) [0m
+  [4;36;1mAssunto Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mLocalizacao Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (33.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 2 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 3 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 4 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (10.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.3ms)
+Completed in 446ms (View: 251, DB: 17) | 200 OK [http://localhost/livros]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#index (for 127.0.0.1 at 2011-11-18 12:05:59) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (0.6ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;36;1mLivro Load (0.2ms)[0m   [0;1mSELECT * FROM `livros` [0m
+Rendering template within layouts/application
+Rendering livros/index
+  [4;35;1mLivro Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mIdentificacao Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mArea Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mEditora Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1massuntos_livros Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 1 ) [0m
+  [4;36;1mAssunto Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mLocalizacao Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (35.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 2 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 3 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (8.8ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 4 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (8.9ms)
+Completed in 498ms (View: 263, DB: 21) | 200 OK [http://localhost/livros]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#index (for 127.0.0.1 at 2011-11-18 12:07:11) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;36;1mLivro Load (0.2ms)[0m   [0;1mSELECT * FROM `livros` [0m
+Rendering template within layouts/application
+Rendering livros/index
+  [4;35;1mLivro Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mIdentificacao Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mArea Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mEditora Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1massuntos_livros Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 1 ) [0m
+  [4;36;1mAssunto Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mLocalizacao Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (31.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 2 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (8.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 3 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.8ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 4 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (8.7ms)
+Completed in 422ms (View: 238, DB: 16) | 200 OK [http://localhost/livros]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#index (for 127.0.0.1 at 2011-11-18 12:07:35) [GET]
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;36;1mLivro Load (0.2ms)[0m   [0;1mSELECT * FROM `livros` [0m
+Rendering template within layouts/application
+Rendering livros/index
+  [4;35;1mLivro Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mIdentificacao Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mArea Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mEditora Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1massuntos_livros Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 1 ) [0m
+  [4;36;1mAssunto Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mLocalizacao Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (48.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 2 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (8.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 3 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 4 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (8.6ms)
+Completed in 527ms (View: 301, DB: 21) | 200 OK [http://localhost/livros]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#index (for 127.0.0.1 at 2011-11-18 12:08:03) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;36;1mLivro Load (0.1ms)[0m   [0;1mSELECT * FROM `livros` [0m
+Rendering template within layouts/application
+Rendering livros/index
+  [4;35;1mLivro Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mIdentificacao Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mArea Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mEditora Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1massuntos_livros Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 1 ) [0m
+  [4;36;1mAssunto Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mLocalizacao Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (33.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 2 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 3 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 4 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (10.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.2ms)
+Completed in 445ms (View: 253, DB: 16) | 200 OK [http://localhost/livros]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#index (for 127.0.0.1 at 2011-11-18 12:10:08) [GET]
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mArea Load (0.3ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.3ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;36;1mLivro Load (0.2ms)[0m   [0;1mSELECT * FROM `livros` [0m
+Rendering template within layouts/application
+Rendering livros/index
+  [4;35;1mLivro Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mIdentificacao Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mArea Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mEditora Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1massuntos_livros Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 1 ) [0m
+  [4;36;1mAssunto Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mLocalizacao Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (42.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.2ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 2 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (11.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 3 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (11.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;36;1mAssunto Load (0.2ms)[0m   [0;1mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 4 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (10.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 5 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+Rendered livros/_form_livro (9.6ms)
+Completed in 525ms (View: 304, DB: 23) | 200 OK [http://localhost/livros]
