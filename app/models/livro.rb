@@ -5,6 +5,7 @@ class Livro < ActiveRecord::Base
   
   belongs_to :identificacao
   belongs_to :area
+  belongs_to :autor
   belongs_to :editora
   belongs_to :localizacao
   #accepts_nested_attributes_for :assuntos, :reject_if => lambda {|a| a[:descricao].blank?}, :allow_destroy => true

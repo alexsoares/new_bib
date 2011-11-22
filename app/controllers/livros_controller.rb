@@ -87,11 +87,21 @@ class LivrosController < ApplicationController
     end
   end
 
+ def subtitulo
+  session[:identificacao] = params[:livro_identificacao_id]
+   #@identificacao = Identificacao.find(:all, :conditions => ["id=?", session[:identificacao]])
+   @identificacao = Identificacao.find_by_id(session[:identificacao]).subtitulo
+   #$teste = @identificacao.subtitulo
+   render :partial => 'subtitulo'
+
+   end
+
   protected
 
   def load_resources
     @assuntos = Assunto.all
-    @identificacoes  = Identificacao.all
+    @identificacoes  = Identificacao.all(:order => 'livro ASC')
+    @autores  = Autor.all
     @areas = Area.all(:order => 'nome ASC')
     @editoras = Editora.all(:order => 'nome ASC') 
     @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id])

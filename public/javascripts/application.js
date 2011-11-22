@@ -1,5 +1,8 @@
 $(document).ready(function() {
-$('#livro_identificacao_id,#livro_area_id,#livro_localizacao_id,#livro_editora_id').selectmenu({width: 150,style:'dropdown', menuWidth: 150});
+$('#livro_autor_id,#livro_identificacao_id,#livro_localizacao_id').selectmenu({width: 550,style:'dropdown', menuWidth: 550});
+$('#livro_area_id, ,#livro_editora_id').selectmenu({width: 300,style:'dropdown', menuWidth: 300})
+$('#livro_data_edicao').selectmenu({width: 100,style:'dropdown', menuWidth: 100})
+
 $("#livro_assunto_ids").multiselect({
    selectedText: "# of # selected",
    noneSelectedText: 'Selecione os assuntos'

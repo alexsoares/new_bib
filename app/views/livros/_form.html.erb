@@ -3,6 +3,79 @@
   <p><div id="aviso"></div></p>
   <table align="center" >
     <tr>
+      <td colspan="3">
+        <%= f.label :identificacao_id,"Título: " %>
+        <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
+      </td>
+    <tr>
+      <td colspan="3">
+        <%= observe_field 'livro_identificacao_id',
+                          :with => :livro_identificacao_id,
+                          :url => { :action => 'subtitulo' } ,
+                          :update => "subtitulo"%>
+        <div id= 'subtitulo'></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= f.label :autor_id,"Autor: " %>
+        <%= f.collection_select :autor_id ,@autores,:id,:nome, :include_blank => "Selecione" %>
+      </td>
+
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= f.label :colecao, "Coleção:" %><br />
+        <%= f.text_field :colecao, :size => "59" %>
+      </td>
+    </tr>
+    <tr>
+       <td>
+        <%= f.label :area_id,"Area: " %>
+        <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
+      </td>
+      <td>
+        <%= f.label :tombo_l, "Tombo Local:"%><br />
+        <%= f.text_field :tombo_l, :size => "10" %>
+      </td>
+      <td>
+        <%= f.label :tombo_l, "Tombo SEDUC:"%><br />
+        
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => "Nova Localização" %>
+        <div id="local"><%= render "campos_local"%></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :editora_id %><br />
+        <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
+      </td>
+      <td colspan="2">
+        <br />
+        <%= f.text_field :edicao, :size => "1" %>ª<%= f.label :edicao, " Edição" %>
+      </td>
+    <tr/>
+    <tr>
+      <td>
+        <%= f.label :local_edicao, "Local Edição:" %><br />
+        <%= f.text_field :local_edicao, :size => "32" %>
+      </td>
+      <td colspan="2">
+        <%= f.label :data_edicao, "Data:" %><br />
+        <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
+     </td>
+    </tr>
+    <tr>
+      <td><b><i>
+         Para selecionar mais de um assunto <br/> selecionar as opções desejadas ===>
+      </i></b>
+      </td>
       <td colspan="2">
         <%= f.label :assunto_id, "Selecione o(s) assunto(s). " %>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => "Novo Assunto" %>
@@ -11,64 +84,17 @@
     </tr>
     <tr>
       <td>
-        <%= f.label :identificacao_id,"Identificação do Livro: " %>
-        <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
-      </td>
-
-      <td>
-        <%= f.label :area_id,"Area abordada: " %>
-        <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= f.label :localizacao_id,"Selecione a localização: " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => "Nova Localização" %>
-        <div id="local"><%= render "campos_local"%></div>        
-      </td>
-      <td>
-        <%= f.label :tombo_l %><br />
-        <%= f.text_field :tombo_l, :size => "25" %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= f.label :colecao %><br />
-        <%= f.text_field :colecao, :size => "25" %>
-      </td>
-      <td>
-        <%= f.label :edicao %><br />
-        <%= f.text_field :edicao, :size => "25" %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= f.label :editora_id %><br />
-        <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
-      </td>
-      <td>
-        <%= f.label :data_edicao %><br />
-        <%= datepicker_tag(:livro,:data_edicao,{ :size => 10},{:dateFormat => "'dd-mm-yy'", :changeYear => true, :changeMonth => true, :yearRange => "'-60:+0'", :buttonImage => "'/stylesheets/images/datepicker.gif'",:showOn => "'both'" }) %>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <%= f.label :local_edicao %><br />
-        <%= f.text_field :local_edicao, :size => "25" %>
-      </td>
-    </tr>
-    <tr>
-      <td>
         <%= f.label :resumo %><br />
-        <%= f.text_area :resumo, :size => "25x5" %>
+        <%= f.text_area :resumo, :size => "30x3" %>
       </td>
-      <td>
+      <td colspan="2">
         <%= f.label :obs %><br />
-        <%= f.text_area :obs, :size => "25x5" %>
+        <%= f.text_area :obs, :size => "24x3" %>
       </td>
     </tr>
-
-    <tr><td colspan="2" align="center"><%= f.submit "Salvar" %></td></tr>
+    <tr>
+      <td colspan="3"><%= f.submit "Salvar" %></td>
+    </tr>
   <% end %>
 </table>
     

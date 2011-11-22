@@ -1,6 +1,15 @@
 <% title "Livro" %>
 
 <p>
+  <strong>Título:</strong>
+  <%=h @livro.identificacao.livro %>
+</p>
+<p>
+  <strong>Subtítulo:</strong>
+  <%=h @livro.identificacao.subtitulo %>
+</p>
+
+<p>
   <strong>Assuntos relacionados:</strong><br />
   <ul>
   <% @livro.assuntos.each do |assunto| %>
@@ -11,10 +20,7 @@
   </ul>
 </p>
 
-<p>
-  <strong>Identificacao:</strong>
-  <%=h @livro.identificacao %>
-</p>
+
 <p>
   <strong>Area:</strong>
   <%=h @livro.area %>

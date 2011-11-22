@@ -12,6 +12,7 @@ class CreateRoles < ActiveRecord::Migration
     add_index "roles_users", "user_id"
     Role.create :name => "admin"
     Role.create :name => "escola"
+    Role.create :name => "responsavel"
 
   end
 

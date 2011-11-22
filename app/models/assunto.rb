@@ -13,4 +13,8 @@ class Assunto < ActiveRecord::Base
 #      self.descricao = self.novo_valor
 #    end
 #  end
+
+  def before_save
+    self.descricao.upcase!
+end
 end
