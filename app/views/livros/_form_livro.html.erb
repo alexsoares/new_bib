@@ -6,39 +6,42 @@
           <h2>Informações do Livro</h2>
            </div>
             <div id="informe">
-              <div id="conteudoEsq">
-                <h2>Informações Literária</h2>
-                <hr>
-                <p>
-                  <strong>Assuntos relacionados:</strong><br />
-                  <ul>
-                  <% livro.assuntos.each do |assunto| %>
-                    <li>
-                      <%= assunto.descricao %>
-                    </li>
-                  <%end%>
-                  </ul>
-                </p>
-                <hr>
-                <p>
-                  <strong>Area:</strong>
-                  <%=h livro.area.nome %><br/>
-                  <strong>Editora:</strong>
-                  <%=h livro.editora.nome %><br/>
-                  <strong>Tombo Seduc:</strong>
-                  <%=h livro.tombo_seduc %><br/>
-                  <strong>Tombo L:</strong>
-                  <%=h livro.tombo_l %><br/>
-                  <strong>Colecao:</strong>
-                  <%=h livro.colecao %><br/>
-                  <strong>Edicao:</strong>
-                  <%=h livro.edicao %><br/>
-                  <strong>Data Edicao:</strong>
-                  <%=h livro.data_edicao %>
-                </p>
-              </div>
-
               <div id="sepEsqcolCentral">
+                <div id="conteudoEsq">
+                  <h2>Informações Literária</h2>
+                  <hr>
+                  <p>
+                    <strong>Assuntos relacionados:</strong><br />
+                    <ul>
+                    <% livro.assuntos.each do |assunto| %>
+                      <li>
+                        <%= assunto.descricao %>
+                      </li>
+                    <%end%>
+                    </ul>
+                  </p>
+                  <hr>
+                  <p>
+                    <strong>Area:</strong>
+                    <%=h livro.area.nome %><br/>
+                    <strong>Editora:</strong>
+                    <%=h livro.editora.nome %><br/>
+                    <strong>Tombo Seduc:</strong>
+                    <%=h livro.tombo_seduc %><br/>
+                    <strong>Tombo L:</strong>
+                    <%=h livro.tombo_l %><br/>
+                    <strong>Colecao:</strong>
+                    <%=h livro.colecao %><br/>
+                    <strong>Edicao:</strong>
+                    <%=h livro.edicao %><br/>
+                    <strong>Data Edicao:</strong>
+                    <%=h livro.data_edicao %><br/>
+                    <strong>Data de aquisição</strong>
+                    <%=h livro.localizacao.data_aquisicao%>
+
+                  </p>
+                </div>
+
                 <div id="colDireita">
                   <h2>Informações de localização</h2>
                   <hr>
@@ -49,10 +52,6 @@
                   <p>
                     <strong>Tipo de aquisição</strong>
                     <%=h livro.localizacao.aquisicao%>
-                  </p>
-                  <p>
-                    <strong>Data de aquisição</strong>
-                    <%=h livro.localizacao.data_aquisicao%>
                   </p>
                 </div>
               </div>
