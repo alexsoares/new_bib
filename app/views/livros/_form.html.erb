@@ -4,7 +4,7 @@
   <table align="center" >
     <tr>
       <td colspan="3">
-        <%= f.label :identificacao_id,"Título: " %>
+        <%= f.label :identificacao_id,"Título: " %><br/>
         <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
       </td>
     <tr>
@@ -18,10 +18,7 @@
     </tr>
     <tr>
       <td colspan="3">
-        <%= f.label :autor_id,"Autor: " %>
-        <%= f.collection_select :autor_id ,@autores,:id,:nome, :include_blank => "Selecione" %>
       </td>
-
     </tr>
     <tr>
       <td colspan="3">
@@ -31,19 +28,16 @@
     </tr>
     <tr>
        <td>
-        <%= f.label :area_id,"Area: " %>
+        <%= f.label :area_id,"Area: " %><br/>
         <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
       </td>
       <td>
         <%= f.label :tombo_l, "Tombo Local:"%><br />
         <%= f.text_field :tombo_l, :size => "10" %>
       </td>
-      <td>
-        <%= f.label :tombo_l, "Tombo SEDUC:"%><br />
-        
+      <td>       
       </td>
     </tr>
-
     <tr>
       <td colspan="3">
         <%= f.label :localizacao_id,"Selecione a localização: " %>
@@ -64,7 +58,7 @@
     <tr>
       <td>
         <%= f.label :local_edicao, "Local Edição:" %><br />
-        <%= f.text_field :local_edicao, :size => "32" %>
+        <%= f.text_field :local_edicao, :size => "30" %>
       </td>
       <td colspan="2">
         <%= f.label :data_edicao, "Data:" %><br />

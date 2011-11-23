@@ -1,3 +1,29 @@
+.tabelas {
+  border: solid 1px;
+  border-collapse: separate;
+  border-color:black;
+  width:100%;
+  }
+  .tabelas th {
+      font-size: 12px;
+      color: black;
+      background-color: #EE9A00;
+      padding: 4px 8px;
+      padding-bottom: 4px;
+      text-align: center;
+    }
+    .tabelas th.titulo {
+        background-color: yellow;
+    }
+    .tabelas th.titulo h1{
+        color:#000;
+    }
+    .tabelas td {
+      padding: 4px 8px;
+      background-color: #F5DEB3;
+      color:black;
+      text-align: center;
+    }
 #aviso{
     color: red;
 }

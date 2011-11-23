@@ -1,25 +1,22 @@
-<% title "Livros Cadastrados" %>
+<% title "Livros Cadastrados", :id =>"livros" %>
 <div class="tabs">
-<table border="1">
+<table class="tabelas">
   <tr>
     
     <th>Identificacao</th>
     <th>Area</th>
     <th>Editora</th>
-    <th>Tombo Seduc</th>
-    <th>Tombo L</th>
     <th>Colecao</th>
-    <th>Edicao</th>
+    <th colspan="3">Administração</th>
+
   </tr>
   <% for livro in @livros %>
     <tr>
       <td><%= link_to livro.identificacao.livro, "#inline_livro", :class =>"inline", :title => "Informações livro" %></td>
       <td><%=h livro.area.nome %></td>
       <td><%=h livro.editora.nome %></td>
-      <td><%=h livro.tombo_seduc %></td>
-      <td><%=h livro.tombo_l %></td>
       <td><%=h livro.colecao %></td>
-      <td><%=h livro.edicao %></td>
+
       <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "25x25"), livro, :title => "Exibir livro" %></td>
       <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_livro_path(livro), :title => "Editar livro" %></td>
       <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), livro, :confirm => 'Are you sure?', :method => :delete, :title => "Excluir livro" %></td>
