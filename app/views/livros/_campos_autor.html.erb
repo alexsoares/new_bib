@@ -1,0 +1,4 @@
+<div class="fields">
+        <%= select_tag("livro[autor_ids][]", options_for_select(@autores.collect { |ff| [ff.nome, ff.id] }, @livro.autores.collect { |fs| fs.id }),
+                   {:multiple=>true, :id => "livro_autor_ids"}) %>
+</div>

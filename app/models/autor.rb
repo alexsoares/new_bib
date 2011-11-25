@@ -1,6 +1,7 @@
 class Autor < ActiveRecord::Base
-  attr_accessible :nome
-  has_many :livros
+  has_and_belongs_to_many :livros
+  #attr_accessible :nome
+  #has_many :livros
 
 def before_save
     self.nome.upcase!

@@ -1,0 +1,35 @@
+<%if @alunos.present?%>
+<table border="1" class="tabelas" width="100%">
+  <tr>
+    <th>Identificação</th>
+    <th>Nome</th>
+    <th>Escola</th>
+    <th>Tipo</th>
+  </tr>
+  
+    <% @alunos.each do |aluno| %>
+      <tr>
+        <td>
+           <% if aluno.aluno_ra.present? %>
+              <%= link_to aluno.aluno_ra, chats_path(:pessoa => aluno.id_pessoa)  %>              
+             <%else%>             
+             <% if aluno.matricula_funcionario.present? %>
+               <%= aluno.matricula_funcionario %>
+             <%end%>
+           <%end%>
+        </td>
+        <td>
+          <%= aluno.nome %>
+        </td>
+        <td><%= aluno.nome_escola %></td>
+        <td>
+           <% if aluno.aluno_ra.present? %>
+            <%= "Aluno" %>
+           <%else%>
+            <%= "Funcionario" %>
+           <%end%>
+        </td>
+      </tr>
+    <%end%>
+</table>
+<%end%>

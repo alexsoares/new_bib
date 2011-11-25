@@ -1,0 +1,36 @@
+<% title "Itens Emprestimo" %>
+
+<p>
+  <strong>Emprestimo:</strong>
+  <%=h @itens_emprestimo.emprestimo %>
+</p>
+<p>
+  <strong>Audio Visual:</strong>
+  <%=h @itens_emprestimo.audio_visual %>
+</p>
+<p>
+  <strong>Livro:</strong>
+  <%=h @itens_emprestimo.livro %>
+</p>
+<p>
+  <strong>Dicionario Enciclopedia:</strong>
+  <%=h @itens_emprestimo.dicionario_enciclopedia %>
+</p>
+<p>
+  <strong>Mapas:</strong>
+  <%=h @itens_emprestimo.mapas %>
+</p>
+<p>
+  <strong>Periodico:</strong>
+  <%=h @itens_emprestimo.periodico %>
+</p>
+<p>
+  <strong>Jogo:</strong>
+  <%=h @itens_emprestimo.jogo %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_itens_emprestimo_path(@itens_emprestimo) %> |
+  <%= link_to "Destroy", @itens_emprestimo, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", itens_emprestimos_path %>
+</p>

@@ -1,0 +1,20 @@
+<% form_for @funcionario do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :matricula %><br />
+    <%= f.text_field :matricula %>
+  </p>
+  <p>
+    <%= f.label :campo_validacao %><br />
+    <%= f.text_field :campo_validacao %>
+  </p>
+  <p>
+    <%= f.label :unidade_id,"Unidades: " %><br/>
+    <%= f.collection_select :unidade_id ,@unidades,:id,:nome, :include_blank => "Selecione" %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

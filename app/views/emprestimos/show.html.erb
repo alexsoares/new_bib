@@ -1,0 +1,20 @@
+<% title "Emprestimo" %>
+
+<p>
+  <strong>Tipo Emprestimo:</strong>
+  <%=h @emprestimo.tipo_emprestimo %>
+</p>
+<p>
+  <strong>Professor:</strong>
+  <%=h @emprestimo.professor %>
+</p>
+<p>
+  <strong>Aluno:</strong>
+  <%=h @emprestimo.aluno %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_emprestimo_path(@emprestimo) %> |
+  <%= link_to "Destroy", @emprestimo, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", emprestimos_path %>
+</p>

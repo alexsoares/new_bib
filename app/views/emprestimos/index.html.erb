@@ -1,0 +1,21 @@
+<% title "Emprestimos" %>
+
+<table>
+  <tr>
+    <th>Tipo Emprestimo</th>
+    <th>Professor</th>
+    <th>Aluno</th>
+  </tr>
+  <% for emprestimo in @emprestimos %>
+    <tr>
+      <td><%=h emprestimo.tipo_emprestimo %></td>
+      <td><%=h emprestimo.professor %></td>
+      <td><%=h emprestimo.aluno %></td>
+      <td><%= link_to "Show", emprestimo %></td>
+      <td><%= link_to "Edit", edit_emprestimo_path(emprestimo) %></td>
+      <td><%= link_to "Destroy", emprestimo, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Emprestimo", new_emprestimo_path %></p>

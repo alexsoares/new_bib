@@ -20,18 +20,29 @@
   </ul>
 </p>
 
+<p>
+  <strong>Autor(es):</strong><br />
+  <ul>
+  <% @livro.autores.each do |autor| %>
+    <li>
+      <%= autor.nome %>
+    </li>
+  <%end%>
+  </ul>
+</p>
+
 
 <p>
   <strong>Area:</strong>
-  <%=h @livro.area %>
+  <%=h @livro.area.nome %>
 </p>
 <p>
   <strong>Editora:</strong>
-  <%=h @livro.editora %>
+  <%=h @livro.editora.nome %>
 </p>
 <p>
   <strong>Localizacao:</strong>
-  <%=h @livro.localizacao %>
+  <%=h @livro.localizacao.local_guardado %>
 </p>
 <p>
   <strong>Tombo Seduc:</strong>
@@ -68,6 +79,6 @@
 
 <p>
   <%= link_to "Edit", edit_livro_path(@livro) %> |
-  <%= link_to "Destroy", @livro, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Destroy", @livro, :confirm => 'Confirma?', :method => :delete %> |
   <%= link_to "View All", livros_path %>
 </p>

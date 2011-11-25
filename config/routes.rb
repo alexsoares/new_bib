@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :emprestimos
+
+  map.resources :itens_emprestimos
+
+  map.resources :funcionarios
+
   map.resources :tipos
 
   map.resources :unidades

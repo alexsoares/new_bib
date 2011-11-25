@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117161434) do
+ActiveRecord::Schema.define(:version => 20111125090211) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -50,6 +50,11 @@ ActiveRecord::Schema.define(:version => 20111117161434) do
     t.datetime "updated_at"
   end
 
+  create_table "autores_livros", :id => false, :force => true do |t|
+    t.integer "autor_id", :null => false
+    t.integer "livro_id", :null => false
+  end
+
   create_table "dicionario_enciclopedias", :force => true do |t|
     t.integer  "editora_id"
     t.integer  "area_id"
@@ -75,6 +80,23 @@ ActiveRecord::Schema.define(:version => 20111117161434) do
     t.datetime "updated_at"
   end
 
+  create_table "emprestimos", :force => true do |t|
+    t.integer  "tipo_emprestimo"
+    t.integer  "professor_id"
+    t.integer  "aluno"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "funcionarios", :force => true do |t|
+    t.string   "nome"
+    t.integer  "matricula"
+    t.integer  "unidade_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "campo_validacao"
+  end
+
   create_table "identificacaos", :force => true do |t|
     t.integer  "codigo"
     t.string   "livro"
@@ -87,6 +109,18 @@ ActiveRecord::Schema.define(:version => 20111117161434) do
   create_table "itens_assuntos", :force => true do |t|
     t.integer  "assunto_id"
     t.string   "sub_assunto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "itens_emprestimos", :force => true do |t|
+    t.integer  "emprestimo_id"
+    t.integer  "audio_visual_id"
+    t.integer  "livro_id"
+    t.integer  "dicionario_enciclopedia_id"
+    t.integer  "mapas_id"
+    t.integer  "periodico_id"
+    t.integer  "jogo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -120,6 +154,7 @@ ActiveRecord::Schema.define(:version => 20111117161434) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "autor"
+    t.boolean  "status",           :default => true
   end
 
   create_table "localizacoes", :force => true do |t|

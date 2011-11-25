@@ -1,7 +1,7 @@
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
   <p><div id="aviso"></div></p>
-  <table align="center" >
+  <table align="center">
     <tr>
       <td colspan="3">
         <%= f.label :identificacao_id,"Título: " %><br/>
@@ -36,6 +36,9 @@
         <%= f.text_field :tombo_l, :size => "10" %>
       </td>
       <td>       
+        <%= f.label :autor_id, "Selecione o(s) autor(es). " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => "Novo Autor" %>
+        <div id="autor"><%= render "campos_autor"%></div>
       </td>
     </tr>
     <tr>

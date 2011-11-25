@@ -1,0 +1,16 @@
+<% title "Funcionario" %>
+
+<p>
+  <strong>Nome:</strong>
+  <%=h @funcionario.nome %>
+</p>
+<p>
+  <strong>Matricula:</strong>
+  <%=h @funcionario.matricula %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_funcionario_path(@funcionario) %> |
+  <%= link_to "Destroy", @funcionario, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", funcionarios_path %>
+</p>

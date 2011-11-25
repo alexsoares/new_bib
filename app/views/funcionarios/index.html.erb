@@ -1,0 +1,21 @@
+<% title "Funcionarios" %>
+
+<table class="grid">
+  <tr>
+    <th width="100">Matricula</th>
+    <th width="300">Nome</th>
+    <th width="150" colspan="3"></th>
+  </tr>
+  <% for funcionario in @funcionarios %>
+    <tr>
+      <td><%=h funcionario.matricula %></td>
+      <td><%=h funcionario.nome %></td>
+      
+      <td><%= link_to "Show", funcionario %></td>
+      <td><%= link_to "Edit", edit_funcionario_path(funcionario) %></td>
+      <td><%= link_to "Destroy", funcionario, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to link_to image_tag("/stylesheets/images/adicionar.png", :size => "25x25"), new_funcionario_path %></p>

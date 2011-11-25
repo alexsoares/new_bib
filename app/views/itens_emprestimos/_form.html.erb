@@ -1,0 +1,32 @@
+<% form_for @itens_emprestimo do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :emprestimo %><br />
+    <%= f.text_field :emprestimo %>
+  </p>
+  <p>
+    <%= f.label :audio_visual %><br />
+    <%= f.text_field :audio_visual %>
+  </p>
+  <p>
+    <%= f.label :livro %><br />
+    <%= f.text_field :livro %>
+  </p>
+  <p>
+    <%= f.label :dicionario_enciclopedia %><br />
+    <%= f.text_field :dicionario_enciclopedia %>
+  </p>
+  <p>
+    <%= f.label :mapas %><br />
+    <%= f.text_field :mapas %>
+  </p>
+  <p>
+    <%= f.label :periodico %><br />
+    <%= f.text_field :periodico %>
+  </p>
+  <p>
+    <%= f.label :jogo %><br />
+    <%= f.text_field :jogo %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
