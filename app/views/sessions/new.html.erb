@@ -1,16 +1,45 @@
-<h1>Log In</h1>
+<div id="posicao_login" >
+ <table width="75%" border="1" rules="all" frame="box">
+  <tr>
+    <td width="48%" rowspan="3">
+       <div id="imagem_login"></div>
+    </td>
+    <td width="25%">
+           <p><font  size="4"><b><u>Sistema de Gerenciamento Informática</u></b></font></p>
+           <p align="center"><font  size="3">LOGIN</font></p>
+          <% form_tag session_path do -%>
+          <font  size="2">
+           <p><%= label_tag 'Usuário' %><br />
+              <%= text_field_tag 'login', @login %></p>
 
-<% form_tag session_path do -%>
-<p><%= label_tag 'login' %><br />
-<%= text_field_tag 'login', @login %></p>
+          <p><%= label_tag 'Senha' %><br/>
+             <%= password_field_tag 'password', nil %></p>
+          </font>
+          <p><%= submit_tag 'Entrar' %></p>
+          <% end %>
+        <br/>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="2" align="center">
+        <font  size="2"><b>Não possui senha?</b></font><br/>
+               <%= button_to 'Cadastrar Usuário/Senha', signup_path%>
+               <%= link_to 'Esqueci a Senha', new_password_path%>
+      </td>
+   </tr>
+   <tr>
+     <td colspan="2">
+        <div id="rodape_login">
+           © 2010 . Prefeitura de Americana - SEDUC - Todos os Direitos Reservados.
+        </div>
+      </td>
+    </tr>
+   </table>
+</div>
+<br/>
 
-<p><%= label_tag 'password' %><br/>
-<%= password_field_tag 'password', nil %></p>
 
-<!-- Uncomment this if you want this functionality
-<p><%= label_tag 'remember_me', 'Remember me' %>
-<%= check_box_tag 'remember_me', '1', @remember_me %></p>
--->
 
-<p><%= submit_tag 'Log in' %></p>
-<% end -%>
+
+
+

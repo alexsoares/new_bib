@@ -1,0 +1,32 @@
+<br/>
+<br/>
+<font size="2">
+<table class="tabelas" border="1" align="center" width="90%">
+  <tr>
+    <td>
+      <h1><center>Esqueceu a senha?</center></h1>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <% form_tag url_for(:action => 'create') do %>
+              Digite e-mail cadastrado no sistema
+              <%= text_field_tag :email, "", :size => 50 %>
+             <%= submit_tag 'Enviar' %>
+            <% end %>
+
+           </td>
+        </tr>
+        <tr>
+        <td align="left">
+          <%= button_to 'Voltar', root_path, {:method => "get"}%>
+         </td>
+       </tr>
+      </table>
+    </td>
+   </tr>
+ </table>
+</font>

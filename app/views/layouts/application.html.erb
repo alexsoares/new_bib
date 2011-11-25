@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= "Sistema de Biblioteca - BibliOS. Você está em: #{h(yield(:title) || 'Sem titulo')}" %></title>
-    <%= stylesheet_link_tag 'application','colorbox','geral',"jquery-ui-1.8.16.custom","jquery.multiselect","ui.selectmenu" %>
+    <%= stylesheet_link_tag 'application','colorbox','geral',"pepper-grinder/jquery-ui-1.8.16.custom","jquery.multiselect","ui.selectmenu" %>
     <%= stylesheet_link_tag '/javascripts/plugins/flexigrid/css/flexigrid.css' %>
-    <%= javascript_include_tag 'jquery-1.7','jquery-ui-1.8.16.custom.min','jrails','plugins/flexigrid/js/flexigrid.pack',"jquery.colorbox","colorbox.js","jquery.multiselect.min","ui.selectmenu","jquery.validate",'application.js' %>
+    <%= javascript_include_tag 'jquery-1.7','jquery-ui-1.8.16.custom.min','jrails',"jquery.colorbox","colorbox.js","jquery.multiselect.min","ui.selectmenu",'plugins/flexigrid/js/flexigrid.pack','application.js' %>
 
     <%= yield(:head) %>
   </head>

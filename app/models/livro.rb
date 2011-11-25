@@ -14,11 +14,11 @@ class Livro < ActiveRecord::Base
   validates_presence_of :area_id, :message => "Campo obrigatório"
   validates_presence_of :colecao, :message => "Campo obrigatório"
   validates_presence_of :tombo_l, :message => "Campo obrigatório"
-  validates_presence_of :autor_id, :message => "Campo obrigatório"
+  validates_presence_of :autor_ids, :message => "Campo obrigatório"
   validates_presence_of :localizacao_id, :message => "Campo obrigatório"
   validates_presence_of :editora_id, :message => "Campo obrigatório"
   validates_presence_of :localizacao_id, :message => "Campo obrigatório"
-  validates_presence_of :assunto_id, :message => "Campo obrigatório"
+  validates_presence_of :assunto_ids, :message => "Campo obrigatório"
   
 
 

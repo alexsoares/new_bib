@@ -1,14 +1,4 @@
 $(document).ready(function() {
-
-
-/*
-Validação
-*/
-
-$("#new_livro").validate();
-
-//Validacao até Aqui
-
 $(".grid").flexigrid({
     showTableToggleBtn: true,
     sortorder: "asc",
