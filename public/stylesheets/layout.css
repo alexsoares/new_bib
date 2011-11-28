@@ -1,0 +1,76 @@
+body {
+   	margin:0 0 5px 0;
+	padding:0;
+	background-color:#444;
+	font:italic 14px/1.5em 
+	Verdana, Arial, Serif;
+}
+#topo{
+	width:auto;
+	height:50px;
+	background-color:#333;
+	border-top:1px solid #666;
+	border-bottom:2px dotted #666;
+	color:#0f0;
+	text-align:center;
+}
+#esquerda {
+	position:absolute;
+	width:190px;
+	top:60px;
+	left:5px;
+	color:#99f;
+	padding-bottom:20px;
+	border-bottom:3px double #666;
+}
+#colunaEsquerda {
+	background:#444;
+}
+#sepEsquerdaColCentral {
+	margin-left:200px;
+	padding-left:2px;
+	background:#666;
+}
+#colCentral {    
+	background:#22232F;
+	color:#991;
+    height:100%;
+	padding:2px 10px;
+	text-align:justify;
+	border-bottom:1px solid #666;
+}
+
+/*Desenhando o Menu*/
+
+#menu {
+
+	}
+#menu ul {
+	margin: 0; padding: 0;
+	margin-left: 6px;
+	}
+
+#menu ul li {
+	display: inline;
+	}
+
+#menu ul li a {
+	background: #444;
+	color: orange;
+	border: 1px black solid;
+	border-bottom: 1px #000 solid;
+	float: left;
+	padding: 5px 7px;
+	margin: 2px;
+	text-decoration: none;
+	}
+
+#menu ul li a:hover {
+	background: #444;
+	color: white;
+	border: black 1px solid;
+	border-bottom: none;
+	text-decoration: none;
+	}
+/*Limite inferior - desenhando Menu*/
+

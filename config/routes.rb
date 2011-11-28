@@ -1,6 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :configuracaos
-
   
   map.resources :emprestimos
 

@@ -3,6 +3,12 @@
   <p><div id="aviso"></div></p>
   <table align="center">
     <tr>
+      <td>
+        <%= f.label :tombo_l, "Tombo Local:"%><br />
+        <%= f.text_field :tombo_l, :size => "10" %>
+      </td>
+    </tr>
+    <tr>
       <td colspan="3">
         <%= f.label :identificacao_id,"Título: " %><br/>
         <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
@@ -23,17 +29,13 @@
     <tr>
       <td colspan="3">
         <%= f.label :colecao, "Coleção:" %><br />
-        <%= f.text_field :colecao, :size => "59" %>
+        <%= f.text_field :colecao, :size => "40" %>
       </td>
     </tr>
     <tr>
        <td>
         <%= f.label :area_id,"Area: " %><br/>
         <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
-      </td>
-      <td>
-        <%= f.label :tombo_l, "Tombo Local:"%><br />
-        <%= f.text_field :tombo_l, :size => "10" %>
       </td>
       <td>       
         <%= f.label :autor_id, "Selecione o(s) autor(es). " %>

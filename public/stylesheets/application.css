@@ -1,8 +1,11 @@
 body {
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
-}
+
+	padding:0;
+	background-color:#444;
+	font:italic 14px/1.5em
+	Verdana, Arial, Serif;
+
+    }
 
 a img {
   border: none;
@@ -18,18 +21,17 @@ a {
   overflow: hidden;
 }
 #menu{
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
+
+  padding: 10px 150px;
 
 }
 #container {
   width: 75%;
   margin: 0 auto;
-  background-color: #bc7932;
+  
+  background-color: white;
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
@@ -86,4 +88,11 @@ a {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+#colCentral {
+	background:#22232F;
+	color:#991;
+	padding:2px 10px;
+	text-align:justify;
+	border-bottom:1px solid #666;
 }
