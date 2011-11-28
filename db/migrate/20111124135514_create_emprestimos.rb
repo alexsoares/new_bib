@@ -4,6 +4,7 @@ class CreateEmprestimos < ActiveRecord::Migration
       t.integer :tipo_emprestimo
       t.references :professor
       t.integer :aluno
+      t.references :unidade
       t.timestamps
     end
   end

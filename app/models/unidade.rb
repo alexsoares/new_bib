@@ -5,4 +5,5 @@ class Unidade < ActiveRecord::Base
   belongs_to :unidades_gpd
   belongs_to :tipo
   has_many :localizacoes
+  has_many :emprestimos
 end

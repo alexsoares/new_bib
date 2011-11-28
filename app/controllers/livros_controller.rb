@@ -1,11 +1,6 @@
 class LivrosController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
-  def teste
-    t = 0
-    y = 0
-    render :text => 'hg'
-  end
   def index
     @livros = Livro.all
   end

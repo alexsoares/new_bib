@@ -153,7 +153,6 @@ ActiveRecord::Schema.define(:version => 20111125090211) do
     t.text     "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "autor"
     t.boolean  "status",           :default => true
   end
 
@@ -262,6 +261,7 @@ ActiveRecord::Schema.define(:version => 20111125090211) do
     t.datetime "updated_at"
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
+    t.string   "password_reset_code"
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
     t.integer  "unidade_id"

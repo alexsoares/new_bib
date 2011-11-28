@@ -113,3 +113,20 @@
 	border-bottom:1px solid #666;
     height:345px;
 }
+#imagem-login {
+   background-image:url(/images/biblioteca_virtual.jpg);
+   background-repeat: no-repeat;
+   background-position:top;
+   text-align: center;
+   color:white;
+   width:100%;
+   height:326px;
+   margin:0;
+   font-weight:bold;
+   border-color:black;
+   border-left: double;
+   border-bottom: double;
+   border-top: double;
+   border-right: double;
+
+}

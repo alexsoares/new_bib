@@ -1,4 +1,4 @@
-<h1>Sign up as a new user</h1>
+<h1>Crie um usuário</h1>
 <% @user.password = @user.password_confirmation = nil %>
 
 <%= error_messages_for :user %>
@@ -9,11 +9,14 @@
 <p><%= f.label :email %><br/>
 <%= f.text_field :email %></p>
 
+<p><%= f.label :unidade_id, "Unidade" %><br/>
+<%= f.collection_select :unidade_id,@unidades,:id,:nome, :include_blank => "Selecione sua unidade" %></p>
+
 <p><%= f.label :password %><br/>
 <%= f.password_field :password %></p>
 
 <p><%= f.label :password_confirmation, 'Confirm Password' %><br/>
 <%= f.password_field :password_confirmation %></p>
 
-<p><%= submit_tag 'Sign up' %></p>
+<p><%= submit_tag 'Gerar Login' %></p>
 <% end -%>

@@ -3,4 +3,5 @@ class Emprestimo < ActiveRecord::Base
   
   #attr_accessible :tipo_emprestimo, :professor, :aluno
   belongs_to :funcionario
+  belongs_to :unidade
 end

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :load_resources
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   
@@ -36,5 +37,11 @@ class UsersController < ApplicationController
       flash[:error]  = "SENHA OU USUÁRIO NÃO AUTORIZADO, VERIFIQUE A VALIDAÇÃO EM SEU E_MAIL OU ENTRE EM CONTATO COM A SEDUC."
       redirect_back_or_default('/')
     end
+  end
+
+  protected
+
+  def load_resources
+    @unidades = Unidade.all
   end
 end

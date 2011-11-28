@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resource :password
+  map.resources :configuracaos
+
+  
   map.resources :emprestimos
 
   map.resources :itens_emprestimos
@@ -44,6 +46,8 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
+  map.resource :password
+  map.reset_password '/reset_password/:id', :controller => 'passwords', :action => 'edit'
   map.resources :users
 
   map.resource :session
