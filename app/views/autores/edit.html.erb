@@ -1,8 +1,8 @@
-<% title "AUTOR" %>
-
-<%= render :partial => 'form' %>
-
-<p>
-  | <%= link_to "Visualizar", @autor %> |
-  <%= link_to "Listar", autores_path %> |
-</p>
+<% title "AUTORES" %>
+<div class="tabs">
+  <br/><font size="5"><strong>Cadastro de Autores</strong></font><br/><br/>
+   <div class="tabs">
+      <%= render :partial => 'form' %>
+    </div>
+  <p><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), autores_path, :title => "Autores Cadastrados" %></p>
+</div>

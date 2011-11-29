@@ -1,8 +1,10 @@
-<% title "EDITORA" %>
+<% title "EDITORAS" %>
+<div class="tabs">
+  <br/><font size="5"><strong>Cadastro de Editoras</strong></font><br/><br/>
+   <div class="tabs">
+      <%= render :partial => 'form' %>
+    </div>
+  <p><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), editoras_path, :title => "Livros Cadastrados" %></p>
+</div>
 
-<%= render :partial => 'form' %>
 
-<p>
-  | <%= link_to "Visualizar", @editora %> |
-  <%= link_to "Listar", editoras_path %> |
-</p>

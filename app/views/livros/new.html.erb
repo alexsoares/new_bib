@@ -1,7 +1,9 @@
 <% title "LIVROS" %>
-
 <div class="tabs">
-  <%= render :partial => 'form' %>
+  <br/>
+  <font size="5"><strong>Cadastro de Livros</strong></font><br/><br/>
+      <div class="tabs">
+      <%= render :partial => 'form' %>
+    </div>
+  <p><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), livros_path, :title => "Livros Cadastrados" %></p>
 </div>
-
-<p><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "25x25"), livros_path %></p>

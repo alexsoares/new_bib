@@ -1,12 +1,17 @@
-<% title "AREA DO CONHECIMENTO" %>
+<% title "ÁREAS" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+     <h3><b><i>Área do Conhecimento</i></b></h3>
+        <hr>
+             <strong>Área:</strong>  <%=h @area.nome %><br/>
+        <hr>
+        <table>
+          <tr>
+            <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), areas_path, :title => "Áreas Cadastradas" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_area_path(@area), :title => "Editar Área" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @area, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Área" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_area_path, :title => "Cadastrar Área" %></td>
+          </tr>
+        </table>
+</div>
 
-<p>
-  <strong>Nome:</strong>
-  <%=h @area.nome %>
-</p>
-
-<p>
-  | <%= link_to "Alterar", edit_area_path(@area) %> |
-  <%= link_to "Apagar", @area, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "Listar", areas_path %> |
-</p>

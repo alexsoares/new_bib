@@ -1,12 +1,17 @@
-<% title "AUTOR" %>
+<% title "AUTORES" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+     <h3><b><i>Autor</i></b></h3>
+        <hr>
+             <strong>Nome:</strong>  <%=h @autor.nome %><br/>
+        <hr>
+        <table>
+          <tr>
+            <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), autores_path, :title => "Autor Cadastradas" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_autor_path(@autor), :title => "Editar Autor" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @autor, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Autor" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_autor_path, :title => "Cadastrar Autor" %></td>
+          </tr>
+        </table>
+</div>
 
-<p>
-  <strong>Nome:</strong>
-  <%=h @autor.nome %>
-</p>
-
-<p>
-  | <%= link_to "Editar", edit_autor_path(@autor) %> |
-  <%= link_to "Apagar", @autor, :confirm => 'Tem certeza?', :method => :delete %> |
-  <%= link_to "Listar", autores_path %> |
-</p>

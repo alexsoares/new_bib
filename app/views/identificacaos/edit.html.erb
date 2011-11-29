@@ -1,8 +1,8 @@
-<% title "LIVROS & TÍTULOS" %>
-
-<%= render :partial => 'form' %>
-
-<p>
-  | <%= link_to "Vizualizar", @identificacao %> |
-  <%= link_to "Listar", identificacaos_path %> |
-</p>
+<% title "TÍTULOS" %>
+<div class="tabs">
+  <br/><font size="5"><strong>Cadastro de Titulos</strong></font><br/><br/>
+   <div class="tabs">
+      <%= render :partial => 'form' %>
+    </div>
+  <p><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), identificacaos_path, :title => "Títulos Cadastrados" %></p>
+</div>

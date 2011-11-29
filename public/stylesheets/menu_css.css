@@ -125,14 +125,17 @@ color:#2b3238;
 .nav .current .sub li.sub_show a {
 color:#2b3238;
 cursor:default;
+font-weight:bold;
 }
 
 .nav .select .sub li a {
 	font-weight:normal;
+    font-weight:bold;
 }
 
 .nav .select :hover .sub li a:hover,
 .nav .current .sub li a:hover {
 visibility:visible;
 color:#73a0d2;
+font-weight:bold;
 }
