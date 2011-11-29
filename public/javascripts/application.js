@@ -5,11 +5,7 @@ $(".grid").flexigrid({
 	usepager: true,
 	title: 'Livros Cadastrados',
 	useRp: true,
-	rp: 15,
-	searchitems : [
-		{display: 'Livro', name : 'identificacao'},
-		{display: 'Area', name : 'area', isdefault: true}
-		],
+	rp: 15
 
 
 });

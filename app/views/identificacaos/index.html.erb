@@ -1,22 +1,25 @@
 <% title "LIVROS & TÍTULOS" %>
 
-<table>
+<table class="grid">
+  <thead>
   <tr>
-    <th>Código</th>
-    <th>Título</th>
-    <th>Subtítulo</th>
-    <th>Observação</th>
+    <th width="100">Código ISBN</th>
+    <th width="300">Título</th>
+    <th width="200">Subtítulo</th>
+    <th colspan="4">Administração</th>
   </tr>
+  </thead>
   <% for identificacao in @identificacaos %>
+    <tbody>
     <tr>
-      <td><%=h identificacao.codigo %></td>
+      <td ><%=h identificacao.codigo %></td>
       <td><%=h identificacao.livro %></td>
       <td><%=h identificacao.subtitulo %></td>
-      <td><%=h identificacao.obs %></td>
-      <td>| <%= link_to "Visualizar", identificacao %></td>
-      <td>| <%= link_to "Editar", edit_identificacao_path(identificacao) %></td>
-      <td>| <%= link_to "Apagar", identificacao, :confirm => 'Tem certeza?', :method => :delete %> |</td>
+      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), identificacao %></td>
+      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao) %></td>
+      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete %></td>
     </tr>
+    </tbody>
   <% end %>
 </table>
 
