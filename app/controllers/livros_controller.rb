@@ -56,6 +56,19 @@ class LivrosController < ApplicationController
   end
 
 
+  def filtrar    
+    if params[:busca].present?
+      @identificacoes = Identificacao.all(:conditions =>["livro like ?", ""+params[:busca][:busca]+"%"])
+    end
+      @livro = Livro.new
+      render :update do |page|
+        page.replace_html 'ident', :partial => "campos_identificacao"
+        page.replace_html 'aviso', :text => "Filtrado!"
+      end
+
+  end
+
+
   def create_assunto
     @assunto = Assunto.new(params[:assunto])
     if @assunto.save

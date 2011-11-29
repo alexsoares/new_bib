@@ -11,7 +11,10 @@
     <tr>
       <td colspan="3">
         <%= f.label :identificacao_id,"Título: " %><br/>
-        <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
+        <div id="ident"><%=render "campos_identificacao"%></div>        
+      </td>
+      <td >
+        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "12x12"), "#inline_busca", :class =>"inline", :title => "Filtrar Identificação" %>
       </td>
     <tr>
       <td colspan="3">
@@ -99,3 +102,4 @@
     
     <%= render "form_assunto" %>
     <%= render "form_local" %>
+    <%= render "form_busca" %>
