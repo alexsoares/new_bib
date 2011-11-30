@@ -2,20 +2,33 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title><%= "Sistema de Biblioteca - BibliOS. Você está em: #{h(yield(:title) || 'Sem titulo')}" %></title>
+    <title><%= "Sistema de Biblioteca - BIBLO. Você está em: #{h(yield(:title) || 'Sem titulo')}" %></title>
     <%= stylesheet_link_tag 'application','layout.css' %>
     <%= javascript_include_tag 'jquery-1.7','jquery-ui-1.8.16.custom.min','jrails',"jquery.colorbox","colorbox.js","jquery.multiselect.min","ui.selectmenu",'plugins/flexigrid/js/flexigrid.pack','application.js' %>
     <%= yield(:head) %>
   </head>
   <body>
         <div id="topo">
+         <p>
+             <h1>SISTEMA DE GERENCIAMENTO DE BIBLIOTECA - BIBLOS - </h1>
+         </p>
+         <p>
+             <h3>Secretaria da Educação da Prefeitura Municipal de Americana </h3>
+         </p>
           <%- flash.each do |name, msg| -%>
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
           <%- end -%>
         </div>
+        <div id="rodape">
+           © 2011 . Prefeitura de Americana - SEDUC - Todos os Direitos Reservados.
+        </div>
         <div id="esquerda">
           <% unless logged_in? %>
             <% form_tag session_path do -%>
+            <font  size="3">
+              <center><b><u>LOGIN DE ACESSO</u></b></center>
+            </font>
+
             <font  size="2">
              <p><%= label_tag 'Usuário' %><br />
                 <%= text_field_tag 'login', @login %></p>
@@ -26,6 +39,21 @@
             <p><%= submit_tag 'Entrar' %></p>
             <% end %>
           <%end%>
+        </div>
+        <div id="direita">
+          <p>
+          <font  size="3"><b>Não possui senha?</b></font>
+          </p>
+          <br/>
+          
+            Clicar aqui
+            <%= button_to 'Cadastrar Usuário/Senha', signup_path%>
+          
+          <br/>
+          <p>
+            <%= link_to 'Esqueci a Senha', new_password_path%>
+         </p>
+
         </div>
          <div id="colunaEsquerda">
           <div id="sepEsquerdaColCentral">

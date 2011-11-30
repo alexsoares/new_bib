@@ -5,7 +5,7 @@ $(".grid").flexigrid({
 	usepager: true,
 	title: 'Livros Cadastrados',
 	useRp: true,
-	rp: 15
+	rp: 150
 
 
 });

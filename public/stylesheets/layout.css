@@ -7,18 +7,27 @@ body {
 }
 #topo{
 	width:auto;
-	height:50px;
+	height:90px;
 	background-color:#333;
 	border-top:1px solid #666;
 	border-bottom:2px dotted #666;
 	color:#0f0;
 	text-align:center;
 }
+#rodape{
+	width:auto;
+    position:absolute;
+	top:530px;
+	left:260px;
+	color:#99f;
+	padding-bottom:20px;
+
+}
 #esquerda {
 	position:absolute;
-	width:190px;
-	top:60px;
-	left:5px;
+	width:220px;
+	top:100px;
+	left:15px;
 	color:#99f;
 	padding-bottom:20px;
 	border-bottom:3px double #666;
@@ -26,17 +35,33 @@ body {
 #colunaEsquerda {
 	background:#444;
 }
+
+#direita {
+	position:absolute;
+	width:220px;
+	top:100px;
+	left:800px;
+	color:#99f;
+	padding-bottom:20px;
+	border-bottom:3px double #666;
+}
+#sepcolCentralDir{
+
+}
+
 #sepEsquerdaColCentral {
-	margin-left:200px;
+	margin-left:250px;
 	padding-left:2px;
 	background:#666;
+    width:520px;
+    bottom:580px;
 }
 #colCentral {    
 	background:#22232F;
 	color:#991;
     height:100%;
-	padding:2px 10px;
-	text-align:justify;
+	padding:5px 0px 22px;
+	text-align:center;
 	border-bottom:1px solid #666;
 }
 

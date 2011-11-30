@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :load_resources
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
-  
+  layout "login"
 
   # render new.rhtml
   def new
