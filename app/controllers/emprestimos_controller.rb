@@ -15,7 +15,7 @@ class EmprestimosController < ApplicationController
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])
     if @emprestimo.save
-      flash[:notice] = "Successfully created emprestimo."
+      flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
       redirect_to @emprestimo
     else
       render :action => 'new'
@@ -29,7 +29,7 @@ class EmprestimosController < ApplicationController
   def update
     @emprestimo = Emprestimo.find(params[:id])
     if @emprestimo.update_attributes(params[:emprestimo])
-      flash[:notice] = "Successfully updated emprestimo."
+      flash[:notice] = "EMPRESTIMO REALIZADO COM SUCESSO."
       redirect_to @emprestimo
     else
       render :action => 'edit'
@@ -39,7 +39,7 @@ class EmprestimosController < ApplicationController
   def destroy
     @emprestimo = Emprestimo.find(params[:id])
     @emprestimo.destroy
-    flash[:notice] = "Successfully destroyed emprestimo."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to emprestimos_url
   end
 

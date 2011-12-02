@@ -19,7 +19,7 @@ class DicionarioEnciclopediasController < ApplicationController
   def create
     @dicionario_enciclopedia = DicionarioEnciclopedia.new(params[:dicionario_enciclopedia])
     if @dicionario_enciclopedia.save
-      flash[:notice] = "Successfully created dicionario enciclopedia."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @dicionario_enciclopedia
     else
       render :action => 'new'
@@ -33,7 +33,7 @@ class DicionarioEnciclopediasController < ApplicationController
   def update
     @dicionario_enciclopedia = DicionarioEnciclopedia.find(params[:id])
     if @dicionario_enciclopedia.update_attributes(params[:dicionario_enciclopedia])
-      flash[:notice] = "Successfully updated dicionario enciclopedia."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @dicionario_enciclopedia
     else
       render :action => 'edit'
@@ -43,7 +43,7 @@ class DicionarioEnciclopediasController < ApplicationController
   def destroy
     @dicionario_enciclopedia = DicionarioEnciclopedia.find(params[:id])
     @dicionario_enciclopedia.destroy
-    flash[:notice] = "Successfully destroyed dicionario enciclopedia."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to dicionario_enciclopedias_url
   end
 

@@ -38,7 +38,7 @@ class AutoresController < ApplicationController
   def destroy
     @autor = Autor.find(params[:id])
     @autor.destroy
-    flash[:notice] = "APAGADO COM SUCESSO."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to autores_url
   end
 end

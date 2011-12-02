@@ -14,7 +14,7 @@ class TiposController < ApplicationController
   def create
     @tipo = Tipo.new(params[:tipo])
     if @tipo.save
-      flash[:notice] = "Successfully created tipo."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @tipo
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class TiposController < ApplicationController
   def update
     @tipo = Tipo.find(params[:id])
     if @tipo.update_attributes(params[:tipo])
-      flash[:notice] = "Successfully updated tipo."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @tipo
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class TiposController < ApplicationController
   def destroy
     @tipo = Tipo.find(params[:id])
     @tipo.destroy
-    flash[:notice] = "Successfully destroyed tipo."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to tipos_url
   end
 end

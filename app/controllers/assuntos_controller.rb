@@ -14,7 +14,7 @@ class AssuntosController < ApplicationController
   def create
     @assunto = Assunto.new(params[:assunto])
     if @assunto.save
-      flash[:notice] = "Successfully created assunto."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       render :action => 'livros/new'
       
     else
@@ -29,7 +29,7 @@ class AssuntosController < ApplicationController
   def update
     @assunto = Assunto.find(params[:id])
     if @assunto.update_attributes(params[:assunto])
-      flash[:notice] = "Successfully updated assunto."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @assunto
     else
       render :action => 'edit'
@@ -39,7 +39,7 @@ class AssuntosController < ApplicationController
   def destroy
     @assunto = Assunto.find(params[:id])
     @assunto.destroy
-    flash[:notice] = "Successfully destroyed assunto."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to assuntos_url
   end
 end

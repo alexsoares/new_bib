@@ -18,10 +18,24 @@ class MapasController < ApplicationController
   def create
     @mapas = Mapas.new(params[:mapas])
     if @mapas.save
-      flash[:notice] = "Successfully created mapas."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @mapas
     else
       render :action => 'new'
+    end
+  end
+
+def create_local
+    @localizacao = Localizacao.new(params[:localizacao])
+    @localizacao.add_unidade(current_user.unidade_id)
+    if @localizacao.save
+      @localizacoes = Localizacao.all
+      @mapas = Mapas.new
+      render :update do |page|
+        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'aviso', :text => "NOVA LOCALIZAÇÃO CADASTRADA, CONTINUE O CADASTRO"
+      end
+
     end
   end
 
@@ -32,7 +46,7 @@ class MapasController < ApplicationController
   def update
     @mapas = Mapas.find(params[:id])
     if @mapas.update_attributes(params[:mapas])
-      flash[:notice] = "Successfully updated mapas."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @mapas
     else
       render :action => 'edit'
@@ -42,7 +56,7 @@ class MapasController < ApplicationController
   def destroy
     @mapas = Mapas.find(params[:id])
     @mapas.destroy
-    flash[:notice] = "Successfully destroyed mapas."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to mapas_url
   end
 

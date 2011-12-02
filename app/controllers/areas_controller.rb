@@ -38,7 +38,7 @@ class AreasController < ApplicationController
   def destroy
     @area = Area.find(params[:id])
     @area.destroy
-    flash[:notice] = "APAGADO COM SUCESSO."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to areas_url
   end
 end

@@ -14,7 +14,7 @@ class ConfiguracaosController < ApplicationController
   def create
     @configuracao = Configuracao.new(params[:configuracao])
     if @configuracao.save
-      flash[:notice] = "Successfully created configuracao."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @configuracao
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class ConfiguracaosController < ApplicationController
   def update
     @configuracao = Configuracao.find(params[:id])
     if @configuracao.update_attributes(params[:configuracao])
-      flash[:notice] = "Successfully updated configuracao."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @configuracao
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class ConfiguracaosController < ApplicationController
   def destroy
     @configuracao = Configuracao.find(params[:id])
     @configuracao.destroy
-    flash[:notice] = "Successfully destroyed configuracao."
+    flash[:notice] = "CEXCLUIDO COM SUCESSO."
     redirect_to configuracaos_url
   end
 end

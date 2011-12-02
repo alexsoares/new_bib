@@ -14,7 +14,7 @@ class ItensEmprestimosController < ApplicationController
   def create
     @itens_emprestimo = ItensEmprestimo.new(params[:itens_emprestimo])
     if @itens_emprestimo.save
-      flash[:notice] = "Successfully created itens emprestimo."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @itens_emprestimo
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class ItensEmprestimosController < ApplicationController
   def update
     @itens_emprestimo = ItensEmprestimo.find(params[:id])
     if @itens_emprestimo.update_attributes(params[:itens_emprestimo])
-      flash[:notice] = "Successfully updated itens emprestimo."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @itens_emprestimo
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class ItensEmprestimosController < ApplicationController
   def destroy
     @itens_emprestimo = ItensEmprestimo.find(params[:id])
     @itens_emprestimo.destroy
-    flash[:notice] = "Successfully destroyed itens emprestimo."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to itens_emprestimos_url
   end
 end

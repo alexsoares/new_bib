@@ -4,16 +4,12 @@ class Jogo < ActiveRecord::Base
 
     belongs_to :localizacao
 
-  FAIXA_ETARIA = %w(0-3_ANOS 4-5_ANOS 6-7_ANOS  8-10_ANOS 11-13_ANOS 14_OU_MAIS)
+  FAIXA_ETARIA = %w(0-3_ANOS 4-5_ANOS 6-7_ANOS  8-10_ANOS 11-13_ANOS 14_OU_MAIS TODAS)
 
-  def before_save
-    self.tombo_seduc.upcase!
-    self.tombo_l.upcase!
-    self.nome.upcase!
-    self.fabricante.upcase!
-    self.tipo.upcase!
-    self.obs.upcase!
-end
 
+
+  def auto_inc_tombo_seduc
+    self.tombo_seduc =+ 1
+  end
 
 end

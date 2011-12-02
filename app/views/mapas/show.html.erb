@@ -1,53 +1,102 @@
-<% title "Mapas" %>
+<% title "MAPAS" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+    <font size="6"><strong><%=h "#{@mapas.titulo}" %></strong></font><br/>
+    <font size="4"><strong><%=h "#{@mapas.subtitulo}" %></strong></font><br/>
+       <div id="telaShow">
+         <div id="linhaCentral">
+           <div id="conteudoEsquerda">
+              <h3><b><i><font color="DimGrey">Informações sobre o mapa</font></i></b></h3>
+                  <hr>
+                    <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+                     <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+                     <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+                     <strong>Data Edição:</strong>   <%=h @mapas.ano.strftime("%Y") %><br/>
+                     <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+                </div>
+                <div id="colunaDireita">
+                  <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
+                  <hr>
+                     <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+                     <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+                     <strong>Tipo de aquisição:</strong>   <%=h @mapas.localizacao.aquisicao%><br/>
+                     <strong>Data Aquisição:</strong>   <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+                     <strong>Localização:</strong>   <%=h @mapas.localizacao.local_guardado %><br/>
+                     <strong>Unidade:</strong>   <%=h @mapas.localizacao.unidade.nome %><br/>
+                     <strong>Observação:</strong>   <%=h @mapas.obs%><br/>
+                </div>
 
+              </div>
+            </div>
+    <table>
+          <tr>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), mapas_path, :title => "Mapas Cadastradas" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_mapa_path(@mapas), :title => "Editar Mapa" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @mapas, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Mapa" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_jogo_path, :title => "Cadastrar Jogos" %></td>
+          </tr>
+      </table>
+
+</div>
+
+
+<% title "MAPAS" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+     <font size="2"><b><i>MAPA</i></b></font>
+        <hr>
 <p>
-  <strong>Localizacao:</strong>
-  <%=h @mapas.localizacao %>
+  
 </p>
 <p>
-  <strong>Tombo Seduc:</strong>
-  <%=h @mapas.tombo_seduc %>
+  <strong>Titulo:</strong> <%=h @mapas.titulo %>
 </p>
 <p>
-  <strong>Tombo L:</strong>
-  <%=h @mapas.tombo_l %>
-</p>
-<p>
-  <strong>Titulo:</strong>
-  <%=h @mapas.titulo %>
-</p>
-<p>
-  <strong>Subtitulo:</strong>
-  <%=h @mapas.subtitulo %>
+  <strong>Subtitulo:</strong> <%=h @mapas.subtitulo %>
 </p>
   <p>
-  <strong>Tipo:</strong>
-  <%=h @mapas.tipo %>
+  <strong>Tipo:</strong> <%=h @mapas.tipo %>
 </p>
 <p>
-  <strong>Ano:</strong>
-  <%=h @mapas.ano.strftime("%Y") %>
+  <strong>Ano:</strong> <%=h @mapas.ano.strftime("%Y") %>
 </p>
 <p>
-  <strong>Formato:</strong>
-  <%=h @mapas.formato %>
+  <strong>Formato:</strong> <%=h @mapas.formato %>
 </p>
 <p>
-  <strong>Editora:</strong>
-  <%=h @mapas.editora.nome %>
+  <strong>Editora:</strong> <%=h @mapas.editora.nome %>
 </p>
 <p>
-  <strong>Edicao:</strong>
-  <%=h @mapas.edicao %>
+  <strong>Edição:</strong> <%=h @mapas.edicao %>
 </p>
 <p>
-  <strong>Local Edicao:</strong>
-  <%=h @mapas.local_edicao %>
+  <strong>Local Edição:</strong> <%=h @mapas.local_edicao %>
 </p>
 <p>
-  <strong>Obs:</strong>
-  <%=h @mapas.obs %>
+  <strong>Observação:</strong> <%=h @mapas.obs %>
 </p>
+<hr>
+    <table>
+          <tr>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), mapas_path, :title => "Mapas Cadastradas" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_mapa_path(@mapas), :title => "Editar Mapa" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @mapa, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Mapa" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_jogo_path, :title => "Cadastrar Jogos" %></td>
+          </tr>
+      </table>
+</div>
+
+
+
+
+
+
+
+<% title "Mapas" %>
+
+
 
 <p>
   <%= link_to "Edit", edit_mapa_path(@mapas) %> |

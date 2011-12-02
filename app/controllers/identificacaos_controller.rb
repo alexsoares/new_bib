@@ -38,7 +38,7 @@ class IdentificacaosController < ApplicationController
   def destroy
     @identificacao = Identificacao.find(params[:id])
     @identificacao.destroy
-    flash[:notice] = "APAGADO COM SUCESSO."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to identificacaos_url
   end
 end

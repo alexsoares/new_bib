@@ -46,7 +46,7 @@ class LivrosController < ApplicationController
   def destroy
     @livro = Livro.find(params[:id])
     @livro.destroy
-    flash[:notice] = "APAGADO COM SUCESSO."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to livros_url
   end
   def visualizar_check

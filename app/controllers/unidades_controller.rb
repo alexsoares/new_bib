@@ -14,7 +14,7 @@ class UnidadesController < ApplicationController
   def create
     @unidade = Unidade.new(params[:unidade])
     if @unidade.save
-      flash[:notice] = "Successfully created unidade."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @unidade
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class UnidadesController < ApplicationController
   def update
     @unidade = Unidade.find(params[:id])
     if @unidade.update_attributes(params[:unidade])
-      flash[:notice] = "Successfully updated unidade."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @unidade
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class UnidadesController < ApplicationController
   def destroy
     @unidade = Unidade.find(params[:id])
     @unidade.destroy
-    flash[:notice] = "Successfully destroyed unidade."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to unidades_url
   end
 end

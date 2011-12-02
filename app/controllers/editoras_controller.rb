@@ -38,7 +38,7 @@ class EditorasController < ApplicationController
   def destroy
     @editora = Editora.find(params[:id])
     @editora.destroy
-    flash[:notice] = "APAGADO COM SUCESSO."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to editoras_url
   end
 end

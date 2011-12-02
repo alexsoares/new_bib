@@ -18,10 +18,24 @@ class JogosController < ApplicationController
   def create
     @jogos = Jogo.new(params[:jogo])
     if @jogos.save
-      flash[:notice] = "Successfully created jogos."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @jogos
     else
       render :action => 'new'
+    end
+  end
+
+def create_local
+    @localizacao = Localizacao.new(params[:localizacao])
+    @localizacao.add_unidade(current_user.unidade_id)
+    if @localizacao.save
+      @localizacoes = Localizacao.all
+      @livro = Livro.new
+      render :update do |page|
+        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'aviso', :text => "NOVA LOCALIZAÇÃO CADASTRADA, CONTINUE O CADASTRO"
+      end
+
     end
   end
 
@@ -32,7 +46,7 @@ class JogosController < ApplicationController
   def update
     @jogos = Jogo.find(params[:id])
     if @jogos.update_attributes(params[:jogo])
-      flash[:notice] = "Successfully updated jogos."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @jogos
     else
       render :action => 'edit'
@@ -42,15 +56,14 @@ class JogosController < ApplicationController
   def destroy
     @jogos = Jogo.find(params[:id])
     @jogos.destroy
-    flash[:notice] = "Successfully destroyed jogos."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to jogos_url
   end
 
     protected
 
   def load_resources
-
-    @localizacoes = Localizacao.all
+     @localizacoes = Localizacao.all
   end
 
 end

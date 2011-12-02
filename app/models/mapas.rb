@@ -8,8 +8,8 @@ class Mapas < ActiveRecord::Base
   FORMATO_MAPA = %w(GLOBO PLANO OUTROS)
 
 def before_save
-    self.tombo_seduc.upcase!
-    self.tombo_l.upcase!
+  
+  
     self.titulo.upcase!
     self.subtitulo.upcase!
     self.local_edicao.upcase!

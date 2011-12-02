@@ -15,7 +15,7 @@ class FuncionariosController < ApplicationController
   def create
     @funcionario = Funcionario.new(params[:funcionario])
     if @funcionario.save
-      flash[:notice] = "Successfully created funcionario."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @funcionario
     else
       render :action => 'new'
@@ -29,7 +29,7 @@ class FuncionariosController < ApplicationController
   def update
     @funcionario = Funcionario.find(params[:id])
     if @funcionario.update_attributes(params[:funcionario])
-      flash[:notice] = "Successfully updated funcionario."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @funcionario
     else
       render :action => 'edit'
@@ -39,7 +39,7 @@ class FuncionariosController < ApplicationController
   def destroy
     @funcionario = Funcionario.find(params[:id])
     @funcionario.destroy
-    flash[:notice] = "Successfully destroyed funcionario."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to funcionarios_url
   end
   protected

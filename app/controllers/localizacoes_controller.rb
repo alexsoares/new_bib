@@ -15,7 +15,7 @@ class LocalizacoesController < ApplicationController
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)   
     if @localizacao.save
-      flash[:notice] = "Successfully created localizacao."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @localizacao
     else
       render :action => 'new'
@@ -29,7 +29,7 @@ class LocalizacoesController < ApplicationController
   def update
     @localizacao = Localizacao.find(params[:id])
     if @localizacao.update_attributes(params[:localizacao])
-      flash[:notice] = "Successfully updated localizacao."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @localizacao
     else
       render :action => 'edit'
@@ -39,7 +39,7 @@ class LocalizacoesController < ApplicationController
   def destroy
     @localizacao = Localizacao.find(params[:id])
     @localizacao.destroy
-    flash[:notice] = "Successfully destroyed localizacao."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to localizacoes_url
   end
 end

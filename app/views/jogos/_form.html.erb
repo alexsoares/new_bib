@@ -1,36 +1,56 @@
 <% form_for @jogos do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :tombo_seduc %><br />
-    <%= f.text_field :tombo_seduc %>
-  </p>
-  <p>
-    <%= f.label :tombo_l %><br />
-    <%= f.text_field :tombo_l %>
-  </p>
-  <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.label :faixa_etaria %><br />
-    <%= f.select :faixa_etaria, Jogo::FAIXA_ETARIA, :include_blank => '---Selecione---'%>
- </p>
-  <p>
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
-  </p>
-  <p>
-    <%= f.label :fabricante %><br />
-    <%= f.text_field :fabricante %>
-  </p>
-  <p>
-    <%= f.label :localizacao_id %><br />
-    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:local_guardado, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :obs %><br />
-    <%= f.text_area :obs %>
-  </p>
-  <p><%= f.submit %></p>
+  <p><div id="aviso"></div></p>
+  <table>
+     <tr>
+      <td align="lef">
+          <%= f.label :tombo_l, 'Tombo Local:' %><br />
+          <%= f.text_field :tombo_l, :size => "10" %>
+      </td>
+    <tr>
+    </tr>
+      <td align="lef">
+          <%= f.label :nome, 'Nome:' %><br />
+          <%= f.text_field :nome %>
+      </td>
+    <tr>
+    </tr>
+      <td align="lef">
+          <%= f.label :faixa_etaria, 'Faixa Etária:' %><br />
+          <%= f.select :faixa_etaria, Jogo::FAIXA_ETARIA, :include_blank => '---Selecione---'%>
+      </td>
+    <tr>
+    </tr>
+      <td align="lef">
+          <%= f.label :tipo,'Tipo:' %><br />
+          <%= f.text_field :tipo %>
+      </td>
+    <tr>
+    </tr>
+      <td align="lef">
+          <%= f.label :fabricante, 'Fabricante:' %><br />
+          <%= f.text_field :fabricante %>
+      </td>
+    <tr>
+    </tr>
+      <td align="lef">
+        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
+        <div id="local"><%= render "campos_local"%></div>
+
+      </td>
+    <tr>
+    </tr>
+      <td align="lef">
+          <%= f.label :obs, 'Observação;' %><br />
+          <%= f.text_area :obs,:size => "30x3" %>
+      </td>
+    <tr>
+    </tr>
+      <td><%= f.submit'Salvar' %>
+      </td>
+    </tr>
+   </table>
 <% end %>
+
+    <%= render "form_local" %>

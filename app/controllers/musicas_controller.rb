@@ -14,7 +14,7 @@ class MusicasController < ApplicationController
   def create
     @musica = Musica.new(params[:musica])
     if @musica.save
-      flash[:notice] = "Successfully created musica."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @musica
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class MusicasController < ApplicationController
   def update
     @musica = Musica.find(params[:id])
     if @musica.update_attributes(params[:musica])
-      flash[:notice] = "Successfully updated musica."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @musica
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class MusicasController < ApplicationController
   def destroy
     @musica = Musica.find(params[:id])
     @musica.destroy
-    flash[:notice] = "Successfully destroyed musica."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to musicas_url
   end
 end

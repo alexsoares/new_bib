@@ -18,7 +18,7 @@ class PeriodicosController < ApplicationController
   def create
     @periodicos = Periodico.new(params[:periodico])
     if @periodicos.save
-      flash[:notice] = "Successfully created periodicos."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @periodicos
     else
       render :action => 'new'
@@ -32,7 +32,7 @@ class PeriodicosController < ApplicationController
   def update
     @periodicos = Periodico.find(params[:id])
     if @periodicos.update_attributes(params[:periodico])
-      flash[:notice] = "Successfully updated periodicos."
+      flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @periodicos
     else
       render :action => 'edit'
@@ -42,7 +42,7 @@ class PeriodicosController < ApplicationController
   def destroy
     @periodicos = Periodico.find(params[:id])
     @periodicos.destroy
-    flash[:notice] = "Successfully destroyed periodicos."
+    flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to periodicos_url
   end
 

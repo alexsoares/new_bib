@@ -1,8 +1,13 @@
-<% title "Edit Mapas" %>
-
-<%= render :partial => 'form' %>
-
-<p>
-  <%= link_to "Show", @mapas %> |
-  <%= link_to "View All", mapas_path %>
-</p>
+<% title "MAPAS" %>
+<div class="tabs">
+  <font size="2"><strong>CADASTRO DE MAPAS</strong></font><br/>
+      <div class="tabs">
+      <%= render :partial => 'form' %>
+    </div>
+  <table>
+   <tr>
+    <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), mapas_path, :title => "Mapas Cadastrados" %></td>
+   </tr>
+  </table>
+</div>
