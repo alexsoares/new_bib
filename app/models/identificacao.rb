@@ -4,9 +4,9 @@ class Identificacao < ActiveRecord::Base
   has_many :livros
 
 def before_save
-    self.livro.upcase!
-    self.subtitulo.upcase!
-    self.obs.upcase!
+#    self.livro.upcase!
+#    self.subtitulo.upcase!
+#    self.obs.upcase!
 end
 
 end

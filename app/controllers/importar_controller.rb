@@ -27,9 +27,10 @@ class ImportarController < ApplicationController
   def efetivar_importacao
     temp = Temp.all
     temp.each do |f|
-      importacao = UnidadesGpd.new
-      importacao.id = f.id_unidades
-      importacao.unidade = f.nome
+      importacao = Editora.new
+      importacao.nome = f.nome
+      importacao.cidade = f.cidade
+      importacao.pais = f.pais
       importacao.save
       f.destroy
     end

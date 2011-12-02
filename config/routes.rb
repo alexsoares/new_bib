@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :configuracaos
-  
+  map.resources :importar
   map.resources :emprestimos
 
   map.resources :itens_emprestimos
