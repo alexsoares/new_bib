@@ -15,12 +15,18 @@
       <td ><%=h identificacao.codigo %></td>
       <td><%=h identificacao.livro %></td>
       <td><%=h identificacao.subtitulo %></td>
-      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), identificacao %></td>
-      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao) %></td>
-      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete %></td>
+      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), identificacao, :title => "Visualizar Titulo" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao), :title => "Editar Titulo" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Titulo" %></td>
     </tr>
     </tbody>
   <% end %>
 </table>
-<p>| <%= link_to "Cadastrar", new_identificacao_path %> |</p>
+  <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+     <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_identificacao_path, :title => "Cadastrar Título" %></td>
+    </tr>
+  </table>
+
 </div>

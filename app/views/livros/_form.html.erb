@@ -3,19 +3,23 @@
   <p><div id="aviso"></div></p>
   <table align="center">
     <tr>
-      <td>
+      <td >
         <%= f.label :tombo_l, "Tombo Local:"%><br />
         <%= f.text_field :tombo_l, :size => "10" %>
       </td>
+      <td colspan="3">
+        <b>Para filtrar o <i>Título</i> clicar no icone abaixo e digitar uma palavra ou frase que a componha.      </b>
+      </td>
     </tr>
     <tr>
-      <td colspan="3">
+      <td colspan="2">
         <%= f.label :identificacao_id,"Título: " %><br/>
         <div id="ident"><%=render "campos_identificacao"%></div>        
       </td>
-      <td >
-        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "12x12"), "#inline_busca", :class =>"inline", :title => "Filtrar Identificação" %>
+      <td width="100%">
+        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "20x20"), "#inline_busca", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]  %>
       </td>
+    </tr>
     <tr>
       <td colspan="3">
         <%= observe_field 'livro_identificacao_id',
@@ -32,7 +36,18 @@
     <tr>
       <td colspan="3">
         <%= f.label :colecao, "Coleção:" %><br />
-        <%= f.text_field :colecao, :size => "40" %>
+        <%= f.text_field :colecao, :size => "55" %>
+      </td>
+    </tr>
+    <tr>
+      <td><b><i>
+         Para selecionar mais de um autor <br/> precionar a tecla <i>SHIFT</i> e selecionar <br/>as opções desejadas ===========>
+      </i></b>
+      </td>
+      <td colspan="2">
+        <%= f.label :autor_id, "Selecione o(s) autor(es). " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_autor", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]  %>
+        <div id="autor"><%= render "campos_autor"%></div>     
       </td>
     </tr>
     <tr>
@@ -40,16 +55,9 @@
         <%= f.label :area_id,"Area: " %><br/>
         <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
       </td>
-      <td>       
-        <%= f.label :autor_id, "Selecione o(s) autor(es). " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => "Novo Autor" %>
-        <div id="autor"><%= render "campos_autor"%></div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3">
+      <td width="75%">
         <%= f.label :localizacao_id,"Selecione a localização: " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => "Nova Localização" %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
         <div id="local"><%= render "campos_local"%></div>
       </td>
     </tr>
@@ -75,12 +83,12 @@
     </tr>
     <tr>
       <td><b><i>
-         Para selecionar mais de um assunto <br/> selecionar as opções desejadas ===>
+         Para selecionar mais de um assunto <br/> precionar a tecla <i>SHIFT</i> e selecionar <br/>as opções desejadas ===========>
       </i></b>
       </td>
       <td colspan="2">
         <%= f.label :assunto_id, "Selecione o(s) assunto(s). " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => "NOVO ASSUNTO" %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]%>
         <div id="assuntos"><%= render "campos_assunto"%></div>        
       </td>
     </tr>
@@ -100,6 +108,7 @@
   <% end %>
 </table>
     
+    <%= render "form_autor" %>
     <%= render "form_assunto" %>
     <%= render "form_local" %>
     <%= render "form_busca" %>

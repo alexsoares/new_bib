@@ -1,7 +1,7 @@
 <% title "TÍTULOS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-     <h3><b><i>Títulos  </i></b></h3>
+     <font size="2"><b><i>TÍTULO  </i></b></font>
         <hr>
           <p>
             <strong>Código:</strong> <%=h @identificacao.codigo %>
@@ -19,9 +19,10 @@
         <hr>
         <table>
           <tr>
-            <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), identificacaos_path, :title => "Título Cadastradas" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_identificacao_path(@identificacao), :title => "Editar Título" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @identificacao, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Título" %></td>
+            <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), identificacaos_path, :title => "Título Cadastradas" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_identificacao_path(@identificacao), :title => "Editar Título" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @identificacao, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Título" %></td>
             <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_identificacao_path, :title => "Cadastrar Título" %></td>
           </tr>
         </table>

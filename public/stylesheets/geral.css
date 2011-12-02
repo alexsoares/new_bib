@@ -38,6 +38,9 @@
 	color:#0f0;
 	text-align:center;
 }
+
+
+
 #conteudoEsq {
 	position:absolute;
 	width:340px;
@@ -68,6 +71,62 @@
     background-color: #ccc;
     padding: 8px;
 }
+
+#topoShow {
+    width:auto;
+	height:100px;
+	padding:3px 0 0 0;
+	background-color:#333;
+	border-top:1px solid #666;
+	border-bottom:2px dotted #666;
+	color:#000;
+	text-align:left;
+	position:absolute;
+	top:100px;
+	left:15px;
+}
+
+#telaShow {
+    background:#EEE9E9;
+    height:410px;
+    border-style:double;
+    border-color:#CDC9C9;
+}
+
+#linhaCentral {
+	    margin-left:310px;
+	    border-color:#CDC9C9;
+    	border-left-style:double;
+    	border-left-width:thin;
+    	padding-left:1px;
+    	background:#BEBEBE;
+    	height:inherit;
+}
+
+#colunaEsquerda {
+    background:#EEE9E9;
+    height:410px;
+}
+
+#colunaDireita {
+	background:#EEE9E9;
+	color:#000;
+	padding:2px 10px;
+	text-align:justify;
+	height:406px;
+}
+
+#conteudoEsquerda {
+	position:absolute;
+	width:300px;
+	top:78px;
+	left:10px;
+	color:#000;
+	padding-bottom:20px;
+}
+
+
+
 #imagem-login {
    background-image:url(/images/biblioteca_virtual.jpg);
    background-repeat: no-repeat;

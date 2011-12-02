@@ -1,21 +1,33 @@
 <% title "EDITORAS" %>
-
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Cidade</th>
-    <th>Pais</th>
-  </tr>
+<div class="tabs">
+<table class="grid">
+  <thead>
+    <tr>
+     <th width="205">Nome</th>
+     <th width="300">Cidade</th>
+     <th width="100">Pais</th>
+     <th colspan="4">Administração</th>
+   </tr>
+  </thead>
   <% for editora in @editoras %>
+   <tbody>
     <tr>
       <td><%=h editora.nome %></td>
       <td><%=h editora.cidade %></td>
       <td><%=h editora.pais %></td>
-      <td>| <%= link_to "Visualizar", editora %> </td>
-      <td>| <%= link_to "Editar", edit_editora_path(editora) %></td>
-      <td>|<%= link_to "Apagar", editora, :confirm => 'Tem certeza?', :method => :delete %> |</td>
+      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), editora, :title => "Visualizar Editora" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_editora_path(editora),  :title => "Editar Editora" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), editora, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Editora" %></td>
+
+
     </tr>
+   </tbody> 
   <% end %>
 </table>
-
-<p>| <%= link_to "Cadastrar", new_editora_path %> |</p>
+  <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+     <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_editora_path, :title => "Cadastrar Editora" %></td>
+    </tr>
+  </table>
+</div>

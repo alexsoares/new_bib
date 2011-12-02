@@ -1,8 +1,13 @@
 <% title "AUTORES" %>
 <div class="tabs">
-  <br/><font size="5"><strong>Cadastro de Autores</strong></font><br/><br/>
+  <font size="2"><strong>CADASTRO DE AUTORES</strong></font><br/>
    <div class="tabs">
       <%= render :partial => 'form' %>
     </div>
-  <p><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), autores_path, :title => "Autores Cadastrados" %></p>
+  <table>
+   <tr>
+    <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), autores_path, :title => "Autores Cadastrados" %></td>
+   </tr>
+  </table>
 </div>

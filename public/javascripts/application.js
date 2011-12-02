@@ -3,7 +3,7 @@ $(".grid").flexigrid({
     showTableToggleBtn: true,
     sortorder: "asc",
 	usepager: true,
-	title: 'Livros Cadastrados',
+	title: 'DADOS CADASTRADOS',
 	useRp: true,
 	rp: 150
 

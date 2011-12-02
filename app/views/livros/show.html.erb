@@ -1,84 +1,51 @@
-<% title "Livro" %>
+<% title "LIVRO" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+    <font size="6"><strong><%=h "#{@livro.identificacao.livro}" %></strong></font><br/>
+     <font size="4"><strong><%=h "#{@livro.identificacao.subtitulo}" %></strong></font><br/>
+     <font size="2">Coleção:<strong><%=h "#{@livro.colecao}" %></strong></font>
+       <div id="telaShow">
+         <div id="linhaCentral">
+           <div id="conteudoEsquerda">
+              <h3><b><i><font color="DimGrey">Informações sobre o Livro</font></i></b></h3>
+                  <hr>
+                    <strong>Area:</strong>  <%=h @livro.area.nome %><br/>
+                    <strong>Autor(es):</strong><br/>
+                        <% @livro.autores.each do |autor| %>
+                             <%="-  #{autor.nome}" %><br/>
+                        <%end%>
+                     <strong>Editora:</strong>   <%=h @livro.editora.nome %><br/>
+                     <strong>Edição:</strong>   <%=h @livro.edicao %>ª<br/>
+                     <strong>Data Edição:</strong>   <%=h @livro.data_edicao.strftime("%Y") %><br/>
+                     <strong>Local Edição:</strong>   <%=h @livro.local_edicao %><br/>
+                     <strong>Assuntos relacionados:</strong><br/>
+                        <% @livro.assuntos.each do |assunto| %>
+                            <%="-  #{ assunto.descricao}" %><br/>
+                        <%end%>
+                  <strong>Resumo:</strong>   <%=h @livro.resumo %>
+                </div>
+                <div id="colunaDireita">
+                  <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
+                  <hr>
+                     <strong>Tombo Seduc:</strong>   <%=h @livro.tombo_seduc %><br/>
+                     <strong>Tombo Local:</strong>   <%=h @livro.tombo_l %><br/>
+                     <strong>Tipo de aquisição:</strong>   <%=h @livro.localizacao.aquisicao%><br/>
+                     <strong>Data Aquisição:</strong>   <%=h @livro.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+                     <strong>Localização:</strong>   <%=h @livro.localizacao.local_guardado %><br/>
+                     <strong>Unidade:</strong>   <%=h @livro.localizacao.unidade.nome %><br/>
+                     <strong>Observação:</strong>   <%=h @livro.obs%><br/>
+                </div>
 
-<p>
-  <strong>Título:</strong>
-  <%=h @livro.identificacao.livro %>
-</p>
-<p>
-  <strong>Subtítulo:</strong>
-  <%=h @livro.identificacao.subtitulo %>
-</p>
+              </div>
+            </div>
+        <table>
+          <tr>
+            <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), livros_path, :title => "Livros Cadastrados" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_livro_path(@livro), :title => "Editar Livro" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @livro, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir livro" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_livro_path, :title => "Cadastrar Livro" %></td>
+          </tr>
+        </table>
 
-<p>
-  <strong>Assuntos relacionados:</strong><br />
-  <ul>
-  <% @livro.assuntos.each do |assunto| %>
-    <li>
-      <%= assunto.descricao %>
-    </li>
-  <%end%>
-  </ul>
-</p>
-
-<p>
-  <strong>Autor(es):</strong><br />
-  <ul>
-  <% @livro.autores.each do |autor| %>
-    <li>
-      <%= autor.nome %>
-    </li>
-  <%end%>
-  </ul>
-</p>
-
-
-<p>
-  <strong>Area:</strong>
-  <%=h @livro.area.nome %>
-</p>
-<p>
-  <strong>Editora:</strong>
-  <%=h @livro.editora.nome %>
-</p>
-<p>
-  <strong>Localizacao:</strong>
-  <%=h @livro.localizacao.local_guardado %>
-</p>
-<p>
-  <strong>Tombo Seduc:</strong>
-  <%=h @livro.tombo_seduc %>
-</p>
-<p>
-  <strong>Tombo L:</strong>
-  <%=h @livro.tombo_l %>
-</p>
-<p>
-  <strong>Colecao:</strong>
-  <%=h @livro.colecao %>
-</p>
-<p>
-  <strong>Edicao:</strong>
-  <%=h @livro.edicao %>
-</p>
-<p>
-  <strong>Data Edicao:</strong>
-  <%=h @livro.data_edicao %>
-</p>
-<p>
-  <strong>Local Edicao:</strong>
-  <%=h @livro.local_edicao %>
-</p>
-<p>
-  <strong>Resumo:</strong>
-  <%=h @livro.resumo %>
-</p>
-<p>
-  <strong>Obs:</strong>
-  <%=h @livro.obs %>
-</p>
-
-<p>
-  <%= link_to "Edit", edit_livro_path(@livro) %> |
-  <%= link_to "Destroy", @livro, :confirm => 'Confirma?', :method => :delete %> |
-  <%= link_to "View All", livros_path %>
-</p>
+</div>

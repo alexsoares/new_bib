@@ -21,7 +21,13 @@ class Livro < ActiveRecord::Base
   validates_presence_of :assunto_ids, :message => "Campo obrigatório"
   
 
+def before_save
+    self.colecao.upcase!
+    self.local_edicao.upcase!
+    self.resumo.upcase!
+    self.obs.upcase!
 
+end
 
 
 

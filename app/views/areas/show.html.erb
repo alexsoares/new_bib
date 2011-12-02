@@ -1,15 +1,16 @@
 <% title "ÁREAS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-     <h3><b><i>Área do Conhecimento</i></b></h3>
+     <font size="2"><b><i>ÁREA DO CONHECIMENTO</i></b></font>
         <hr>
              <strong>Área:</strong>  <%=h @area.nome %><br/>
         <hr>
         <table>
           <tr>
-            <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), areas_path, :title => "Áreas Cadastradas" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_area_path(@area), :title => "Editar Área" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @area, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Área" %></td>
+            <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), areas_path, :title => "Áreas Cadastradas" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_area_path(@area), :title => "Editar Área" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @area, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Área" %></td>
             <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_area_path, :title => "Cadastrar Área" %></td>
           </tr>
         </table>

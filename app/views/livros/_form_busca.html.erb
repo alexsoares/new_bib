@@ -1,20 +1,22 @@
+
 	<div style='display:none'>
-		<div id='inline_busca' style='padding:10px; background:#fff;'>
-          <h2><%= current_user.unidade.nome %></h2>
+		<div id='inline_busca' style='padding:10px; background:#EEE9E9;'>
+          <h2>FILTRAR TÍTULOS</h2>
           <% form_remote_for(:busca,:url => { :action => 'filtrar' }, :success => "$.fn.colorbox.close()") do |f|%>
             <%= error_messages_for 'contact' %>
             <table>
               <tr>
                 <th width="30%">
-                  <div class="botao">Assunto</div>
+                  <div class="botao">Título:</div>
                 </th>
                 <td width="20%" align="center">
                   <%= f.text_field :busca %>
                 </td>
-                <td><div class="botao"><%= submit_tag 'Filtrar!'  %></div></td>
+                <td><div class="botao"><%= submit_tag 'Filtrar'  %></div></td>
               </tr>
             </table>
           <%end%>
           <hr>
         </div>
 	</div>
+ 

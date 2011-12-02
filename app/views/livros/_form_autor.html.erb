@@ -1,15 +1,15 @@
 	<div style='display:none'>
-		<div id='inline_assunto' style='padding:10px; background:#EEE9E9;'>
-          <h2>CADASTRO DE ASSUNTO</h2>
-          <% form_remote_for(:assunto,:url => { :action => 'create_assunto' }, :success => "$.fn.colorbox.close()") do |f|%>
+		<div id='inline_autor' style='padding:10px; background:#EEE9E9;'>
+          <h2>CADASTRO DE AUTORES</h2>
+          <% form_remote_for(:autor,:url => { :action => 'create_autor' }, :success => "$.fn.colorbox.close()") do |f|%>
             <%= error_messages_for 'contact' %>
             <table>
               <tr>
                 <th width="30%">
-                  <div class="botao">Assunto:</div>
+                  <div class="botao">Autor:</div>
                 </th>
                 <td width="20%" align="center">
-                  <%= f.text_field :descricao %>
+                  <%= f.text_field :nome %>
                 </td>
                 <td><div class="botao"><%= submit_tag 'Criar'  %></div></td>
               </tr>

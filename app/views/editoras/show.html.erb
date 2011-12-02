@@ -1,7 +1,7 @@
 <% title "EDITORAS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-     <h3><b><i>Editora Conhecimento</i></b></h3>
+     <font size="2"><b><i>EDITORA</i></b></font>
         <hr>
           <p>
             <strong>Nome:</strong> <%=h @editora.nome %>
@@ -15,10 +15,11 @@
         <hr>
         <table>
           <tr>
-            <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), editoras_path, :title => "Editora Cadastradas" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_editora_path(@editora), :title => "Editar Editora" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @editora, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Editora" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_editora_path, :title => "Cadastrar Editora" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), editoras_path, :title => "Editoras Cadastradas" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_editora_path(@editora), :title => "Editar Editora" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @editora, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Editora" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_editora_path, :title => "Cadastrar Título" %></td>
           </tr>
         </table>
 </div>

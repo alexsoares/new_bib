@@ -68,6 +68,18 @@ class LivrosController < ApplicationController
 
   end
 
+    def create_autor
+    @autor = Autor.new(params[:autor])
+    if @autor.save
+      @autores = Autor.all
+      @livro = Livro.new
+      render :update do |page|
+        page.replace_html 'autores', :partial => "campos_autor"
+        page.replace_html 'aviso', :text => "AUTOR CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O AUTOR"
+      end
+
+    end
+  end
 
   def create_assunto
     @assunto = Assunto.new(params[:assunto])
@@ -94,6 +106,7 @@ class LivrosController < ApplicationController
 
     end
   end
+
 
  def subtitulo
   session[:identificacao] = params[:livro_identificacao_id]

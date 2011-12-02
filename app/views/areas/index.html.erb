@@ -1,17 +1,29 @@
-<% title "AREA DO CONHECIMENTO" %>
-
-<table>
+<% title "ÁREA DO CONHECIMENTO" %>
+<div class="tabs">
+<table class="grid">
+  <thead>
   <tr>
-    <th>Nome</th>
+    <th width="600">Nome</th>
+    <th colspan="4">Administração</th>
   </tr>
+  </thead>
   <% for area in @areas %>
-    <tr>
+    <tbody>
+     <tr>
       <td><%=h area.nome %></td>
-      <td>| <%= link_to "Exibir", area %></td>
-      <td>| <%= link_to "Alterar", edit_area_path(area) %></td>
-      <td>| <%= link_to "Apagar", area, :confirm => 'Tem certeza?', :method => :delete %> |</td>
-    </tr>
+      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), area, :title => "Visualizar Área" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_area_path(area),  :title => "Editar Área" %></td>
+      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), area, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Área" %></td>
+      </tr >
+    </tbody>
   <% end %>
 </table>
 
-<p>| <%= link_to "Cadastrar", new_area_path %> |</p>
+  <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+     <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_area_path, :title => "Cadastrar Área" %></td>
+    </tr>
+  </table>
+</div>
+
