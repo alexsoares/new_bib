@@ -2,7 +2,15 @@ class UsersController < ApplicationController
   before_filter :load_resources
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
-  layout "login"
+  layout :layout?
+
+  def layout?
+    if logged_in?
+      "application"
+    else
+      "user"
+    end
+  end
 
   # render new.rhtml
   def new
@@ -15,7 +23,7 @@ class UsersController < ApplicationController
     success = @user && @user.save
     if success && @user.errors.empty?
       redirect_back_or_default('/')
-      flash[:notice] = "USUÁRIO E SENHA CADASTRADA COM SUCESSO, VERIFIQUE SEU E-MAIL PARA ATIVA-LOS."
+      flash[:notice] = "USUÁRIO CRIADO COM SUCESSO, ENTRE EM CONTATO COM O ADMINISTRADOR DO SISTEMA PARA LIBERAÇÃO."
     else
       flash[:error]  = "SENHA OU USUÁRIO NÃO AUTORIZADO, FAVOR ENTRAR EM CONTATO COM A SEDUC."
       render :action => 'new'

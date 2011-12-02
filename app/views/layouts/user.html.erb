@@ -9,44 +9,12 @@
   </head>
   <body>
         <div id="topo">
-             <%- flash.each do |name, msg| -%>
-              <%= content_tag :div, msg, :id => "flash_#{name}" %>
-             <%- end -%>
-
          <p>
              <h1>SISTEMA DE GERENCIAMENTO DE BIBLIOTECA - BIBLOS - </h1>
              <h3>Secretaria da Educação da Prefeitura Municipal de Americana </h3>
-         </p>
-        </div>
-        <div id="esquerda">
-          <% unless logged_in? %>
-            <% form_tag session_path do -%>
-            <font  size="3">
-              <center><b><u>LOGIN DE ACESSO</u></b></center>
-            </font>
-            <font  size="2">
-             <p><%= label_tag 'Usuário' %><br />
-                <%= text_field_tag 'login', @login %></p>
-
-            <p><%= label_tag 'Senha' %><br/>
-               <%= password_field_tag 'password', nil %></p>
-            </font>
-            <p><%= submit_tag 'Entrar' %></p>
-            <% end %>
-          <%end%>
-        </div>
-        <div id="direita">
-          <p>
-          <font  size="3"><b>Não possui senha?</b></font>
-          </p>
-          <br/>
-          
-            Clicar aqui
-            <%= button_to 'Cadastrar Usuário/Senha', signup_path%>
-          
-          <br/>
-          <p>
-            <%= link_to 'Esqueci a Senha', new_password_path%>
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
          </p>
         </div>
          <div id="colunaEsquerda">
@@ -55,9 +23,6 @@
               <div id="sepcolCentralDir">
                 <div id="colCentral">
                   <div id="container">
-                    <%- if show_title? -%>
-                      <h1><%=h yield(:title) %></h1>
-                    <%- end -%>
                     <%= yield %>
                   </div>
                 </div>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111125090211) do
+ActiveRecord::Schema.define(:version => 20111201175053) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -55,6 +55,19 @@ ActiveRecord::Schema.define(:version => 20111125090211) do
     t.integer "livro_id", :null => false
   end
 
+  create_table "configuracaos", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "dias_posse"
+    t.integer  "dias_para_aviso"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "data_files", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "dicionario_enciclopedias", :force => true do |t|
     t.integer  "editora_id"
     t.integer  "area_id"
@@ -84,8 +97,16 @@ ActiveRecord::Schema.define(:version => 20111125090211) do
     t.integer  "tipo_emprestimo"
     t.integer  "professor_id"
     t.integer  "aluno"
+    t.integer  "unidade_id",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "data_emprestimo"
+    t.date     "data_devolucao"
+  end
+
+  create_table "emprestimos_livros", :id => false, :force => true do |t|
+    t.integer "autor_id", :null => false
+    t.integer "livro_id", :null => false
   end
 
   create_table "funcionarios", :force => true do |t|
@@ -219,6 +240,12 @@ ActiveRecord::Schema.define(:version => 20111125090211) do
 
   add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
   add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
+
+  create_table "temps", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tipos", :force => true do |t|
     t.string   "nome"
