@@ -2,7 +2,7 @@
 <div class ="tabs">
   <div id="topoShow"></div>
     <font size="6"><strong><%=h "#{@mapas.titulo}" %></strong></font><br/>
-    <font size="4"><strong><%=h "#{@mapas.subtitulo}" %></strong></font><br/>
+    <font size="4"><strong><%=h "#{@mapas.subtitulo}" %></strong></font><br/><br/>
        <div id="telaShow">
          <div id="linhaCentral">
            <div id="conteudoEsquerda">
@@ -40,66 +40,3 @@
 
 </div>
 
-
-<% title "MAPAS" %>
-<div class ="tabs">
-  <div id="topoShow"></div>
-     <font size="2"><b><i>MAPA</i></b></font>
-        <hr>
-<p>
-  
-</p>
-<p>
-  <strong>Titulo:</strong> <%=h @mapas.titulo %>
-</p>
-<p>
-  <strong>Subtitulo:</strong> <%=h @mapas.subtitulo %>
-</p>
-  <p>
-  <strong>Tipo:</strong> <%=h @mapas.tipo %>
-</p>
-<p>
-  <strong>Ano:</strong> <%=h @mapas.ano.strftime("%Y") %>
-</p>
-<p>
-  <strong>Formato:</strong> <%=h @mapas.formato %>
-</p>
-<p>
-  <strong>Editora:</strong> <%=h @mapas.editora.nome %>
-</p>
-<p>
-  <strong>Edição:</strong> <%=h @mapas.edicao %>
-</p>
-<p>
-  <strong>Local Edição:</strong> <%=h @mapas.local_edicao %>
-</p>
-<p>
-  <strong>Observação:</strong> <%=h @mapas.obs %>
-</p>
-<hr>
-    <table>
-          <tr>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), mapas_path, :title => "Mapas Cadastradas" %></td>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_mapa_path(@mapas), :title => "Editar Mapa" %></td>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @mapa, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Mapa" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_jogo_path, :title => "Cadastrar Jogos" %></td>
-          </tr>
-      </table>
-</div>
-
-
-
-
-
-
-
-<% title "Mapas" %>
-
-
-
-<p>
-  <%= link_to "Edit", edit_mapa_path(@mapas) %> |
-  <%= link_to "Destroy", @mapas, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", mapas_path %>
-</p>

@@ -9,11 +9,15 @@ class DicionarioEnciclopedia < ActiveRecord::Base
 TIPO_DIC_ENC = %w(DICIONÁRIO ENCICLOPÉDIA OUTROS)
 
   def before_save
-    self.tombo_seduc.upcase!
-    self.tombo_l.upcase!
+
+
     self.colecao.upcase!
     self.local_edicao.upcase!
     self.obs.upcase!
 end
+
+    def auto_inc_tombo_seduc
+    self.tombo_seduc =+ 1
+  end
 
 end

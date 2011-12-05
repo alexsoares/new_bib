@@ -7,7 +7,6 @@ class Periodico < ActiveRecord::Base
   TIPO_PERIODICO = %w(ANUARIO BOLETIM JORNAL REVISTA OUTROS)
 
   def before_save
-    self.tombo_seduc.upcase!
     self.tombo_l.upcase!
     self.titulo.upcase!
     self.subtitulo.upcase!
@@ -17,6 +16,9 @@ class Periodico < ActiveRecord::Base
     self.obs.upcase!
 end
 
+  def auto_inc_tombo_seduc
+    self.tombo_seduc =+ 1
+  end
 
 
 end

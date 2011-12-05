@@ -1,5 +1,16 @@
-<% title "New Dicionario Enciclopedia" %>
+<% title "DICIONÁRIOS & ENCICLOPÉDIAS" %>
+<div class="tabs">
+ <div id="caixa_titulo">
+     <font size="3"><strong>CADASTRO DE DICIONÁRIOS E ENCICLOPEDIAS</strong></font><br/>
+ </div>
+ <div class="tabs">
+      <%= render :partial => 'form' %>
+</div>
+  <table>
+   <tr>
+    <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), dicionario_enciclopedias_path, :title => "Dicionários & Enciclopédias Cadastrados" %></td>
+   </tr>
+  </table>
+</div>
 
-<%= render :partial => 'form' %>
-
-<p><%= link_to "Back to List", dicionario_enciclopedias_path %></p>

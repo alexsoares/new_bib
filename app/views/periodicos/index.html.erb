@@ -1,42 +1,47 @@
-<% title "Periodicos" %>
+<% title "PERIÓDICOS", :id =>"periodicos" %>
+<div class="tabs">
+  <div id="caixa_titulo">
+    <font size="3"><strong>CADASTRO DE PERIÓDICOS</strong></font><br/>
+  </div>
+    <div class="tabs">
+      <table>
+        <tr bgcolor="#DCDCDC" >
+             <th width="100">Tipo</th>
+                <th width="240">Título</th>
+                <th width="150">Subtítulo</th>
+                <th width="100">Periodicidade</th>
+                <th colspan="3">Administração</th>
+            
+           </tr>
+       
+            <% for periodico in @periodicos %>
 
-<table>
-  <tr>
-    
-    <th>Tombo Seduc</th>
-    <th>Tombo L</th>
-    <th>Issn</th>
-    <th>Titulo</th>
-    <th>Subtitulo</th>
-    <th>Colecao</th>
-    <th>Tipo</th>
-    <th>Periodicidade</th>
-    <th>Producao</th>
-    <th>Local Producao</th>
-    <th>Data Producao</th>
-    <th>Localizacao</th>
-    <th>Obs</th>
-  </tr>
-  <% for periodico in @periodicos %>
-    <tr>
-      <td><%=h periodico.tombo_seduc %></td>
-      <td><%=h periodico.tombo_l %></td>
-      <td><%=h periodico.issn %></td>
-      <td><%=h periodico.titulo %></td>
-      <td><%=h periodico.subtitulo %></td>
-      <td><%=h periodico.colecao %></td>
-      <td><%=h periodico.tipo %></td>
-      <td><%=h periodico.periodicidade %></td>
-      <td><%=h periodico.producao %></td>
-      <td><%=h periodico.local_producao %></td>
-      <td><%=h periodico.data_producao.strftime("%d/%m/%Y") %></td>
-      <td><%=h periodico.localizacao %></td>
-      <td><%=h periodico.obs %></td>
-      <td><%= link_to "Show", periodico %></td>
-      <td><%= link_to "Edit", edit_periodico_path(periodico) %></td>
-      <td><%= link_to "Destroy", periodico, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+              <tr bgcolor="	#F5F5F5">
+                <td><%=h periodico.tipo%></td>
+                <td><%=h periodico.titulo%></td>
+                <td><%=h periodico.subtitulo %></td>
+                <td><%=h periodico.periodicidade %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), periodico, :title => "Exibir Periódico" %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_periodico_path(periodico), :title => "Editar Periódico" %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), periodico, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Periódico" %></td>
+              </tr>
+            <% end %>
+     </table>
 
-<p><%= link_to "New Periodico", new_periodico_path %></p>
+        <table bgcolor="#DCDCDC" width="100%">
+           <tr >
+             <td align="left" colspan="4"><%= will_paginate @periodicos%></td>
+          </tr>
+        </table>
+
+    </div>
+     <table>
+       <tr>
+          <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+          <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), new_periodico_path, :title => "Cadastrar Periódico" %></td>
+       </tr>
+    </table>
+</div>
+
+
+

@@ -4,7 +4,8 @@ class PeriodicosController < ApplicationController
   before_filter :load_resources
 
   def index
-    @periodicos = Periodico.all
+    @periodicos = Periodico.paginate :page => params[:page], :order => 'titulo ASC', :per_page => 10
+    
   end
 
   def show

@@ -26,6 +26,34 @@ class DicionarioEnciclopediasController < ApplicationController
     end
   end
 
+def create_local
+    @localizacao = Localizacao.new(params[:localizacao])
+    @localizacao.add_unidade(current_user.unidade_id)
+    if @localizacao.save
+      @localizacoes = Localizacao.all
+      @dicionario_enciclopedia = DicionarioEnciclopedia.new
+      render :update do |page|
+        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'aviso', :text => "NOVO DICIONÁRIO & ENCICLOPÉDIA CADASTRADO, CONTINUE O CADASTRO"
+      end
+
+    end
+  end
+
+
+  def filtrar
+    if params[:busca].present?
+      @identificacoes = Identificacao.all(:conditions =>["livro like ?", ""+params[:busca][:busca]+"%"])
+    end
+     @dicionario_enciclopedia = DicionarioEnciclopedia.new
+      render :update do |page|
+        page.replace_html 'ident', :partial => "campos_identificacao"
+        page.replace_html 'aviso', :text => "Filtrado!"
+      end
+
+  end
+
+
   def edit
     @dicionario_enciclopedia = DicionarioEnciclopedia.find(params[:id])
   end
@@ -47,11 +75,18 @@ class DicionarioEnciclopediasController < ApplicationController
     redirect_to dicionario_enciclopedias_url
   end
 
+# def subtitulo
+#  session[:subtitulo] = params[:dicionario_enciclopedia_identificacao_id]
+#  @dicionario_enciclopedia = DicionarioEnciclopedia.find_by_identificacao_id(session[:subtitulo])
+#  render :partial => 'subtitulo'
+#  end
+
  def subtitulo
-  session[:subtitulo] = params[:dicionario_enciclopedia_identificacao_id]
-  @dicionario_enciclopedia = DicionarioEnciclopedia.find_by_identificacao_id(session[:subtitulo])
-  render :partial => 'subtitulo'
-  end
+  session[:identificacao] = params[:dicionario_enciclopedia_identificacao_id]
+   @identificacao = Identificacao.find_by_id(session[:identificacao]).subtitulo
+   render :partial => 'subtitulo'
+
+   end
 
 
     protected

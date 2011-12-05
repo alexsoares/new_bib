@@ -1,57 +1,85 @@
 <% form_for @dicionario_enciclopedia do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :area %><br />
-    <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :tombo_seduc %><br />
-    <%= f.text_field :tombo_seduc %>
-  </p>
-  <p>
-    <%= f.label :tombo_l %><br />
-    <%= f.text_field :tombo_l %>
-  </p>
-  <p>
-    <%= f.label :tipo %><br />
-    <%= f.select :tipo, DicionarioEnciclopedia::TIPO_DIC_ENC, :include_blank => '---Selecione---'%>
-  </p>
-  <p>
-    <%= f.label :identificacao_id,"ID" %><br />
-    <%= f.collection_select :identificacao_id ,@identificacoes,:id,:livro, :include_blank => "Selecione" %>
-    <div id= 'subtitulo'></div>
-  </p>
-   <%= observe_field 'dicionario_enciclopedia_identificacao_id',
-                          :update => "subtitulo",
-                          :with => :dicionario_enciclopedia_identificacao_id,
-                          :url => { :action => 'subtitulo' } %>
-  <p>
-    <%= f.label :colecao %><br />
-    <%= f.text_field :colecao %>
-  </p>
-  <p>
-    <%= f.label :volume %><br />
-    <%= f.text_field :volume %>
-  </p>
-  <p>
-    <%= f.label :editora_id %><br />
-    <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :data_edicao %><br />
-    <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
-  </p>
-  <p>
-    <%= f.label :local_edicao %><br />
-    <%= f.text_field :local_edicao %>
-  </p>
-  <p>
-    <%= f.label :localizacao_id %><br />
-    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :obs %><br />
-    <%= f.text_area :obs %>
-  </p>
-  <p><%= f.submit %></p>
-<% end %>
+  <table align="center" bgcolor="#F5F5F5">
+    <tr>
+      <td colspan="3">
+        <%= f.label :tombo_l, "Tombo Local:"%><br />
+        <%= f.text_field :tombo_l, :size => "10" %>
+     </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+  
+        <%= f.label :identificacao_id,"Título: " %><br/>
+        <div id="ident"><%=render "campos_identificacao"%></div>
+      </td>
+      <td width="100%">
+        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "20x20"), "#inline_busca", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]  %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= observe_field 'dicionario_enciclopedia_identificacao_id',
+                                :update => "subtitulo",
+                                :with => :dicionario_enciclopedia_identificacao_id,
+                                :url => { :action => 'subtitulo' } %>
+        <div id= 'subtitulo'></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <%= f.label :colecao, "Coleção:" %><br />
+        <%= f.text_field :colecao, :size => "55" %>
+      </td>
+      <td>
+        <%= f.label :volume, "Volume:" %><br />
+        <%= f.text_field :volume, :size =>"2" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
+        <div id="local"><%= render "campos_local"%></div>
+      </td>
+    </tr>
+    <tr>
+     <td>
+        <%= f.label :editora_id %><br />
+        <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
+      </td>
+      <td colspan="2">
+        <%= f.label :tipo,"Tipo: " %><br/>
+        <%= f.select :tipo, DicionarioEnciclopedia::TIPO_DIC_ENC, :include_blank => '---Selecione---'%>
+      </td>
+    <tr/>
+    <tr>
+      <td>
+        <%= f.label :local_edicao, "Local Edição:" %><br />
+        <%= f.text_field :local_edicao, :size => "30" %>
+      </td>
+      <td colspan="2">
+        <%= f.label :data_edicao, "Data:" %><br />
+        <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
+     </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= f.label :obs, 'Observação:' %><br />
+        <%= f.text_area :obs, :size => "30x3" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"><%= f.submit "Salvar" %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+    <%= render "form_local" %>
+    <%= render "form_busca" %>

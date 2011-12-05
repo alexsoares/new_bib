@@ -1,0 +1,38 @@
+	<div style='display:none'>
+		<div id='inline_local' style='padding:10px; background:#EEE9E9;'>
+          <h2>LOCALIZAÇÃO</h2>
+
+          <% form_remote_for(:localizacao,:url => { :action => 'create_local' }, :success => "$.fn.colorbox.close()") do |f|%>
+            <%= error_messages_for 'local' %>
+            <table>
+              <tr>
+                <td>
+                  <%= f.label :local_guardado,'Local  Guardado:' %>
+                </td>
+                <td colspan="2">
+                  <%= f.text_field :local_guardado %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= f.label :aquisicao, 'Forma Aquisição:' %>
+                </td>
+                <td colspan="2">
+                  <%= f.text_field :aquisicao %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= f.label :data_aquisicao,'Data Aquisição' %>
+                </td>
+                <td>
+                  <%= f.date_select :data_aquisicao %>
+                </td>
+                <td><div class="botao"><%= submit_tag 'Criar'  %></div>
+                </td>
+              </tr>
+            </table>
+          <%end%>
+          <hr>
+        </div>
+	</div>

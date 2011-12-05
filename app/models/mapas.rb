@@ -16,4 +16,8 @@ def before_save
     self.obs.upcase!
 end
 
+  def auto_inc_tombo_seduc
+    self.tombo_seduc =+ 1
+  end
+
 end

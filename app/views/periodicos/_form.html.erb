@@ -1,58 +1,75 @@
 <% form_for @periodicos do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :tombo_seduc %><br />
-    <%= f.text_field :tombo_seduc %>
-  </p>
-  <p>
-    <%= f.label :tombo_l %><br />
-    <%= f.text_field :tombo_l %>
-  </p>
-  <p>
-    <%= f.label :issn %><br />
-    <%= f.text_field :issn %>
-  </p>
-  <p>
-    <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
-  </p>
-  <p>
-    <%= f.label :subtitulo %><br />
-    <%= f.text_field :subtitulo %>
-  </p>
-  <p>
-    <%= f.label :colecao %><br />
-    <%= f.text_field :colecao %>
-  </p>
-  <p>
-    <%= f.label :tipo %><br />
+  <p><div id="aviso"></div></p>
+  <table>
+     <tr>
+      <td align="lef">
+          <%= f.label :tombo_l, 'Tombo Local:' %><br />
+          <%= f.text_field :tombo_l, :size => "10" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="lef">
+          <%= f.label :titulo,  'Título:' %><br />
+          <%= f.text_field :titulo, :size => "73" %>
+      </td>
+    </tr>
+    <tr>
+      <td align="lef">
+          <%= f.label :subtitulo,  'Subtítulo:' %><br />
+          <%= f.text_field :subtitulo, :size => "40" %>
+      </td>
+      <td align="lef">
+          <%= f.label :colecao, 'Coleção:' %><br />
+          <%= f.text_field :colecao, :size => "30" %>
+      </td>
+    </tr>
+    <tr>
+      <td align="lef">
+    <%= f.label :tipo, 'Tipo:' %><br />
     <%= f.select :tipo, Periodico::TIPO_PERIODICO, :include_blank => '---Selecione---'%>
-  </p>
-  <p>
-    <%= f.label :periodicidade %><br />
+      </td>
+      <td align="lef">
+  <%= f.label :periodicidade, 'Periodicidade:' %><br />
     <%= f.select :periodicidade, Periodico::PERIODICIDADE, :include_blank => '---Selecione---'%>
+      </td>
+    </tr>
+    <tr>
+      <td align="lef">
+          <%= f.label :producao, 'Produção:' %><br />
+          <%= f.text_field :producao%>
+      </td>
+      <td align="lef">
+          <%= f.label :data_producao, 'Data:' %><br />
+          <%= f.date_select(:data_producao, :order => [:day, :month,:year], :start_year => (Date.today.year)-10) %>
+      </td>
+    </tr>
+    <tr>
+      <td align="lef">
+          <%= f.label :local_producao, 'Local Produção:' %><br />
+          <%= f.text_field :local_producao%>
+      </td>
 
-  </p>
+    <tr>
+      <td align="lef">
+        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
+        <div id="local"><%= render "campos_local"%></div>
 
-  <p>
-    <%= f.label :producao %><br />
-    <%= f.text_field :producao %>
-  </p>
-  <p>
-    <%= f.label :local_producao %><br />
-    <%= f.text_field :local_producao %>
-  </p>
-  <p>
-    <%= f.label :data_producao %><br />
-    <%= f.date_select(:data_producao, :order => [:day, :month, :year], :start_year => (Date.today.year)-50) %>
-  </p>
-  <p>
-    <%= f.label :localizacao_id %><br />
-    <%= f.collection_select :localizacao_id ,@localizacoes,:id,:descricao, :include_blank => "Selecione" %>
-  </p>
-  <p>
-    <%= f.label :obs %><br />
-    <%= f.text_area :obs %>
-  </p>
-  <p><%= f.submit %></p>
+      </td>
+    </tr>
+    <tr>
+      <td align="lef">
+          <%= f.label :obs, 'Observação;' %><br />
+          <%= f.text_area :obs,:size => "30x3" %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= f.submit'Salvar' %>
+      </td>
+    </tr>
+   </table>
 <% end %>
+
+    <%= render "form_local" %>
+

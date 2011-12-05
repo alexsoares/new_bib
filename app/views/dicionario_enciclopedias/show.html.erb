@@ -1,62 +1,44 @@
-<% title "Dicionario Enciclopedia" %>
+<% title "DICIONÁRIOS & ENCICLOPÉDIAS" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+    <font size="5"><strong><%=h "#{@dicionario_enciclopedia.identificacao.livro}" %></strong></font><br/>
+     <font size="4"><strong><%=h "#{@dicionario_enciclopedia.identificacao.subtitulo}" %></strong></font><br/><br/>
+
+       <div id="telaShow">
+         <div id="linhaCentral">
+           <div id="conteudoEsquerda">
+              <h3><b><i><font color="DimGrey">Informações sobre o volume</font></i></b></h3>
+                  <hr>
+                     <strong>Coleção:</strong>  <%=h @dicionario_enciclopedia.colecao %><br/>
+                     <strong>Volume:</strong>  <%=h @dicionario_enciclopedia.volume %><br/>
+                     <strong>Editora:</strong>   <%=h @dicionario_enciclopedia.editora.nome %><br/>
+                     <strong>Data Edição:</strong>   <%=h @dicionario_enciclopedia.data_edicao.strftime("%Y") %><br/>
+                     <strong>Local Edição:</strong>   <%=h @dicionario_enciclopedia.local_edicao %><br/>
+              </div>
+                <div id="colunaDireita">
+                  <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
+                  <hr>
+                     <strong>Tombo Seduc:</strong>   <%=h @dicionario_enciclopedia.tombo_seduc %><br/>
+                     <strong>Tombo Local:</strong>   <%=h @dicionario_enciclopedia.tombo_l %><br/>
+                     <strong>Tipo de aquisição:</strong>   <%=h @dicionario_enciclopedia.localizacao.aquisicao%><br/>
+                     <strong>Data Aquisição:</strong>   <%=h @dicionario_enciclopedia.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+                     <strong>Localização:</strong>   <%=h @dicionario_enciclopedia.localizacao.local_guardado %><br/>
+                     <strong>Unidade:</strong>   <%=h @dicionario_enciclopedia.localizacao.unidade.nome %><br/>
+                     <strong>Observação:</strong>   <%=h @dicionario_enciclopedia.obs%><br/>
+                </div>
+
+              </div>
+            </div>
+        <table>
+          <tr>
+            <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left"><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), dicionario_enciclopedias_path, :title => "Dicionários & Enciclopédias Cadastrados" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_dicionario_enciclopedia_path(@dicionario_enciclopedia), :title => "Editar Dicionário & Enciclopédia" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @dicionario_enciclopedia, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Dicionário & Enciclopédia" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_dicionario_enciclopedia_path, :title => "Cadastrar Livro" %></td>
+          </tr>
+        </table>
+
+</div>
 
 
-<p>
-  <strong>Area:</strong>
-  <%=h @dicionario_enciclopedia.area.nome %>
-</p>
-<p>
-  <strong>Tipo:</strong>
-  <%=h @dicionario_enciclopedia.tipo %>
-</p>
-<p>
-  <strong>Tombo Seduc:</strong>
-  <%=h @dicionario_enciclopedia.tombo_seduc %>
-</p>
-<p>
-  <strong>Tombo L:</strong>
-  <%=h @dicionario_enciclopedia.tombo_l %>
-</p>
-
-<p>
-  <strong>Título:</strong>
-  <%=h @dicionario_enciclopedia.identificacao.livro %>
-</p>
-<p>
-  <strong>Sub-título:</strong>
-  <%=h @dicionario_enciclopedia.identificacao.subtitulo %>
-</p>
-<p>
-  <strong>Colecao:</strong>
-  <%=h @dicionario_enciclopedia.colecao %>
-</p>
-<p>
-  <strong>Volume:</strong>
-  <%=h @dicionario_enciclopedia.volume %>
-</p>
-<p>
-  <strong>Editora:</strong>
-  <%=h @dicionario_enciclopedia.editora.nome %>
-</p>
-<p>
-  <strong>Data Edicao:</strong>
-  <%=h @dicionario_enciclopedia.data_edicao.strftime("%Y") %>
-</p>
-<p>
-  <strong>Local Edicao:</strong>
-  <%=h @dicionario_enciclopedia.local_edicao %>
-</p>
-<p>
-  <strong>Localizacao:</strong>
-  <%=h @dicionario_enciclopedia.localizacao %>
-</p>
-<p>
-  <strong>Obs:</strong>
-  <%=h @dicionario_enciclopedia.obs %>
-</p>
-
-<p>
-  <%= link_to "Edit", edit_dicionario_enciclopedia_path(@dicionario_enciclopedia) %> |
-  <%= link_to "Destroy", @dicionario_enciclopedia, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", dicionario_enciclopedias_path %>
-</p>

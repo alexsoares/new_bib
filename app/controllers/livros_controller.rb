@@ -11,16 +11,12 @@ class LivrosController < ApplicationController
 
   def new
     @livro = Livro.new
-    #1.times do
-    #  assunto = @livro.assuntos.build
-    #end
-    #@assunto = Assunto.new
+
   end
 
   def create
     @livro = Livro.new(params[:livro])
-    #p = params[:livro][:assuntos]
-    #@assunto = @livro.assuntos.build(params[:assuntos]) unless params[:assuntos][:descricao].blank?
+
     if @livro.save
       flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @livro
@@ -49,6 +45,7 @@ class LivrosController < ApplicationController
     flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to livros_url
   end
+
   def visualizar_check
     if params[:livro_assunto_id].to_i == 1
       render :partial => "check"
@@ -93,6 +90,7 @@ class LivrosController < ApplicationController
 
     end
   end
+  
   def create_local
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)

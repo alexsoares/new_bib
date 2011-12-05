@@ -28,6 +28,22 @@
     color: red;
 }
 
+#caixa_titulo{
+	width:auto;
+	height:20px;
+	padding:3px 0 0 0;
+	background-color:#E6E6FA;
+	text-align:left;
+}
+
+#caixa_subtitulo{
+	width:auto;
+	height:20px;
+	padding:3px 0 0 0;
+	background-color:#DCDCDC;
+	text-align:left;
+}
+
 #tudo{
 	width:auto;
 	height:100px;
