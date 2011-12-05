@@ -1,23 +1,29 @@
 <% title "AUTORES" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>AUTORES CADASTRADOS</strong></font><br/>
+  </div>
 <div class="tabs">
-<table class="grid">
-  <thead>
-  <tr>
-    <th width="630">Nome</th>
-    <th colspan="4">Administração</th>
-  </tr>
-  </thead>
-  <% for autor in @autores %>
-    <tbody>
+  <table bgcolor="#DCDCDC" width="100%">
     <tr>
-      <td><%=h autor.nome %></td>
-      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), autor, :title => "Visualizar Autor" %></td>
-      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_autor_path(autor),  :title => "Editar Autor" %></td>
-      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), autor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Autor" %></td>
+      <th width="630">Nome</th>
+      <th colspan="4">Administração</th>
     </tr>
-    </tbody>    
-  <% end %>
-</table>
+    <% for autor in @autores %>
+    <tr bgcolor="#F5F5F5">
+      <td><%=h autor.nome %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), autor, :title => "Visualizar Autor" %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_autor_path(autor),  :title => "Editar Autor" %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), autor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Autor" %></td>
+    </tr>
+    <% end %>
+  </table>
+  <table bgcolor="#DCDCDC" width="100%">
+     <tr >
+        <td align="left" colspan="4"><%= will_paginate @autores%></td>
+    </tr>
+  </table>
+  </div>
   <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>

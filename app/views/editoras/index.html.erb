@@ -1,29 +1,33 @@
 <% title "EDITORAS" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>EDITORAS CADASTRADAS</strong></font><br/>
+  </div>
 <div class="tabs">
-<table class="grid">
-  <thead>
+  <table bgcolor="#DCDCDC" width="100%">
     <tr>
-     <th width="205">Nome</th>
-     <th width="300">Cidade</th>
+     <th width="300">Nome</th>
+     <th width="200">Cidade</th>
      <th width="100">Pais</th>
      <th colspan="4">Administração</th>
-   </tr>
-  </thead>
-  <% for editora in @editoras %>
-   <tbody>
-    <tr>
-      <td><%=h editora.nome %></td>
+    </tr>
+    <% for editora in @editoras %>
+    <tr bgcolor="#F5F5F5">
+  <td><%=h editora.nome %></td>
       <td><%=h editora.cidade %></td>
       <td><%=h editora.pais %></td>
-      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), editora, :title => "Visualizar Editora" %></td>
-      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_editora_path(editora),  :title => "Editar Editora" %></td>
-      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), editora, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Editora" %></td>
-
-
+      <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), editora, :title => "Visualizar Editora" %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_editora_path(editora),  :title => "Editar Editora" %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), editora, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Editora" %></td>
     </tr>
-   </tbody> 
-  <% end %>
-</table>
+    <% end %>
+  </table>
+  <table bgcolor="#DCDCDC" width="100%">
+     <tr >
+        <td align="left" colspan="4"><%= will_paginate @autores%></td>
+    </tr>
+  </table>
+  </div>
   <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
@@ -31,3 +35,5 @@
     </tr>
   </table>
 </div>
+
+

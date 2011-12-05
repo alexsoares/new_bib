@@ -1,18 +1,23 @@
 <% title "EDITORAS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-     <font size="2"><b><i>EDITORA</i></b></font>
-        <hr>
-          <p>
-            <strong>Nome:</strong> <%=h @editora.nome %>
-          </p>
-          <p>
-            <strong>Cidade:</strong> <%=h @editora.cidade %>
-          </p>
-          <p>
-            <strong>Pais:</strong> <%=h @editora.pais %>
-          </p>
-        <hr>
+   <div id="caixa_titulo">
+     <font size="3"><strong>EDITORA</strong></font><br/>
+   </div>
+     <table  width="100%" bgcolor="#F5F5F5">
+       <tr>
+         <td width="10%"><strong>Nome:</strong> </td>
+         <td align="left"><%=h @editora.nome %></td>
+       </tr>
+       <tr>
+         <td width="10%"><strong>Cidade:</strong> </td>
+         <td align="left"><%=h @editora.cidade %></td>
+       </tr>
+       <tr>
+         <td width="10%"><strong>País:</strong> </td>
+         <td align="left"><%=h @editora.pais %></td>
+       </tr>
+     </table>
         <table>
           <tr>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
@@ -23,4 +28,6 @@
           </tr>
         </table>
 </div>
+
+
 

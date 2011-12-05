@@ -1,6 +1,7 @@
 class EditorasController < ApplicationController
   def index
-    @editoras = Editora.all
+    @editoras = Editora.paginate :page => params[:page], :order => 'nome ASC', :per_page => 10
+
   end
 
   def show

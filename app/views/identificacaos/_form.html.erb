@@ -1,20 +1,24 @@
 <% form_for @identificacao do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :codigo %>:<br />
-    <%= f.text_field :codigo %>
-  </p>
-  <p>
-    <%= f.label :livro, "Título" %>:<br />
-    <%= f.text_field :livro %>
-  </p>
-  <p>
-    <%= f.label :subtitulo %>:<br />
-    <%= f.text_field :subtitulo %>
-  </p>
-  <p>
-    <%= f.label :obs %>:<br />
-    <%= f.text_area(:obs, :cols =>28, :rows => "2") %>
-  </p>
-  <p><%= f.submit "Salvar" %></p>
+  <table  width="100%" bgcolor="#F5F5F5">
+    <tr>
+      <td><b><%= f.label :codigo, 'Código:' %></b><br/>
+             <%= f.text_field :codigo %></td>
+   </tr>
+   <tr>
+      <td><b><%= f.label :livro, "Título" %>:</b><br/>
+             <%= f.text_field :livro %></td>
+   </tr>
+   <tr>
+      <td><b><%= f.label :subtitulo,'Subtítulo:' %></b><br/>
+             <%= f.text_field :subtitulo %></td>
+   </tr>
+   <tr>
+      <td><b><%= f.label :obs, 'Observação:' %></b><br/>
+             <%= f.text_area(:obs, :cols =>28, :rows => "2") %></td>
+   </tr>
+   <tr>
+      <td colspan="2"><%= f.submit "Salvar" %></td>
+    </tr>
+  </table>
 <% end %>

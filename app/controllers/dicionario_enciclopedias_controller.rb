@@ -5,7 +5,7 @@ class DicionarioEnciclopediasController < ApplicationController
 
   
   def index
-    @dicionario_enciclopedias = DicionarioEnciclopedia.all
+    @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
   end
 
   def show

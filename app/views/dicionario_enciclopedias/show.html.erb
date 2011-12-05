@@ -1,9 +1,12 @@
 <% title "DICIONÁRIOS & ENCICLOPÉDIAS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-    <font size="5"><strong><%=h "#{@dicionario_enciclopedia.identificacao.livro}" %></strong></font><br/>
-     <font size="4"><strong><%=h "#{@dicionario_enciclopedia.identificacao.subtitulo}" %></strong></font><br/><br/>
-
+  <table  bgcolor="#DCDCDC" width="100%">
+    <tr><td>
+     <font size="5"><strong><%=h "#{@dicionario_enciclopedia.identificacao.livro}" %></strong></font><br/>
+     <font size="4"><strong><%=h "#{@dicionario_enciclopedia.identificacao.subtitulo}" %></strong></font><br/>
+   </td></tr>
+</table>
        <div id="telaShow">
          <div id="linhaCentral">
            <div id="conteudoEsquerda">

@@ -40,7 +40,7 @@
 	width:auto;
 	height:20px;
 	padding:3px 0 0 0;
-	background-color:#DCDCDC;
+	background-color:#000;
 	text-align:left;
 }
 
@@ -92,7 +92,7 @@
     width:auto;
 	height:100px;
 	padding:3px 0 0 0;
-	background-color:#333;
+	background-color:#F5F5F5;
 	border-top:1px solid #666;
 	border-bottom:2px dotted #666;
 	color:#000;
@@ -103,7 +103,7 @@
 }
 
 #telaShow {
-    background:#EEE9E9;
+    background:#F5F5F5;
     height:410px;
     border-style:double;
     border-color:#CDC9C9;
@@ -125,7 +125,7 @@
 }
 
 #colunaDireita {
-	background:#EEE9E9;
+	background:#F5F5F5;
 	color:#000;
 	padding:2px 10px;
 	text-align:justify;
@@ -135,7 +135,7 @@
 #conteudoEsquerda {
 	position:absolute;
 	width:300px;
-	top:78px;
+	top:60px;
 	left:10px;
 	color:#000;
 	padding-bottom:20px;
