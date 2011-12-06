@@ -2,7 +2,8 @@ class LivrosController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
   def index
-    @livros = Livro.all
+    @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
+
   end
 
   def show

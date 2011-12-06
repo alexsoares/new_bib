@@ -3,37 +3,33 @@
   <table width="100%" bgcolor="#F5F5F5">
      <tr>
       <td align="lef">
-          <%= f.label :tombo_l, 'Tombo Local:' %><br />
+          <b><%= f.label :tombo_l, 'Tombo Local:' %></b><br />
           <%= f.text_field :tombo_l, :size => "10" %>
       </td>
     <tr>
     </tr>
       <td align="lef">
-          <%= f.label :nome, 'Nome:' %><br />
+          <b><%= f.label :nome, 'Nome:' %></b><br />
           <%= f.text_field :nome %>
       </td>
-    <tr>
-    </tr>
       <td align="lef">
-          <%= f.label :faixa_etaria, 'Faixa Etária:' %><br />
+          <b><%= f.label :faixa_etaria, 'Faixa Etária:' %></b><br />
           <%= f.select :faixa_etaria, Jogo::FAIXA_ETARIA, :include_blank => '---Selecione---'%>
       </td>
     <tr>
     </tr>
       <td align="lef">
-          <%= f.label :tipo,'Tipo:' %><br />
+          <b><%= f.label :tipo,'Tipo:' %></b><br />
           <%= f.text_field :tipo %>
       </td>
-    <tr>
-    </tr>
       <td align="lef">
-          <%= f.label :fabricante, 'Fabricante:' %><br />
+          <b><%= f.label :fabricante, 'Fabricante:' %></b><br />
           <%= f.text_field :fabricante %>
       </td>
     <tr>
     </tr>
       <td align="lef">
-        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <b><%= f.label :localizacao_id,"Selecione a localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
         <div id="local"><%= render "campos_local"%></div>
 
@@ -41,7 +37,7 @@
     <tr>
     </tr>
       <td align="lef">
-          <%= f.label :obs, 'Observação;' %><br />
+          <b><%= f.label :obs, 'Observação:' %></b><br />
           <%= f.text_area :obs,:size => "30x3" %>
       </td>
     <tr>

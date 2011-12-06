@@ -1,44 +1,41 @@
 <% title "JOGOS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-     <font size="2"><b><i>JOGO</i></b></font>
-        <hr>
-          <p>
-            <strong>Tombo Seduc:</strong><%=h @jogos.tombo_seduc %>
-          </p>
-          <p>
-            <strong>Tombo Local:</strong><%=h @jogos.tombo_l %>
-          </p>
-          <p>
-            <strong>Nome:</strong> <%=h @jogos.nome %>
-          </p>
-          <p>
-            <strong>Faixa Etaria:</strong> <%=h @jogos.faixa_etaria %>
-          </p>
-          <p>
-            <strong>Tipo:</strong> <%=h @jogos.tipo %>
-          </p>
-          <p>
-            <strong>Fabricante:</strong> <%=h @jogos.fabricante %>
-          </p>
-          <p>
-            <strong>Localização:</strong> <%=h @jogos.localizacao.local_guardado %>
-          </p>
-          <p>
-            <strong>Observação:</strong> <%=h @jogos.obs %>
-          </p>
-          <hr>
-        <table>
+    <font size="5"><strong><%=h "#{@jogos.nome}" %></strong></font><br/><br/>
+       <div id="telaShow">
+         <div id="linhaCentral">
+           <div id="conteudoEsquerda">
+              <h3><b><i><font color="DimGrey">Informações sobre o jogo</font></i></b></h3>
+                  <hr>
+                    <strong>Faixa Etária:</strong>  <%=h @jogos.faixa_etaria %><br/>
+                     <strong>Tipo:</strong>   <%=h @jogos.tipo %><br/>
+                     <strong>Fabricante:</strong>   <%=h @jogos.fabricante %><br/>
+                </div>
+                <div id="colunaDireita">
+                  <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
+                  <hr>
+                     <strong>Tombo Seduc:</strong>   <%=h @jogos.tombo_seduc %><br/>
+                     <strong>Tombo Local:</strong>   <%=h @jogos.tombo_l %><br/>
+                     <strong>Localização:</strong>   <%=h @jogos.localizacao.local_guardado %><br/>
+                     <strong>Unidade:</strong>   <%=h @jogos.localizacao.unidade.nome %><br/>
+                     <strong>Observação:</strong>   <%=h @jogos.obs%><br/>
+                </div>
+
+              </div>
+            </div>
+    <table>
           <tr>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), jogos_path, :title => "Jogos Cadastradas" %></td>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_jogo_path(@jogos), :title => "Editar Jogo" %></td>
-            
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @jogo, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Jogo" %></td>
             <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_jogo_path, :title => "Cadastrar Jogos" %></td>
           </tr>
-        </table>
+      </table>
+
 </div>
+
+
 
 
 

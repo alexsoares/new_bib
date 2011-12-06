@@ -4,7 +4,8 @@ class JogosController < ApplicationController
   before_filter :load_resources
 
   def index
-    @jogos = Jogo.all
+    @jogos = Jogo.paginate :page => params[:page], :order => 'nome ASC', :per_page => 10
+
   end
 
   def show

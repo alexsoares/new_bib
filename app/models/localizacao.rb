@@ -4,6 +4,8 @@ class Localizacao < ActiveRecord::Base
   has_many :livros
   has_many :mapas
 
+  FORMAAQUISICAO = %w(DOAÇÃO  AQUISIÇÃO_SEDUC AQUISIÇÃO_UNIDADE ENVIADO_MEC ENVIADO_SEC_EST_EDUC OUTROS)
+
 
 def before_save
     self.aquisicao.upcase!

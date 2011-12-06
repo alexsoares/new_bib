@@ -16,7 +16,7 @@
                   <%= f.label :aquisicao, 'Forma Aquisição:' %>
                 </td>
                 <td colspan="2">
-                  <%= f.text_field :aquisicao %>
+                  <%= f.select :aquisicao, Localizacao::FORMAAQUISICAO, :include_blank => '---Selecione---'%>
                 </td>
               </tr>
               <tr>

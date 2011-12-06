@@ -18,12 +18,12 @@
                   <%= f.label :aquisicao, 'Forma Aquisição:' %>
                 </td>
                 <td colspan="2">
-                  <%= f.text_field :aquisicao %>
+                  <%= f.select :aquisicao, Localizacao::FORMAAQUISICAO, :include_blank => '---Selecione---'%>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <%= f.label :data_aquisicao,'Data Aquisição' %>
+                  <%= f.select :aquisicao, Localizacao::FORMAAQUISICAO, :include_blank => '---Selecione---'%>
                 </td>
                 <td>
                   <%= f.date_select :data_aquisicao %>
