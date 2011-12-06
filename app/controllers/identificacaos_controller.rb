@@ -1,6 +1,7 @@
 class IdentificacaosController < ApplicationController
   def index
-    @identificacaos = Identificacao.all
+    @identificacaos = Identificacao.paginate :page => params[:page], :order => 'livro ASC', :per_page => 10
+   
   end
 
   def show

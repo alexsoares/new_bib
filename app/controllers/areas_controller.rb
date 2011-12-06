@@ -1,6 +1,7 @@
 class AreasController < ApplicationController
   def index
-    @areas = Area.all
+    @areas = Area.paginate :page => params[:page], :order => 'nome ASC', :per_page => 10
+    
   end
 
   def show

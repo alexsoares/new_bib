@@ -1,23 +1,23 @@
 <% title "TÍTULOS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-     <font size="2"><b><i>TÍTULO  </i></b></font>
-        <hr>
-          <p>
-            <strong>Código:</strong> <%=h @identificacao.codigo %>
-          </p>
-          <p>
-            <strong>Título:</strong> <%=h @identificacao.livro %>
-          </p>
-          <p>
-            <strong>Subtítulo:</strong> <%=h @identificacao.subtitulo %>
-          </p>
-          <p>
-            <strong>Observação:</strong> <%=h @identificacao.obs %>
-          </p>
-
-        <hr>
-        <table>
+   <div id="caixa_titulo">
+     <font size="3"><strong>TÍTULO</strong></font><br/>
+   </div>
+      <table  width="100%" bgcolor="#F5F5F5">
+       <tr>
+         <td width="10%"> <strong>Código:</strong> <%=h @identificacao.codigo %></td>
+       </tr>
+       <tr>
+         <td width="10%"><strong>Título:</strong> <%=h @identificacao.livro %></td>
+       </tr>
+       <tr>
+         <td width="10%"><strong>Subtítulo:</strong> <%=h @identificacao.subtitulo %></td>
+       </tr>
+       <tr>
+         <td width="10%"><strong>Observação:</strong> <%=h @identificacao.obs %></td>
+       </tr>
+       <table>
           <tr>
             <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), identificacaos_path, :title => "Título Cadastradas" %></td>

@@ -1,6 +1,7 @@
 class AutoresController < ApplicationController
   def index
-    @autores = Autor.all
+    @autores = Autor.paginate :page => params[:page], :order => 'nome ASC', :per_page => 10
+    
   end
 
   def show

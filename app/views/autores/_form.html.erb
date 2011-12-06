@@ -1,8 +1,18 @@
 <% form_for @autor do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :nome %>:<br />
-    <%= f.text_field :nome %>
-  </p>
-  <p><%= f.submit "Salvar" %></p>
+  <table  width="100%" bgcolor="#F5F5F5">
+  <tr><td></td></tr>
+  <tr><td></td></tr>
+    <tr>
+      <td>
+        <b><%= f.label :nome, 'Nome:' %></b><br />
+        <%= f.text_field :nome %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.submit "Salvar" %>
+      </td>
+    </tr>
+  </table>
 <% end %>

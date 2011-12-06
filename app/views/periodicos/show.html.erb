@@ -1,52 +1,46 @@
 <% title "PERIÓDICOS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-     <font size="2"><b><i>PERIÓDICO</i></b></font>
-        <hr>
-          <p>
-            <strong>Tombo Seduc:</strong><%=h @periodicos.tombo_seduc %>
-          </p>
-          <p>
-            <strong>Tombo Local:</strong><%=h @periodicos.tombo_l %>
-          </p>
-          <p>
-            <strong>Título:</strong> <%=h @periodicos.titulo %>
-          </p>
-          <p>
-            <strong>Subtítulo:</strong> <%=h @periodicos.subtitulo %>
-          </p>
-          <p>
-            <strong>Coleção:</strong> <%=h @periodicos.colecao %>
-          </p>
-          <p>
-            <strong>Tipo:</strong> <%=h @periodicos.tipo %> - 
+    <font size="6"><strong><%=h "#{@periodicos.titulo}" %></strong></font><br/>
+    <font size="4"><strong><%=h "#{@periodicos.subtitulo}" %></strong></font><br/><br/>
+       <div id="telaShow">
+         <div id="linhaCentral">
+           <div id="conteudoEsquerda">
+              <h3><b><i><font color="DimGrey">Informações sobre o periódico</font></i></b></h3>
+                  <hr>
+                    <strong>Coleção:</strong>  <%=h @periodicos.colecao %><br/>
+                     <strong>Tipo:</strong>   <%=h @periodicos.tipo %><br/>
+                     <strong>Periodicidade:</strong>   <%=h @periodicos.periodicidade %>ª<br/>
+                     <strong>Produção:</strong>   <%=h @periodicos.producao %>ª<br/>
+                     <strong>Data:</strong>   <%=h @periodicos.data_producao.strftime("%Y") %><br/>
+                     <strong>Local:</strong>   <%=h @periodicos.local_producao %><br/>
+                </div>
+                <div id="colunaDireita">
+                  <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
+                  <hr>
+                     <strong>Tombo Seduc:</strong>   <%=h @periodicos.tombo_seduc %><br/>
+                     <strong>Tombo Local:</strong>   <%=h @periodicos.tombo_l %><br/>
+                     <strong>Tipo de aquisição:</strong>   <%=h @periodicos.localizacao.aquisicao%><br/>
+                     <strong>Data Aquisição:</strong>   <%=h @periodicos.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+                     <strong>Localização:</strong>   <%=h @periodicos.localizacao.local_guardado %><br/>
+                     <strong>Unidade:</strong>   <%=h @periodicos.localizacao.unidade.nome %><br/>
+                     <strong>Observação:</strong>   <%=h @periodicos.obs%><br/>
+                </div>
 
-            <strong>Periodicidade:</strong> <%=h @periodicos.periodicidade %>
-          </p>
-          <p>
-            <strong>Producao:</strong> <%=h @periodicos.producao %> - 
-            <strong>Data:</strong> <%=h @periodicos.data_producao.strftime("%d / %b / %Y") %>
-          </p>
-
-          <p>
-            <strong>Local Produção:</strong> <%=h @periodicos.local_producao %>
-          </p>
-          <p>
-            <strong>Localização:</strong> <%=h @periodicos.localizacao.local_guardado %>
-          </p>
-          <p>
-            <strong>Observação:</strong> <%=h @periodicos.obs %>
-          </p>
-          <hr>
-        <table>
+              </div>
+            </div>
+     <table>
           <tr>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), periodicos_path, :title => "Periódicos Cadastradas" %></td>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_periodico_path(@periodicos), :title => "Editar Periódico" %></td>
-
+            <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), periodicos_path, :title => "Periódico Cadastrados" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_periodico_path(@periodicos), :title => "Editar Periódico " %></td>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @periodico, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Periódico" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_periodico_path, :title => "Cadastrar Periodicos" %></td>
+            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_periodico_path, :title => "Cadastrar Periódico" %></td>
           </tr>
         </table>
+
 </div>
+
+
+
 

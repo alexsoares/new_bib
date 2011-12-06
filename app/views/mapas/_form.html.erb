@@ -1,57 +1,57 @@
 <% form_for @mapas do |f| %>
   <%= f.error_messages %>
-  <p><div id="aviso"></div></p>
-  <table>
+  <table  width="100%" bgcolor="#F5F5F5">
      <tr>
       <td align="lef" colspan="3">
-          <%= f.label :tombo_l, 'Tombo Local:' %><br />
+          <b><%= f.label :tombo_l, 'Tombo Local:' %></b><br />
           <%= f.text_field :tombo_l, :size => "10" %>
       </td>
     </tr>
     <tr>
       <td align="lef" colspan="3">
-         <%= f.label :titulo,'Titulo:' %><br />
-         <%= f.text_field :titulo, :size => "70" %>
+         <b><%= f.label :titulo,'Titulo:' %></b><br />
+         <%= f.text_field :titulo, :size => "65" %>
       </td>
     </tr>
     <tr>
       <td align="lef" colspan="3">
-        <%= f.label :subtitulo, 'Subtítulo:' %><br />
-        <%= f.text_field :subtitulo, :size => "70" %>
+        <b><%= f.label :subtitulo, 'Subtítulo:' %></b><br />
+        <%= f.text_field :subtitulo, :size => "65" %>
       </td>
     </tr>
     <tr>
       <td align="lef">
-         <%= f.label :tipo, 'Tipo:' %><br />
+         <b><%= f.label :tipo, 'Tipo:' %></b><br />
          <%= f.select :tipo, Mapas::TIPO_MAPA, :include_blank => '---Selecione---'%>
       </td>
       <td align="lef">
-         <%= f.label :formato,'Formato:' %><br />
+         <b><%= f.label :formato,'Formato:' %></b><br />
         <%= f.select :formato, Mapas::FORMATO_MAPA, :include_blank => '---Selecione---'%>
       </td>
       <td align="lef">
-         <%= f.label :ano, 'Ano:' %><br />
+         <b><%= f.label :ano, 'Ano:' %></b><br />
         <%= f.date_select(:ano, :order => [:year], :start_year => (Date.today.year)-50) %>
       </td>
 
     </tr>
     <tr>
       <td align="lef">
-        <%= f.label :editora_id, 'Editora:' %><br />
+        <b><%= f.label :editora_id, 'Editora:' %></b><br />
         <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
       </td>
       <td align="lef">
-        <%= f.label :local_edicao,'Local Edição:' %><br />
-        <%= f.text_field :local_edicao %>
+        <b><%= f.label :local_edicao,'Local Edição:' %></b><br />
+        <%= f.text_field :local_edicao, :size => "20" %>
       </td>
       <td align="lef">
-       <%= f.text_field :edicao, :size=>"1" %>ª Edição
+        <b>Edição:</b><br />
+       <%= f.text_field :edicao, :size=>"1" %>ª 
       </td>
 
     </tr>
     <tr>
       <td align="lef" colspan="3">
-        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <b><%= f.label :localizacao_id,"Selecione a localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
         <div id="local"><%= render "campos_local"%></div>
 
@@ -59,7 +59,7 @@
     </tr>
     <tr>
       <td align="lef" colspan="3">
-          <%= f.label :obs, 'Observação;' %><br />
+          <b><%= f.label :obs, 'Observação;' %></b><br />
           <%= f.text_area :obs,:size => "30x3" %>
       </td>
     </tr>
