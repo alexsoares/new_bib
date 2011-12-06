@@ -12,7 +12,7 @@
                     <strong>Area:</strong>  <%=h @livro.area.nome %><br/>
                     <strong>Autor(es):</strong><br/>
                         <% @livro.autores.each do |autor| %>
-                             <%="-  #{autor.nome}" %><br/>
+                             <b>-</b> <%="#{autor.nome}" %><br/>
                         <%end%>
                      <strong>Editora:</strong>   <%=h @livro.editora.nome %><br/>
                      <strong>Edição:</strong>   <%=h @livro.edicao %>ª<br/>
@@ -20,7 +20,7 @@
                      <strong>Local Edição:</strong>   <%=h @livro.local_edicao %><br/>
                      <strong>Assuntos relacionados:</strong><br/>
                         <% @livro.assuntos.each do |assunto| %>
-                            <%="-  #{ assunto.descricao}" %><br/>
+                            <b>-</b> <%="#{ assunto.descricao}" %><br/>
                         <%end%>
                   <strong>Resumo:</strong>   <%=h @livro.resumo %>
                 </div>
