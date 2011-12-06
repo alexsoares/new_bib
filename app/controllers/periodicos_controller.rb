@@ -26,6 +26,20 @@ class PeriodicosController < ApplicationController
     end
   end
 
+  def create_local
+    @localizacao = Localizacao.new(params[:localizacao])
+    @localizacao.add_unidade(current_user.unidade_id)
+    if @localizacao.save
+      @localizacoes = Localizacao.all
+      @periodicos = Periodico.new
+      render :update do |page|
+        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'aviso', :text => "NOVA LOCALIZAÇÃO CADASTRADA, CONTINUE O CADASTRO"
+      end
+
+    end
+  end
+
   def edit
     @periodicos = Periodico.find(params[:id])
   end

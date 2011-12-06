@@ -39506,3 +39506,2758 @@ Rendering identificacaos/index
   [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Completed in 163ms (View: 100, DB: 44) | 200 OK [http://localhost/identificacaos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:48:04) [GET]
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;36;1mIdentificacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 158ms (View: 144, DB: 3) | 200 OK [http://localhost/identificacaos]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:48:26) [GET]
+  [4;36;1mIdentificacao Load (0.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 149ms (View: 125, DB: 3) | 200 OK [http://localhost/identificacaos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:48:37) [GET]
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;36;1mIdentificacao Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 121ms (View: 104, DB: 3) | 200 OK [http://localhost/identificacaos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:48:53) [GET]
+  Parameters: {"page"=>"354"}
+  [4;36;1mIdentificacao Load (60.8ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3530, 10[0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mUser Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 242ms (View: 64, DB: 66) | 200 OK [http://localhost/identificacaos?page=354]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:48:57) [GET]
+  Parameters: {"page"=>"346"}
+  [4;36;1mIdentificacao Load (53.6ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3450, 10[0m
+  [4;35;1mIdentificacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 192ms (View: 123, DB: 59) | 200 OK [http://localhost/identificacaos?page=346]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:49:03) [GET]
+  Parameters: {"page"=>"342"}
+  [4;35;1mIdentificacao Load (80.5ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3410, 10[0m
+  [4;36;1mIdentificacao Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 258ms (View: 162, DB: 83) | 200 OK [http://localhost/identificacaos?page=342]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:49:07) [GET]
+  Parameters: {"page"=>"338"}
+  [4;36;1mIdentificacao Load (59.9ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3370, 10[0m
+  [4;35;1mIdentificacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 190ms (View: 105, DB: 63) | 200 OK [http://localhost/identificacaos?page=338]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:49:12) [GET]
+  Parameters: {"page"=>"334"}
+  [4;35;1mIdentificacao Load (61.5ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3330, 10[0m
+  [4;36;1mIdentificacao Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (7.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 204ms (View: 113, DB: 73) | 200 OK [http://localhost/identificacaos?page=334]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:49:19) [GET]
+  Parameters: {"page"=>"330"}
+  [4;36;1mIdentificacao Load (65.1ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3290, 10[0m
+  [4;35;1mIdentificacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 198ms (View: 112, DB: 68) | 200 OK [http://localhost/identificacaos?page=330]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:49:23) [GET]
+  Parameters: {"page"=>"326"}
+  [4;35;1mIdentificacao Load (67.6ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3250, 10[0m
+  [4;36;1mIdentificacao Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 200ms (View: 111, DB: 70) | 200 OK [http://localhost/identificacaos?page=326]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:49:29) [GET]
+  Parameters: {"page"=>"330"}
+  [4;36;1mIdentificacao Load (0.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3290, 10[0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 141ms (View: 124, DB: 5) | 200 OK [http://localhost/identificacaos?page=330]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:50:05) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mIdentificacao Load (22.4ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 10, 10[0m
+  [4;36;1mIdentificacao Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (8.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 188ms (View: 140, DB: 35) | 200 OK [http://localhost/identificacaos?page=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:50:12) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mIdentificacao Load (0.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mIdentificacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 275ms (View: 259, DB: 3) | 200 OK [http://localhost/identificacaos?page=1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:50:33) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 10, 10[0m
+  [4;36;1mIdentificacao Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 132ms (View: 112, DB: 3) | 200 OK [http://localhost/identificacaos?page=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-05 15:50:38) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mIdentificacao Load (19.0ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 20, 10[0m
+  [4;35;1mIdentificacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 311ms (View: 277, DB: 22) | 200 OK [http://localhost/identificacaos?page=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#show (for 127.0.0.1 at 2011-12-05 15:54:29) [GET]
+  Parameters: {"id"=>"29"}
+  [4;35;1mIdentificacao Columns (11.3ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mIdentificacao Load (0.3ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 29) [0m
+Rendering template within layouts/application
+Rendering identificacaos/show
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 93ms (View: 70, DB: 13) | 200 OK [http://localhost/identificacaos/29]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-06 07:11:45) [GET]
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;36;1mIdentificacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 126ms (View: 109, DB: 3) | 200 OK [http://localhost/identificacaos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#edit (for 127.0.0.1 at 2011-12-06 07:11:51) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mIdentificacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering identificacaos/edit
+Rendered identificacaos/_form (7.8ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 49ms (View: 33, DB: 3) | 200 OK [http://localhost/identificacaos/11/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-06 07:12:00) [GET]
+  [4;36;1mIdentificacao Load (0.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 121ms (View: 107, DB: 3) | 200 OK [http://localhost/identificacaos]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#show (for 127.0.0.1 at 2011-12-06 07:12:04) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mIdentificacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mIdentificacao Load (0.3ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 12) [0m
+Rendering template within layouts/application
+Rendering identificacaos/show
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 74ms (View: 40, DB: 3) | 200 OK [http://localhost/identificacaos/12]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#new (for 127.0.0.1 at 2011-12-06 07:12:10) [GET]
+  [4;35;1mIdentificacao Columns (10.7ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+Rendering template within layouts/application
+Rendering identificacaos/new
+Rendered identificacaos/_form (11.0ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 66ms (View: 36, DB: 12) | 200 OK [http://localhost/identificacaos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#index (for 127.0.0.1 at 2011-12-06 07:12:14) [GET]
+  [4;36;1mIdentificacao Load (0.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+Rendering template within layouts/application
+Rendering identificacaos/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 139ms (View: 127, DB: 3) | 200 OK [http://localhost/identificacaos]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (13.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#show (for 127.0.0.1 at 2011-12-06 08:08:43) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mIdentificacao Columns (15.8ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mIdentificacao Load (12.7ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering identificacaos/show
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 224ms (View: 169, DB: 43) | 200 OK [http://localhost/identificacaos/11]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#new (for 127.0.0.1 at 2011-12-06 08:08:51) [GET]
+  [4;35;1mIdentificacao Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+Rendering template within layouts/application
+Rendering identificacaos/new
+Rendered identificacaos/_form (9.7ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 64ms (View: 39, DB: 3) | 200 OK [http://localhost/identificacaos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EditorasController#new (for 127.0.0.1 at 2011-12-06 08:08:55) [GET]
+  [4;36;1mEditora Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+Rendering template within layouts/application
+Rendering editoras/new
+Rendered editoras/_form (11.3ms)
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 85ms (View: 46, DB: 3) | 200 OK [http://localhost/editoras/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EditorasController#index (for 127.0.0.1 at 2011-12-06 08:08:59) [GET]
+  [4;35;1mEditora Load (0.2ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;36;1mEditora Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `editoras` [0m
+Rendering template within layouts/application
+Rendering editoras/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 146ms (View: 118, DB: 6) | 200 OK [http://localhost/editoras]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EditorasController#show (for 127.0.0.1 at 2011-12-06 08:09:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.3ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering editoras/show
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 76ms (View: 65, DB: 3) | 200 OK [http://localhost/editoras/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EditorasController#edit (for 127.0.0.1 at 2011-12-06 08:09:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEditora Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.2ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering editoras/edit
+Rendered editoras/_form (12.1ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 70ms (View: 37, DB: 3) | 200 OK [http://localhost/editoras/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-06 08:09:10) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 80ms (View: 9, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:09:14) [GET]
+  [4;35;1mArea Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (9.3ms)
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 75ms (View: 61, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:09:18) [GET]
+  [4;36;1mArea Load (0.4ms)[0m   [0;1mSELECT * FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 339ms (View: 322, DB: 3) | 200 OK [http://localhost/areas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-06 08:09:32) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 60ms (View: 14, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:09:36) [GET]
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (4.4ms)
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 37ms (View: 27, DB: 2) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:09:40) [GET]
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 345ms (View: 335, DB: 3) | 200 OK [http://localhost/areas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#show (for 127.0.0.1 at 2011-12-06 08:09:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArea Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.3ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering areas/show
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 63ms (View: 49, DB: 3) | 200 OK [http://localhost/areas/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:11:12) [GET]
+  [4;36;1mArea Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (8.3ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 165ms (View: 152, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#create (for 127.0.0.1 at 2011-12-06 08:11:20) [POST]
+  Parameters: {"commit"=>"Salvar", "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs=", "area"=>{"nome"=>"aaaaa"}}
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (18.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArea Create (14.5ms)[0m   [0mINSERT INTO `areas` (`created_at`, `nome`, `updated_at`) VALUES('2011-12-06 10:11:20', 'AAAAA', '2011-12-06 10:11:20')[0m
+  [4;36;1mSQL (96.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/areas/40
+Completed in 143ms (DB: 130) | 302 Found [http://localhost/areas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#show (for 127.0.0.1 at 2011-12-06 08:11:20) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.4ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 40) [0m
+Rendering template within layouts/application
+Rendering areas/show
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 44ms (View: 33, DB: 3) | 200 OK [http://localhost/areas/40]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#show (for 127.0.0.1 at 2011-12-06 08:14:29) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 40) [0m
+Rendering template within layouts/application
+Rendering areas/show
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 72ms (View: 49, DB: 2) | 200 OK [http://localhost/areas/40]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#show (for 127.0.0.1 at 2011-12-06 08:14:43) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 40) [0m
+Rendering template within layouts/application
+Rendering areas/show
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 48ms (View: 34, DB: 3) | 200 OK [http://localhost/areas/40]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:15:06) [GET]
+  [4;35;1mArea Load (0.4ms)[0m   [0mSELECT * FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;36;1mArea Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 310ms (View: 299, DB: 3) | 200 OK [http://localhost/areas]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#destroy (for 127.0.0.1 at 2011-12-06 08:15:23) [DELETE]
+  Parameters: {"authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs=", "id"=>"39"}
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.3ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 39) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mArea Destroy (20.7ms)[0m   [0;1mDELETE FROM `areas` WHERE `id` = 39[0m
+  [4;35;1mSQL (52.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/areas
+Completed in 91ms (DB: 75) | 302 Found [http://localhost/areas/39]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:15:23) [GET]
+  [4;36;1mArea Load (0.4ms)[0m   [0;1mSELECT * FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 230ms (View: 219, DB: 3) | 200 OK [http://localhost/areas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#show (for 127.0.0.1 at 2011-12-06 08:15:37) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mArea Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.3ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering areas/show
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 72ms (View: 60, DB: 3) | 200 OK [http://localhost/areas/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:15:40) [GET]
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 352ms (View: 337, DB: 2) | 200 OK [http://localhost/areas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:21:40) [GET]
+  [4;36;1mArea Load (21.4ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 198ms (View: 156, DB: 32) | 200 OK [http://localhost/areas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:21:54) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mArea Load (0.8ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC LIMIT 10, 10[0m
+  [4;36;1mArea Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 223ms (View: 206, DB: 3) | 200 OK [http://localhost/areas?page=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-06 08:21:59) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 58ms (View: 8, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:22:04) [GET]
+  [4;35;1mArea Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (9.9ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 203ms (View: 170, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:22:48) [GET]
+  [4;36;1mArea Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (6.2ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 46ms (View: 36, DB: 2) | 200 OK [http://localhost/areas/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:23:06) [GET]
+  [4;35;1mArea Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (6.7ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 166ms (View: 146, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:23:30) [GET]
+  [4;36;1mArea Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (7.1ms)
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 81ms (View: 69, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:23:56) [GET]
+  [4;35;1mArea Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (5.4ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 72ms (View: 57, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:24:25) [GET]
+  [4;36;1mArea Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (5.0ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 58ms (View: 48, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:24:44) [GET]
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (9.7ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 57ms (View: 47, DB: 2) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:24:51) [GET]
+  [4;36;1mArea Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (9.7ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 72ms (View: 37, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:24:58) [GET]
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (4.9ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 42ms (View: 31, DB: 2) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EditorasController#new (for 127.0.0.1 at 2011-12-06 08:25:07) [GET]
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+Rendering template within layouts/application
+Rendering editoras/new
+Rendered editoras/_form (5.2ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 59ms (View: 38, DB: 3) | 200 OK [http://localhost/editoras/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AutoresController#new (for 127.0.0.1 at 2011-12-06 08:25:12) [GET]
+  [4;35;1mAutor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+Rendering template within layouts/application
+Rendering autores/new
+Rendered autores/_form (4.1ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 85ms (View: 59, DB: 2) | 200 OK [http://localhost/autores/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:25:17) [GET]
+  [4;36;1mArea Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (4.0ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 40ms (View: 30, DB: 2) | 200 OK [http://localhost/areas/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AutoresController#new (for 127.0.0.1 at 2011-12-06 08:25:24) [GET]
+  [4;35;1mAutor Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+Rendering template within layouts/application
+Rendering autores/new
+Rendered autores/_form (7.0ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 41ms (View: 30, DB: 2) | 200 OK [http://localhost/autores/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AutoresController#new (for 127.0.0.1 at 2011-12-06 08:25:41) [GET]
+  [4;36;1mAutor Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `autores`[0m
+Rendering template within layouts/application
+Rendering autores/new
+Rendered autores/_form (4.6ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 39ms (View: 29, DB: 3) | 200 OK [http://localhost/autores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#new (for 127.0.0.1 at 2011-12-06 08:25:49) [GET]
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+Rendering template within layouts/application
+Rendering identificacaos/new
+Rendered identificacaos/_form (7.5ms)
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 53ms (View: 30, DB: 3) | 200 OK [http://localhost/identificacaos/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EditorasController#new (for 127.0.0.1 at 2011-12-06 08:25:53) [GET]
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+Rendering template within layouts/application
+Rendering editoras/new
+Rendered editoras/_form (5.6ms)
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 39ms (View: 29, DB: 3) | 200 OK [http://localhost/editoras/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AutoresController#new (for 127.0.0.1 at 2011-12-06 08:25:59) [GET]
+  [4;35;1mAutor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+Rendering template within layouts/application
+Rendering autores/new
+Rendered autores/_form (8.5ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 58ms (View: 41, DB: 5) | 200 OK [http://localhost/autores/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AutoresController#new (for 127.0.0.1 at 2011-12-06 08:26:04) [GET]
+  [4;36;1mAutor Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `autores`[0m
+Rendering template within layouts/application
+Rendering autores/new
+Rendered autores/_form (3.7ms)
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 49ms (View: 33, DB: 8) | 200 OK [http://localhost/autores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 08:26:08) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;35;1mUnidade Columns (5.9ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (4.2ms)
+Rendered periodicos/_form_local (15.3ms)
+Rendered periodicos/_form (144.0ms)
+Completed in 212ms (View: 154, DB: 10) | 200 OK [http://localhost/periodicos/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#new (for 127.0.0.1 at 2011-12-06 08:26:17) [GET]
+  [4;36;1mIdentificacao Columns (11.2ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+Rendering template within layouts/application
+Rendering identificacaos/new
+Rendered identificacaos/_form (27.4ms)
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 77ms (View: 49, DB: 13) | 200 OK [http://localhost/identificacaos/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-06 08:26:31) [GET]
+  [4;35;1mArea Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+Rendered areas/_form (4.3ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 43ms (View: 30, DB: 3) | 200 OK [http://localhost/areas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:26:34) [GET]
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mUser Columns (4.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 116ms (View: 100, DB: 6) | 200 OK [http://localhost/areas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#show (for 127.0.0.1 at 2011-12-06 08:26:40) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mArea Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.3ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 40) [0m
+Rendering template within layouts/application
+Rendering areas/show
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 43ms (View: 32, DB: 3) | 200 OK [http://localhost/areas/40]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:26:47) [GET]
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;36;1mArea Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 88ms (View: 77, DB: 3) | 200 OK [http://localhost/areas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#edit (for 127.0.0.1 at 2011-12-06 08:26:50) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mArea Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 40) [0m
+Rendering template within layouts/application
+Rendering areas/edit
+Rendered areas/_form (17.3ms)
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 67ms (View: 52, DB: 3) | 200 OK [http://localhost/areas/40/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#edit (for 127.0.0.1 at 2011-12-06 08:27:16) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mArea Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.3ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 40) [0m
+Rendering template within layouts/application
+Rendering areas/edit
+Rendered areas/_form (6.5ms)
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 73ms (View: 49, DB: 3) | 200 OK [http://localhost/areas/40/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:27:22) [GET]
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 91ms (View: 79, DB: 3) | 200 OK [http://localhost/areas]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#destroy (for 127.0.0.1 at 2011-12-06 08:27:26) [DELETE]
+  Parameters: {"authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs=", "id"=>"40"}
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 40) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mArea Destroy (0.2ms)[0m   [0;1mDELETE FROM `areas` WHERE `id` = 40[0m
+  [4;35;1mSQL (56.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/areas
+Completed in 69ms (DB: 58) | 302 Found [http://localhost/areas/40]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#index (for 127.0.0.1 at 2011-12-06 08:27:27) [GET]
+  [4;36;1mArea Load (3.2ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mArea Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `areas` [0m
+Rendering template within layouts/application
+Rendering areas/index
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 132ms (View: 114, DB: 8) | 200 OK [http://localhost/areas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 08:28:20) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (5.7ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;35;1mUnidade Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (14.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (17.1ms)
+Rendered periodicos/_form_local (17.3ms)
+Rendered periodicos/_form (80.8ms)
+Completed in 154ms (View: 77, DB: 23) | 200 OK [http://localhost/periodicos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 08:40:22) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;36;1mUnidade Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (5.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (9.1ms)
+Rendered periodicos/_form_local (30.8ms)
+Rendered periodicos/_form (116.7ms)
+Completed in 192ms (View: 131, DB: 12) | 200 OK [http://localhost/periodicos/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 08:41:15) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;35;1mUnidade Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (5.8ms)
+Rendered periodicos/_form_local (10.6ms)
+Rendered periodicos/_form (62.9ms)
+Completed in 259ms (View: 87, DB: 6) | 200 OK [http://localhost/periodicos/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 08:41:18) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (4.1ms)
+Rendered periodicos/_form_local (10.1ms)
+Rendered periodicos/_form (77.5ms)
+Completed in 124ms (View: 87, DB: 5) | 200 OK [http://localhost/periodicos/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 08:45:20) [GET]
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;35;1mUnidade Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (4.0ms)
+Rendered periodicos/_form_local (14.7ms)
+Rendered periodicos/_form (84.0ms)
+Completed in 181ms (View: 99, DB: 10) | 200 OK [http://localhost/periodicos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create (for 127.0.0.1 at 2011-12-06 08:45:59) [POST]
+  Parameters: {"commit"=>"Salvar", "periodico"=>{"obs"=>"aaaaa", "data_producao(2i)"=>"12", "tipo"=>"BOLETIM", "data_producao(3i)"=>"6", "colecao"=>"aaaa", "titulo"=>"aaaa", "tombo_l"=>"111", "periodicidade"=>"DIARIO", "subtitulo"=>"aaaa", "localizacao_id"=>"12", "local_producao"=>"aaa", "data_producao(1i)"=>"2011", "producao"=>"aaa"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (15.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPeriodico Create (0.3ms)[0m   [0mINSERT INTO `periodicos` (`tipo`, `obs`, `created_at`, `tombo_l`, `titulo`, `colecao`, `updated_at`, `tombo_seduc`, `subtitulo`, `periodicidade`, `localizacao_id`, `issn`, `data_producao`, `local_producao`, `producao`) VALUES('BOLETIM', 'AAAAA', '2011-12-06 10:45:59', '111', 'AAAA', 'AAAA', '2011-12-06 10:45:59', NULL, 'AAAA', 'DIARIO', 12, NULL, '2011-12-06', 'AAA', 'AAA')[0m
+  [4;36;1mSQL (57.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/periodicos/9
+Completed in 284ms (DB: 75) | 302 Found [http://localhost/periodicos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#show (for 127.0.0.1 at 2011-12-06 08:45:59) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mPeriodico Load (0.3ms)[0m   [0mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering periodicos/show
+
+ActionView::TemplateError (undefined method `produtcao' for #<Periodico:0xb6736afc>) on line #37 of app/views/periodicos/show.html.erb:
+34:          <td align="left"><%=h @periodicos.periodicidade %></td>
+35:        </tr>         <tr>
+36:          <td width="10%"><strong>Produção:</strong></td>
+37:          <td align="left"><%=h @periodicos.produtcao%></td>
+38:        </tr>
+39:        <tr>
+40:          <td width="10%"><strong>Data:</strong></td>
+
+    app/views/periodicos/show.html.erb:37
+
+Rendered rescues/_trace (83.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#show (for 127.0.0.1 at 2011-12-06 08:46:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+  [4;36;1mPeriodico Load (0.1ms)[0m   [0;1mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering periodicos/show
+  [4;35;1mLocalizacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 12) [0m
+
+ActionView::TemplateError (edit_periodico_url failed to generate from {:controller=>"periodicos", :action=>"edit", :id=>nil}, expected: {:controller=>"periodicos", :action=>"edit"}, diff: {:id=>nil}) on line #60 of app/views/periodicos/show.html.erb:
+57:           <tr>
+58:             <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+59:             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), periodicos_path, :title => "Periódico Cadastrados" %></td>
+60:             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_periodico_path(@periodico), :title => "Editar Periódico " %></td>
+61:             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @periodico, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Periódico" %></td>
+62:             <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_periodicor_path, :title => "Cadastrar Periódico" %></td>
+63:           </tr>
+
+    (eval):16:in `edit_periodico_path'
+    app/views/periodicos/show.html.erb:60
+
+Rendered rescues/_trace (99.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#show (for 127.0.0.1 at 2011-12-06 08:46:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mPeriodico Load (0.1ms)[0m   [0mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering periodicos/show
+  [4;36;1mLocalizacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 12) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_periodicor_path' for #<ActionView::Base:0xb661cab8>) on line #62 of app/views/periodicos/show.html.erb:
+59:             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), periodicos_path, :title => "Periódico Cadastrados" %></td>
+60:             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_periodico_path(@periodicos), :title => "Editar Periódico " %></td>
+61:             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @periodico, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Periódico" %></td>
+62:             <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_periodicor_path, :title => "Cadastrar Periódico" %></td>
+63:           </tr>
+64:         </table>
+65: </div>
+
+    app/views/periodicos/show.html.erb:62
+
+Rendered rescues/_trace (227.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#show (for 127.0.0.1 at 2011-12-06 08:47:06) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (6.7ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+  [4;36;1mPeriodico Load (0.1ms)[0m   [0;1mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering periodicos/show
+  [4;35;1mLocalizacao Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 12) [0m
+Completed in 103ms (View: 36, DB: 11) | 200 OK [http://localhost/periodicos/9]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#index (for 127.0.0.1 at 2011-12-06 08:47:32) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (11.9ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Load (15.8ms)[0m   [0;1mSELECT * FROM `periodicos` ORDER BY titulo ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering periodicos/index
+  [4;35;1mPeriodico Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+Completed in 152ms (View: 86, DB: 30) | 200 OK [http://localhost/periodicos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#show (for 127.0.0.1 at 2011-12-06 08:54:20) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+  [4;36;1mPeriodico Load (0.1ms)[0m   [0;1mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering periodicos/show
+  [4;35;1mLocalizacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 12) [0m
+Completed in 52ms (View: 21, DB: 6) | 200 OK [http://localhost/periodicos/9]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#edit (for 127.0.0.1 at 2011-12-06 08:54:27) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mPeriodico Load (0.1ms)[0m   [0mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering periodicos/edit
+  [4;36;1mUnidade Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (7.3ms)
+Rendered periodicos/_form_local (10.9ms)
+Rendered periodicos/_form (146.3ms)
+Completed in 209ms (View: 165, DB: 7) | 200 OK [http://localhost/periodicos/9/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#index (for 127.0.0.1 at 2011-12-06 08:54:33) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Load (0.1ms)[0m   [0;1mSELECT * FROM `periodicos` ORDER BY titulo ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering periodicos/index
+  [4;35;1mPeriodico Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+Completed in 182ms (View: 112, DB: 8) | 200 OK [http://localhost/periodicos]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 08:58:29) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (23.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mUnidade Columns (9.6ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (4.0ms)
+Rendered mapas/_form_local (16.9ms)
+Rendered mapas/_form (86.7ms)
+Completed in 305ms (View: 84, DB: 38) | 200 OK [http://localhost/mapas/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 09:03:57) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;36;1mEditora Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mUnidade Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (9.6ms)
+Rendered mapas/_form_local (31.0ms)
+Rendered mapas/_form (103.7ms)
+Completed in 188ms (View: 119, DB: 9) | 200 OK [http://localhost/mapas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 09:04:37) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;35;1mEditora Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (3.9ms)
+Rendered mapas/_form_local (17.5ms)
+Rendered mapas/_form (82.2ms)
+Completed in 134ms (View: 92, DB: 7) | 200 OK [http://localhost/mapas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 09:05:20) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (6.3ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (3.8ms)
+Rendered mapas/_form_local (35.8ms)
+Rendered mapas/_form (86.9ms)
+Completed in 178ms (View: 100, DB: 13) | 200 OK [http://localhost/mapas/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 09:05:38) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (20.0ms)
+Rendered mapas/_form_local (24.6ms)
+Rendered mapas/_form (99.5ms)
+Completed in 244ms (View: 111, DB: 7) | 200 OK [http://localhost/mapas/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 09:06:18) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (4.5ms)
+Rendered mapas/_form_local (19.3ms)
+Rendered mapas/_form (76.1ms)
+Completed in 133ms (View: 86, DB: 7) | 200 OK [http://localhost/mapas/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 09:06:31) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (4.6ms)
+Rendered periodicos/_form_local (12.6ms)
+Rendered periodicos/_form (59.8ms)
+Completed in 102ms (View: 66, DB: 5) | 200 OK [http://localhost/periodicos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:06:47) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"ccccccc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"ccccc"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:06:52) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"ccccccc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"ccccc"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:06:53) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"ccccccc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"ccccc"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:06:56) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"ccccccc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"ccccc"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 09:08:14) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;35;1mUnidade Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (9.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (13.0ms)
+Rendered periodicos/_form_local (9.8ms)
+Rendered periodicos/_form (80.0ms)
+Completed in 151ms (View: 81, DB: 15) | 200 OK [http://localhost/periodicos/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:24) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (6.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:25) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:25) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:26) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.8ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:27) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:27) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:27) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:27) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:27) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:28) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:08:28) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"zxczxczc", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"zxczxczx"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+
+ActionController::UnknownAction (No action responded to create_local. Actions: access_denied, check_roles, create, destroy, edit, index, load_resources, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 09:11:26) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (23.4ms)
+Rendered periodicos/_form_local (13.9ms)
+Rendered periodicos/_form (89.0ms)
+Completed in 212ms (View: 98, DB: 5) | 200 OK [http://localhost/periodicos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create_local (for 127.0.0.1 at 2011-12-06 09:11:35) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"\\zxcxzc\\zx", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"z\\xczxczc\\\\"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mLocalizacao Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLocalizacao Create (0.4ms)[0m   [0mINSERT INTO `localizacoes` (`created_at`, `aquisicao`, `updated_at`, `data_aquisicao`, `unidade_id`, `local_guardado`) VALUES('2011-12-06 11:11:35', '\\ZXCXZC\\ZX', '2011-12-06 11:11:35', '2011-12-06', 53, 'Z\\XCZXCZC\\\\')[0m
+  [4;36;1mSQL (56.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLocalizacao Load (0.4ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+Rendered periodicos/_campos_local (1.4ms)
+Completed in 114ms (View: 5, DB: 62) | 200 OK [http://localhost/periodicos/create_local]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 09:11:47) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mUnidade Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (18.1ms)
+Rendered mapas/_form_local (26.1ms)
+Rendered mapas/_form (88.6ms)
+Completed in 158ms (View: 95, DB: 7) | 200 OK [http://localhost/mapas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#create_local (for 127.0.0.1 at 2011-12-06 09:12:22) [POST]
+  Parameters: {"localizacao"=>{"aquisicao"=>"", "data_aquisicao(1i)"=>"2011", "data_aquisicao(2i)"=>"12", "data_aquisicao(3i)"=>"6", "local_guardado"=>"asdasdqweqweqweqweq"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.8ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mLocalizacao Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mLocalizacao Create (0.3ms)[0m   [0;1mINSERT INTO `localizacoes` (`created_at`, `aquisicao`, `updated_at`, `data_aquisicao`, `unidade_id`, `local_guardado`) VALUES('2011-12-06 11:12:23', '', '2011-12-06 11:12:23', '2011-12-06', 53, 'ASDASDQWEQWEQWEQWEQ')[0m
+  [4;35;1mSQL (56.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLocalizacao Load (0.3ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+Rendered mapas/_campos_local (3.7ms)
+Completed in 148ms (View: 6, DB: 62) | 200 OK [http://localhost/mapas/create_local]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#create (for 127.0.0.1 at 2011-12-06 09:13:02) [POST]
+  Parameters: {"commit"=>"Salvar", "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs=", "mapas"=>{"obs"=>"", "ano(3i)"=>"6", "tipo"=>"CLIMÁTICO", "formato"=>"PLANO", "titulo"=>"aaaa", "tombo_l"=>"qwe", "subtitulo"=>"aaaa", "editora_id"=>"18", "localizacao_id"=>"16", "local_edicao"=>"", "edicao"=>"", "ano(1i)"=>"2011", "ano(2i)"=>"12"}}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMapas Create (0.3ms)[0m   [0;1mINSERT INTO `mapas` (`tipo`, `obs`, `created_at`, `ano`, `formato`, `tombo_l`, `updated_at`, `titulo`, `tombo_seduc`, `subtitulo`, `editora_id`, `localizacao_id`, `local_edicao`, `data_edicao`, `edicao`) VALUES('CLIMÁTICO', '', '2011-12-06 11:13:02', '2011-12-06', 'PLANO', 'qwe', '2011-12-06 11:13:02', 'AAAA', NULL, 'AAAA', 18, 16, '', NULL, '')[0m
+  [4;35;1mSQL (50.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/mapas/4
+Completed in 100ms (DB: 55) | 302 Found [http://localhost/mapas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:13:03) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.3ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.3ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 18) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 16) [0m
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 139ms (View: 87, DB: 7) | 200 OK [http://localhost/mapas/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#edit (for 127.0.0.1 at 2011-12-06 09:13:14) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering mapas/edit
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mLocalizacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (4.0ms)
+Rendered mapas/_form_local (33.0ms)
+Rendered mapas/_form (80.9ms)
+Completed in 165ms (View: 100, DB: 7) | 200 OK [http://localhost/mapas/4/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#new (for 127.0.0.1 at 2011-12-06 09:13:20) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+Rendering template within layouts/application
+Rendering periodicos/new
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered periodicos/_campos_local (3.9ms)
+Rendered periodicos/_form_local (146.3ms)
+Rendered periodicos/_form (186.5ms)
+Completed in 226ms (View: 195, DB: 5) | 200 OK [http://localhost/periodicos/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#index (for 127.0.0.1 at 2011-12-06 09:13:28) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Load (0.4ms)[0m   [0;1mSELECT * FROM `periodicos` ORDER BY titulo ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering periodicos/index
+Completed in 38ms (View: 13, DB: 2) | 200 OK [http://localhost/periodicos]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#create (for 127.0.0.1 at 2011-12-06 09:14:05) [POST]
+  Parameters: {"commit"=>"Salvar", "periodico"=>{"obs"=>"teste", "data_producao(2i)"=>"12", "tipo"=>"ANUARIO", "data_producao(3i)"=>"6", "colecao"=>"teste", "titulo"=>"teste", "tombo_l"=>"111", "periodicidade"=>"SEMANAL", "subtitulo"=>"teste", "localizacao_id"=>"9", "local_producao"=>"teste", "data_producao(1i)"=>"2011", "producao"=>"teste"}, "authenticity_token"=>"tHzWGnSXDAlLa7vN5+HIUEahTCEezMOUTzHWsadMBvs="}
+  [4;35;1mUser Columns (5.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPeriodico Create (0.3ms)[0m   [0;1mINSERT INTO `periodicos` (`tipo`, `obs`, `created_at`, `tombo_l`, `titulo`, `colecao`, `updated_at`, `tombo_seduc`, `subtitulo`, `periodicidade`, `localizacao_id`, `issn`, `data_producao`, `local_producao`, `producao`) VALUES('ANUARIO', 'TESTE', '2011-12-06 11:14:05', '111', 'TESTE', 'TESTE', '2011-12-06 11:14:05', NULL, 'TESTE', 'SEMANAL', 9, NULL, '2011-12-06', 'TESTE', 'TESTE')[0m
+  [4;35;1mSQL (100.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/periodicos/10
+Completed in 179ms (DB: 108) | 302 Found [http://localhost/periodicos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#show (for 127.0.0.1 at 2011-12-06 09:14:06) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mPeriodico Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+  [4;36;1mPeriodico Load (0.3ms)[0m   [0;1mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering periodicos/show
+  [4;35;1mLocalizacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.3ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 9) [0m
+Completed in 55ms (View: 20, DB: 4) | 200 OK [http://localhost/periodicos/10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeriodicosController#show (for 127.0.0.1 at 2011-12-06 09:21:03) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mUser Columns (8.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (10.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mPeriodico Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mPeriodico Load (0.1ms)[0m   [0mSELECT * FROM `periodicos` WHERE (`periodicos`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering periodicos/show
+  [4;36;1mLocalizacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 9) [0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 100ms (View: 43, DB: 23) | 200 OK [http://localhost/periodicos/10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-06 09:21:28) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered mapas/_campos_local (3.9ms)
+Rendered mapas/_form_local (30.4ms)
+Rendered mapas/_form (77.0ms)
+Completed in 155ms (View: 91, DB: 7) | 200 OK [http://localhost/mapas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#index (for 127.0.0.1 at 2011-12-06 09:21:33) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Load (0.4ms)[0m   [0mSELECT * FROM `mapas` [0m
+Rendering template within layouts/application
+Rendering mapas/index
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+Completed in 158ms (View: 30, DB: 4) | 200 OK [http://localhost/mapas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:21:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.3ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.2ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 9) [0m
+  [4;35;1mLocalizacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 78ms (View: 35, DB: 7) | 200 OK [http://localhost/mapas/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#new (for 127.0.0.1 at 2011-12-06 09:22:03) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (85.0ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (7.4ms)[0m   [0mSELECT * FROM `autores` [0m
+  [4;36;1mArea Load (0.8ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.4ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;35;1mLivro Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+Rendering template within layouts/application
+Rendering livros/new
+  [4;36;1mIdentificacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+Rendered livros/_campos_identificacao (414.5ms)
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mAutor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+Rendered livros/_campos_autor (53.4ms)
+  [4;36;1mArea Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mLocalizacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+Rendered livros/_campos_local (4.4ms)
+  [4;36;1mEditora Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mAssunto Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `assuntos`[0m
+Rendered livros/_campos_assunto (6.2ms)
+Rendered livros/_form_autor (3.5ms)
+Rendered livros/_form_assunto (3.4ms)
+Rendered livros/_form_local (16.2ms)
+Rendered livros/_form_busca (3.6ms)
+Rendered livros/_form (598.1ms)
+Completed in 925ms (View: 602, DB: 106) | 200 OK [http://localhost/livros/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#index (for 127.0.0.1 at 2011-12-06 09:22:13) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` [0m
+  [4;35;1mIdentificacao Load (3.3ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mAutor Load (2.9ms)[0m   [0;1mSELECT * FROM `autores` [0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;36;1mLivro Load (0.1ms)[0m   [0;1mSELECT * FROM `livros` [0m
+Rendering template within layouts/application
+Rendering livros/index
+  [4;35;1mLivro Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mIdentificacao Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined method `livro' for nil:NilClass) on line #15 of app/views/livros/index.html.erb:
+12:   <% for livro in @livros %>
+13:     <tbody>
+14:     <tr>
+15:       <td><%= link_to livro.identificacao.livro, "#inline_livro_#{livro.id}", :class =>"inline", :title => "Informações livro" %></td>
+16:       <td><%=h livro.area.nome %></td>
+17:       <td><%=h livro.editora.nome %></td>
+18:       <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), livro, :title => "Exibir livro" %></td>
+
+    app/views/livros/index.html.erb:15
+    app/views/livros/index.html.erb:12:in `each'
+    app/views/livros/index.html.erb:12
+
+Rendered rescues/_trace (67.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DicionarioEnciclopediasController#new (for 127.0.0.1 at 2011-12-06 09:22:26) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.5ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mIdentificacao Load (5.2ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mDicionarioEnciclopedia Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+Rendering template within layouts/application
+Rendering dicionario_enciclopedias/new
+  [4;35;1mIdentificacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+Rendered dicionario_enciclopedias/_campos_identificacao (119.2ms)
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mLocalizacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+Rendered dicionario_enciclopedias/_campos_local (4.4ms)
+  [4;35;1mEditora Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+Rendered dicionario_enciclopedias/_form_local (17.1ms)
+Rendered dicionario_enciclopedias/_form_busca (3.8ms)
+Rendered dicionario_enciclopedias/_form (215.5ms)
+Completed in 490ms (View: 224, DB: 13) | 200 OK [http://localhost/dicionario_enciclopedias/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DicionarioEnciclopediasController#index (for 127.0.0.1 at 2011-12-06 09:22:32) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mArea Load (13.4ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mIdentificacao Load (2.5ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mDicionarioEnciclopedia Load (11.9ms)[0m   [0;1mSELECT `dicionario_enciclopedias`.* FROM `dicionario_enciclopedias` INNER JOIN `identificacaos` ON `identificacaos`.id = `dicionario_enciclopedias`.identificacao_id ORDER BY livro ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering dicionario_enciclopedias/index
+  [4;35;1mDicionarioEnciclopedia Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mIdentificacao Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 4) [0m
+Completed in 626ms (View: 77, DB: 32) | 200 OK [http://localhost/dicionario_enciclopedias]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DicionarioEnciclopediasController#show (for 127.0.0.1 at 2011-12-06 09:22:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mIdentificacao Load (2.3ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mDicionarioEnciclopedia Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;35;1mDicionarioEnciclopedia Load (0.3ms)[0m   [0mSELECT * FROM `dicionario_enciclopedias` WHERE (`dicionario_enciclopedias`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering dicionario_enciclopedias/show
+  [4;36;1mIdentificacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 4) [0m
+  [4;36;1mEditora Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.3ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 5) [0m
+  [4;36;1mLocalizacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mLocalizacao Load (0.3ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 15) [0m
+  [4;36;1mUnidade Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 348ms (View: 50, DB: 11) | 200 OK [http://localhost/dicionario_enciclopedias/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:23:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.4ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Mapas with ID=2):
+  app/controllers/mapas_controller.rb:11:in `show'
+
+Rendered rescues/_trace (63.4ms)
+Rendered rescues/_request_and_response (3.1ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-06 09:23:43) [GET]
+
+ActionController::RoutingError (No route matches "/mapa/2" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:23:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.3ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Mapas with ID=1):
+  app/controllers/mapas_controller.rb:11:in `show'
+
+Rendered rescues/_trace (51.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:25:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.3ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+
+ActionView::TemplateError (undefined method `nome' for nil:NilClass) on line #12 of app/views/mapas/show.html.erb:
+9:               <h3><b><i><font color="DimGrey">Informações sobre o mapa</font></i></b></h3>
+10:                   <hr>
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.ano.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+
+    app/views/mapas/show.html.erb:12
+
+Rendered rescues/_trace (85.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:33:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (11.7ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.4ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (2.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.ano.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+16:                 </div>
+17:                 <div id="colunaDireita">
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (80.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:33:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (9.6ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.ano.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+16:                 </div>
+17:                 <div id="colunaDireita">
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (86.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:34:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.data_edicao.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+16:                 </div>
+17:                 <div id="colunaDireita">
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (183.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:36:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.7ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.4ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.data_edicao.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+16:                 </div>
+17:                 <div id="colunaDireita">
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (87.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:36:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.data_edicao.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+16:                 </div>
+17:                 <div id="colunaDireita">
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (68.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:41:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `dano' for #<Mapas:0xb6594384>) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.dano.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+16:                 </div>
+17:                 <div id="colunaDireita">
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (159.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:41:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `dano' for #<Mapas:0xb66e7a4c>) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>   <%=h @mapas.dano.strftime("%Y") %><br/>
+15:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+16:                 </div>
+17:                 <div id="colunaDireita">
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (64.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:42:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (5.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `edicao' for nil:NilClass) on line #14 of app/views/mapas/show.html.erb:
+11:                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
+12:                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
+13:                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
+14:                      <strong>Data Edição:</strong>  <%if !@mapas.ano.edicao.nil?%>
+15:                                                        <%=h @mapas.ano.strftime("%Y") %><br/>
+16:                                                     <%end%>
+17:                      <strong>Local Edição:</strong>   <%=h @mapas.local_edicao %><br/>
+
+    app/views/mapas/show.html.erb:14
+
+Rendered rescues/_trace (79.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:43:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.5ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `aquisicao' for nil:NilClass) on line #24 of app/views/mapas/show.html.erb:
+21:                   <hr>
+22:                      <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+23:                      <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+24:                      <strong>Tipo de aquisição:</strong>   <%=h @mapas.localizacao.aquisicao%><br/>
+25:                      <strong>Data Aquisição:</strong>   <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+26:                      <strong>Localização:</strong>   <%=h @mapas.localizacao.local_guardado %><br/>
+27:                      <strong>Unidade:</strong>   <%=h @mapas.localizacao.unidade.nome %><br/>
+
+    app/views/mapas/show.html.erb:24
+
+Rendered rescues/_trace (165.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:44:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (10.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `aquisicao' for nil:NilClass) on line #24 of app/views/mapas/show.html.erb:
+21:                   <hr>
+22:                      <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+23:                      <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+24:                      <strong>Tipo de aquisição:</strong>   <%=h @mapas.localizacao.aquisicao%><br/>
+25:                      <strong>Data Aquisição:</strong> <%if !@mapas.data_aquisicao.nil?%>
+26:                                                         <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+27:                                                       <%end%>
+
+    app/views/mapas/show.html.erb:24
+
+Rendered rescues/_trace (65.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:44:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (9.7ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `aquisicao' for nil:NilClass) on line #24 of app/views/mapas/show.html.erb:
+21:                   <hr>
+22:                      <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+23:                      <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+24:                      <strong>Tipo de aquisição:</strong>   <%=h @mapas.localizacao.aquisicao%><br/>
+25:                      <strong>Data Aquisição:</strong> <%if !@mapas.data_aquisicao.nil?%>
+26:                                                         <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+27:                                                       <%end%>
+
+    app/views/mapas/show.html.erb:24
+
+Rendered rescues/_trace (96.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:45:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `aquisicao' for nil:NilClass) on line #24 of app/views/mapas/show.html.erb:
+21:                   <hr>
+22:                      <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+23:                      <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+24:                      <strong>Tipo de aquisição:</strong>   <%=h @mapas.localizacao.aquisicao%><br/>
+25:                      <strong>Data Aquisição:</strong> <%if !@mapas.localizacao.data_aquisicao.nil?%>
+26:                                                         <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+27:                                                       <%end%>
+
+    app/views/mapas/show.html.erb:24
+
+Rendered rescues/_trace (82.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:45:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (8.7ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (11.0ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `aquisicao' for nil:NilClass) on line #24 of app/views/mapas/show.html.erb:
+21:                   <hr>
+22:                      <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+23:                      <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+24:                      <strong>Tipo de aquisição:</strong>   <%=h @mapas.localizacao.aquisicao%><br/>
+25:                      <strong>Data Aquisição:</strong> <%if !@mapas.localizacao.data_aquisicao.nil?%>
+26:                                                         <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+27:                                                       <%end%>
+
+    app/views/mapas/show.html.erb:24
+
+Rendered rescues/_trace (123.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:47:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.5ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mMapas Load (0.1ms)[0m   [0mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;36;1mEditora Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `data_aquisicao' for nil:NilClass) on line #25 of app/views/mapas/show.html.erb:
+22:                      <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+23:                      <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+24:                      <strong>Tipo de aquisição:</strong>   <br/>
+25:                      <strong>Data Aquisição:</strong> <%if !@mapas.localizacao.data_aquisicao.nil?%>
+26:                                                         <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+27:                                                       <%end%>
+28:                      <strong>Localização:</strong>   <%=h @mapas.localizacao.local_guardado %><br/>
+
+    app/views/mapas/show.html.erb:25
+
+Rendered rescues/_trace (90.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-06 09:48:38) [GET]
+  [4;36;1mUser Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 59ms (View: 25, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:48:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+
+ActionView::TemplateError (undefined method `aquisicao' for nil:NilClass) on line #24 of app/views/mapas/show.html.erb:
+21:                   <hr>
+22:                      <strong>Tombo Seduc:</strong>   <%=h @mapas.tombo_seduc %><br/>
+23:                      <strong>Tombo Local:</strong>   <%=h @mapas.tombo_l %><br/>
+24:                      <strong>Tipo de aquisição:</strong>   <%=h @mapas.localizacao.aquisicao%><br/>
+25:                      <strong>Data Aquisição:</strong> <%if !@mapas.localizacao.data_aquisicao.nil?%>
+26:                                                         <%=h @mapas.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+27:                                                       <%end%>
+
+    app/views/mapas/show.html.erb:24
+
+Rendered rescues/_trace (73.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:51:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.3ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 80ms (View: 35, DB: 7) | 200 OK [http://localhost/mapas/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:53:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.6ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.2ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 144ms (View: 53, DB: 8) | 200 OK [http://localhost/mapas/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:55:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.5ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 186ms (View: 43, DB: 7) | 200 OK [http://localhost/mapas/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:57:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.5ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 145ms (View: 64, DB: 8) | 200 OK [http://localhost/mapas/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:57:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 86ms (View: 37, DB: 7) | 200 OK [http://localhost/mapas/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:57:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 160ms (View: 39, DB: 7) | 200 OK [http://localhost/mapas/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:57:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (6.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.6ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (5.1ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 140ms (View: 57, DB: 16) | 200 OK [http://localhost/mapas/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#show (for 127.0.0.1 at 2011-12-06 09:58:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.5ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mMapas Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (`mapas`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering mapas/show
+  [4;35;1mEditora Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 456) [0m
+  [4;35;1mLocalizacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (`localizacoes`.`id` = 1) [0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Completed in 94ms (View: 42, DB: 7) | 200 OK [http://localhost/mapas/1]

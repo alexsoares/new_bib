@@ -15,7 +15,9 @@
                      <strong>Coleção:</strong>  <%=h @dicionario_enciclopedia.colecao %><br/>
                      <strong>Volume:</strong>  <%=h @dicionario_enciclopedia.volume %><br/>
                      <strong>Editora:</strong>   <%=h @dicionario_enciclopedia.editora.nome %><br/>
-                     <strong>Data Edição:</strong>   <%=h @dicionario_enciclopedia.data_edicao.strftime("%Y") %><br/>
+                     <strong>Data Edição:</strong>  <%if !@dicionario_enciclopedia.data_edicao.nil?%>
+                                                      <%=h @dicionario_enciclopedia.data_edicao.strftime("%Y") %><br/>
+                                                    <%end%>
                      <strong>Local Edição:</strong>   <%=h @dicionario_enciclopedia.local_edicao %><br/>
               </div>
                 <div id="colunaDireita">

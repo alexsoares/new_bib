@@ -2,6 +2,7 @@ class Localizacao < ActiveRecord::Base
   #attr_accessible :unidade, :local_guardado, :aquisicao, :data_aquisicao
   belongs_to :unidade
   has_many :livros
+  has_many :mapas
 
 
 def before_save

@@ -1,27 +1,34 @@
 <% title "TÍTULOS" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>TÍTULOS CADASTRADOS</strong></font><br/>
+  </div>
 <div class="tabs">
-<table class="grid">
-  <thead>
-  <tr>
-    <th width="100">Código ISBN</th>
-    <th width="300">Título</th>
-    <th width="200">Subtítulo</th>
-    <th colspan="4">Administração</th>
-  </tr>
-  </thead>
-  <% for identificacao in @identificacaos %>
-    <tbody>
+  <table bgcolor="#DCDCDC" width="100%">
     <tr>
+        <th width="50">Código</th>
+        <th width="350">Título</th>
+        <th width="200">Subtítulo</th>
+        <th colspan="4">Administração</th>
+   </tr>
+    <% for identificacao in @identificacaos %>
+   <tr bgcolor="#F5F5F5">
       <td ><%=h identificacao.codigo %></td>
       <td><%=h identificacao.livro %></td>
       <td><%=h identificacao.subtitulo %></td>
-      <td><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), identificacao, :title => "Visualizar Titulo" %></td>
-      <td><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao), :title => "Editar Titulo" %></td>
-      <td><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Titulo" %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), identificacao, :title => "Visualizar Titulo" %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao), :title => "Editar Titulo" %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Titulo" %></td>
     </tr>
-    </tbody>
+
   <% end %>
 </table>
+  <table bgcolor="#DCDCDC" width="100%">
+     <tr >
+        <td align="left" colspan="4"><%= will_paginate @identificacaos%></td>
+    </tr>
+  </table>
+  </div>
   <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
