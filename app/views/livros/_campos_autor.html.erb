@@ -1,4 +1,4 @@
 <div class="fields">
-        <%= select_tag("livro[autor_ids][]", options_for_select(@autores.collect { |ff| [ff.nome, ff.id] }, @livro.autores.collect { |fs| fs.id }),
+        <%= select_tag("livro[autor_ids][]", options_for_select(@autores.collect { |ff| [truncate(ff.nome, :length => 20, :omission => "..."), ff.id] }, @livro.autores.collect { |fs| fs.id }),
                    {:multiple=>true, :id => "livro_autor_ids", :size => 5}) %>
 </div>
