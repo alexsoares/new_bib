@@ -1,8 +1,8 @@
 <% title "PERIÓDICOS" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-    <font size="6"><strong><%=h "#{@periodicos.titulo}" %></strong></font><br/>
-    <font size="4"><strong><%=h "#{@periodicos.subtitulo}" %></strong></font><br/><br/>
+    <font size="5"><strong><%=h "#{@periodicos.titulo}" %></strong></font><br/>
+    <font size="4"><strong><%=h "#{@periodicos.subtitulo}" %></strong></font><br/>
        <div id="telaShow">
          <div id="linhaCentral">
            <div id="conteudoEsquerda">
@@ -10,8 +10,8 @@
                   <hr>
                     <strong>Coleção:</strong>  <%=h @periodicos.colecao %><br/>
                      <strong>Tipo:</strong>   <%=h @periodicos.tipo %><br/>
-                     <strong>Periodicidade:</strong>   <%=h @periodicos.periodicidade %>ª<br/>
-                     <strong>Produção:</strong>   <%=h @periodicos.producao %>ª<br/>
+                     <strong>Periodicidade:</strong>   <%=h @periodicos.periodicidade %><br/>
+                     <strong>Produção:</strong>   <%=h @periodicos.producao %><br/>
                      <strong>Data:</strong>   <%=h @periodicos.data_producao.strftime("%Y") %><br/>
                      <strong>Local:</strong>   <%=h @periodicos.local_producao %><br/>
                 </div>

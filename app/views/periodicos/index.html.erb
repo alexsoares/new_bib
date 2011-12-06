@@ -7,9 +7,9 @@
       <table>
         <tr bgcolor="#DCDCDC" >
              <th width="100">Tipo</th>
-                <th width="240">Título</th>
-                <th width="150">Subtítulo</th>
-                <th width="100">Periodicidade</th>
+                <th width="200">Título</th>
+                <th width="200">Subtítulo</th>
+                <th width="90">Periodicidade</th>
                 <th colspan="3">Administração</th>
             
            </tr>
@@ -18,7 +18,7 @@
                 <td><%=h periodico.tipo%></td>
                 <td><%=h periodico.titulo%></td>
                 <td><%=h periodico.subtitulo %></td>
-                <td><%=h periodico.periodicidade %></td>
+                <td align="center"><%=h periodico.periodicidade %></td>
                 <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), periodico, :title => "Exibir Periódico" %></td>
                 <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_periodico_path(periodico), :title => "Editar Periódico" %></td>
                 <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), periodico, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Periódico" %></td>

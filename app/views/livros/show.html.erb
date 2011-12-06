@@ -3,12 +3,12 @@
   <div id="topoShow"></div>
     <font size="5"><strong><%=h "#{@livro.identificacao.livro}" %></strong></font><br/>
      <font size="4"><strong><%=h "#{@livro.identificacao.subtitulo}" %></strong></font><br/>
-     <font size="2">Coleção:<strong><%=h "#{@livro.colecao}" %></strong></font>
-       <div id="telaShow">
+     <div id="telaShow">
          <div id="linhaCentral">
            <div id="conteudoEsquerda">
               <h3><b><i><font color="DimGrey">Informações sobre o Livro</font></i></b></h3>
                   <hr>
+                    <strong>Coleção:</strong>  <%=h @livro.colecao %><br/>
                     <strong>Area:</strong>  <%=h @livro.area.nome %><br/>
                     <strong>Autor(es):</strong><br/>
                         <% @livro.autores.each do |autor| %>

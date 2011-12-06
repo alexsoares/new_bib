@@ -2,7 +2,7 @@
 <div class ="tabs">
   <div id="topoShow"></div>
     <font size="5"><strong><%=h "#{@mapas.titulo}" %></strong></font><br/>
-    <font size="4"><strong><%=h "#{@mapas.subtitulo}" %></strong></font><br/><br/>
+    <font size="4"><strong><%=h "#{@mapas.subtitulo}" %></strong></font><br/>
        <div id="telaShow">
          <div id="linhaCentral">
            <div id="conteudoEsquerda">
@@ -11,7 +11,7 @@
                     <strong>Formato:</strong>  <%=h @mapas.formato %><br/>
                      <strong>Editora:</strong>   <%=h @mapas.editora.nome %><br/>
                      <strong>Edição:</strong>   <%=h @mapas.edicao %>ª<br/>
-                     <strong>Data Edição:</strong>  <%if !@mapas.ano.nil?%>
+                     <strong>Ano Edição:</strong>  <%if !@mapas.ano.nil?%>
                                                        <%=h @mapas.ano.strftime("%Y") %><br/>
                                                     <%else%>
                                                        <br/>

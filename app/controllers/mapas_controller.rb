@@ -4,7 +4,8 @@ class MapasController < ApplicationController
   before_filter :load_resources
 
   def index
-    @mapas = Mapas.all
+    @mapas = Mapas.paginate :page => params[:page], :order => 'titulo ASC', :per_page => 10
+
   end
 
   def show

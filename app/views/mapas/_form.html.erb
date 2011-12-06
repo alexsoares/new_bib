@@ -30,7 +30,7 @@
       </td>
       <td align="lef">
          <b><%= f.label :ano, 'Ano:' %></b><br />
-        <%= f.date_select(:ano, :order => [:year], :start_year => (Date.today.year)-50) %>
+        <%= f.date_select(:ano, :order => [:year], :start_year => (Date.today.year)-20) %>
       </td>
 
     </tr>
@@ -59,7 +59,7 @@
     </tr>
     <tr>
       <td align="lef" colspan="3">
-          <b><%= f.label :obs, 'Observação;' %></b><br />
+          <b><%= f.label :obs, 'Observação:' %></b><br />
           <%= f.text_area :obs,:size => "30x3" %>
       </td>
     </tr>
