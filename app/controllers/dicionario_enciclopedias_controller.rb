@@ -3,7 +3,28 @@ class DicionarioEnciclopediasController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
 
-  
+def consultaDic
+ if (params[:search].nil? || params[:search].empty?)
+   $t=01;
+    @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :page => params[:page], :per_page => 10, :joins => :identificacao,  :conditions => ["livro like ? ", ""],:order => 'livro ASC'
+ else
+    if params[:type_of].to_i == 1
+     $t=0;
+     @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","DICIONÁRIO"], :order => 'livro ASC')
+     else if params[:type_of].to_i == 2
+       $t=0;
+       @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC')
+       else if params[:type_of].to_i == 3
+         $t=0;
+         @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"], :order => 'livro ASC')
+       else
+         @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
+       end
+      end
+    end
+  end
+ end
+
   def index
     @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
   end
@@ -75,17 +96,10 @@ def create_local
     redirect_to dicionario_enciclopedias_url
   end
 
-# def subtitulo
-#  session[:subtitulo] = params[:dicionario_enciclopedia_identificacao_id]
-#  @dicionario_enciclopedia = DicionarioEnciclopedia.find_by_identificacao_id(session[:subtitulo])
-#  render :partial => 'subtitulo'
-#  end
-
  def subtitulo
   session[:identificacao] = params[:dicionario_enciclopedia_identificacao_id]
    @identificacao = Identificacao.find_by_id(session[:identificacao]).subtitulo
    render :partial => 'subtitulo'
-
    end
 
 

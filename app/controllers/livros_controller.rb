@@ -1,9 +1,9 @@
 class LivrosController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
+
   def index
     @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
-
   end
 
   def show
@@ -12,12 +12,10 @@ class LivrosController < ApplicationController
 
   def new
     @livro = Livro.new
-
   end
 
   def create
     @livro = Livro.new(params[:livro])
-
     if @livro.save
       flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @livro
@@ -53,6 +51,35 @@ class LivrosController < ApplicationController
     end
   end
 
+  def consultaLiv
+ if (params[:search].nil? || params[:search].empty?)
+   $t=01;
+   @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao,  :conditions => ["livro like ? ", ""],:order => 'livro ASC'
+ else
+    if params[:type_of].to_i == 1
+       $t=0;
+       @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao,  :conditions => ["livro like ? ", "%" + params[:search].to_s + "%"],:order => 'livro ASC'
+     else if params[:type_of].to_i == 2
+         $t=0;
+         @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :area,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+      else if params[:type_of].to_i == 3
+           $t=0;
+           @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :autores,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+        else if params[:type_of].to_i == 4
+            $t=0;
+            @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :assuntos,  :conditions => ["descricao like ? ", "%" + params[:search].to_s + "%"],:order => 'descricao ASC'
+          else if params[:type_of].to_i == 5
+            $t=0;
+            @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :editora,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+          else
+            @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
+          end
+        end
+       end
+     end
+    end
+  end
+ end
 
   def filtrar    
     if params[:busca].present?
