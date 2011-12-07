@@ -61,6 +61,24 @@ def create_local
     redirect_to mapas_url
   end
 
+def consultaMap
+ if (params[:search].nil? || params[:search].empty?)
+   $t=01;
+   @mapas = Mapas.paginate :page => params[:page], :per_page => 10, :conditions => ["titulo like ? ", ""],:order => 'titulo ASC'
+ else if params[:type_of].to_i == 1
+       $t=0;
+       @mapas = Mapas.paginate :page => params[:page], :per_page => 10, :conditions => ["titulo like ? ", "%" + params[:search].to_s + "%"],:order => 'titulo ASC'
+     else if params[:type_of].to_i == 2
+         $t=0;
+         @mapas = Mapas.paginate :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ? ", "%" + params[:search].to_s + "%"],:order => 'subtitulo ASC'
+      else
+         @mapas = Mapas.paginate :page => params[:page], :per_page => 10, :order => 'titulo ASC'
+     end
+    end
+  end
+ end
+
+
     protected
 
   def load_resources

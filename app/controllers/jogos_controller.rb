@@ -61,7 +61,7 @@ def create_local
     redirect_to jogos_url
   end
 
-  def consultaJog
+def consultaJog
  if (params[:search].nil? || params[:search].empty?)
    $t=01;
    @jogos = Jogo.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ? ", ""],:order => 'nome ASC'

@@ -36,7 +36,14 @@ ActionController::Routing::Routes.draw do |map|
 
   map.consultaDic '/consultaDic', :controller => 'dicionario_enciclopedias', :action => 'consultaDic'
   map.consultaLiv '/consultaLiv', :controller => 'livros', :action => 'consultaLiv'
-  map.consultaJog '/consultajog', :controller => 'jogos', :action => 'consultaJog'
+  map.consultaJog '/consultaJog', :controller => 'jogos', :action => 'consultaJog'
+  map.consultaMap '/consultaMap', :controller => 'mapas', :action => 'consultaMap'
+  #map.consultaPer '/consultaPer', :controller => 'periodicos', :action => 'consultaPer'
+  map.consultaAut '/consultaAut', :controller => 'autores', :action => 'consultaAut'
+  map.consultaAre '/consultaAre', :controller => 'areas', :action => 'consultaAre'
+  map.consultaEdi '/consultaEdi', :controller => 'editoras', :action => 'consultaEdi'
+  map.consultaTit '/consultaTit', :controller => 'identificacaos', :action => 'consultaTit'
+
 
   map.resource :session
   map.resources :editoras

@@ -1,0 +1,53 @@
+<% title "ÁREAS", :id =>"areas" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>CONSULTAS ÁREAS</strong></font><br/>
+  </div>
+  <div class="tabs">
+  <br/>
+  <table width="100%" align="center" >
+    <tr>
+      <% form_tag consultaAre_path :method => 'get' do %>
+       <td  colspan="2"align="right"><font size="4"> Digitar dado para consulta:</font>
+         <%= text_field_tag :search, params[:search] %>
+         <%= submit_tag "Filtrar" %>
+       </td>
+      <% end %>
+   </tr>
+  </table>
+ 
+  <br/>
+  <hr>
+  <div class="tabs">
+    <table bgcolor="#DCDCDC" width="100%">
+         <tr>
+            <th width="630">Nome</th>
+            <th colspan="4">Administração</th>
+         </tr>
+          <% for area in @areas %>
+          <tr bgcolor="#F5F5F5">
+            <td><%=h area.nome %></td>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), area, :title => "Visualizar Area" %></td>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_area_path(area),  :title => "Editar Area" %></td>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), area, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Area" %></td>
+          </tr>
+          <% end %>
+      </table>
+      <table bgcolor="#DCDCDC" width="100%">
+         <tr >
+           <td align="left" colspan="4"><%= will_paginate @areas%></td>
+       </tr>
+      </table>
+   </div>
+
+  <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaAre_path, :title => "Nova Area" %></td>
+    </tr>
+   
+  </table>
+  </div>
+</div>
+
+

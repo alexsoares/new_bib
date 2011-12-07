@@ -42,4 +42,16 @@ class AreasController < ApplicationController
     flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to areas_url
   end
+
+def consultaAre
+ if (params[:search].nil? || params[:search].empty?)
+   $t=01;
+    @areas = Area.paginate :page => params[:page], :per_page => 10,  :conditions => ["nome like ? ", ""],:order => 'nome ASC'
+ else
+     $t=0;
+    @areas = Area.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+
+ end
+end
+
 end
