@@ -42,4 +42,22 @@ class IdentificacaosController < ApplicationController
     flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to identificacaos_url
   end
+
+def consultaTit
+ if (params[:search].nil? || params[:search].empty?)
+   $t=01;
+    @identificacaos = Identificacao.paginate :page => params[:page], :per_page => 10,  :conditions => ["livro like ? ", ""],:order => 'livro ASC'
+ else if params[:type_of].to_i == 1
+     $t=0;
+     @identificacaos = Identificacao.paginate :page => params[:page], :per_page => 10, :conditions => ["livro like ?", "%" + params[:search].to_s + "%"],:order => 'livro ASC'
+     else if params[:type_of].to_i == 2
+        $t=0;
+        @identificacaos = Identificacao.paginate :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ?", "%" + params[:search].to_s + "%"],:order => 'livro ASC'
+      else
+        @identificacaos = Identificacao.paginate :page => params[:page], :order => 'livro ASC', :per_page => 10
+     end
+    end
+  end
+end
+
 end
