@@ -1,18 +1,30 @@
-$(document).ready(function() {
-$(".grid").flexigrid({
-    showTableToggleBtn: true,
-    sortorder: "asc",
-	usepager: true,
-	title: 'DADOS CADASTRADOS',
-	useRp: true,
-	rp: 150
+$(document).ready(function( $ ) {
+
+//Click do menu - inicio
+	var uls = $('.select ul');
+	uls.hide();
+
+	$('.select > li').click(function( e ){
+		e.stopPropagation();
+		uls.hide();
+		$( this ).find('ul').show();
+	});
+	$('.select ul').click(function( e ){
+		e.stopPropagation();
+	});
+	$('body').click(function(){
+		uls.hide();
+	});
+//Click do menu - fim
 
 
+
+
+$( "#nome_livro" ).autocomplete({
+    
+    source: "livro.json",
+    minLength: 0
 });
-
-
-
-
 
 $( "input:submit" ).button();
 $( "#datepicker" ).datepicker();

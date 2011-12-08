@@ -1,3 +1,8 @@
+#identificacao {
+    height:20px;
+    width:575px;
+    border: solid 1px;
+}
 .tabelas {
   border: solid 1px;
   border-collapse: separate;

@@ -2,7 +2,7 @@
 	<div style='display:none'>
 		<div id='inline_busca' style='padding:10px; background:#EEE9E9;'>
           <h2>FILTRAR TÍTULOS</h2>
-          <% form_remote_for(:busca,:url => { :action => 'filtrar' }, :success => "$.fn.colorbox.close()") do |f|%>
+          <% form_remote_for(:busca,:url => { :action => 'filtrar' }) do |f|%>
             <%= error_messages_for 'contact' %>
             <table>
               <tr>
@@ -17,6 +17,7 @@
             </table>
           <%end%>
           <hr>
+            <div id="lista_livros">sss</div>
         </div>
 	</div>
  
