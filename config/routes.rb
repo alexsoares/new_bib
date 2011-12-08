@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :roles_users
+
   map.resources :configuracaos
   map.resources :importar
   map.resources :emprestimos
