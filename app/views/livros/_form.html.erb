@@ -11,16 +11,9 @@
       </td>
     </tr>
     <tr>
-      <td colspan="2">
+      <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %></b><br/>
-        <div id="identificacao"></div>
-        <%= text_field_tag :nome_livro %>
-          <%= observe_field 'nome_livro',
-            :url    => { :action => 'livro' },
-            :with   => 'nome_livro' %>
-      </td>
-      <td>
-        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "20x20"), "#inline_busca", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]  %>
+        <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
       </td>
     </tr>
     <tr>

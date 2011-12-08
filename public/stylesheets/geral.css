@@ -1,3 +1,10 @@
+#lista_livros {
+    height:100px;
+    width:850px;
+    border: solid 1px;
+    overflow: auto;
+
+}
 #identificacao {
     height:20px;
     width:575px;

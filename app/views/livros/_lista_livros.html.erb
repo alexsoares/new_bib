@@ -1,13 +1,13 @@
 <%if @identificacoes.present?%>
-<table>
-  <tr colspan="5"></tr>
+<table border="1" frame="box" rules="all" width="100%">
   <th>Titulo</th>
   <th>SubTitulo</th>
+  
   <%@identificacoes.each do |livro|%>
     <tr>
       <td><%= livro.truncated_value %></td>
       <td><%= livro.subtitulo %></td>
-      <td><%= link_to_remote("This", :success => "$.fn.colorbox.close()", :url => { :action => "return", :selected => livro}) %></td>
+      <td><%= link_to_remote("Retornar", :success => "$.fn.colorbox.close()", :url => { :action => "return", :selected => livro}) %></td>
     </tr>
   <%end%>
 </table>
