@@ -26,7 +26,7 @@
                     </ul>
                   </div>
                 </li>
-
+                <% if current_user.has_role?('admin') and current_user.has_role?('escola') and current_user.has_role?('responsavel')%>
                 <li><a href="#"><b>Cadastros</b></a>
                   <div class="select_sub">
                     <ul class="sub">
@@ -42,7 +42,7 @@
                     </ul>
                   </div>
                 </li>
-
+                <%end%>
                 <li><a href="#"><b>Consulta</b></a>
                   <div class="select_sub">
                     <ul class="sub">
