@@ -11,21 +11,14 @@
       </td>
     </tr>
     <tr>
-      <td colspan="2">
+      <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %></b><br/>
-        <div id="ident"><%=render "campos_identificacao"%></div>        
-      </td>
-      <td>
-        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "20x20"), "#inline_busca", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]  %>
+        <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
       </td>
     </tr>
     <tr>
       <td colspan="3">
-        <%= observe_field 'livro_identificacao_id',
-                          :with => :livro_identificacao_id,
-                          :url => { :action => 'subtitulo' } ,
-                          :update => "subtitulo"%>
-        <div id= 'subtitulo'></div>
+        <div id= 'subtitulo' style="margin-left: 16px"></div>
       </td>
     </tr>
     <tr>

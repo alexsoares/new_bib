@@ -2,6 +2,20 @@ class LivrosController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
 
+    def livro
+    t = params[:nome_livro]
+    @livro = Identificacao.find(:all,:conditions => ["livro like ?",params[:nome_livro]+"%"])
+    @livro_hash = []
+    @livro.each do |id|
+      @livro_hash <<  id.livro
+    end
+    respond_to do |format|
+      format.js
+      format.json  { render :json => @livro_hash.to_json }
+    end
+  end
+
+
   def index
     @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
   end
@@ -16,6 +30,9 @@ class LivrosController < ApplicationController
 
   def create
     @livro = Livro.new(params[:livro])
+    @livro.identificacao_id = session[:identificacao_id]
+    session[:identificacao_id] = nil
+
     if @livro.save
       flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @livro
@@ -83,17 +100,28 @@ class LivrosController < ApplicationController
 
   def filtrar    
     if params[:busca].present?
-      @identificacoes = Identificacao.all(:conditions =>["livro like ?", ""+params[:busca][:busca]+"%"])
+      @identificacoes = Identificacao.all(:conditions =>["livro like ?", params[:busca][:busca]+"%"])
     end
-      @livro = Livro.new
+#      render :update do |page|
+#        page.replace_html 'ident', :partial => "campos_identificacao"
+#        page.replace_html 'aviso', :text => "Filtrado!"
+#      end
       render :update do |page|
-        page.replace_html 'ident', :partial => "campos_identificacao"
-        page.replace_html 'aviso', :text => "Filtrado!"
+        page.replace_html 'lista_livros', :partial => "lista_livros"
       end
-
   end
 
-    def create_autor
+    def return      
+      session[:identificacao_id] = params[:selected]
+      @identificacao = Identificacao.find(params[:selected])
+      render :update do |page|
+        page.replace_html 'identificacao', :text => @identificacao.livro
+        page.replace_html 'subtitulo', :text => "<b>Subtitulo: </b>#{@identificacao.subtitulo}"
+      end
+  end
+
+
+  def create_autor
     @autor = Autor.new(params[:autor])
     if @autor.save
       @autores = Autor.all
