@@ -36,7 +36,7 @@
      </table>
         <table bgcolor="#DCDCDC" width="100%">
            <tr >
-             <td align="left" colspan="4"><%= @role_users%></td>
+             <td align="left" colspan="4"><%=will_paginate @role_users%></td>
           </tr>
         </table>
 
@@ -44,7 +44,7 @@
      <table>
        <tr>
          <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "40x40"), root_path, :title => "Voltar" %></td>
-         <td align="left" ><%= link_to image_tag("/stylesheets/images/gerenciar.png", :size => "40x40"),new_roles_user_path, :title => "Associar" %></td>
+         <td align="left" ><%= link_to image_tag("/stylesheets/images/gerenciar1.png", :size => "40x40"),new_roles_user_path, :title => "Associar" %></td>
        </tr>
     </table>
 </div>

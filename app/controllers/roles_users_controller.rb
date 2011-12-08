@@ -23,7 +23,7 @@ class RolesUsersController < ApplicationController
   def index
     $new_id = 0
     
-    @roles_users = RolesUser.paginate :page => params[:page], :per_page => 1, :joins => :user, :order => 'login ASC'
+    @role_users = RolesUser.paginate :page => params[:page], :per_page => 10, :joins => :user, :order => 'login ASC'
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @role_users }
