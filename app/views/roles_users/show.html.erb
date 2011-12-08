@@ -1,0 +1,47 @@
+<% title "USUÁRIOS" %>
+<div class="tabs">
+   <div id="caixa_titulo">
+     <font size="3"><strong>NÍVEL DE ACESSO</strong></font><br/>
+ </div>
+   <div class="tabs">
+     <table width="100%" bgcolor="#F5F5F5" align="center">
+      <tr>
+        <td>
+          <br/>
+           <table width="100%" >
+            <tr>
+              <th>Login:</th>
+              <th>Nome Usuário:</th>
+              <th>Nível de acesso:</th>
+            </tr>
+            <tr>
+              <td><%= User.find(@roles_user.user_id).login %></td>
+              <td><%= Role.find(@roles_user.role_id).name %></td>
+
+                    <%if Role.find(@roles_user.role_id).name == 'administrador' then%>
+                        <td>Usuário administrador do sistema. Acesso total ao sistema.</td>
+                    <%else%>
+                        <td>Usuário estagiário. Acesso restrito ao sistema.</td>
+                    <%end%>
+            </tr>
+           </table>
+            <div class="botao">
+             <table>
+              <tr>
+                <td align="left" width="4%"><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "40x40"),  root_path, {:method => "get"}, :title => "Voltar"%></td>
+                <% if current_user.has_role?('administrador') or current_user.has_role?('estagiario SEDUC') %>
+                    <td align="left" width="4%" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"),{:action => "edit", :id => @role_user}, :method => "get", :title => "Alterar Dados"%></td>
+                <%end%>
+                <td align="left" ><%= link_to image_tag("/stylesheets/images/imprimir.png", :size => "30x30"), onclick="javascript:window.print()", :title => "Imprimir" %></td>
+              </tr>
+            </table>
+            </div>
+         </td>
+        </tr>
+       </table>
+    </div>
+</div>
+
+
+
+

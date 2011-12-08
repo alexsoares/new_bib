@@ -1,0 +1,40 @@
+<% title "USUÁRIOS" %>
+<div class="tabs">
+   <div id="caixa_titulo">
+     <font size="3"><strong>NÍVEL DE ACESSO</strong></font><br/>
+ </div>
+   <div class="tabs">
+<table width="100%" bgcolor="#F5F5F5" align="center">
+ <tr>
+   <td>
+     <font  size=2>
+     <table width="100%">
+        <% form_for(@role_user) do |f| %>
+        <%= f.error_messages %>
+     <tr>
+        <td width="30%"><%= f.label :user_id,'Selecionar o Usuário' %></td>
+        <td align="left"><%= f.collection_select  :user_id,@users, :id, :login, :include_blank => ' -- Selecione -- ' %>
+     </tr>
+      <tr>
+        <td><%= f.label :role_id,'Selecionar o nível de acesso :' %></td>
+        <td align="left"><%= f.collection_select  :role_id,@roles, :id, :name, :include_blank => ' -- Selecione -- ' %>
+      </tr>
+     </table>
+     <br/>
+     <table  width="100%" align="center">
+      <tr>
+         <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "40x40"), root_path, :title => "Voltar" %></td>
+        <td align="left"><input type="image" src="/stylesheets/images/gerenciar.png" title="Associar Usuários"></td>
+        <% end %>
+     </tr>
+     </table>
+     </font>
+ </td>
+</tr>
+</table>
+
+<br/>
+</div>
+</div>
+
+

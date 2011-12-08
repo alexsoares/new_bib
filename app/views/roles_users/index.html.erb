@@ -1,0 +1,54 @@
+<% title "USUÁRIOS", :id =>"usuarios" %>
+<div class="tabs">
+  <div id="caixa_titulo">
+    <font size="3"><strong>GERENCIAMENTO DE ACESSO</strong></font><br/>
+  </div>
+    <div class="tabs">
+      <table>
+        <tr bgcolor="#DCDCDC" >
+            <th width="100">Login</th>
+            <th width="100">Acesso de</th>
+            <th width="400">Descricao</th>
+            <th colspan="3">Administração</th>
+         </tr>
+        <% for role_user in @role_users %>
+         <tr bgcolor="	#F5F5F5">
+            <td align="center" width="25%"><%= User.find(role_user.user_id).login %></td>
+            <td align="center"><%= Role.find(role_user.role_id).name %></td>
+            <%if Role.find(role_user.role_id).name == 'admin' then%>
+               <td align="center">Usuário administrador do sistema. Acesso total ao sistema.</td>
+            <%else%>
+                <td align="center"> Acesso restrito ao sistema.</td>
+            <%end%>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), role_user, :title => "Visualizar Usuário" %></td>
+            <% if current_user.has_role?('admin')  %>
+                <td align="center" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"),{:action => "edit", :id =>role_user}, :method => "get", :title => "Alterar Dados"%></td>
+            <%else%>
+                <td align="center" ></td>
+            <%end%>
+            <% if current_user.has_role?('administrador')%>
+                <td align="center" colspan="1"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), role_user, :confirm => 'Confirma Exclusao?', :method => :delete, :title => "Excluir" %></td>
+            <%else%>
+                <td align="center" ></td>
+            <%end%>
+         </tr>
+        <% end %>
+     </table>
+        <table bgcolor="#DCDCDC" width="100%">
+           <tr >
+             <td align="left" colspan="4"><%= @role_users%></td>
+          </tr>
+        </table>
+
+    </div>
+     <table>
+       <tr>
+         <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "40x40"), root_path, :title => "Voltar" %></td>
+         <td align="left" ><%= link_to image_tag("/stylesheets/images/gerenciar.png", :size => "40x40"),new_roles_user_path, :title => "Associar" %></td>
+       </tr>
+    </table>
+</div>
+
+
+
+
