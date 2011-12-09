@@ -8,7 +8,10 @@
       <td><%= f.text_field :nome %></td>
   </tr>
     <tr>
-      <td><%= f.submit "Salvar"%></td>
+      <td>
+        <% if current_user.has_role?('admin') %>
+           <%= f.submit "Salvar"%></td>
+        <%end%>
      </tr>
   </table>
 <% end %>

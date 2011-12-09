@@ -38,13 +38,18 @@
          </tr>
     <% for identificacao in @identificacaos %>
    <tr bgcolor="#F5F5F5">
-      <td ><%=h identificacao.codigo %></td>
-      <td><%=h identificacao.livro %></td>
-      <td><%=h identificacao.subtitulo %></td>
+      <td align="lef"><%=h identificacao.codigo %></td>
+      <td align="lef"><%=h identificacao.livro %></td>
+      <td align="lef"><%=h identificacao.subtitulo %></td>
       <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), identificacao, :title => "Visualizar Titulo" %></td>
-      <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao), :title => "Editar Titulo" %></td>
-      <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Titulo" %></td>
-    </tr>
+      <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+          <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao), :title => "Editar Titulo" %></td>
+         <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Titulo" %></td>
+     <%else%>
+         <td align="center"> --- </td>
+         <td align="center"> --- </td>
+     <%end%>
+  </tr>
 
   <% end %>
       </table>

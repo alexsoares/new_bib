@@ -15,7 +15,6 @@
       <% end %>
    </tr>
   </table>
- 
   <br/>
   <hr>
   <div class="tabs">
@@ -26,10 +25,15 @@
          </tr>
           <% for editora in @editoras %>
           <tr bgcolor="#F5F5F5">
-            <td><%=h editora.nome %></td>
+            <td align="left"><%=h editora.nome %></td>
             <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), editora, :title => "Visualizar Editora" %></td>
-            <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_editora_path(editora),  :title => "Editar Editora" %></td>
-            <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), editora, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Editora" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+               <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_editora_path(editora),  :title => "Editar Editora" %></td>
+               <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), editora, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Editora" %></td>
+            <%else%>
+               <td align="center"> --- </td>
+               <td align="center"> --- </td>
+            <%end%>
           </tr>
           <% end %>
       </table>

@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       redirect_back_or_default('/')
       flash[:notice] = "USUÁRIO CRIADO COM SUCESSO, ENTRE EM CONTATO COM O ADMINISTRADOR DO SISTEMA PARA LIBERAÇÃO."
     else
-      flash[:error]  = "SENHA OU USUÁRIO NÃO AUTORIZADO, FAVOR ENTRAR EM CONTATO COM A SEDUC."
+      flash[:error]  = "SENHA OU USUÁRIO NÃO AUTORIZADO "
       render :action => 'new'
     end
   end

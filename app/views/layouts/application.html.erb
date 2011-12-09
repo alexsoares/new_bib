@@ -26,7 +26,7 @@
                     </ul>
                   </div>
                 </li>
-                <% if current_user.has_role?('admin') and current_user.has_role?('escola') and current_user.has_role?('responsavel')%>
+                <% if current_user.has_role?('admin') and current_user.has_role?('escola') or current_user.has_role?('escola') or  current_user.has_role?('responsavel')%>
                 <li><a href="#"><b>Cadastros</b></a>
                   <div class="select_sub">
                     <ul class="sub">
@@ -36,7 +36,9 @@
                       <li><%= link_to "Mapas", new_mapa_path %></li>
                       <li><%= link_to "Periodicos", new_periodico_path %></li>
                       <li><%= link_to "Autores", new_autor_path %></li>
-                      <li><%= link_to "Áreas", new_area_path %></li>
+                      <% if current_user.has_role?('admin')%>
+                         <li><%= link_to "Áreas", new_area_path %></li>
+                      <%end%>
                       <li><%= link_to "Editoras", new_editora_path %></li>
                       <li><%= link_to "Títulos", new_identificacao_path %></li>
                     </ul>
@@ -59,7 +61,7 @@
                   </div>
                 </li>
 
-                <% if current_user.has_role?('admin')  %>
+                <% if current_user.has_role?('admin') or current_user.has_role?('escola')  %>
                 <li><a href="#"><b>Gerenciamento</b></a>
                   <div class="select_sub">
                     <ul class="sub">

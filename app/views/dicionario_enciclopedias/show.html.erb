@@ -3,8 +3,8 @@
   <div id="topoShow"></div>
   <table  bgcolor="#DCDCDC" width="100%">
     <tr><td>
-     <font size="5"><strong><%=h "#{@dicionario_enciclopedia.identificacao.livro}" %></strong></font><br/>
-     <font size="4"><strong><%=h "#{@dicionario_enciclopedia.identificacao.subtitulo}" %></strong></font><br/>
+     <font size="4"><strong><%=h "#{@dicionario_enciclopedia.identificacao.livro}" %></strong></font><br/>
+     <font size="3"><strong><%=h "#{@dicionario_enciclopedia.identificacao.subtitulo}" %></strong></font><br/>
    </td></tr>
 </table>
        <div id="telaShow">
@@ -38,9 +38,15 @@
           <tr>
             <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
             <td width="6%"align="left"><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), dicionario_enciclopedias_path, :title => "Dicionários & Enciclopédias Cadastrados" %></td>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_dicionario_enciclopedia_path(@dicionario_enciclopedia), :title => "Editar Dicionário & Enciclopédia" %></td>
-            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @dicionario_enciclopedia, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Dicionário & Enciclopédia" %></td>
-            <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_dicionario_enciclopedia_path, :title => "Cadastrar Livro" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_dicionario_enciclopedia_path(@dicionario_enciclopedia), :title => "Editar Dicionário & Enciclopédia" %></td>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @dicionario_enciclopedia, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Dicionário & Enciclopédia" %></td>
+                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_dicionario_enciclopedia_path, :title => "Cadastrar Livro" %></td>
+            <%else%>
+                <td align="center"> </td>
+                <td align="center"> </td>
+                <td align="center"> </td>
+            <%end%>
           </tr>
         </table>
 

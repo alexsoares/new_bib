@@ -13,12 +13,17 @@
            </tr>
          <% for livro in @livros %>
             <tr bgcolor="	#F5F5F5">
-                <td><%=h livro.identificacao.livro%></td>
-                <td><%=h livro.area.nome %></td>
-                <td><%=h livro.editora.nome %></td>
+                <td align="left"><%=h livro.identificacao.livro%></td>
+                <td align="left"><%=h livro.area.nome %></td>
+                <td align="left"><%=h livro.editora.nome %></td>
                 <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), livro, :title => "Exibir Periódico" %></td>
-                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(livro), :title => "Editar Livro" %></td>
-                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), livro, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Livro" %></td>
+                <% if current_user.has_role?('admin')or current_user.has_role?('escola') or current_user.has_role?('responsavel')  %>
+                    <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(livro), :title => "Editar Livro" %></td>
+                    <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), livro, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Livro" %></td>
+                <%else%>
+                    <td align="center"> --- </td>
+                    <td align="center"> --- </td>
+                <%end%>
               </tr>
             <% end %>
      </table>
@@ -33,7 +38,11 @@
      <table>
        <tr>
           <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
-          <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), new_livro_path, :title => "Cadastrar Livro" %></td>
+         <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+             <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), new_dicionario_enciclopedia_path, :title => "Cadastrar livro" %></td>          <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), new_livro_path, :title => "Cadastrar Livro" %></td>
+         <%else%>
+              <td></td>
+        <%end%>
        </tr>
     </table>
 </div>

@@ -1,12 +1,33 @@
-<h1>Editing roles_user</h1>
+<% title "USUÁRIOS" %>
+<div class="tabs">
+ <div id="caixa_titulo">
+     <font size="3"><strong>NÍVEL DE ACESSO</strong></font><br/>
+ </div>
+ <div class="tabs">
+  <table width="100%" bgcolor="#F5F5F5" align="center">
+     <% form_for(@role_user) do |f| %>
+     <%@user = User.find(:all,:conditions => ['id = ' + @role_user.user_id.to_s])%>
+     <%= f.error_messages %>
+      <tr>
+       <td  width="30%"><%= f.label :user_id,'Selecione o Usuário' %></td>
+       <td align="left"><%= f.collection_select  :user_id,@user, :id, :login, :include_blank => ' -- Selecione -- ' %>
+      </tr>
+      <tr>
+       <td><%= f.label :role_id,'Selecione o nível de acesso :' %></td>
+       <td><%= f.collection_select  :role_id,@roles, :id, :name, :include_blank => ' -- Selecione -- ' %>
+             <%= observe_field :roles_user_role_id,
+             :with => :roles_user_role_id,
+             :url => { :action => 'role_id' } %>
+             <div id="aviso"></div>
+       </tr>
+  </table>
+  </div>
+ <table>
+  <tr>
+    <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "40x40"), root_path, :title => "Voltar" %></td>
+    <td align="left"><input type="image" src="/stylesheets/images/associar.png" title="Associar Usuários"></td>
+   <% end %>
+   </tr>
+</table>
+</div>
 
-<% form_for(@roles_user) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @roles_user %> |
-<%= link_to 'Back', roles_users_path %>

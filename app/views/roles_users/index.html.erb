@@ -13,23 +13,34 @@
          </tr>
         <% for role_user in @role_users %>
          <tr bgcolor="	#F5F5F5">
-            <td align="center" width="25%"><%= User.find(role_user.user_id).login %></td>
-            <td align="center"><%= Role.find(role_user.role_id).name %></td>
-            <%if Role.find(role_user.role_id).name == 'admin' then%>
-               <td align="center">Usuário administrador do sistema. Acesso total ao sistema.</td>
-            <%else%>
-                <td align="center"> Acesso restrito ao sistema.</td>
-            <%end%>
-                <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), role_user, :title => "Visualizar Usuário" %></td>
-            <% if current_user.has_role?('admin')  %>
+            <td width="25%"><%= User.find(role_user.user_id).login %></td>
+             <%if  Role.find(role_user.role_id).name == 'admin' then%>
+                 <td width="25%">Administrador</td>
+                 <td>Acesso total ao sistema</td>
+               <%else%>
+                   <%if  Role.find(role_user.role_id).name == 'escola' then%>
+                      <td>Direção UE.</td>
+                      <td> Acesso parcial administração</td>
+                  <%else%>
+                     <%if  Role.find(role_user.role_id).name == 'responsavel' then%>
+                       <td>Responsábel Biblioteca</td>
+                       <td>Acesso parcial gerenciamento</td>
+                     <%else%>
+                         <td>Usuário Biblioteca</td>
+                         <td>Acesso restrito ao sistema.</td>
+                     <%end%>
+                  <%end%>
+               <%end%>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), role_user, :title => "Visualizar Usuário" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') %>
                 <td align="center" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"),{:action => "edit", :id =>role_user}, :method => "get", :title => "Alterar Dados"%></td>
             <%else%>
-                <td align="center" ></td>
+                <td align="center" > -- </td>
             <%end%>
-            <% if current_user.has_role?('administrador')%>
+           <% if current_user.has_role?('admin') or current_user.has_role?('escola') %>
                 <td align="center" colspan="1"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), role_user, :confirm => 'Confirma Exclusao?', :method => :delete, :title => "Excluir" %></td>
             <%else%>
-                <td align="center" ></td>
+                <td align="center" > -- </td>
             <%end%>
          </tr>
         <% end %>
@@ -44,7 +55,7 @@
      <table>
        <tr>
          <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "40x40"), root_path, :title => "Voltar" %></td>
-         <td align="left" ><%= link_to image_tag("/stylesheets/images/gerenciar1.png", :size => "40x40"),new_roles_user_path, :title => "Associar" %></td>
+         <td align="left" ><%= link_to image_tag("/stylesheets/images/gerenciar2.png", :size => "40x40"),new_roles_user_path, :title => "Associar" %></td>
        </tr>
     </table>
 </div>

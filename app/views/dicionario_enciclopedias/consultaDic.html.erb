@@ -48,13 +48,18 @@
 
         <% for dicionario_enciclopedia in @dicionario_enciclopedias %>
           <tr  bgcolor="#F5F5F5">
-            <td><%=h dicionario_enciclopedia.identificacao.livro %></td>
-            <td><%=h dicionario_enciclopedia.identificacao.subtitulo %></td>
-            <td><%=h dicionario_enciclopedia.colecao %></td>
+            <td align="left"><%=h dicionario_enciclopedia.identificacao.livro %></td>
+            <td align="left"><%=h dicionario_enciclopedia.identificacao.subtitulo %></td>
+            <td align="left"><%=h dicionario_enciclopedia.colecao %></td>
             <td align="center"><%=h dicionario_enciclopedia.volume %></td>
             <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), dicionario_enciclopedia, :title => "Exibir livro" %></td>
-            <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(dicionario_enciclopedia), :title => "Editar livro" %></td>
-            <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), dicionario_enciclopedia, :confirm => 'Confirma?', :method => :delete, :title => "Excluir livro" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(dicionario_enciclopedia), :title => "Editar livro" %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), dicionario_enciclopedia, :confirm => 'Confirma?', :method => :delete, :title => "Excluir livro" %></td>
+            <%else%>
+                <td align="center"> --- </td>
+                <td align="center"> --- </td>
+            <%end%>
           </tr>
         <% end %>
       </table>
