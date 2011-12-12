@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :cantores
+
   map.resources :generos
 
   map.resources :roles_users
@@ -48,6 +50,7 @@ ActionController::Routing::Routes.draw do |map|
   map.consultaEdi '/consultaEdi', :controller => 'editoras', :action => 'consultaEdi'
   map.consultaTit '/consultaTit', :controller => 'identificacaos', :action => 'consultaTit'
   map.consultaGen '/consultaGen', :controller => 'generos', :action => 'consultaGen'
+  map.consultaCan '/consultaCan', :controller => 'cantores', :action => 'consultaCan'
 
 
   map.resource :session

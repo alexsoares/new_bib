@@ -40,6 +40,7 @@
                       <% if current_user.has_role?('admin')%>
                          <li><%= link_to "Áreas", new_area_path %></li>
                       <%end%>
+                      <li><%= link_to "Cantores", new_cantor_path %></li>
                       <li><%= link_to "Editoras", new_editora_path %></li>
                       <% if current_user.has_role?('admin')%>
                          <li><%= link_to "Gêneros", new_genero_path %></li>
@@ -60,6 +61,7 @@
                       <li> __ </li>
                       <li><%= link_to "Autores", consultaAut_path %></li>
                       <li><%= link_to "Áreas", consultaAre_path %></li>
+                      <li><%= link_to "Cantores", consultaCan_path %></li>
                       <li><%= link_to "Editoras", consultaEdi_path %></li>
                       <li><%= link_to "Gêneros", consultaGen_path %></li>
                       <li><%= link_to "Títulos", consultaTit_path %></li>

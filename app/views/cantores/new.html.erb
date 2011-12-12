@@ -1,0 +1,16 @@
+<% title "CANTORES" %>
+<div class="tabs">
+ <div id="caixa_titulo">
+     <font size="3"><strong>CADASTRO DE CANTORES</strong></font><br/>
+ </div>
+      <div class="tabs">
+      <%= render :partial => 'form' %>
+    </div>
+  <table>
+   <tr>
+    <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), cantores_path, :title => "Cantores Cadastrados" %></td>
+   </tr>
+  </table>
+</div>
+

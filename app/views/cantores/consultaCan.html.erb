@@ -1,0 +1,58 @@
+<% title "CANTORES", :id =>"cantores" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>CONSULTAS CANTORES</strong></font><br/>
+  </div>
+  <div class="tabs">
+  <br/>
+  <table width="100%" align="center" >
+    <tr>
+      <% form_tag consultaCan_path :method => 'get' do %>
+       <td  colspan="2"align="right"><font size="4"> Digitar dado para consulta:</font>
+         <%= text_field_tag :search, params[:search] %>
+         <%= submit_tag "Filtrar" %>
+       </td>
+      <% end %>
+   </tr>
+  </table>
+ 
+  <br/>
+  <hr>
+  <div class="tabs">
+    <table bgcolor="#DCDCDC" width="100%">
+         <tr>
+            <th width="630">Nome</th>
+            <th colspan="4">Administração</th>
+         </tr>
+          <% for cantor in @cantores %>
+          <tr bgcolor="#F5F5F5">
+            <td><%=h cantor.nome %></td>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), cantor, :title => "Visualizar Cantor" %></td>
+            <% if current_user.has_role?('admin')or current_user.has_role?('escola') or current_user.has_role?('responsavel') %>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_cantor_path(cantor),  :title => "Editar Cantor" %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), cantor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Cantor" %></td>
+            <%else%>
+                <td align="center"> --- </td>
+                <td align="center"> --- </td>
+            <%end%>
+            </tr>
+          <% end %>
+      </table>
+      <table bgcolor="#DCDCDC" width="100%">
+         <tr >
+           <td align="left" colspan="4"><%= will_paginate @cantores%></td>
+       </tr>
+      </table>
+   </div>
+
+  <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaCan_path, :title => "Nova Consulta" %></td>
+    </tr>
+   
+  </table>
+  </div>
+</div>
+
+
