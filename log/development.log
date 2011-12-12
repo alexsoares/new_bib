@@ -9399,3 +9399,240 @@ Rendering livros/consultaLiv
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 4) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 6) [0m
 Completed in 374ms (View: 61, DB: 31) | 200 OK [http://localhost/consultaLiv?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateIdentificacaos (20111103140712)
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE `identificacaos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `codigo` int(11), `livro` varchar(255), `subtitulo` varchar(255), `obs` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111103140712')[0m
+Migrating to CreateLocalizacoes (20111103142802)
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE `localizacoes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `unidade_id` int(11), `local_guardado` varchar(255), `aquisicao` varchar(255), `data_aquisicao` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111103142802')[0m
+Migrating to CreateAreas (20111103142908)
+  [4;35;1mSQL (6.8ms)[0m   [0mCREATE TABLE `areas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111103142908')[0m
+Migrating to CreateEditoras (20111103143141)
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `editoras` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `cidade` varchar(255), `pais` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111103143141')[0m
+Migrating to CreateRoles (20111103143650)
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE `roles_users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mCREATE INDEX `index_roles_users_on_role_id` ON `roles_users` (`role_id`)[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE INDEX `index_roles_users_on_user_id` ON `roles_users` (`user_id`)[0m
+  [4;35;1mRole Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.3ms)[0m   [0mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.3ms)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('escola')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.2ms)[0m   [0mINSERT INTO `roles` (`name`) VALUES('responsavel')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111103143650')[0m
+Migrating to CreateUsers (20111103145438)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `password_reset_code` varchar(255), `activation_code` varchar(40), `activated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mUser Columns (24.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'administrador') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'informatica@seducpma.com') LIMIT 1[0m
+  [4;35;1mUser Create (3.2ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `password_reset_code`, `activation_code`, `remember_token`, `login`, `email`) VALUES('', 'bbba153a16349e4de7175918cf2e1f6a0d60a197', '2011-12-12 13:05:01', '2011-12-12 13:05:01', 'c062537f8de6a5ba32dd59fbcacfed7b2f7e5646', NULL, '2011-12-12 13:05:01', NULL, '10f32bb3bc3d01b736fed0ffe1942c0a3b05a10a', NULL, 'administrador', 'informatica@seducpma.com')[0m
+  [4;36;1mRolesUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRolesUser Create (0.5ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES(4, 1)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111103145438')[0m
+Migrating to CreateAudioVisuais (20111103171606)
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE TABLE `audio_visuais` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `genero_midia_id` int(11), `localizacao_id` int(11), `tombo_seduc` varchar(255), `tombo_l` varchar(255), `tipo` varchar(255), `titulo` varchar(255), `subtitulo` varchar(255), `producao` varchar(255), `local_producao` varchar(255), `data_producao` date, `obs` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111103171606')[0m
+Migrating to CreateLivros (20111103172501)
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE `livros` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `identificacao_id` int(11), `area_id` int(11), `editora_id` int(11), `localizacao_id` int(11), `tombo_seduc` int(11) DEFAULT 0, `tombo_l` varchar(255), `colecao` varchar(255), `edicao` varchar(255), `data_edicao` date, `local_edicao` varchar(255), `resumo` text, `obs` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111103172501')[0m
+Migrating to CreateDicionarioEnciclopedias (20111103173835)
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE `dicionario_enciclopedias` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `editora_id` int(11), `area_id` int(11), `localizacao_id` int(11), `identificacao_id` int(11), `tombo_seduc` varchar(255), `tombo_l` varchar(255), `colecao` varchar(255), `tipo` varchar(255), `volume` int(11), `data_edicao` date, `local_edicao` varchar(255), `obs` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (9.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111103173835')[0m
+Migrating to CreateMapas (20111103180754)
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE `mapas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `editora_id` int(11), `localizacao_id` int(11), `tombo_seduc` varchar(255), `tombo_l` varchar(255), `tipo` varchar(255), `subtitulo` varchar(255), `ano` date, `formato` varchar(255), `data_edicao` date, `local_edicao` varchar(255), `edicao` varchar(255), `obs` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111103180754')[0m
+Migrating to CreatePeriodicos (20111104131658)
+  [4;36;1mSQL (6.9ms)[0m   [0;1mCREATE TABLE `periodicos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `localizacao_id` int(11), `tombo_seduc` varchar(255), `tombo_l` varchar(255), `tipo` varchar(255), `titulo` varchar(255), `subtitulo` varchar(255), `colecao` varchar(255), `producao` varchar(255), `periodicidade` varchar(255), `issn` int(11), `local_producao` varchar(255), `data_producao` date, `obs` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111104131658')[0m
+Migrating to CreateJogos (20111104135250)
+  [4;36;1mSQL (17.6ms)[0m   [0;1mCREATE TABLE `jogos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `localizacao_id` int(11), `tombo_seduc` varchar(255), `tombo_l` varchar(255), `nome` varchar(255), `faixa_etaria` varchar(255), `tipo` varchar(255), `fabricante` varchar(255), `obs` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111104135250')[0m
+Migrating to CreateAssuntos (20111108095000)
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE `assuntos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `descricao` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111108095000')[0m
+Migrating to CreateItensAssuntos (20111108101214)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE `itens_assuntos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `assunto_id` int(11), `sub_assunto` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111108101214')[0m
+Migrating to CreateAutores (20111108110739)
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCREATE TABLE `autores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111108110739')[0m
+Migrating to CreateMusicas (20111108120056)
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE `musicas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `interprete` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111108120056')[0m
+Migrating to AddTituloToMapas (20111108144756)
+  [4;36;1mSQL (5.9ms)[0m   [0;1mALTER TABLE `mapas` ADD `titulo` varchar(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111108144756')[0m
+Migrating to AddUnidadeToUsers (20111108171531)
+  [4;36;1mSQL (6.8ms)[0m   [0;1mALTER TABLE `users` ADD `unidade_id` int(11)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111108171531')[0m
+Migrating to CreateUnidades (20111108172431)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE `unidades` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111108172431')[0m
+Migrating to AssuntosLivros (20111110175329)
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE `assuntos_livros` (`assunto_id` int(11) NOT NULL, `livro_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111110175329')[0m
+Migrating to AddCamposToUnidades (20111117152552)
+  [4;36;1mSQL (7.9ms)[0m   [0;1mALTER TABLE `unidades` ADD `unidades_gpd_id` int(11)[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mALTER TABLE `unidades` ADD `endereco` varchar(255)[0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1mALTER TABLE `unidades` ADD `num` int(11)[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mALTER TABLE `unidades` ADD `complemento` varchar(255)[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mALTER TABLE `unidades` ADD `bairro` varchar(255)[0m
+  [4;35;1mSQL (8.8ms)[0m   [0mALTER TABLE `unidades` ADD `cidade` varchar(255)[0m
+  [4;36;1mSQL (32.1ms)[0m   [0;1mALTER TABLE `unidades` ADD `fone` varchar(255)[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mALTER TABLE `unidades` ADD `email` varchar(255)[0m
+  [4;36;1mSQL (18.7ms)[0m   [0;1mALTER TABLE `unidades` ADD `diretor` varchar(255)[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mALTER TABLE `unidades` ADD `coordenador` varchar(255)[0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mALTER TABLE `unidades` ADD `responsavel_bib` varchar(255)[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mALTER TABLE `unidades` ADD `obs` text[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mALTER TABLE `unidades` ADD `tipo_id` int(11)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111117152552')[0m
+Migrating to CreateTipos (20111117153922)
+  [4;36;1mSQL (30.1ms)[0m   [0;1mCREATE TABLE `tipos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (7.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111117153922')[0m
+Migrating to CreateUnidadesGpds (20111117161434)
+  [4;36;1mSQL (12.5ms)[0m   [0;1mCREATE TABLE `unidades_gpds` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111117161434')[0m
+Migrating to CreateAutoresLivros (20111123143345)
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE `autores_livros` (`autor_id` int(11) NOT NULL, `livro_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111123143345')[0m
+Migrating to CreateFuncionarios (20111124125844)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE `funcionarios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `matricula` int(11), `unidade_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111124125844')[0m
+Migrating to CreateItensEmprestimos (20111124135232)
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE `itens_emprestimos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `emprestimo_id` int(11), `audio_visual_id` int(11), `livro_id` int(11), `dicionario_enciclopedia_id` int(11), `mapas_id` int(11), `periodico_id` int(11), `jogo_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111124135232')[0m
+Migrating to CreateEmprestimos (20111124135514)
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE `emprestimos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tipo_emprestimo` int(11), `professor_id` int(11), `aluno` int(11), `unidade_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111124135514')[0m
+Migrating to AddStatusToLivros (20111125085948)
+  [4;36;1mSQL (6.5ms)[0m   [0;1mALTER TABLE `livros` ADD `status` tinyint(1) DEFAULT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111125085948')[0m
+Migrating to AddCampoValidacaoToFuncionarios (20111125090211)
+  [4;36;1mSQL (5.9ms)[0m   [0;1mALTER TABLE `funcionarios` ADD `campo_validacao` varchar(255)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111125090211')[0m
+Migrating to EmprestimosLivros (20111125173829)
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE `emprestimos_livros` (`autor_id` int(11) NOT NULL, `livro_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111125173829')[0m
+Migrating to AddDataEmprestimoToEmprestimos (20111125175024)
+  [4;36;1mSQL (11.4ms)[0m   [0;1mALTER TABLE `emprestimos` ADD `data_emprestimo` date[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111125175024')[0m
+Migrating to AddDataDevolucaoToEmprestimos (20111125175051)
+  [4;36;1mSQL (5.4ms)[0m   [0;1mALTER TABLE `emprestimos` ADD `data_devolucao` date[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111125175051')[0m
+Migrating to CreateConfiguracaos (20111125175410)
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE TABLE `configuracaos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `dias_posse` int(11), `dias_para_aviso` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111125175410')[0m
+Migrating to CreateDataFiles (20111129170714)
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE `data_files` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111129170714')[0m
+Migrating to CreateTemps (20111201175053)
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE `temps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111201175053')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `areas`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `areas`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `assuntos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `assuntos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `assuntos_livros`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `audio_visuais`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `audio_visuais`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `audio_visuais`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `autores`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `autores`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `autores_livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `autores_livros`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `configuracaos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `data_files`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `data_files`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `data_files`[0m
+  [4;35;1mSQL (15.9ms)[0m   [0mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `editoras`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `editoras`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `emprestimos`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `emprestimos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `emprestimos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `emprestimos_livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `funcionarios`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `funcionarios`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `funcionarios`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `identificacaos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `identificacaos`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `itens_assuntos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `itens_emprestimos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `jogos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `jogos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `jogos`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `livros`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `livros`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `localizacoes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `localizacoes`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `mapas`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `mapas`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `musicas`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `musicas`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `musicas`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `periodicos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `periodicos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `temps`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `temps`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `temps`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `tipos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `tipos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `tipos`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `unidades`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `unidades`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `unidades_gpds`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m

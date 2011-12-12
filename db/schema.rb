@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(:version => 20111201175053) do
     t.integer  "tipo_emprestimo"
     t.integer  "professor_id"
     t.integer  "aluno"
-    t.integer  "unidade_id",      :null => false
+    t.integer  "unidade_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "data_emprestimo"
@@ -233,7 +233,7 @@ ActiveRecord::Schema.define(:version => 20111201175053) do
     t.string "name"
   end
 
-  create_table "roles_users", :id => false, :force => true do |t|
+  create_table "roles_users", :force => true do |t|
     t.integer "role_id"
     t.integer "user_id"
   end
