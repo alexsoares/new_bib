@@ -16,14 +16,18 @@
         <td align="left"><%= f.collection_select  :role_id,@roles, :id, :name, :include_blank => ' -- Selecione -- ' %>
         <br/>
       </tr>
-    
+      <tr>
+        <td align="left"><input type="image" src="/stylesheets/images/associar.png" title="Associar Usuários"></td>
+      </tr>
+    <% end %>
   </table>
   </div>
   <table>
      <tr>
          <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "40x40"), root_path, :title => "Voltar" %></td>
-        <td align="left"><input type="image" src="/stylesheets/images/gerenciar2.png" title="Associar Usuários"></td>
-        <% end %>
+
+
+
      </tr>
    </table>
 </div>

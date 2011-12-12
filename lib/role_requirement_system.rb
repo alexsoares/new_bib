@@ -109,7 +109,7 @@ module RoleRequirementSystem
     end
     
     def render_optional_error_file(status)
-      render :text => "You don't have access here.", :status => status
+      render :text => "Aconteceu algum problema, ou você não tem acesso Aqui.", :status => status
     end
     
     def access_denied

@@ -21,13 +21,6 @@ a {
   height: 0;
   overflow: hidden;
 }
-#menu{
-  width: 100%;
-  margin: 0 auto;
-
-  padding: 10px 150px;
-
-}
 #container {
   width: 75%;
   margin: 0 auto;
