@@ -1,0 +1,43 @@
+<% title "GÊNEROS" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>GÊNEROS CADASTRADOS</strong></font><br/>
+  </div>
+<div class="tabs">
+  <table bgcolor="#DCDCDC" width="100%">
+    <tr>
+      <th width="630">Nome</th>
+      <th colspan="4">Administração</th>
+    </tr>
+    <% for genero in @generos %>
+    <tr bgcolor="#F5F5F5">
+      <td><%=h genero.nome %></td>
+      <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), genero, :title => "Visualizar Gênero" %></td>
+            <% if current_user.has_role?('admin') %>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_genero_path(genero),  :title => "Editar Gênero" %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), genero, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Gênero" %></td>
+            <%else%>
+                <td align="center"> --- </td>
+                <td align="center"> --- </td>
+            <%end%>
+    </tr>
+    <% end %>
+  </table>
+  <table bgcolor="#DCDCDC" width="100%">
+     <tr >
+        <td align="left" colspan="4"><%= will_paginate @generos%></td>
+    </tr>
+  </table>
+  </div>
+  <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    <% if current_user.has_role?('admin') %>
+      <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_genero_path, :title => "Cadastrar Gênero" %></td>
+   <%end%>
+
+    </tr>
+  </table>
+</div>
+
+
