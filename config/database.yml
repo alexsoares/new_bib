@@ -31,20 +31,20 @@ test:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: bib_test
+  database: biblioteca_test
   pool: 5
   username: root
-  password: s3inf0
+  password: s3inf05
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: bib_production
+  database: biblioteca_production
   pool: 5
   username: root
-  password: s3inf0
+  password: s3inf05
   socket: /var/run/mysqld/mysqld.sock
 
 common: &common
@@ -54,6 +54,11 @@ common: &common
   password: b!bl0s2011seduc # from psql setup, see Postgresql
 
 autenticacao_development:
+  <<: *common
+  database: gpd_americana
+  host: 187.17.113.200
+
+autenticacao_production:
   <<: *common
   database: gpd_americana
   host: 187.17.113.200

@@ -5,7 +5,7 @@ class CreateRoles < ActiveRecord::Migration
     end
     
     # generate the join table
-    create_table "roles_users", :id => false do |t|
+    create_table "roles_users" do |t|
       t.integer "role_id", "user_id"
     end
     add_index "roles_users", "role_id"
