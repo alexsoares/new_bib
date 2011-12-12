@@ -1,16 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 3.1.2deb1ubuntu0.2
+-- version 3.3.7deb5build0.10.10.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: Nov 17, 2011 as 01:01 PM
--- Versão do Servidor: 5.0.75
--- Versão do PHP: 5.2.6-3ubuntu4.6
+-- Tempo de Geração: Dez 12, 2011 as 08:12 AM
+-- Versão do Servidor: 5.1.49
+-- Versão do PHP: 5.3.3-1ubuntu9.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
 --
--- Banco de Dados: `infoseduc_development`
+-- Banco de Dados: `biblioteca_development`
 --
 
 -- --------------------------------------------------------
@@ -20,11 +26,11 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 CREATE TABLE IF NOT EXISTS `tipos` (
-  `id` int(11) NOT NULL auto_increment,
-  `nome` varchar(255) collate utf8_unicode_ci default NULL,
-  `created_at` datetime default NULL,
-  `updated_at` datetime default NULL,
-  PRIMARY KEY  (`id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
 
 --
@@ -43,4 +49,3 @@ INSERT INTO `tipos` (`id`, `nome`, `created_at`, `updated_at`) VALUES
 (10, 'ITINERANCIA', '2010-10-25 10:12:20', '2010-10-25 10:12:20'),
 (11, 'PREFEITURA MUNICIPAL DE AMERICANA', '2010-10-28 10:06:02', '2010-10-28 10:06:02'),
 (12, 'CASA DO CONTO', '2010-11-26 12:51:37', '2010-11-26 12:51:37');
-

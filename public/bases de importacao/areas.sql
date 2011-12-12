@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: Nov 16, 2011 as 07:45 AM
+-- Tempo de Geração: Dez 12, 2011 as 08:02 AM
 -- Versão do Servidor: 5.1.49
 -- Versão do PHP: 5.3.3-1ubuntu9.5
 
@@ -16,14 +16,28 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: 'biblos_development'
+-- Banco de Dados: `biblioteca_development`
 --
 
+-- --------------------------------------------------------
+
 --
--- Extraindo dados da tabela 'areas'
+-- Estrutura da tabela `areas`
 --
 
-INSERT INTO areas (id, nome, created_at, updated_at) VALUES
+CREATE TABLE IF NOT EXISTS `areas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=39 ;
+
+--
+-- Extraindo dados da tabela `areas`
+--
+
+INSERT INTO `areas` (`id`, `nome`, `created_at`, `updated_at`) VALUES
 (1, 'PORTUGUÊS', '2011-09-21 18:14:20', '2011-09-21 18:14:20'),
 (2, 'MATEMÁTICA', '2011-09-21 18:14:26', '2011-09-21 18:14:26'),
 (3, 'LITERATURA', '2011-09-21 18:14:31', '2011-09-21 18:14:31'),
@@ -57,5 +71,5 @@ INSERT INTO areas (id, nome, created_at, updated_at) VALUES
 (34, 'ADMINISTRAÇÃO', '2011-11-11 16:41:00', '2011-11-11 16:41:00'),
 (35, 'ECONOMIA', '2011-11-11 16:41:08', '2011-11-11 16:41:08'),
 (36, 'URBANISMO', '2011-11-11 16:41:20', '2011-11-11 16:41:20'),
-(37, 'CIENCIAS HUMANAS', '2011-11-11 16:41:57', '2011-11-11 16:41:57'),
+(37, 'CIÊNCIAS HUMANAS', '2011-11-11 16:41:57', '2011-12-07 17:26:13'),
 (38, 'GEOGRAFIA', '2011-11-11 16:42:29', '2011-11-11 16:42:29');

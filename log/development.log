@@ -9250,3 +9250,152 @@ Rendering identificacaos/consultaTit
   [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 11 ) [0m
   [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
 Completed in 253ms (View: 232, DB: 5) | 200 OK [http://localhost/consultaTit?method=get]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 07:53:02) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 25ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-12-12 07:53:02) [GET]
+Rendering template within layouts/login
+Rendering sessions/new
+Completed in 158ms (View: 153, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-12-12 07:53:19) [POST]
+  Parameters: {"commit"=>"Entrar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "login"=>"ngarcia", "password"=>"mus@and2"}
+  [4;36;1mUser Load (13.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'ngarcia' and activated_at IS NOT NULL) LIMIT 1[0m
+ACESSO NÃO AUTORIZADO 'ngarcia' from 127.0.0.1 at Mon Dec 12 09:53:19 UTC 2011
+Rendering template within layouts/login
+Rendering sessions/new
+Completed in 89ms (View: 12, DB: 14) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-12-12 07:53:35) [POST]
+  Parameters: {"commit"=>"Entrar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "login"=>"administrador", "password"=>"S3INF09"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'administrador' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+ACESSO NÃO AUTORIZADO 'administrador' from 127.0.0.1 at Mon Dec 12 09:53:35 UTC 2011
+Rendering template within layouts/login
+Rendering sessions/new
+Completed in 42ms (View: 12, DB: 2) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-12-12 07:53:46) [POST]
+  Parameters: {"commit"=>"Entrar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "login"=>"administrador", "password"=>"S3INF09"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'administrador' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+ACESSO NÃO AUTORIZADO 'administrador' from 127.0.0.1 at Mon Dec 12 09:53:46 UTC 2011
+Rendering template within layouts/login
+Rendering sessions/new
+Completed in 38ms (View: 12, DB: 2) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-12-12 07:53:48) [POST]
+  Parameters: {"commit"=>"Entrar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "login"=>"administrador", "password"=>""}
+ACESSO NÃO AUTORIZADO 'administrador' from 127.0.0.1 at Mon Dec 12 09:53:48 UTC 2011
+Rendering template within layouts/login
+Rendering sessions/new
+Completed in 39ms (View: 19, DB: 0) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-12-12 07:54:16) [POST]
+  Parameters: {"commit"=>"Entrar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "login"=>"administrador", "password"=>"s3inf09"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'administrador' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (11.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 42ms (DB: 15) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 07:54:17) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (10.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.3ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.5ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (53.3ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 206ms (View: 71, DB: 70) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-12 07:55:11) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.6ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (113.1ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (27.8ms)[0m   [0mSELECT * FROM `autores` [0m
+  [4;36;1mArea Load (1.1ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (8.3ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.7ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;35;1mLivro Load (22.3ms)[0m   [0mSELECT `livros`.* FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id WHERE (livro like '' ) ORDER BY livro ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering livros/consultaLiv
+  [4;36;1mroles_users Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 595ms (View: 136, DB: 178) | 200 OK [http://localhost/consultaLiv]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-12 07:55:22) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "type_of"=>"6", "search"=>"a"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (3.9ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (1.1ms)[0m   [0mSELECT * FROM `autores` [0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;35;1mLivro Load (15.9ms)[0m   [0mSELECT `livros`.* FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id ORDER BY livro ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering livros/consultaLiv
+  [4;36;1mLivro Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `livros`[0m
+  [4;35;1mIdentificacao Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mIdentificacao Load (0.3ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 15) [0m
+  [4;35;1mArea Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 4) [0m
+  [4;35;1mEditora Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.3ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 18) [0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mIdentificacao Load (0.3ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 4) [0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 18) [0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 5) [0m
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 34) [0m
+  [4;35;1mEditora Load (0.2ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 5) [0m
+  [4;36;1mIdentificacao Load (0.2ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 6) [0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 35) [0m
+  [4;36;1mEditora Load (0.2ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 6) [0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 6) [0m
+Completed in 374ms (View: 61, DB: 31) | 200 OK [http://localhost/consultaLiv?method=get]

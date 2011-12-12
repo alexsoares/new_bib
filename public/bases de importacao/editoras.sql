@@ -1,13 +1,19 @@
 -- phpMyAdmin SQL Dump
--- version 3.1.2deb1ubuntu0.2
+-- version 3.3.7deb5build0.10.10.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: Dez 02, 2011 as 02:25 PM
--- Versão do Servidor: 5.0.75
--- Versão do PHP: 5.2.6-3ubuntu4.6
+-- Tempo de Geração: Dez 12, 2011 as 08:04 AM
+-- Versão do Servidor: 5.1.49
+-- Versão do PHP: 5.3.3-1ubuntu9.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Banco de Dados: `biblioteca_development`
@@ -20,14 +26,14 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 CREATE TABLE IF NOT EXISTS `editoras` (
-  `id` int(11) NOT NULL auto_increment,
-  `nome` varchar(255) collate utf8_unicode_ci default NULL,
-  `cidade` varchar(255) collate utf8_unicode_ci default NULL,
-  `pais` varchar(255) collate utf8_unicode_ci default NULL,
-  `created_at` datetime default NULL,
-  `updated_at` datetime default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=455 ;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cidade` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pais` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=457 ;
 
 --
 -- Extraindo dados da tabela `editoras`
@@ -487,5 +493,5 @@ INSERT INTO `editoras` (`id`, `nome`, `cidade`, `pais`, `created_at`, `updated_a
 (451, 'WAK', 'RIO DE JANEIRO', 'BRASIL\n', '2011-12-02 15:59:36', '2011-12-02 15:59:36'),
 (452, 'WORD BOOK', 'SÃO PAULO', 'BRASIL\n', '2011-12-02 15:59:36', '2011-12-02 15:59:36'),
 (453, 'ZAHAR EDITORES', 'RIO DE JANEIRO', 'BRASIL\n', '2011-12-02 15:59:36', '2011-12-02 15:59:36'),
-(454, 'ZEUS', 'RIO DE JANEIRO', 'BRASIL\n', '2011-12-02 15:59:36', '2011-12-02 15:59:36');
-
+(454, 'ZEUS', 'RIO DE JANEIRO', 'BRASIL\n', '2011-12-02 15:59:36', '2011-12-02 15:59:36'),
+(456, 'SEM EDITORA', 'SEM EDITORA', 'SEM EDITORA', NULL, NULL);
