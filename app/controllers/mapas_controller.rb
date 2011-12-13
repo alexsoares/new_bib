@@ -70,16 +70,18 @@ t = params[:search]
 
    end
  else
-     if params[:type_of].to_i == 1
+    if params[:type_of].to_i == 1
        @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["titulo like ? ", "%" + params[:search].to_s + "%"],:order => 'titulo ASC'
+        render :update do |page|
+          page.replace_html 'mapas', :partial => "mapas"
+        end
       else if params[:type_of].to_i == 2
          @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ? ", "%" + params[:search].to_s + "%"],:order => 'subtitulo ASC'
+          render :update do |page|
+            page.replace_html 'mapas', :partial => "mapas"
+          end
       end
     end
-    render :update do |page|
-      page.replace_html 'mapas', :partial => "mapas"
-    end
-
  end
 end
 
