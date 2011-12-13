@@ -1,19 +1,20 @@
-<% title "Musicas" %>
+<h1>Listing musicas</h1>
 
 <table>
   <tr>
     <th>Nome</th>
-    <th>Interprete</th>
   </tr>
-  <% for musica in @musicas %>
-    <tr>
-      <td><%=h musica.nome %></td>
-      <td><%=h musica.interprete %></td>
-      <td><%= link_to "Show", musica %></td>
-      <td><%= link_to "Edit", edit_musica_path(musica) %></td>
-      <td><%= link_to "Destroy", musica, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
+
+<% @musicas.each do |musica| %>
+  <tr>
+    <td><%=h musica.nome %></td>
+    <td><%= link_to 'Show', musica %></td>
+    <td><%= link_to 'Edit', edit_musica_path(musica) %></td>
+    <td><%= link_to 'Destroy', musica, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
 </table>
 
-<p><%= link_to "New Musica", new_musica_path %></p>
+<br />
+
+<%= link_to 'New musica', new_musica_path %>

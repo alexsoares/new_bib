@@ -1,54 +1,45 @@
 require 'test_helper'
 
 class MusicasControllerTest < ActionController::TestCase
-  def test_index
+  test "should get index" do
     get :index
-    assert_template 'index'
+    assert_response :success
+    assert_not_nil assigns(:musicas)
   end
 
-  def test_show
-    get :show, :id => Musica.first
-    assert_template 'show'
-  end
-
-  def test_new
+  test "should get new" do
     get :new
-    assert_template 'new'
+    assert_response :success
   end
 
-  def test_create_invalid
-    Musica.any_instance.stubs(:valid?).returns(false)
-    post :create
-    assert_template 'new'
+  test "should create musica" do
+    assert_difference('Musica.count') do
+      post :create, :musica => { }
+    end
+
+    assert_redirected_to musica_path(assigns(:musica))
   end
 
-  def test_create_valid
-    Musica.any_instance.stubs(:valid?).returns(true)
-    post :create
-    assert_redirected_to musica_url(assigns(:musica))
+  test "should show musica" do
+    get :show, :id => musicas(:one).to_param
+    assert_response :success
   end
 
-  def test_edit
-    get :edit, :id => Musica.first
-    assert_template 'edit'
+  test "should get edit" do
+    get :edit, :id => musicas(:one).to_param
+    assert_response :success
   end
 
-  def test_update_invalid
-    Musica.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Musica.first
-    assert_template 'edit'
+  test "should update musica" do
+    put :update, :id => musicas(:one).to_param, :musica => { }
+    assert_redirected_to musica_path(assigns(:musica))
   end
 
-  def test_update_valid
-    Musica.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Musica.first
-    assert_redirected_to musica_url(assigns(:musica))
-  end
+  test "should destroy musica" do
+    assert_difference('Musica.count', -1) do
+      delete :destroy, :id => musicas(:one).to_param
+    end
 
-  def test_destroy
-    musica = Musica.first
-    delete :destroy, :id => musica
-    assert_redirected_to musicas_url
-    assert !Musica.exists?(musica.id)
+    assert_redirected_to musicas_path
   end
 end

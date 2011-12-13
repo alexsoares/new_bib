@@ -1,8 +1,16 @@
-<% title "Edit Musica" %>
+<h1>Editing musica</h1>
 
-<%= render :partial => 'form' %>
+<% form_for(@musica) do |f| %>
+  <%= f.error_messages %>
 
-<p>
-  <%= link_to "Show", @musica %> |
-  <%= link_to "View All", musicas_path %>
-</p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @musica %> |
+<%= link_to 'Back', musicas_path %>

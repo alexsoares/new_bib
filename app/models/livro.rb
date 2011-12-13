@@ -12,7 +12,6 @@ class Livro < ActiveRecord::Base
   #accepts_nested_attributes_for :localizacao, :reject_if => lambda {|a| a[:local_guardado].blank?}, :allow_destroy => true
   validates_presence_of :identificacao_id, :message => "Campo obrigatório"
   validates_presence_of :area_id, :message => "Campo obrigatório"
-  validates_presence_of :colecao, :message => "Campo obrigatório"
   validates_presence_of :tombo_l, :message => "Campo obrigatório"
   validates_presence_of :autor_ids, :message => "Campo obrigatório"
   validates_presence_of :localizacao_id, :message => "Campo obrigatório"
@@ -28,8 +27,6 @@ def before_save
     self.obs.upcase!
 
 end
-
-
 
   def auto_inc_tombo_seduc
     self.tombo_seduc =+ 1

@@ -14,7 +14,7 @@
         <div id="ident"><%=render "campos_identificacao"%></div>
       </td>
       <td width="100%">
-        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "20x20"), "#inline_busca", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]  %>
+        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "20x20"), "#inline_busca", :class =>"inline"  %>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@
     <tr>
       <td colspan="3">
         <%= f.label :localizacao_id,"Selecione a localização: " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline" %>
         <div id="local"><%= render "campos_local"%></div>
       </td>
     </tr>

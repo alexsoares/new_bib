@@ -3,6 +3,7 @@ class Localizacao < ActiveRecord::Base
   belongs_to :unidade
   has_many :livros
   has_many :mapas
+  has_many :audio_visuais
 
   FORMAAQUISICAO = %w(DOAÇÃO  AQUISIÇÃO_SEDUC AQUISIÇÃO_UNIDADE ENVIADO_MEC ENVIADO_SEC_EST_EDUC OUTROS)
 

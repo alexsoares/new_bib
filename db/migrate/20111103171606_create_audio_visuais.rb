@@ -1,7 +1,7 @@
 class CreateAudioVisuais < ActiveRecord::Migration
   def self.up
     create_table :audio_visuais do |t|
-      t.references :genero_midia
+      t.references :genero
       t.references :localizacao
       t.string :tombo_seduc
       t.string :tombo_l

@@ -7,7 +7,7 @@
         <%= f.text_field :tombo_l, :size => "10" %>
       </td>
       <td colspan="2">
-        <b>Para filtrar o <i>Título</i> clicar no icone abaixo <br>e digitar uma letra ou palavra.      </b>
+        <b>Para selecionar o  <i>Título</i> clicar caixa dentro da caixa.      </b>
       </td>
     </tr>
     <tr>
@@ -33,12 +33,12 @@
     </tr>
     <tr>
       <td><b><i>
-         Para selecionar mais de um autor <br/> precionar a tecla <i>SHIFT</i> e selecionar <br/>as opções desejadas ===========>
+         Para selecionar mais de um autor <br/> precionar a tecla <i>CTRL</i> e selecionar <br/>as opções desejadas ===========>
       </i></b>
       </td>
       <td colspan="2">
-        <b><%= f.label :autor_id, "Selecione o(s) autor(es). " %></b>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_autor", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]  %>
+        <b><%= f.label :autor_id, "Autor(es). " %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_autor", :class =>"inline" %>
         <div id="autor"><%= render "campos_autor"%></div>     
       </td>
     </tr>
@@ -50,8 +50,8 @@
     </tr>
     <tr>
       <td>
-        <b><%= f.label :localizacao_id,"Selecione a localização: " %></b>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome] %>
+        <b><%= f.label :localizacao_id,"Localização: " %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline"%>
         <div id="local"><%= render "campos_local"%></div>
       </td>
       <td width="75%">
@@ -79,12 +79,12 @@
     </tr>
     <tr>
       <td><b><i>
-         Para selecionar mais de um assunto <br/> precionar a tecla <i>SHIFT</i> e selecionar <br/>as opções desejadas ===========>
+         Para selecionar mais de um assunto <br/> precionar a tecla <i>CTRL</i> e selecionar <br/>as opções desejadas ===========>
       </i></b>
       </td>
       <td colspan="2">
-        <b><%= f.label :assunto_id, "Selecione o(s) assunto(s). " %></b>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline", :title => ["Unidade corrente:", current_user.unidade.nome]%>
+        <b><%= f.label :assunto_id, "Assunto(s). " %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline"%>
         <div id="assuntos"><%= render "campos_assunto"%></div>        
       </td>
     </tr>

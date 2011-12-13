@@ -3,12 +3,16 @@
   <table  width="100%" bgcolor="#F5F5F5">
   <tr><td></td></tr>
   <tr><td></td></tr>
-  <tr>
-      <td><b><%= f.label :nome %>:</b></td>
-      <td><%= f.text_field :nome %></td>
-  </tr>
     <tr>
-      <td><%= f.submit "Salvar"%></td>
-     </tr>
+      <td>
+        <b><%= f.label :nome, 'Nome:' %></b><br />
+        <%= f.text_field :nome %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.submit "Salvar" %>
+      </td>
+    </tr>
   </table>
 <% end %>
