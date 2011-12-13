@@ -1,4 +1,32 @@
 jQuery(document).ready(function( $ ){
+    $(".txt_busca").val("Digite parte da busca").css("color","gray");
+  //Filtros consultas mapas
+  $(".filtro").click(function ()
+   {
+     $(".consulta").show();
+     $(".txt_busca").show();
+     $(".label_busca").show();
+   });
+
+   $(".sem_filtro").click(function ()
+    {
+      $(".consulta").show();
+      $(".txt_busca").val("");
+
+      $(".label_busca").hide();
+    });
+    $(".txt_busca").focus(function(){
+       $(".txt_busca").val("");
+    });
+
+  // Fim Filtros
+
+
+
+
+
+
+
 	var uls = $('#menu ul');
 	uls.hide();
 
@@ -15,14 +43,7 @@ jQuery(document).ready(function( $ ){
 	});
 
 $(".grid").flexigrid({
-    showTableToggleBtn: true,
-    sortorder: "asc",
-        usepager: true,
-        title: 'DADOS CADASTRADOS',
-        useRp: true,
-        rp: 150
-
-
+    url: 'livros.json'
 });
 
 $( "input:submit" ).button();

@@ -1,0 +1,32 @@
+<div class="tabs">
+    <table bgcolor="#DCDCDC" width="100%">
+         <tr>
+                <th width="200">Título</th>
+                <th width="300">Subtítulo</th>
+                <th width="90">Formato</th>
+                <th colspan="3">Administração</th>
+         </tr>
+         <% if @mapas.present? %>
+           <% for mapa in @mapas %>
+            <tr bgcolor="	#F5F5F5">
+                <td align="left"><%=h mapa.titulo%></td>
+                <td align="left"><%=h mapa.subtitulo %></td>
+                <td align="center"><%=h mapa.formato %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), mapa, :title => "Exibir Mapa" %></td>
+                <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                    <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_mapa_path(mapa), :title => "Editar Mapa" %></td>
+                    <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), mapa, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Mapa" %></td>
+                <%else%>
+                    <td align="center"> --- </td>
+                    <td align="center"> --- </td>
+                <%end%>
+              </tr>
+            <% end %>
+         <%end%>
+      </table>
+      <table bgcolor="#DCDCDC" width="100%">
+         <tr >
+           <%if @mapas.present?%><td align="left" colspan="4"><%= will_paginate @mapas%></td><%end%>
+       </tr>
+      </table>
+</div>

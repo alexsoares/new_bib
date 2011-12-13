@@ -1,4 +1,4 @@
-class Mapas < ActiveRecord::Base
+class Mapa < ActiveRecord::Base
   #attr_accessible :editora, :localizacao, :tombo_seduc, :tombo_l, :tipo,:titulo, :subtitulo, :ano, :formato, :data_edicao, :local_edicao, :edicao, :obs
   attr_accessor :check
   belongs_to :editora

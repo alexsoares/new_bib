@@ -3,7 +3,6 @@ class LivrosController < ApplicationController
   before_filter :load_resources
 
     def livro
-    t = params[:nome_livro]
     @livro = Identificacao.find(:all,:conditions => ["livro like ?",params[:nome_livro]+"%"])
     @livro_hash = []
     @livro.each do |id|
@@ -18,6 +17,17 @@ class LivrosController < ApplicationController
 
   def index
     @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
+    @livro_hash = []
+    @livros.each do |id|
+      @livro_hash <<  id.identificacao.livro
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+      format.json  { render :json => @livro_hash }
+    end
+
   end
 
   def show
@@ -180,6 +190,6 @@ class LivrosController < ApplicationController
     @areas = Area.all(:order => 'nome ASC')
     @editoras = Editora.all(:order => 'nome ASC') 
     @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id])
-    
+
   end
 end
