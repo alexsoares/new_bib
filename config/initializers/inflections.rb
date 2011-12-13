@@ -11,6 +11,7 @@
   inflect.irregular 'audio_visual', 'audio_visuais'
   inflect.irregular 'identificaocao', 'identificacoes'
   inflect.irregular 'localizacao','localizacoes'
+  inflect.irregular 'cantor','cantores'
   inflect.irregular 'item','itens'
   inflect.irregular 'autor','autores'
  end

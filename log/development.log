@@ -9636,3 +9636,2436 @@ Migrating to CreateTemps (20111201175053)
   [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 12:02:06) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 138ms (View: 37, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#consultaMap (for 127.0.0.1 at 2011-12-12 12:02:12) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.5ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (titulo like '' ) ORDER BY titulo ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering mapas/consultaMap
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 82ms (View: 37, DB: 4) | 200 OK [http://localhost/consultaMap]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#new (for 127.0.0.1 at 2011-12-12 12:02:47) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `jogos`[0m
+Rendering template within layouts/application
+Rendering jogos/new
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Rendered jogos/_campos_local (1.0ms)
+Rendered jogos/_form_local (73.5ms)
+Rendered jogos/_form (107.7ms)
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 173ms (View: 140, DB: 6) | 200 OK [http://localhost/jogos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#new (for 127.0.0.1 at 2011-12-12 12:03:07) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `jogos`[0m
+Rendering template within layouts/application
+Rendering jogos/new
+  [4;35;1mUnidade Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Rendered jogos/_campos_local (0.5ms)
+Rendered jogos/_form_local (16.8ms)
+Rendered jogos/_form (39.7ms)
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 85ms (View: 54, DB: 6) | 200 OK [http://localhost/jogos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DicionarioEnciclopediasController#new (for 127.0.0.1 at 2011-12-12 12:04:11) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.5ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mIdentificacao Load (2.3ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mDicionarioEnciclopedia Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+Rendering template within layouts/application
+Rendering dicionario_enciclopedias/new
+  [4;35;1mIdentificacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+Rendered dicionario_enciclopedias/_campos_identificacao (286.5ms)
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Rendered dicionario_enciclopedias/_campos_local (1.3ms)
+  [4;36;1mEditora Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+Rendered dicionario_enciclopedias/_form_local (12.5ms)
+Rendered dicionario_enciclopedias/_form_busca (5.9ms)
+Rendered dicionario_enciclopedias/_form (374.4ms)
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 617ms (View: 490, DB: 11) | 200 OK [http://localhost/dicionario_enciclopedias/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#new (for 127.0.0.1 at 2011-12-12 12:04:16) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `jogos`[0m
+Rendering template within layouts/application
+Rendering jogos/new
+  [4;36;1mUnidade Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Rendered jogos/_campos_local (0.6ms)
+Rendered jogos/_form_local (23.6ms)
+Rendered jogos/_form (53.6ms)
+  [4;36;1mroles_users Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 211ms (View: 172, DB: 7) | 200 OK [http://localhost/jogos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#new (for 127.0.0.1 at 2011-12-12 12:04:21) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` [0m
+  [4;36;1mIdentificacao Load (3.1ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (1.1ms)[0m   [0mSELECT * FROM `autores` [0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) [0m
+  [4;35;1mLivro Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+Rendering template within layouts/application
+Rendering livros/new
+  [4;36;1mUnidade Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mAutor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `autores`[0m
+Rendered livros/_campos_autor (183.1ms)
+  [4;35;1mArea Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendered livros/_campos_local (1.2ms)
+  [4;36;1mEditora Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+Rendered livros/_campos_assunto (1.5ms)
+Rendered livros/_form_autor (6.1ms)
+Rendered livros/_form_assunto (6.1ms)
+Rendered livros/_form_local (12.4ms)
+Rendered livros/_form_busca (5.4ms)
+Rendered livros/_form (391.3ms)
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 714ms (View: 430, DB: 14) | 200 OK [http://localhost/livros/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#new (for 127.0.0.1 at 2011-12-12 12:04:37) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+Rendering template within layouts/application
+Rendering mapas/new
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Rendered mapas/_campos_local (1.1ms)
+Rendered mapas/_form_local (19.6ms)
+Rendered mapas/_form (74.8ms)
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 248ms (View: 98, DB: 7) | 200 OK [http://localhost/mapas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AutoresController#new (for 127.0.0.1 at 2011-12-12 12:04:44) [GET]
+  [4;35;1mAutor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+Rendering template within layouts/application
+Rendering autores/new
+Rendered autores/_form (7.0ms)
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 91ms (View: 73, DB: 5) | 200 OK [http://localhost/autores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AreasController#new (for 127.0.0.1 at 2011-12-12 12:04:48) [GET]
+  [4;35;1mArea Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+Rendering template within layouts/application
+Rendering areas/new
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered areas/_form (35.4ms)
+Completed in 167ms (View: 69, DB: 4) | 200 OK [http://localhost/areas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EditorasController#new (for 127.0.0.1 at 2011-12-12 12:04:52) [GET]
+  [4;35;1mEditora Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+Rendering template within layouts/application
+Rendering editoras/new
+Rendered editoras/_form (12.7ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 162ms (View: 148, DB: 4) | 200 OK [http://localhost/editoras/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#new (for 127.0.0.1 at 2011-12-12 12:04:58) [GET]
+  [4;35;1mIdentificacao Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+Rendering template within layouts/application
+Rendering identificacaos/new
+Rendered identificacaos/_form (11.9ms)
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 173ms (View: 155, DB: 5) | 200 OK [http://localhost/identificacaos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:05:03) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.5ms)[0m   [0;1mSELECT * FROM `jogos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 67ms (View: 29, DB: 4) | 200 OK [http://localhost/consultaJog]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:06:00) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.1ms)[0m   [0mSELECT * FROM `jogos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 74ms (View: 35, DB: 4) | 200 OK [http://localhost/consultaJog]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:06:03) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.2ms)[0m   [0;1mSELECT * FROM `jogos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 69ms (View: 28, DB: 4) | 200 OK [http://localhost/consultaJog]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:06:06) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.2ms)[0m   [0mSELECT * FROM `jogos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 143ms (View: 28, DB: 4) | 200 OK [http://localhost/consultaJog]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 12:07:01) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.2ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (15.2ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 125ms (View: 74, DB: 19) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:07:16) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.1ms)[0m   [0;1mSELECT * FROM `jogos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 73ms (View: 35, DB: 4) | 200 OK [http://localhost/consultaJog]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:08:18) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.2ms)[0m   [0mSELECT * FROM `jogos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 73ms (View: 36, DB: 4) | 200 OK [http://localhost/consultaJog]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#new (for 127.0.0.1 at 2011-12-12 12:09:49) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `jogos`[0m
+Rendering template within layouts/application
+Rendering jogos/new
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+Rendered jogos/_campos_local (0.5ms)
+Rendered jogos/_form_local (16.5ms)
+Rendered jogos/_form (39.1ms)
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 84ms (View: 53, DB: 6) | 200 OK [http://localhost/jogos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:10:04) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.1ms)[0m   [0mSELECT * FROM `jogos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 47ms (View: 18, DB: 3) | 200 OK [http://localhost/consultaJog]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:10:19) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"a"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.5ms)[0m   [0;1mSELECT * FROM `jogos` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 81ms (View: 25, DB: 5) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:10:22) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"a"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.1ms)[0m   [0mSELECT * FROM `jogos` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 61ms (View: 24, DB: 4) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:10:26) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "type_of"=>"3", "search"=>"a"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.1ms)[0m   [0;1mSELECT * FROM `jogos` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 63ms (View: 25, DB: 4) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:10:33) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "type_of"=>"2", "search"=>"3"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.4ms)[0m   [0mSELECT * FROM `jogos` WHERE (faixa_etaria like '%3%' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 56ms (View: 18, DB: 4) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:10:37) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "type_of"=>"1", "search"=>"3"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.5ms)[0m   [0;1mSELECT * FROM `jogos` WHERE (nome like '%3%' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 143ms (View: 27, DB: 5) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:10:48) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "type_of"=>"1", "search"=>"3"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.1ms)[0m   [0mSELECT * FROM `jogos` WHERE (nome like '%3%' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 77ms (View: 33, DB: 4) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:11:02) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"3"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.1ms)[0m   [0;1mSELECT * FROM `jogos` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 53ms (View: 18, DB: 3) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:11:04) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"3"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+  [4;35;1mJogo Load (0.1ms)[0m   [0mSELECT * FROM `jogos` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 52ms (View: 18, DB: 4) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-12 12:12:09) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"3"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mJogo Load (0.6ms)[0m   [0;1mSELECT * FROM `jogos` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mJogo Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `jogos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `jogos` [0m
+Rendering template within layouts/application
+Rendering jogos/consultaJog
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 201ms (View: 81, DB: 5) | 200 OK [http://localhost/consultaJog?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#consultaMap (for 127.0.0.1 at 2011-12-12 12:12:35) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Load (0.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (titulo like '' ) ORDER BY titulo ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering mapas/consultaMap
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 150ms (View: 18, DB: 4) | 200 OK [http://localhost/consultaMap]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#consultaMap (for 127.0.0.1 at 2011-12-12 12:12:43) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "type_of"=>"1", "search"=>"a"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEditora Load (0.5ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` [0m
+  [4;36;1mMapas Load (1.1ms)[0m   [0;1mSELECT * FROM `mapas` WHERE (titulo like '%a%' ) ORDER BY titulo ASC LIMIT 0, 10[0m
+  [4;35;1mMapas Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapas` WHERE (titulo like '%a%' ) [0m
+Rendering template within layouts/application
+Rendering mapas/consultaMap
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 283ms (View: 224, DB: 8) | 200 OK [http://localhost/consultaMap?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateIdentificacaos (20111103140712)
+Migrating to CreateLocalizacoes (20111103142802)
+Migrating to CreateAreas (20111103142908)
+Migrating to CreateEditoras (20111103143141)
+Migrating to CreateRoles (20111103143650)
+Migrating to CreateUsers (20111103145438)
+Migrating to CreateAudioVisuais (20111103171606)
+Migrating to CreateLivros (20111103172501)
+Migrating to CreateDicionarioEnciclopedias (20111103173835)
+Migrating to CreateMapas (20111103180754)
+Migrating to CreatePeriodicos (20111104131658)
+Migrating to CreateJogos (20111104135250)
+Migrating to CreateAssuntos (20111108095000)
+Migrating to CreateItensAssuntos (20111108101214)
+Migrating to CreateAutores (20111108110739)
+Migrating to CreateMusicas (20111108120056)
+Migrating to AddTituloToMapas (20111108144756)
+Migrating to AddUnidadeToUsers (20111108171531)
+Migrating to CreateUnidades (20111108172431)
+Migrating to AssuntosLivros (20111110175329)
+Migrating to AddCamposToUnidades (20111117152552)
+Migrating to CreateTipos (20111117153922)
+Migrating to CreateUnidadesGpds (20111117161434)
+Migrating to CreateAutoresLivros (20111123143345)
+Migrating to CreateFuncionarios (20111124125844)
+Migrating to CreateItensEmprestimos (20111124135232)
+Migrating to CreateEmprestimos (20111124135514)
+Migrating to AddStatusToLivros (20111125085948)
+Migrating to AddCampoValidacaoToFuncionarios (20111125090211)
+Migrating to EmprestimosLivros (20111125173829)
+Migrating to AddDataEmprestimoToEmprestimos (20111125175024)
+Migrating to AddDataDevolucaoToEmprestimos (20111125175051)
+Migrating to CreateConfiguracaos (20111125175410)
+Migrating to CreateDataFiles (20111129170714)
+Migrating to CreateTemps (20111201175053)
+Migrating to CreateGeneros (20111212141624)
+  [4;36;1mSQL (139.8ms)[0m   [0;1mCREATE TABLE `generos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (58.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111212141624')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `areas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `areas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `assuntos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `assuntos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `assuntos_livros`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `audio_visuais`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `audio_visuais`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `audio_visuais`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `autores`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `autores`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `autores_livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `configuracaos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `data_files`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `data_files`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `data_files`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `editoras`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `editoras`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `emprestimos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `emprestimos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `emprestimos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `emprestimos_livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `funcionarios`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `funcionarios`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `funcionarios`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `generos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `generos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `identificacaos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `identificacaos`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `itens_assuntos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `itens_assuntos`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mSHOW KEYS FROM `itens_assuntos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `itens_emprestimos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `itens_emprestimos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `itens_emprestimos`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `jogos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `jogos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `jogos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mdescribe `livros`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `livros`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `localizacoes`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `localizacoes`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `mapas`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW KEYS FROM `mapas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicas`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `musicas`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `musicas`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `periodicos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `periodicos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `temps`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `temps`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `temps`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `tipos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `tipos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `tipos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `unidades`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `unidades`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `unidades_gpds`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `unidades_gpds`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `unidades_gpds`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateIdentificacaos (20111103140712)
+Migrating to CreateLocalizacoes (20111103142802)
+Migrating to CreateAreas (20111103142908)
+Migrating to CreateEditoras (20111103143141)
+Migrating to CreateRoles (20111103143650)
+Migrating to CreateUsers (20111103145438)
+Migrating to CreateAudioVisuais (20111103171606)
+Migrating to CreateLivros (20111103172501)
+Migrating to CreateDicionarioEnciclopedias (20111103173835)
+Migrating to CreateMapas (20111103180754)
+Migrating to CreatePeriodicos (20111104131658)
+Migrating to CreateJogos (20111104135250)
+Migrating to CreateAssuntos (20111108095000)
+Migrating to CreateItensAssuntos (20111108101214)
+Migrating to CreateAutores (20111108110739)
+Migrating to CreateMusicas (20111108120056)
+Migrating to AddTituloToMapas (20111108144756)
+Migrating to AddUnidadeToUsers (20111108171531)
+Migrating to CreateUnidades (20111108172431)
+Migrating to AssuntosLivros (20111110175329)
+Migrating to AddCamposToUnidades (20111117152552)
+Migrating to CreateTipos (20111117153922)
+Migrating to CreateUnidadesGpds (20111117161434)
+Migrating to CreateAutoresLivros (20111123143345)
+Migrating to CreateFuncionarios (20111124125844)
+Migrating to CreateItensEmprestimos (20111124135232)
+Migrating to CreateEmprestimos (20111124135514)
+Migrating to AddStatusToLivros (20111125085948)
+Migrating to AddCampoValidacaoToFuncionarios (20111125090211)
+Migrating to EmprestimosLivros (20111125173829)
+Migrating to AddDataEmprestimoToEmprestimos (20111125175024)
+Migrating to AddDataDevolucaoToEmprestimos (20111125175051)
+Migrating to CreateConfiguracaos (20111125175410)
+Migrating to CreateDataFiles (20111129170714)
+Migrating to CreateTemps (20111201175053)
+Migrating to CreateGeneros (20111212141624)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `areas`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `areas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `assuntos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `assuntos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `assuntos_livros`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `audio_visuais`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `audio_visuais`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `audio_visuais`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `autores`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `autores`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `autores_livros`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `configuracaos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `data_files`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `data_files`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `data_files`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `editoras`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `editoras`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `emprestimos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `emprestimos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `emprestimos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `emprestimos_livros`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `funcionarios`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `funcionarios`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `funcionarios`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `identificacaos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `itens_assuntos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `itens_emprestimos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `jogos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `jogos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `jogos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `livros`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `livros`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `localizacoes`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `localizacoes`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `mapas`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `mapas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `musicas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `musicas`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `musicas`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `periodicos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `periodicos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `temps`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `temps`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `temps`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `tipos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `tipos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `tipos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `unidades`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `unidades`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `unidades_gpds`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateIdentificacaos (20111103140712)
+Migrating to CreateLocalizacoes (20111103142802)
+Migrating to CreateAreas (20111103142908)
+Migrating to CreateEditoras (20111103143141)
+Migrating to CreateRoles (20111103143650)
+Migrating to CreateUsers (20111103145438)
+Migrating to CreateAudioVisuais (20111103171606)
+Migrating to CreateLivros (20111103172501)
+Migrating to CreateDicionarioEnciclopedias (20111103173835)
+Migrating to CreateMapas (20111103180754)
+Migrating to CreatePeriodicos (20111104131658)
+Migrating to CreateJogos (20111104135250)
+Migrating to CreateAssuntos (20111108095000)
+Migrating to CreateItensAssuntos (20111108101214)
+Migrating to CreateAutores (20111108110739)
+Migrating to CreateMusicas (20111108120056)
+Migrating to AddTituloToMapas (20111108144756)
+Migrating to AddUnidadeToUsers (20111108171531)
+Migrating to CreateUnidades (20111108172431)
+Migrating to AssuntosLivros (20111110175329)
+Migrating to AddCamposToUnidades (20111117152552)
+Migrating to CreateTipos (20111117153922)
+Migrating to CreateUnidadesGpds (20111117161434)
+Migrating to CreateAutoresLivros (20111123143345)
+Migrating to CreateFuncionarios (20111124125844)
+Migrating to CreateItensEmprestimos (20111124135232)
+Migrating to CreateEmprestimos (20111124135514)
+Migrating to AddStatusToLivros (20111125085948)
+Migrating to AddCampoValidacaoToFuncionarios (20111125090211)
+Migrating to EmprestimosLivros (20111125173829)
+Migrating to AddDataEmprestimoToEmprestimos (20111125175024)
+Migrating to AddDataDevolucaoToEmprestimos (20111125175051)
+Migrating to CreateConfiguracaos (20111125175410)
+Migrating to CreateDataFiles (20111129170714)
+Migrating to CreateTemps (20111201175053)
+Migrating to CreateGeneros (20111212141624)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `areas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `areas`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `assuntos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `assuntos_livros`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `audio_visuais`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `audio_visuais`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `audio_visuais`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `autores`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `autores`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `autores_livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `configuracaos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `data_files`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `data_files`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `data_files`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `editoras`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `editoras`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `emprestimos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `emprestimos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `emprestimos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `emprestimos_livros`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `funcionarios`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `funcionarios`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `funcionarios`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `identificacaos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `itens_assuntos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `itens_emprestimos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `jogos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `jogos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `jogos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `livros`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `livros`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `livros`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `localizacoes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `localizacoes`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `mapas`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `mapas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `musicas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `musicas`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `musicas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `periodicos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `periodicos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `temps`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `temps`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `temps`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `tipos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `tipos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `tipos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `unidades`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `unidades`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `unidades_gpds`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateIdentificacaos (20111103140712)
+Migrating to CreateLocalizacoes (20111103142802)
+Migrating to CreateAreas (20111103142908)
+Migrating to CreateEditoras (20111103143141)
+Migrating to CreateRoles (20111103143650)
+Migrating to CreateUsers (20111103145438)
+Migrating to CreateAudioVisuais (20111103171606)
+Migrating to CreateLivros (20111103172501)
+Migrating to CreateDicionarioEnciclopedias (20111103173835)
+Migrating to CreateMapas (20111103180754)
+Migrating to CreatePeriodicos (20111104131658)
+Migrating to CreateJogos (20111104135250)
+Migrating to CreateAssuntos (20111108095000)
+Migrating to CreateItensAssuntos (20111108101214)
+Migrating to CreateAutores (20111108110739)
+Migrating to CreateMusicas (20111108120056)
+Migrating to AddTituloToMapas (20111108144756)
+Migrating to AddUnidadeToUsers (20111108171531)
+Migrating to CreateUnidades (20111108172431)
+Migrating to AssuntosLivros (20111110175329)
+Migrating to AddCamposToUnidades (20111117152552)
+Migrating to CreateTipos (20111117153922)
+Migrating to CreateUnidadesGpds (20111117161434)
+Migrating to CreateAutoresLivros (20111123143345)
+Migrating to CreateFuncionarios (20111124125844)
+Migrating to CreateItensEmprestimos (20111124135232)
+Migrating to CreateEmprestimos (20111124135514)
+Migrating to AddStatusToLivros (20111125085948)
+Migrating to AddCampoValidacaoToFuncionarios (20111125090211)
+Migrating to EmprestimosLivros (20111125173829)
+Migrating to AddDataEmprestimoToEmprestimos (20111125175024)
+Migrating to AddDataDevolucaoToEmprestimos (20111125175051)
+Migrating to CreateConfiguracaos (20111125175410)
+Migrating to CreateDataFiles (20111129170714)
+Migrating to CreateTemps (20111201175053)
+Migrating to CreateGeneros (20111212142507)
+  [4;36;1mSQL (168.1ms)[0m   [0;1mCREATE TABLE `generos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (60.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111212142507')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `areas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `areas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `assuntos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `assuntos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `assuntos_livros`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `audio_visuais`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `audio_visuais`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `audio_visuais`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `autores`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `autores`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `autores_livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `configuracaos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `data_files`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `data_files`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `data_files`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `editoras`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `editoras`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `emprestimos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `emprestimos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `emprestimos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `emprestimos_livros`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `funcionarios`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `funcionarios`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `funcionarios`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `generos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `generos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `identificacaos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `itens_assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `itens_assuntos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `itens_assuntos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `itens_emprestimos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `itens_emprestimos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `itens_emprestimos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `jogos`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `jogos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `jogos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `livros`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `livros`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `localizacoes`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `localizacoes`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `mapas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `mapas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `mapas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicas`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `musicas`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `musicas`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `periodicos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `periodicos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `periodicos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `temps`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `temps`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `temps`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `tipos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `tipos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `tipos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `unidades`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `unidades`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `unidades_gpds`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `unidades_gpds`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `unidades_gpds`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 12:43:56) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined local variable or method `consultaPer_path' for #<ActionView::Base:0xb68e3fd0>) on line #59 of app/views/layouts/application.html.erb:
+56:                       <li><%= link_to "Jogos", consultaJog_path %></li>
+57:                       <li><%= link_to "Livros", consultaLiv_path %></li>
+58:                       <li><%= link_to "Mapas", consultaMap_path %></li>
+59:                       <li><%= link_to "Periódicos", consultaPer_path %></li>
+60:                       <li> __ </li>
+61:                       <li><%= link_to "Autores", consultaAut_path %></li>
+62:                       <li><%= link_to "Áreas", consultaAre_path %></li>
+
+    app/views/layouts/application.html.erb:59
+
+Rendered rescues/_trace (128.5ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 12:44:09) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 80ms (View: 32, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#new (for 127.0.0.1 at 2011-12-12 12:44:16) [GET]
+  [4;36;1mGenero Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+Rendering template within layouts/application
+Rendering generos/new
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered generos/_form (37.1ms)
+Completed in 89ms (View: 72, DB: 5) | 200 OK [http://localhost/generos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#index (for 127.0.0.1 at 2011-12-12 12:44:19) [GET]
+  [4;36;1mGenero Load (0.7ms)[0m   [0;1mSELECT * FROM `generos` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mGenero Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `generos` [0m
+Rendering template within layouts/application
+Rendering generos/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 120ms (View: 101, DB: 6) | 200 OK [http://localhost/generos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 12:46:34) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 57ms (View: 14, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#new (for 127.0.0.1 at 2011-12-12 12:46:43) [GET]
+  [4;36;1mGenero Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+Rendering template within layouts/application
+Rendering generos/new
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered generos/_form (38.0ms)
+Completed in 66ms (View: 49, DB: 5) | 200 OK [http://localhost/generos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#index (for 127.0.0.1 at 2011-12-12 12:46:46) [GET]
+  [4;36;1mGenero Load (0.2ms)[0m   [0;1mSELECT * FROM `generos` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mGenero Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `generos` [0m
+Rendering template within layouts/application
+Rendering generos/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #12 of app/views/generos/index.html.erb:
+9:       <th width="630">Nome</th>
+10:       <th colspan="4">Administração</th>
+11:     </tr>
+12:     <% for genero in @genero %>
+13:     <tr bgcolor="#F5F5F5">
+14:       <td><%=h genero.nome %></td>
+15:       <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), genero, :title => "Visualizar Gênero" %></td>
+
+    app/views/generos/index.html.erb:12
+    app/controllers/generos_controller.rb:7:in `index'
+
+Rendered rescues/_trace (186.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#index (for 127.0.0.1 at 2011-12-12 12:46:59) [GET]
+  [4;35;1mGenero Load (0.2ms)[0m   [0mSELECT * FROM `generos` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;36;1mGenero Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `generos` [0m
+Rendering template within layouts/application
+Rendering generos/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 222ms (View: 206, DB: 5) | 200 OK [http://localhost/generos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#index (for 127.0.0.1 at 2011-12-12 12:47:05) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mGenero Load (0.7ms)[0m   [0mSELECT * FROM `generos` ORDER BY nome ASC LIMIT 10, 10[0m
+Rendering template within layouts/application
+Rendering generos/index
+  [4;36;1mGenero Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 109ms (View: 92, DB: 5) | 200 OK [http://localhost/generos?page=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#show (for 127.0.0.1 at 2011-12-12 12:47:08) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mGenero Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mGenero Load (0.4ms)[0m   [0mSELECT * FROM `generos` WHERE (`generos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering generos/show
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 72ms (View: 55, DB: 5) | 200 OK [http://localhost/generos/8]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#new (for 127.0.0.1 at 2011-12-12 12:47:13) [GET]
+  [4;35;1mGenero Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+Rendering template within layouts/application
+Rendering generos/new
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered generos/_form (27.4ms)
+Completed in 50ms (View: 35, DB: 4) | 200 OK [http://localhost/generos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#index (for 127.0.0.1 at 2011-12-12 12:47:15) [GET]
+  [4;35;1mGenero Load (0.2ms)[0m   [0mSELECT * FROM `generos` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;36;1mGenero Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `generos` [0m
+Rendering template within layouts/application
+Rendering generos/index
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 143ms (View: 125, DB: 5) | 200 OK [http://localhost/generos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#edit (for 127.0.0.1 at 2011-12-12 12:47:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGenero Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mGenero Load (0.3ms)[0m   [0;1mSELECT * FROM `generos` WHERE (`generos`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering generos/edit
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered generos/_form (118.7ms)
+Completed in 149ms (View: 134, DB: 4) | 200 OK [http://localhost/generos/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#index (for 127.0.0.1 at 2011-12-12 12:47:22) [GET]
+  [4;36;1mGenero Load (0.2ms)[0m   [0;1mSELECT * FROM `generos` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mGenero Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `generos` [0m
+Rendering template within layouts/application
+Rendering generos/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 203ms (View: 186, DB: 5) | 200 OK [http://localhost/generos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#show (for 127.0.0.1 at 2011-12-12 12:47:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mGenero Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mGenero Load (0.1ms)[0m   [0mSELECT * FROM `generos` WHERE (`generos`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering generos/show
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 65ms (View: 49, DB: 5) | 200 OK [http://localhost/generos/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 12:47:33) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 67ms (View: 19, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 12:48:15) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 66ms (View: 24, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:48:18) [GET]
+  [4;35;1mGenero Load (0.5ms)[0m   [0mSELECT * FROM `generos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 133ms (View: 40, DB: 3) | 200 OK [http://localhost/consultaGen]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:48:23) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"a"}
+  [4;35;1mGenero Load (0.7ms)[0m   [0mSELECT * FROM `generos` WHERE (nome like '%a%') ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;36;1mGenero Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `generos` WHERE (nome like '%a%') [0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 206ms (View: 187, DB: 6) | 200 OK [http://localhost/consultaGen?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:48:42) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"a"}
+  [4;35;1mGenero Load (0.2ms)[0m   [0mSELECT * FROM `generos` WHERE (nome like '%a%') ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;36;1mGenero Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `generos` WHERE (nome like '%a%') [0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 149ms (View: 130, DB: 5) | 200 OK [http://localhost/consultaGen?method=get]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:48:59) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"a"}
+  [4;35;1mGenero Load (0.2ms)[0m   [0mSELECT * FROM `generos` WHERE (nome like '%a%') ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;36;1mGenero Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `generos` WHERE (nome like '%a%') [0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 150ms (View: 129, DB: 5) | 200 OK [http://localhost/consultaGen?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:49:08) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"ed"}
+  [4;35;1mGenero Load (0.6ms)[0m   [0mSELECT * FROM `generos` WHERE (nome like '%ed%') ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;36;1mGenero Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 68ms (View: 48, DB: 4) | 200 OK [http://localhost/consultaGen?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:49:14) [GET]
+  [4;36;1mGenero Load (0.2ms)[0m   [0;1mSELECT * FROM `generos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 55ms (View: 41, DB: 4) | 200 OK [http://localhost/consultaGen]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:49:21) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"ed"}
+  [4;36;1mGenero Load (0.1ms)[0m   [0;1mSELECT * FROM `generos` WHERE (nome like '%ed%') ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;35;1mGenero Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 63ms (View: 51, DB: 4) | 200 OK [http://localhost/consultaGen?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#show (for 127.0.0.1 at 2011-12-12 12:49:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGenero Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mGenero Load (0.3ms)[0m   [0;1mSELECT * FROM `generos` WHERE (`generos`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering generos/show
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 132ms (View: 115, DB: 5) | 200 OK [http://localhost/generos/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#index (for 127.0.0.1 at 2011-12-12 12:49:29) [GET]
+  [4;36;1mGenero Load (0.2ms)[0m   [0;1mSELECT * FROM `generos` ORDER BY nome ASC LIMIT 0, 10[0m
+  [4;35;1mGenero Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `generos` [0m
+Rendering template within layouts/application
+Rendering generos/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 140ms (View: 122, DB: 5) | 200 OK [http://localhost/generos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:49:39) [GET]
+  [4;36;1mGenero Load (0.2ms)[0m   [0;1mSELECT * FROM `generos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 57ms (View: 42, DB: 4) | 200 OK [http://localhost/consultaGen]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:49:44) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"ed"}
+  [4;36;1mGenero Load (0.2ms)[0m   [0;1mSELECT * FROM `generos` WHERE (nome like '%ed%') ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;35;1mGenero Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 77ms (View: 61, DB: 5) | 200 OK [http://localhost/consultaGen?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:49:48) [GET]
+  [4;35;1mGenero Load (0.2ms)[0m   [0mSELECT * FROM `generos` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 139ms (View: 44, DB: 4) | 200 OK [http://localhost/consultaGen]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#consultaGen (for 127.0.0.1 at 2011-12-12 12:49:55) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"ed"}
+  [4;35;1mGenero Load (0.2ms)[0m   [0mSELECT * FROM `generos` WHERE (nome like '%ed%') ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering generos/consultaGen
+  [4;36;1mGenero Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 81ms (View: 65, DB: 5) | 200 OK [http://localhost/consultaGen?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GenerosController#show (for 127.0.0.1 at 2011-12-12 12:50:00) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGenero Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mGenero Load (0.1ms)[0m   [0mSELECT * FROM `generos` WHERE (`generos`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering generos/show
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 77ms (View: 59, DB: 6) | 200 OK [http://localhost/generos/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:14:12) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_cantor_path' for #<ActionView::Base:0xb664c7cc>) on line #43 of app/views/layouts/application.html.erb:
+40:                       <% if current_user.has_role?('admin')%>
+41:                          <li><%= link_to "Áreas", new_area_path %></li>
+42:                       <%end%>
+43:                       <li><%= link_to "Cantores", new_cantor_path %></li>
+44:                       <li><%= link_to "Editoras", new_editora_path %></li>
+45:                       <% if current_user.has_role?('admin')%>
+46:                          <li><%= link_to "Gêneros", new_genero_path %></li>
+
+    app/views/layouts/application.html.erb:43
+
+Rendered rescues/_trace (61.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:16:23) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_cantor_path' for #<ActionView::Base:0xb65b78fc>) on line #43 of app/views/layouts/application.html.erb:
+40:                       <% if current_user.has_role?('admin')%>
+41:                          <li><%= link_to "Áreas", new_area_path %></li>
+42:                       <%end%>
+43:                       <li><%= link_to "Cantores", new_cantor_path %></li>
+44:                       <li><%= link_to "Editoras", new_editora_path %></li>
+45:                       <% if current_user.has_role?('admin')%>
+46:                          <li><%= link_to "Gêneros", new_genero_path %></li>
+
+    app/views/layouts/application.html.erb:43
+
+Rendered rescues/_trace (106.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateIdentificacaos (20111103140712)
+Migrating to CreateLocalizacoes (20111103142802)
+Migrating to CreateAreas (20111103142908)
+Migrating to CreateEditoras (20111103143141)
+Migrating to CreateRoles (20111103143650)
+Migrating to CreateUsers (20111103145438)
+Migrating to CreateAudioVisuais (20111103171606)
+Migrating to CreateLivros (20111103172501)
+Migrating to CreateDicionarioEnciclopedias (20111103173835)
+Migrating to CreateMapas (20111103180754)
+Migrating to CreatePeriodicos (20111104131658)
+Migrating to CreateJogos (20111104135250)
+Migrating to CreateAssuntos (20111108095000)
+Migrating to CreateItensAssuntos (20111108101214)
+Migrating to CreateAutores (20111108110739)
+Migrating to CreateMusicas (20111108120056)
+Migrating to AddTituloToMapas (20111108144756)
+Migrating to AddUnidadeToUsers (20111108171531)
+Migrating to CreateUnidades (20111108172431)
+Migrating to AssuntosLivros (20111110175329)
+Migrating to AddCamposToUnidades (20111117152552)
+Migrating to CreateTipos (20111117153922)
+Migrating to CreateUnidadesGpds (20111117161434)
+Migrating to CreateAutoresLivros (20111123143345)
+Migrating to CreateFuncionarios (20111124125844)
+Migrating to CreateItensEmprestimos (20111124135232)
+Migrating to CreateEmprestimos (20111124135514)
+Migrating to AddStatusToLivros (20111125085948)
+Migrating to AddCampoValidacaoToFuncionarios (20111125090211)
+Migrating to EmprestimosLivros (20111125173829)
+Migrating to AddDataEmprestimoToEmprestimos (20111125175024)
+Migrating to AddDataDevolucaoToEmprestimos (20111125175051)
+Migrating to CreateConfiguracaos (20111125175410)
+Migrating to CreateDataFiles (20111129170714)
+Migrating to CreateTemps (20111201175053)
+Migrating to CreateGeneros (20111212142507)
+Migrating to CreateCantores (20111212145844)
+  [4;36;1mSQL (120.9ms)[0m   [0;1mCREATE TABLE `cantores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (49.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111212145844')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `areas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `areas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `assuntos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `assuntos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `assuntos_livros`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `audio_visuais`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `audio_visuais`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `audio_visuais`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `autores`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `autores`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `autores_livros`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `autores_livros`[0m
+  [4;35;1mSQL (21.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `cantores`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `cantores`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `configuracaos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `configuracaos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `configuracaos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `data_files`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `data_files`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `data_files`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `editoras`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `editoras`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `emprestimos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `emprestimos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `emprestimos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `emprestimos_livros`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `emprestimos_livros`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `emprestimos_livros`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSHOW FIELDS FROM `funcionarios`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `funcionarios`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `funcionarios`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `generos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `generos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `generos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `identificacaos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `itens_assuntos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `itens_assuntos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `itens_emprestimos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `itens_emprestimos`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `jogos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `jogos`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW KEYS FROM `jogos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `livros`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `livros`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `livros`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `localizacoes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `localizacoes`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `localizacoes`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `mapas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `mapas`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `musicas`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `musicas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `musicas`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `periodicos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `periodicos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `temps`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `temps`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `temps`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `tipos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `tipos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `tipos`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `unidades`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `unidades`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `unidades_gpds`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:16:56) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.4ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_cantor_path' for #<ActionView::Base:0xb65ce3f4>) on line #43 of app/views/layouts/application.html.erb:
+40:                       <% if current_user.has_role?('admin')%>
+41:                          <li><%= link_to "Áreas", new_area_path %></li>
+42:                       <%end%>
+43:                       <li><%= link_to "Cantores", new_cantor_path %></li>
+44:                       <li><%= link_to "Editoras", new_editora_path %></li>
+45:                       <% if current_user.has_role?('admin')%>
+46:                          <li><%= link_to "Gêneros", new_genero_path %></li>
+
+    app/views/layouts/application.html.erb:43
+
+Rendered rescues/_trace (64.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:16:58) [GET]
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_cantor_path' for #<ActionView::Base:0xb65cc52c>) on line #43 of app/views/layouts/application.html.erb:
+40:                       <% if current_user.has_role?('admin')%>
+41:                          <li><%= link_to "Áreas", new_area_path %></li>
+42:                       <%end%>
+43:                       <li><%= link_to "Cantores", new_cantor_path %></li>
+44:                       <li><%= link_to "Editoras", new_editora_path %></li>
+45:                       <% if current_user.has_role?('admin')%>
+46:                          <li><%= link_to "Gêneros", new_genero_path %></li>
+
+    app/views/layouts/application.html.erb:43
+
+Rendered rescues/_trace (61.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:17:17) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 91ms (View: 37, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#new (for 127.0.0.1 at 2011-12-12 13:17:25) [GET]
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+Rendering template within layouts/cantores
+Rendering cantores/new
+Rendered cantores/_form (6.7ms)
+Completed in 55ms (View: 42, DB: 1) | 200 OK [http://localhost/cantores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#new (for 127.0.0.1 at 2011-12-12 13:17:48) [GET]
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+Rendering template within layouts/application
+Rendering cantores/new
+Rendered cantores/_form (4.6ms)
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 52ms (View: 36, DB: 4) | 200 OK [http://localhost/cantores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#new (for 127.0.0.1 at 2011-12-12 13:17:48) [GET]
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+Rendering template within layouts/application
+Rendering cantores/new
+Rendered cantores/_form (3.7ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 42ms (View: 31, DB: 4) | 200 OK [http://localhost/cantores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:17:50) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 48ms (View: 14, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:17:55) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUnidade Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mUnidade Load (0.1ms)[0m   [0;1mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;35;1mEmprestimo Load (0.1ms)[0m   [0mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 61ms (View: 14, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#new (for 127.0.0.1 at 2011-12-12 13:18:00) [GET]
+  [4;35;1mCantor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+Rendering template within layouts/application
+Rendering cantores/new
+Rendered cantores/_form (4.4ms)
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 47ms (View: 34, DB: 4) | 200 OK [http://localhost/cantores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#create (for 127.0.0.1 at 2011-12-12 13:18:05) [POST]
+  Parameters: {"commit"=>"Salvar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "cantor"=>{"nome"=>"a"}}
+  [4;35;1mCantor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCantor Create (0.3ms)[0m   [0mINSERT INTO `cantores` (`created_at`, `nome`, `updated_at`) VALUES('2011-12-12 15:18:05', 'a', '2011-12-12 15:18:05')[0m
+  [4;36;1mSQL (50.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/cantores/1
+Completed in 72ms (DB: 52) | 302 Found [http://localhost/cantores]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#show (for 127.0.0.1 at 2011-12-12 13:18:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mCantor Load (0.3ms)[0m   [0;1mSELECT * FROM `cantores` WHERE (`cantores`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering cantores/show
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 53ms (View: 37, DB: 5) | 200 OK [http://localhost/cantores/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#new (for 127.0.0.1 at 2011-12-12 13:18:54) [GET]
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+Rendering template within layouts/application
+Rendering cantores/new
+Rendered cantores/_form (5.8ms)
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 70ms (View: 54, DB: 5) | 200 OK [http://localhost/cantores/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#create (for 127.0.0.1 at 2011-12-12 13:19:00) [POST]
+  Parameters: {"commit"=>"Salvar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "cantor"=>{"nome"=>"b"}}
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCantor Create (0.3ms)[0m   [0;1mINSERT INTO `cantores` (`created_at`, `nome`, `updated_at`) VALUES('2011-12-12 15:19:01', 'b', '2011-12-12 15:19:01')[0m
+  [4;35;1mSQL (46.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/cantores/2
+Completed in 65ms (DB: 48) | 302 Found [http://localhost/cantores]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#show (for 127.0.0.1 at 2011-12-12 13:19:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mCantor Load (0.3ms)[0m   [0mSELECT * FROM `cantores` WHERE (`cantores`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering cantores/show
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 60ms (View: 40, DB: 5) | 200 OK [http://localhost/cantores/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#show (for 127.0.0.1 at 2011-12-12 13:20:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mCantor Load (0.1ms)[0m   [0;1mSELECT * FROM `cantores` WHERE (`cantores`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering cantores/show
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 66ms (View: 49, DB: 4) | 200 OK [http://localhost/cantores/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:20:34) [GET]
+  [4;36;1mCantor Load (0.6ms)[0m   [0;1mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined local variable or method `autor' for #<ActionView::Base:0xb696b37c>) on line #17 of app/views/cantores/index.html.erb:
+14:       <td><%=h cantor.nome %></td>
+15:       <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), cantor, :title => "Visualizar Cantor" %></td>
+16:             <% if current_user.has_role?('admin') %>
+17:                 <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_autor_path(autor),  :title => "Editar Autor" %></td>
+18:                 <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), autor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Autor" %></td>
+19:             <%else%>
+20:                 <td align="center"> --- </td>
+
+    app/views/cantores/index.html.erb:17
+    app/views/cantores/index.html.erb:12:in `each'
+    app/views/cantores/index.html.erb:12
+    app/controllers/cantores_controller.rb:6:in `index'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:21:29) [GET]
+  [4;35;1mCantor Load (0.2ms)[0m   [0mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined method `edit_cantr_path' for #<ActionView::Base:0xb6906594>) on line #17 of app/views/cantores/index.html.erb:
+14:       <td><%=h cantor.nome %></td>
+15:       <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), cantor, :title => "Visualizar Cantor" %></td>
+16:             <% if current_user.has_role?('admin') %>
+17:                 <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_cantr_path(cantor),  :title => "Editar Cantor" %></td>
+18:                 <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), cantor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Cantor" %></td>
+19:             <%else%>
+20:                 <td align="center"> --- </td>
+
+    app/views/cantores/index.html.erb:17
+    app/views/cantores/index.html.erb:12:in `each'
+    app/views/cantores/index.html.erb:12
+    app/controllers/cantores_controller.rb:6:in `index'
+
+Rendered rescues/_trace (66.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:21:39) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 71ms (View: 19, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#new (for 127.0.0.1 at 2011-12-12 13:25:57) [GET]
+  [4;36;1mCantor Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+Rendering template within layouts/application
+Rendering cantores/new
+Rendered cantores/_form (6.1ms)
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 150ms (View: 49, DB: 9) | 200 OK [http://localhost/cantores/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:26:00) [GET]
+  [4;36;1mCantor Load (0.2ms)[0m   [0;1mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;35;1mCantor Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ActionView::TemplateError (undefined method `edit_cantr_path' for #<ActionView::Base:0xb67034f4>) on line #17 of app/views/cantores/index.html.erb:
+14:       <td><%=h cantor.nome %></td>
+15:       <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), cantor, :title => "Visualizar Cantor" %></td>
+16:             <% if current_user.has_role?('admin') %>
+17:                 <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_cantr_path(cantor),  :title => "Editar Cantor" %></td>
+18:                 <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), cantor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Cantor" %></td>
+19:             <%else%>
+20:                 <td align="center"> --- </td>
+
+    app/views/cantores/index.html.erb:17
+    app/views/cantores/index.html.erb:12:in `each'
+    app/views/cantores/index.html.erb:12
+    app/controllers/cantores_controller.rb:6:in `index'
+
+Rendered rescues/_trace (77.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:26:19) [GET]
+  [4;35;1mCantor Load (0.2ms)[0m   [0mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 171ms (View: 154, DB: 5) | 200 OK [http://localhost/cantores]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#show (for 127.0.0.1 at 2011-12-12 13:26:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mCantor Load (0.4ms)[0m   [0mSELECT * FROM `cantores` WHERE (`cantores`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering cantores/show
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 64ms (View: 47, DB: 5) | 200 OK [http://localhost/cantores/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:26:29) [GET]
+  [4;35;1mCantor Load (0.2ms)[0m   [0mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;36;1mCantor Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 78ms (View: 60, DB: 5) | 200 OK [http://localhost/cantores]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#edit (for 127.0.0.1 at 2011-12-12 13:26:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mCantor Load (0.1ms)[0m   [0mSELECT * FROM `cantores` WHERE (`cantores`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering cantores/edit
+Rendered cantores/_form (6.1ms)
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 67ms (View: 51, DB: 5) | 200 OK [http://localhost/cantores/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:26:35) [GET]
+  [4;35;1mCantor Load (0.2ms)[0m   [0mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;36;1mCantor Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 76ms (View: 59, DB: 5) | 200 OK [http://localhost/cantores]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:26:53) [GET]
+  [4;36;1mCantor Load (0.2ms)[0m   [0;1mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 160ms (View: 142, DB: 7) | 200 OK [http://localhost/cantores]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#new (for 127.0.0.1 at 2011-12-12 13:26:55) [GET]
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+Rendering template within layouts/application
+Rendering cantores/new
+Rendered cantores/_form (5.3ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 59ms (View: 43, DB: 5) | 200 OK [http://localhost/cantores/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#create (for 127.0.0.1 at 2011-12-12 13:26:59) [POST]
+  Parameters: {"commit"=>"Salvar", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "cantor"=>{"nome"=>"c"}}
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCantor Create (0.3ms)[0m   [0mINSERT INTO `cantores` (`created_at`, `nome`, `updated_at`) VALUES('2011-12-12 15:26:59', 'c', '2011-12-12 15:26:59')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/cantores/3
+Completed in 65ms (DB: 49) | 302 Found [http://localhost/cantores]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#show (for 127.0.0.1 at 2011-12-12 13:26:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCantor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mCantor Load (0.3ms)[0m   [0;1mSELECT * FROM `cantores` WHERE (`cantores`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering cantores/show
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 137ms (View: 121, DB: 4) | 200 OK [http://localhost/cantores/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#destroy (for 127.0.0.1 at 2011-12-12 13:27:05) [DELETE]
+  Parameters: {"authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "id"=>"3"}
+  [4;36;1mCantor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mCantor Load (0.1ms)[0m   [0mSELECT * FROM `cantores` WHERE (`cantores`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCantor Destroy (0.3ms)[0m   [0mDELETE FROM `cantores` WHERE `id` = 3[0m
+  [4;36;1mSQL (48.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/cantores
+Completed in 64ms (DB: 50) | 302 Found [http://localhost/cantores/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#index (for 127.0.0.1 at 2011-12-12 13:27:06) [GET]
+  [4;35;1mCantor Load (0.5ms)[0m   [0mSELECT * FROM `cantores` ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/index
+  [4;36;1mCantor Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 76ms (View: 59, DB: 5) | 200 OK [http://localhost/cantores]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:27:10) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 130ms (View: 15, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#consultaCan (for 127.0.0.1 at 2011-12-12 13:27:17) [GET]
+  [4;36;1mCantor Load (0.5ms)[0m   [0;1mSELECT * FROM `cantores` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/consultaCan
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 66ms (View: 50, DB: 5) | 200 OK [http://localhost/consultaCan]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#consultaCan (for 127.0.0.1 at 2011-12-12 13:27:22) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"a"}
+  [4;36;1mCantor Load (0.5ms)[0m   [0;1mSELECT * FROM `cantores` WHERE (nome like '%a%') ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/consultaCan
+  [4;35;1mCantor Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 67ms (View: 51, DB: 5) | 200 OK [http://localhost/consultaCan?method=get]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#consultaCan (for 127.0.0.1 at 2011-12-12 13:27:25) [GET]
+  [4;35;1mCantor Load (0.2ms)[0m   [0mSELECT * FROM `cantores` WHERE (nome like '' ) ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/consultaCan
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 50ms (View: 37, DB: 3) | 200 OK [http://localhost/consultaCan]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CantoresController#consultaCan (for 127.0.0.1 at 2011-12-12 13:27:31) [POST]
+  Parameters: {"commit"=>"Filtrar", "method"=>"get", "authenticity_token"=>"VoFTrX3V02UwsFoQy2hniReIzHER6MriRZ5gSR31iRA=", "search"=>"b"}
+  [4;35;1mCantor Load (0.5ms)[0m   [0mSELECT * FROM `cantores` WHERE (nome like '%b%') ORDER BY nome ASC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering cantores/consultaCan
+  [4;36;1mCantor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cantores`[0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 72ms (View: 54, DB: 6) | 200 OK [http://localhost/consultaCan?method=get]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-12-12 13:27:34) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUnidade Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades`[0m
+  [4;35;1mUnidade Load (0.1ms)[0m   [0mSELECT * FROM `unidades` WHERE (`unidades`.`id` = 53) [0m
+  [4;36;1mEmprestimo Load (0.1ms)[0m   [0;1mSELECT * FROM `emprestimos` WHERE (unidade_id = 53) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 67ms (View: 20, DB: 6) | 200 OK [http://localhost/]

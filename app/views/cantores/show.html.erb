@@ -1,0 +1,29 @@
+<% title "CANTORES" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+   <div id="caixa_titulo">
+     <font size="3"><strong>CANTOR </strong></font><br/>
+   </div>
+     <table  width="100%" bgcolor="#F5F5F5">
+       <tr>
+         <td width="10%"><strong>Cantor:</strong>  <%=h @cantor.nome %></td>
+       </tr>
+     </table>
+        <table>
+          <tr>
+            <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), cantores_path, :title => "Cantores Cadastradas" %></td>
+
+            <% if current_user.has_role?('admin') %>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_cantor_path(@cantor), :title => "Editar Área" %></td>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @cantor, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Cantor" %></td>
+                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_area_path, :title => "Cadastrar Área" %></td>
+            <%else%>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            <%end%>
+         </tr>
+     </table>
+</div>
+
