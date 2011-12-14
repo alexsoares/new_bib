@@ -2,79 +2,33 @@
  <div class="tabs">
    <div id="caixa_titulo">
     <font size="3"><strong>CONSULTAS TÍTULOS</strong></font><br/>
-  </div>
-  <div class="tabs">
-  <% form_tag consultaTit_path :method => 'get' do %>
-     <table width="100%" align="center" bgcolor="#DCDCDC" >
-      <tr>
-        <td>
-           <%= radio_button_tag(:type_of, "1") %>Título
-           <%= radio_button_tag(:type_of, "2") %>Subtítulo
-           <%= radio_button_tag(:type_of, "3") %>Todos
-        </td>
-     </tr>
-    </table>
-  <br/>
-  <table width="100%" align="center" >
-    <tr>
-
-       <td  colspan="2"align="right"><font size="4"> Digitar dado para consulta:</font>
-         <%= text_field_tag :search, params[:search] %>
-         <%= submit_tag "Filtrar" %>
-       </td>
-
-   </tr>
-  </table>
-<% end %>
-  <br/>
-  <hr>
-  <table>
-    <tr>
-      <td align="right"><b>TOTAL DE TÍTULOS: </b>
-         <font color ="red "size="2"><b><%= @contador.count %></b></font>
-      </td>
-   </tr>
-  </table>
-  <div class="tabs">
-    <table bgcolor="#DCDCDC" width="100%">
-         <tr>
-        <th width="50">Código</th>
-        <th width="350">Título</th>
-        <th width="200">Subtítulo</th>
-        <th colspan="4">Administração</th>
-         </tr>
-    <% for identificacao in @identificacaos %>
-   <tr bgcolor="#F5F5F5">
-      <td align="lef"><%=h identificacao.codigo %></td>
-      <td align="lef"><%=h identificacao.livro %></td>
-      <td align="lef"><%=h identificacao.subtitulo %></td>
-      <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), identificacao, :title => "Visualizar Titulo" %></td>
-      <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
-          <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_identificacao_path(identificacao), :title => "Editar Titulo" %></td>
-         <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), identificacao, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Titulo" %></td>
-     <%else%>
-         <td align="center"> --- </td>
-         <td align="center"> --- </td>
-     <%end%>
-  </tr>
-
-  <% end %>
-      </table>
-      <table bgcolor="#DCDCDC" width="100%">
-         <tr >
-           <td align="left" colspan="4"><%= will_paginate @identificacos %></td>
-       </tr>
-      </table>
    </div>
-
+  <div class="tabs">
+    <% form_remote_tag :url => consultaTit_path, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
+         <table width="100%" align="center" bgcolor="#DCDCDC" >
+          <tr>
+            <td>
+               <a href="#" class="filtro"><%= radio_button_tag(:type_of, "1") %></a>Titulo
+               <a href="#" id = "fe" class="filtro"><%= radio_button_tag(:type_of, "2") %></a>SubTitulo
+               <a href="#" class="sem_filtro"><%= radio_button_tag(:type_of, "3") %></a>Todos
+            </td>
+         </tr>
+         <tr>
+           <td><div class="consulta" style="display:none"> <%= render "/shared/consulta" %> </div></td>
+         </tr>
+        </table>
+    <% end %>
+    <br/>
+    <hr>
+    <div id="titulos"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
+    <br/>
   <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
-     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaTit_path, :title => "Novo Titulo" %></td>
+     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaJog_path, :title => "Nova Consulta" %></td>
     </tr>
-   
   </table>
-  </div>
-</div>
+ </div>
+ </div>
 
 
