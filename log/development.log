@@ -15486,3 +15486,48 @@ Processing JogosController#consultaJog (for 127.0.0.1 at 2011-12-13 15:55:07) [G
   [4;35;1mJogo Load (0.6ms)[0m   [0mSELECT * FROM `jogos` WHERE (faixa_etaria like '%0-%' ) ORDER BY nome ASC LIMIT 0, 10[0m
 Rendered jogos/_jogos (0.7ms)
 Completed in 95ms (View: 6, DB: 2) | 200 OK [http://localhost/consultaJog?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=2&search=0-&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323798907560]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-14 07:21:28) [GET]
+
+ActionController::RoutingError (No route matches "/arruma_tombo" with {:method=>:get}):
+  /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+  /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+  /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+  /usr/bin/rdebug-ide:19:in `load'
+  /usr/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalculosController#arruma_tombo (for 127.0.0.1 at 2011-12-14 07:21:36) [GET]
+  [4;36;1mLivro Load (0.5ms)[0m   [0;1mSELECT * FROM `livros` [0m
+  [4;35;1mLivro Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAutor Load (0.4ms)[0m   [0mSELECT `autores`.id FROM `autores` INNER JOIN `autores_livros` ON `autores`.id = `autores_livros`.autor_id WHERE (`autores_livros`.livro_id = 1 ) [0m
+  [4;36;1mAutor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `autores`[0m
+  [4;35;1mAssunto Load (0.4ms)[0m   [0mSELECT `assuntos`.id FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 1 ) [0m
+  [4;36;1mAssunto Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAutor Load (0.3ms)[0m   [0mSELECT `autores`.id FROM `autores` INNER JOIN `autores_livros` ON `autores`.id = `autores_livros`.autor_id WHERE (`autores_livros`.livro_id = 2 ) [0m
+  [4;36;1mAssunto Load (0.3ms)[0m   [0;1mSELECT `assuntos`.id FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 2 ) [0m
+  [4;35;1mLivro Update (47.0ms)[0m   [0mUPDATE `livros` SET `updated_at` = '2011-12-14 09:21:36', `tombo_seduc` = 2 WHERE `id` = 2[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAutor Load (0.3ms)[0m   [0;1mSELECT `autores`.id FROM `autores` INNER JOIN `autores_livros` ON `autores`.id = `autores_livros`.autor_id WHERE (`autores_livros`.livro_id = 3 ) [0m
+  [4;35;1mAssunto Load (0.3ms)[0m   [0mSELECT `assuntos`.id FROM `assuntos` INNER JOIN `assuntos_livros` ON `assuntos`.id = `assuntos_livros`.assunto_id WHERE (`assuntos_livros`.livro_id = 3 ) [0m
+  [4;36;1mLivro Update (0.3ms)[0m   [0;1mUPDATE `livros` SET `updated_at` = '2011-12-14 09:21:36', `tombo_seduc` = 3 WHERE `id` = 3[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering calculos/arruma_tombo
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 339ms (View: 140, DB: 60) | 200 OK [http://localhost/calculos/arruma_tombo]
