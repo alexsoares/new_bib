@@ -1,4 +1,13 @@
 jQuery(document).ready(function( $ ){
+
+
+  $("#localizacao_data_aquisicao").datepicker($.datepicker.regional[ "pt-BR" ]);
+
+
+
+
+
+
   // Inicio Mensagem busca
     $(".txt_busca").val("Digite parte da busca").css("color","gray");
   // Fim Mensagem busca

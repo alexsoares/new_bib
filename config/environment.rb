@@ -20,6 +20,10 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   # config.gem "nifty-generators", :version => '0.4.6'
+  config.gem "will_paginate", :version => '2.3.15'
+  config.gem "searchlogic", :version => "2.4.14"
+  config.gem 'i18n', :version => '0.3.7'
+
     
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -38,7 +42,7 @@ Rails::Initializer.run do |config|
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-   config.i18n.default_locale = 'pt-br'
+  config.i18n.default_locale = "pt-br"
 end
 ActionMailer::Base.default_content_type = "text/html"
 ActionMailer::Base.smtp_settings = {
@@ -49,4 +53,6 @@ ActionMailer::Base.smtp_settings = {
    :user_name => "informatica@seducpma.com", #Você pode usar o Google Apps!
    :password => 'infoseducpma'
 }
-
+WillPaginate::ViewHelpers.pagination_options[:renderer] = 'RemoteLinkRenderer'
+WillPaginate::ViewHelpers.pagination_options[:previous_label]=I18n.t("pagination.prev")
+WillPaginate::ViewHelpers.pagination_options[:next_label]=I18n.t("pagination.next")

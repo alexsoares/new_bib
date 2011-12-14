@@ -1,6 +1,7 @@
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
   <table  align="center" bgcolor="#F5F5F5">
+    <tr><td><%= text_field_tag :teste %></td></tr>
     <tr>
       <td >
         <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />

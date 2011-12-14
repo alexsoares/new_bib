@@ -4,74 +4,34 @@
     <font size="3"><strong>CONSULTAS LIVROS</strong></font><br/>
   </div>
   <div class="tabs">
-   <% form_tag consultaLiv_path :method => 'get' do %>
-     <table width="100%" align="center" bgcolor="#DCDCDC" >
-      <tr>
-        <td>
-           <%= radio_button_tag(:type_of, "1") %>Título
-           <%= radio_button_tag(:type_of, "2") %>Area
-           <%= radio_button_tag(:type_of, "3") %>Autor
-           <%= radio_button_tag(:type_of, "4") %>Assunto
-           <%= radio_button_tag(:type_of, "5") %>Editora
-           <%= radio_button_tag(:type_of, "6") %>Todos
-        </td>
-     </tr>
-    </table>
-  </div>
-  <div class="tabs">
-  <br/>
-  <table width="100%" align="center" >
-    <tr>
-        <td  colspan="2"align="right"><font size="4"> Digitar dado para consulta:</font>
-         <%= text_field_tag :search, params[:search] %>
-         <%= submit_tag "Filtrar" %>
-       </td>
-      
-   </tr>
-  </table>
- <% end %>
-  <br/>
-  <hr>
-    <div class="tabs">
-      <table>
-        <tr bgcolor="#DCDCDC" >
-            <th width="400">Identificacao</th>
-            <th width="100">Area</th>
-            <th width="100">Editora</th>
-            <th colspan="3">Administração</th>
-           </tr>
-         <% for livro in @livros %>
-            <tr bgcolor="	#F5F5F5">
-                <td><%=h livro.identificacao.livro%></td>
-                <td><%=h livro.area.nome %></td>
-                <td><%=h livro.editora.nome %></td>
-                <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), livro, :title => "Exibir Periódico" %></td>
-                <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
-                    <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(livro), :title => "Editar Livro" %></td>
-                    <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), livro, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Livro" %></td>
-                <%else%>
-                    <td align="center"> --- </td>
-                    <td align="center"> --- </td>
-                <%end%>
-              </tr>
-            <% end %>
-     </table>
-
-        <table bgcolor="#DCDCDC" width="100%">
-           <tr >
-             <td align="left" colspan="4"><%= will_paginate @livros%></td>
-          </tr>
+    <% form_remote_tag :url => consultaLiv_path, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
+         <table width="100%" align="center" bgcolor="#DCDCDC" >
+          <tr>
+            <td>
+               <a href="#" class="filtro"><%= radio_button_tag(:type_of, "1") %></a>Título
+               <a href="#" class="filtro"><%= radio_button_tag(:type_of, "2") %></a>Area
+               <a href="#" class="filtro"><%= radio_button_tag(:type_of, "3") %></a>Autor
+               <a href="#" class="filtro"><%= radio_button_tag(:type_of, "4") %></a>Assunto
+               <a href="#" class="filtro"><%= radio_button_tag(:type_of, "5") %></a>Editora
+               <a href="#" class="sem_filtro"><%= radio_button_tag(:type_of, "6") %></a>Todos
+            </td>
+         </tr>
+         <tr>
+           <td><div class="consulta" style="display:none"> <%= render "/shared/consulta" %> </div></td>
+         </tr>
         </table>
-
-    </div>
-
+    <% end %>
+    <br/>
+    <hr>
+    <div id="livros"></div>
+    <div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div>
+    <br/>
   <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
-     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaLiv_path, :title => "Nova Consulta" %></td>
+     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaMap_path, :title => "Nova Consulta" %></td>
     </tr>
- </table>
-  </div>
-</div>
-
+  </table>
+ </div>
+ </div>
 
