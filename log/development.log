@@ -149,3 +149,750 @@ Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 14:
   [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
 Rendered identificacaos/_titulos (407.1ms)
 Completed in 748ms (View: 425, DB: 55) | 200 OK [http://localhost/consultaTit?_=1323881852533&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&page=353&search=&type_of=3&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:20:42) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "_"=>"1323883242105", "type_of"=>"3", "search"=>""}
+  [4;36;1mIdentificacao Load (15.3ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mIdentificacao Load (17.1ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;36;1mIdentificacao Columns (6.2ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered identificacaos/_titulos (335.5ms)
+Completed in 779ms (View: 360, DB: 44) | 200 OK [http://localhost/consultaTit?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=3&search=&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323883242105]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MapasController#consultaMap (for 127.0.0.1 at 2011-12-14 15:20:59) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` [0m
+Rendering template within layouts/application
+Rendering mapas/consultaMap
+Rendered shared/_consulta (2.1ms)
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 307ms (View: 69, DB: 4) | 200 OK [http://localhost/consultaMap]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:21:16) [GET]
+Rendering template within layouts/application
+Rendering identificacaos/consultaTit
+Rendered shared/_consulta (2.1ms)
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 127ms (View: 106, DB: 3) | 200 OK [http://localhost/consultaTit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:22:08) [GET]
+Rendering template within layouts/application
+Rendering identificacaos/consultaTit
+Rendered shared/_consulta (2.8ms)
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 192ms (View: 165, DB: 4) | 200 OK [http://localhost/consultaTit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:22:21) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;35;1mIdentificacao Load (60.9ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mAutor Load (1.1ms)[0m   [0;1mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.4ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+Rendering template within layouts/application
+Rendering livros/consultaLiv
+Rendered shared/_consulta (2.0ms)
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.count) on line #55 of app/views/livros/consultaLiv.html.erb:
+52:   <table>
+53:     <tr>
+54:       <td align="right"><b>TOTAL DE LIVROS: </b>
+55:          <font color ="red "size="2"><b><%= @livros.count %></b></font>
+56:       </td>
+57:    </tr>
+58:   </table>
+
+    app/views/livros/consultaLiv.html.erb:55
+    app/views/livros/consultaLiv.html.erb:8
+    /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /usr/bin/rdebug-ide:19:in `load'
+    /usr/bin/rdebug-ide:19
+
+Rendered rescues/_trace (226.3ms)
+Rendered rescues/_request_and_response (4.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:23:37) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAssunto Load (0.1ms)[0m   [0;1mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;35;1mIdentificacao Load (2.2ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mAutor Load (1.1ms)[0m   [0;1mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+Rendering template within layouts/application
+Rendering livros/consultaLiv
+ERROR: compiling _run_erb_app47views47livros47consultaLiv46html46erb RAISED compile error
+/home/alexandre/new_bib/app/views/livros/consultaLiv.html.erb:65: syntax error, unexpected kENSURE, expecting kEND
+/home/alexandre/new_bib/app/views/livros/consultaLiv.html.erb:67: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47livros47consultaLiv46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  title "LIVROS", :id =>"livros" ; @output_buffer.concat "\n <div class=\"tabs\">\n   <div id=\"caixa_titulo\">\n    <font size=\"3\"><strong>CONSULTAS LIVROS</strong></font><br/>\n  </div>\n  <div class=\"tabs\">\n    "
+
+
+
+
+
+;  form_remote_tag :url => consultaLiv_path, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do ; @output_buffer.concat "\n         <table width=\"100%\" align=\"center\" bgcolor=\"#DCDCDC\" >\n          <tr>\n            <td>\n               <a href=\"#\" class=\"filtro\">"
+
+
+
+; @output_buffer.concat(( radio_button_tag(:type_of, "1") ).to_s); @output_buffer.concat "</a>T\303\255tulo\n               <a href=\"#\" class=\"filtro\">"
+; @output_buffer.concat(( radio_button_tag(:type_of, "2") ).to_s); @output_buffer.concat "</a>Area\n               <a href=\"#\" class=\"filtro\">"
+; @output_buffer.concat(( radio_button_tag(:type_of, "3") ).to_s); @output_buffer.concat "</a>Autor\n               <a href=\"#\" class=\"filtro\">"
+; @output_buffer.concat(( radio_button_tag(:type_of, "4") ).to_s); @output_buffer.concat "</a>Assunto\n               <a href=\"#\" class=\"filtro\">"
+; @output_buffer.concat(( radio_button_tag(:type_of, "5") ).to_s); @output_buffer.concat "</a>Editora\n               <a href=\"#\" class=\"sem_filtro\">"
+; @output_buffer.concat(( radio_button_tag(:type_of, "6") ).to_s); @output_buffer.concat "</a>Todos\n            </td>\n         </tr>\n         <tr>\n           <td><div class=\"consulta\" style=\"display:none\"> "
+
+
+
+; @output_buffer.concat(( render "/shared/consulta" ).to_s); @output_buffer.concat " </div></td>\n         </tr>\n   "
+
+;  form_tag consultaLiv_path :method => 'get' do ; @output_buffer.concat "\n     <table width=\"100%\" align=\"center\" bgcolor=\"#DCDCDC\" >\n      <tr>\n        <td>\n           "
+
+
+
+; @output_buffer.concat(( radio_button_tag(:type_of, "1") ).to_s); @output_buffer.concat "T\303\255tulo\n           "
+; @output_buffer.concat(( radio_button_tag(:type_of, "2") ).to_s); @output_buffer.concat "Area\n           "
+; @output_buffer.concat(( radio_button_tag(:type_of, "3") ).to_s); @output_buffer.concat "Autor\n           "
+; @output_buffer.concat(( radio_button_tag(:type_of, "4") ).to_s); @output_buffer.concat "Assunto\n           "
+; @output_buffer.concat(( radio_button_tag(:type_of, "5") ).to_s); @output_buffer.concat "Editora\n           "
+; @output_buffer.concat(( radio_button_tag(:type_of, "6") ).to_s); @output_buffer.concat "Todos\n        </td>\n     </tr>\n    </table>\n  </div>\n  <div class=\"tabs\">\n  <br/>\n  <table width=\"100%\" align=\"center\" >\n    <tr>\n        <td  colspan=\"2\"align=\"right\"><font size=\"4\"> Digitar dado para consulta:</font>\n         "
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( text_field_tag :search, params[:search] ).to_s); @output_buffer.concat "\n         "
+; @output_buffer.concat(( submit_tag "Filtrar" ).to_s); @output_buffer.concat "\n       </td>\n      \n   </tr>\n  </table>\n "
+
+
+
+
+;  end ; @output_buffer.concat "\n  <br/>\n  <hr>\n    <br/>\n    <hr>\n    <div id=\"livros\"></div>\n    <div id='status' style='display:none;' align=\"center\" >"
+
+
+
+
+
+; @output_buffer.concat(( image_tag("/stylesheets/images/loading.gif") ).to_s); @output_buffer.concat "</div>\n    <br/>\n  <table>\n    <tr>\n     <td width=\"6%\"align=\"left\" > "
+
+
+
+; @output_buffer.concat(( link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" ).to_s); @output_buffer.concat "</td>\n     <td align=\"left\">"
+; @output_buffer.concat(( link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaMap_path, :title => "Nova Consulta" ).to_s); @output_buffer.concat "</td>\n    </tr>\n  </table>\n </div>\n </div>\n\n"
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/alexandre/new_bib/app/views/livros/consultaLiv.html.erb:67:in `compile!'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/alexandre/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/alexandre/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/alexandre/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/alexandre/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/alexandre/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/alexandre/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/home/alexandre/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/home/alexandre/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/home/alexandre/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/alexandre/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+/usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+/usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+/usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+/usr/bin/rdebug-ide:19:in `load'
+/usr/bin/rdebug-ide:19
+
+ActionView::TemplateError (compile error
+/home/alexandre/new_bib/app/views/livros/consultaLiv.html.erb:65: syntax error, unexpected kENSURE, expecting kEND
+/home/alexandre/new_bib/app/views/livros/consultaLiv.html.erb:67: syntax error, unexpected $end, expecting kEND) on line #65 of app/views/livros/consultaLiv.html.erb:
+62:  </div>
+
+    app/views/livros/consultaLiv.html.erb:67:in `compile!'
+    /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /usr/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /usr/bin/rdebug-ide:19:in `load'
+    /usr/bin/rdebug-ide:19
+
+Rendered rescues/_trace (291.8ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:27:12) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAssunto Load (0.2ms)[0m   [0;1mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;35;1mIdentificacao Load (2.5ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mAutor Load (1.1ms)[0m   [0;1mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+Rendering template within layouts/application
+Rendering livros/consultaLiv
+Rendered shared/_consulta (2.0ms)
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 768ms (View: 80, DB: 8) | 200 OK [http://localhost/consultaLiv]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:27:37) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "_"=>"1323883656965", "type_of"=>"6", "search"=>""}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;36;1mIdentificacao Load (2.3ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (1.1ms)[0m   [0mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+  [4;35;1mLivro Load (6.1ms)[0m   [0mSELECT `livros`.* FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;36;1mLivro Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `livros`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id [0m
+  [4;36;1mIdentificacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 14) [0m
+  [4;36;1mArea Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 268) [0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 16) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;36;1mIdentificacao Load (0.3ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 17) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 42) [0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 23) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 146) [0m
+  [4;36;1mIdentificacao Load (0.4ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 25) [0m
+  [4;35;1mArea Load (0.1ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 8) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 346) [0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 27) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 233) [0m
+  [4;36;1mIdentificacao Load (0.3ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 30) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 200) [0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 31) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;36;1mIdentificacao Load (0.3ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 237) [0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 54) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 89) [0m
+Rendered livros/_livros (393.7ms)
+Completed in 1138ms (View: 413, DB: 24) | 200 OK [http://localhost/consultaLiv?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=6&search=&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323883656965]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:27:51) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "_"=>"1323883671325", "type_of"=>"6", "search"=>""}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAssunto Load (0.2ms)[0m   [0;1mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;35;1mIdentificacao Load (2.3ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mAutor Load (1.1ms)[0m   [0;1mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+  [4;36;1mLivro Load (0.2ms)[0m   [0;1mSELECT `livros`.* FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mLivro Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id [0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 14) [0m
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 268) [0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 16) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 17) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 42) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 146) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 25) [0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 8) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 346) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 233) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 30) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 200) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 31) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 44) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 237) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 89) [0m
+Rendered livros/_livros (461.9ms)
+Completed in 1063ms (View: 476, DB: 14) | 200 OK [http://localhost/consultaLiv?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=6&search=&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323883671325]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:27:54) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;36;1mIdentificacao Load (2.3ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (1.4ms)[0m   [0mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.5ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.1ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+Rendering template within layouts/application
+Rendering livros/consultaLiv
+Rendered shared/_consulta (2.1ms)
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 800ms (View: 84, DB: 8) | 200 OK [http://localhost/consultaLiv]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:27:59) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "_"=>"1323883678947", "type_of"=>"6", "search"=>""}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAssunto Load (0.2ms)[0m   [0;1mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;35;1mIdentificacao Load (2.3ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mAutor Load (1.4ms)[0m   [0;1mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.2ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+  [4;36;1mLivro Load (0.2ms)[0m   [0;1mSELECT `livros`.* FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mLivro Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id [0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 14) [0m
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 268) [0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 16) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 17) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 42) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 146) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 25) [0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 8) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 346) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 233) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 30) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 200) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 31) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 44) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 237) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 89) [0m
+Rendered livros/_livros (383.0ms)
+Completed in 1226ms (View: 397, DB: 15) | 200 OK [http://localhost/consultaLiv?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=6&search=&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323883678947]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:28:18) [GET]
+Rendering template within layouts/application
+Rendering identificacaos/consultaTit
+Rendered shared/_consulta (2.1ms)
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 127ms (View: 107, DB: 4) | 200 OK [http://localhost/consultaTit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:28:22) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "_"=>"1323883701763", "type_of"=>"3", "search"=>""}
+  [4;36;1mIdentificacao Load (2.3ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mIdentificacao Load (0.2ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;36;1mIdentificacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered identificacaos/_titulos (316.5ms)
+Completed in 614ms (View: 332, DB: 7) | 200 OK [http://localhost/consultaTit?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=3&search=&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323883701763]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:28:31) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.2ms)[0m   [0mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;36;1mIdentificacao Load (2.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (1.1ms)[0m   [0mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+Rendering template within layouts/application
+Rendering livros/consultaLiv
+Rendered shared/_consulta (2.1ms)
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 691ms (View: 67, DB: 7) | 200 OK [http://localhost/consultaLiv]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:28:36) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "_"=>"1323883716342", "type_of"=>"6", "search"=>""}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAssunto Load (0.2ms)[0m   [0;1mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;35;1mIdentificacao Load (2.3ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;36;1mAutor Load (1.1ms)[0m   [0;1mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;36;1mEditora Load (0.4ms)[0m   [0;1mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;35;1mLocalizacao Load (0.1ms)[0m   [0mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+  [4;36;1mLivro Load (0.2ms)[0m   [0;1mSELECT `livros`.* FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mLivro Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id [0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 14) [0m
+  [4;35;1mArea Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `editoras`[0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 268) [0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 16) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 17) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 42) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 146) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 25) [0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 8) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 346) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 233) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 30) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 200) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 31) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 241) [0m
+  [4;35;1mIdentificacao Load (0.1ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 44) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.1ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 237) [0m
+  [4;36;1mIdentificacao Load (0.1ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mEditora Load (0.1ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 89) [0m
+Rendered livros/_livros (468.7ms)
+Completed in 1080ms (View: 481, DB: 14) | 200 OK [http://localhost/consultaLiv?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=6&search=&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323883716342]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LivrosController#consultaLiv (for 127.0.0.1 at 2011-12-14 15:28:44) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "page"=>"2", "_"=>"1323883724669", "search"=>"", "type_of"=>"6"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAssunto Load (0.1ms)[0m   [0mSELECT * FROM `assuntos` ORDER BY descricao ASC[0m
+  [4;36;1mIdentificacao Load (2.3ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC[0m
+  [4;35;1mAutor Load (1.2ms)[0m   [0mSELECT * FROM `autores` ORDER BY nome ASC[0m
+  [4;36;1mArea Load (0.2ms)[0m   [0;1mSELECT * FROM `areas` ORDER BY nome ASC[0m
+  [4;35;1mEditora Load (0.4ms)[0m   [0mSELECT * FROM `editoras` ORDER BY nome ASC[0m
+  [4;36;1mLocalizacao Load (0.2ms)[0m   [0;1mSELECT * FROM `localizacoes` WHERE (unidade_id = 53) ORDER BY local_guardado ASC[0m
+  [4;35;1mLivro Load (6.0ms)[0m   [0mSELECT `livros`.* FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id ORDER BY livro ASC LIMIT 10, 10[0m
+  [4;36;1mLivro Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `livros`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `livros` INNER JOIN `identificacaos` ON `identificacaos`.id = `livros`.identificacao_id [0m
+  [4;36;1mIdentificacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 70) [0m
+  [4;36;1mArea Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `areas`[0m
+  [4;35;1mArea Load (0.2ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 9) [0m
+  [4;36;1mEditora Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mEditora Load (0.3ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 386) [0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mIdentificacao Load (0.3ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;36;1mArea Load (0.1ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mEditora Load (0.3ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `identificacaos` WHERE (`identificacaos`.`id` = 83) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `areas` WHERE (`areas`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `editoras` WHERE (`editoras`.`id` = 50) [0m
+Rendered livros/_livros (361.3ms)
+Completed in 1106ms (View: 374, DB: 19) | 200 OK [http://localhost/consultaLiv?_=1323883724669&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&page=2&search=&type_of=6&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:29:09) [GET]
+Rendering template within layouts/application
+Rendering identificacaos/consultaTit
+Rendered shared/_consulta (1.9ms)
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 122ms (View: 102, DB: 3) | 200 OK [http://localhost/consultaTit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:29:14) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "_"=>"1323883753675", "type_of"=>"3", "search"=>""}
+  [4;35;1mIdentificacao Load (2.4ms)[0m   [0mSELECT * FROM `identificacaos` [0m
+  [4;36;1mIdentificacao Load (0.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 0, 10[0m
+  [4;35;1mIdentificacao Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered identificacaos/_titulos (490.2ms)
+Completed in 789ms (View: 507, DB: 8) | 200 OK [http://localhost/consultaTit?authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&type_of=3&search=&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&_=1323883753675]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:29:19) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "page"=>"2", "_"=>"1323883759580", "search"=>"", "type_of"=>"3"}
+  [4;36;1mIdentificacao Load (2.4ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mIdentificacao Load (17.1ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 10, 10[0m
+  [4;36;1mIdentificacao Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered identificacaos/_titulos (330.2ms)
+Completed in 767ms (View: 347, DB: 24) | 200 OK [http://localhost/consultaTit?_=1323883759580&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&page=2&search=&type_of=3&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:29:32) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "page"=>"3", "_"=>"1323883771823", "search"=>"", "type_of"=>"3"}
+  [4;35;1mIdentificacao Load (2.3ms)[0m   [0mSELECT * FROM `identificacaos` [0m
+  [4;36;1mIdentificacao Load (17.2ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 20, 10[0m
+  [4;35;1mIdentificacao Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered identificacaos/_titulos (313.2ms)
+Completed in 619ms (View: 328, DB: 24) | 200 OK [http://localhost/consultaTit?_=1323883771823&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&page=3&search=&type_of=3&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:29:39) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "page"=>"354", "_"=>"1323883778986", "search"=>"", "type_of"=>"3"}
+  [4;36;1mIdentificacao Load (2.3ms)[0m   [0;1mSELECT * FROM `identificacaos` [0m
+  [4;35;1mIdentificacao Load (49.4ms)[0m   [0mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3530, 10[0m
+  [4;36;1mIdentificacao Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `identificacaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `identificacaos` [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered identificacaos/_titulos (413.6ms)
+Completed in 753ms (View: 431, DB: 56) | 200 OK [http://localhost/consultaTit?_=1323883778986&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&page=354&search=&type_of=3&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IdentificacaosController#consultaTit (for 127.0.0.1 at 2011-12-14 15:29:42) [GET]
+  Parameters: {"authenticity_token"=>"THa9Gf4KL1Q/ZkBKKxm/mTr8CfCgxX6AU1+CnBJkexA=", "page"=>"353", "_"=>"1323883782287", "search"=>"", "type_of"=>"3"}
+  [4;35;1mIdentificacao Load (2.3ms)[0m   [0mSELECT * FROM `identificacaos` [0m
+  [4;36;1mIdentificacao Load (50.5ms)[0m   [0;1mSELECT * FROM `identificacaos` ORDER BY livro ASC LIMIT 3520, 10[0m
+  [4;35;1mIdentificacao Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `identificacaos` [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendered identificacaos/_titulos (342.1ms)
+Completed in 797ms (View: 359, DB: 57) | 200 OK [http://localhost/consultaTit?_=1323883782287&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D&page=353&search=&type_of=3&authenticity_token=THa9Gf4KL1Q%2FZkBKKxm%2FmTr8CfCgxX6AU1%2BCnBJkexA%3D]
