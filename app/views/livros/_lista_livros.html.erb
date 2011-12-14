@@ -7,7 +7,7 @@
     <tr>
       <td><%= livro.truncated_value %></td>
       <td><%= livro.subtitulo %></td>
-      <td><%= link_to_remote("Retornar", :success => "$.fn.colorbox.close()", :url => { :action => "return", :selected => livro}) %></td>
+      <td><%= link_to_remote("Selecionar", :success => "$.fn.colorbox.close()", :url => { :action => "return", :selected => livro}) %></td>
     </tr>
   <%end%>
 </table>

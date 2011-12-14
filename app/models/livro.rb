@@ -20,6 +20,7 @@ class Livro < ActiveRecord::Base
   validates_presence_of :assunto_ids, :message => "Campo obrigatório"
   
 
+
   def auto_inc_tombo_seduc
     self.tombo_seduc = self.id
   end

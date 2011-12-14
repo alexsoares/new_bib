@@ -1,16 +1,8 @@
-<% title "Musica" %>
-
 <p>
-  <strong>Nome:</strong>
+  <b>Nome:</b>
   <%=h @musica.nome %>
 </p>
-<p>
-  <strong>Interprete:</strong>
-  <%=h @musica.interprete %>
-</p>
 
-<p>
-  <%= link_to "Edit", edit_musica_path(@musica) %> |
-  <%= link_to "Destroy", @musica, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", musicas_path %>
-</p>
+
+<%= link_to 'Edit', edit_musica_path(@musica) %> |
+<%= link_to 'Back', musicas_path %>

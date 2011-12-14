@@ -1,48 +1,83 @@
 <% form_for @audio_visual do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :genero_midia %><br />
-    <%= f.text_field :genero_midia %>
-  </p>
-  <p>
-    <%= f.label :localizacao %><br />
-    <%= f.text_field :localizacao %>
-  </p>
-  <p>
-    <%= f.label :tombo_seduc %><br />
-    <%= f.text_field :tombo_seduc %>
-  </p>
-  <p>
-    <%= f.label :tombo_l %><br />
-    <%= f.text_field :tombo_l %>
-  </p>
-  <p>
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
-  </p>
-  <p>
-    <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
-  </p>
-  <p>
-    <%= f.label :subtitulo %><br />
-    <%= f.text_field :subtitulo %>
-  </p>
-  <p>
-    <%= f.label :producao %><br />
-    <%= f.text_field :producao %>
-  </p>
-  <p>
-    <%= f.label :local_producao %><br />
-    <%= f.text_field :local_producao %>
-  </p>
-  <p>
-    <%= f.label :data_producao %><br />
-    <%= f.date_select :data_producao %>
-  </p>
-  <p>
-    <%= f.label :obs %><br />
-    <%= f.text_field :obs %>
-  </p>
-  <p><%= f.submit %></p>
-<% end %>
+  <table  align="center" bgcolor="#F5F5F5" width="100%">
+    <tr>
+      <td align="left">
+        <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />
+        <%= f.text_field :tombo_l, :size => "10" %>
+      </td>
+     <td align="lef">
+          <b><%= f.label :tipo, 'Tipo:' %></b><br />
+          <%= f.select :tipo, AudioVisual::TIPO, :include_blank => '---Selecionar---'%>
+     </td>
+      <td align="left">
+        <b><%= f.label :genero_id,"Genero: " %></b><br/>
+        <%= f.collection_select :genero_id ,@generos,:id,:nome, :include_blank => "Selecionar" %>
+         <%= observe_field :audio_visual_genero_id,
+            :with => :audio_visual_genero_id,            
+            :url => { :action => 'musica1' } %>
+      </td>
+
+    </tr>
+    <tr>
+      <td colspan="3" align="left">
+        <b><%= f.label :titulo, "Título:" %></b><br />
+        <%= f.text_field :titulo, :size => "70" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left">
+        <b><%= f.label :subtitulo, "Subtítulo:" %></b><br />
+        <%= f.text_field :subtitulo, :size => "70" %>
+      </td>
+    </tr>
+    <tr>
+       <td> <b> Musica:</b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_musica", :class =>"inline" %>
+        <div id="musica"><%= render "campos_musica"%></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div id= "musica" style="margin-left: 0px"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left">
+        <b><%= f.label :producao, "Produção:" %></b><br />
+        <%= f.text_field :producao, :size => "70" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left">
+        <b><%= f.label :local_producao, "Local:" %></b><br />
+        <%= f.text_field :local_producao, :size => "35" %>
+      </td>
+      <td align="left">
+        <b><%= f.label :data_producao, "Data:" %></b><br />
+        <%= f.date_select(:data_producao, :order => [:day, :month,:year], :start_year => (Date.today.year)-50) %>
+     </td>
+    </tr>
+    <tr>
+      <td colspan="3"  align="left">
+        <b><%= f.label :localizacao_id,"Localização: " %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline"%>
+        <div id="local"><%= render "campos_local"%></div>
+      </td>
+
+    </tr>
+    <tr>
+      <td colspan="3"  align="left">
+        <b><%= f.label :obs, 'Observação:' %></b><br />
+        <%= f.text_area :obs, :size => "68x3" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"><%= f.submit "Salvar" %></td>
+    </tr>
+  <% end %>
+</table>
+
+    <%= render "form_local" %>
+    <%= render "form_musica" %>
+

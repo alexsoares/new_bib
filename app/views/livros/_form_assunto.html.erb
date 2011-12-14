@@ -1,6 +1,6 @@
 	<div style='display:none'>
 		<div id='inline_assunto' style='padding:10px; background:#EEE9E9;'>
-          <h2>CADASTRO DE ASSUNTO</h2>
+          <h2>ASSUNTOS</h2>
           <% form_remote_for(:assunto,:url => { :action => 'create_assunto' }, :success => "$.fn.colorbox.close()") do |f|%>
             <%= error_messages_for 'contact' %>
             <table>

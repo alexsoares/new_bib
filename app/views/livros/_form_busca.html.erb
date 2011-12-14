@@ -1,12 +1,18 @@
 
 	<div style='display:none'>
 		<div id='inline_busca' style='padding:10px; background:#EEE9E9;'>
-          <h2>FILTRAR TÍTULOS</h2>
+          <h2>TÍTULOS</h2>
           <% form_remote_for(:busca,:url => { :action => 'filtrar' }) do |f|%>
             <%= error_messages_for 'contact' %>
             <table>
               <tr>
-                <th width="30%">
+                <td colspan="2">
+                   Digitar uma palavra do <b>Título</b> e clicar em <b>Filtrar</b> e <b>Selecionar</b>
+                </td>
+                
+              </tr>
+              <tr>
+                <th width="20%">
                   <div class="botao">Título:</div>
                 </th>
                 <td width="20%" align="center">
@@ -16,6 +22,7 @@
               </tr>
             </table>
           <%end%>
+          <br/>
             <div id="lista_livros"></div>
         </div>
 	</div>
