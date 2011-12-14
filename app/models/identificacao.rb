@@ -7,11 +7,6 @@ class Identificacao < ActiveRecord::Base
 
   
 
-def before_save
-    self.livro.upcase!
-    self.subtitulo.upcase!
-    self.obs.upcase!
-end
 
 
 def truncated_value

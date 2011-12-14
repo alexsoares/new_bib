@@ -60,14 +60,12 @@ def create_local
   end
 
 def consultaMap
-t = params[:search]
- unless params[:search] != "Digite parte da busca"
+ unless params[:search].present?
    if params[:type_of].to_i == 3
      @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10,:order => 'titulo ASC'
-          render :update do |page|
-            page.replace_html 'mapas', :partial => "mapas"
-          end
-
+     render :update do |page|
+       page.replace_html 'mapas', :partial => "mapas"
+     end
    end
  else
     if params[:type_of].to_i == 1

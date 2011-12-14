@@ -16,10 +16,13 @@ class LivrosController < ApplicationController
 
 
   def index
-    @livros = Livro.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
+
+      @livro = Identificacao.all :order => 'livro ASC'
+      @livros = Livro.paginate :all, :page => params[:page], :per_page => 10
+
     @livro_hash = []
-    @livros.each do |id|
-      @livro_hash <<  id.identificacao.livro
+    @livro.each do |id|
+      @livro_hash <<  id.livro
     end
 
     respond_to do |format|
@@ -178,15 +181,14 @@ class LivrosController < ApplicationController
    @identificacao = Identificacao.find_by_id(session[:identificacao]).subtitulo
    #$teste = @identificacao.subtitulo
    render :partial => 'subtitulo'
-
-   end
+ end
 
   protected
 
   def load_resources
-    @assuntos = Assunto.all
+    @assuntos = Assunto.all(:order => "descricao ASC")
     @identificacoes  = Identificacao.all(:order => 'livro ASC')
-    @autores  = Autor.all
+    @autores  = Autor.all(:order => "nome ASC")
     @areas = Area.all(:order => 'nome ASC')
     @editoras = Editora.all(:order => 'nome ASC') 
     @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id])

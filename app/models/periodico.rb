@@ -6,15 +6,6 @@ class Periodico < ActiveRecord::Base
   PERIODICIDADE = %w(DIARIO SEMANAL QUINZENAL MENSAL BIMESTRAL SEMETRAL ANUAL OUTROS)
   TIPO_PERIODICO = %w(ANUARIO BOLETIM JORNAL REVISTA OUTROS)
 
-  def before_save
-    self.tombo_l.upcase!
-    self.titulo.upcase!
-    self.subtitulo.upcase!
-    self.colecao.upcase!
-    self.producao.upcase!
-    self.local_producao.upcase!
-    self.obs.upcase!
-end
 
   def auto_inc_tombo_seduc
     self.tombo_seduc =+ 1

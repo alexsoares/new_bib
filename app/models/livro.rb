@@ -1,5 +1,5 @@
 class Livro < ActiveRecord::Base
-  before_create :auto_inc_tombo_seduc
+  after_create :auto_inc_tombo_seduc
   #attr_accessible :assunto, :identificacao, :area, :editora, :localizacao, :tombo_seduc, :tombo_l, :colecao, :edicao, :data_edicao, :local_edicao, :resumo, :obs
   has_and_belongs_to_many :assuntos
   has_and_belongs_to_many :autores
@@ -12,7 +12,6 @@ class Livro < ActiveRecord::Base
   #accepts_nested_attributes_for :localizacao, :reject_if => lambda {|a| a[:local_guardado].blank?}, :allow_destroy => true
   validates_presence_of :identificacao_id, :message => "Campo obrigatório"
   validates_presence_of :area_id, :message => "Campo obrigatório"
-  validates_presence_of :colecao, :message => "Campo obrigatório"
   validates_presence_of :tombo_l, :message => "Campo obrigatório"
   validates_presence_of :autor_ids, :message => "Campo obrigatório"
   validates_presence_of :localizacao_id, :message => "Campo obrigatório"
@@ -21,18 +20,8 @@ class Livro < ActiveRecord::Base
   validates_presence_of :assunto_ids, :message => "Campo obrigatório"
   
 
-def before_save
-    self.colecao.upcase!
-    self.local_edicao.upcase!
-    self.resumo.upcase!
-    self.obs.upcase!
-
-end
-
-
-
   def auto_inc_tombo_seduc
-    self.tombo_seduc =+ 1
+    self.tombo_seduc = self.id
   end
 
 end

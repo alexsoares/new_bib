@@ -62,21 +62,28 @@ def create_local
   end
 
 def consultaJog
- if (params[:search].nil? || params[:search].empty?)
-   $t=01;
-   @jogos = Jogo.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ? ", ""],:order => 'nome ASC'
- else if params[:type_of].to_i == 1
-       $t=0;
-       @jogos = Jogo.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-     else if params[:type_of].to_i == 2
-         $t=0;
-         @jogos = Jogo.paginate :page => params[:page], :per_page => 10, :conditions => ["faixa_etaria like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-      else
-        @jogos = Jogo.paginate :page => params[:page], :per_page => 10, :order => 'nome ASC'
+ unless params[:search].present?
+   if params[:type_of].to_i == 3
+     @jogos = Jogo.paginate :all, :page => params[:page], :per_page => 10,:order => 'nome ASC'
+     render :update do |page|
+       page.replace_html 'jogos', :partial => "jogos"
      end
+   end
+ else
+    if params[:type_of].to_i == 1
+        @jogos = Jogo.paginate :all,:page => params[:page], :per_page => 10, :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+        render :update do |page|
+          page.replace_html 'jogos', :partial => "jogos"
+        end
+      else if params[:type_of].to_i == 2
+         @jogos = Jogo.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["faixa_etaria like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+          render :update do |page|
+            page.replace_html 'jogos', :partial => "jogos"
+          end
+      end
     end
-  end
  end
+end
 
     protected
 

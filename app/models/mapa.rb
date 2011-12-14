@@ -7,14 +7,6 @@ class Mapa < ActiveRecord::Base
   TIPO_MAPA = %w(BIOGRÁFICO CLIMÁTICO DEMOGRÁFICO ECONÔNICO GEOGRÁFICO HIDROGÁFICO HISTÓRICO POLÍTICO RODOVIÁRIO TOPOGRÁFICO OUTROS)
   FORMATO_MAPA = %w(GLOBO LIVRO PLANO OUTROS)
 
-def before_save
-  
-  
-    self.titulo.upcase!
-    self.subtitulo.upcase!
-    self.local_edicao.upcase!
-    self.obs.upcase!
-end
 
   def auto_inc_tombo_seduc
     self.tombo_seduc =+ 1

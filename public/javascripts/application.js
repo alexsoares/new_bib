@@ -1,28 +1,53 @@
 jQuery(document).ready(function( $ ){
+  // Inicio Mensagem busca
     $(".txt_busca").val("Digite parte da busca").css("color","gray");
+  // Fim Mensagem busca
+
+  // Autocomplete Faixa Etaria
+  $("#fe").click(function ()
+   {
+     $(".consulta").show();
+     $(".txt_busca").val("Digite parte da busca").css("color","gray");
+     $("#search").show().addClass("autocomplete").removeClass("txt_busca");
+     
+     $(".autocomplete").autocomplete({
+        source: ["a"]
+     });
+
+     $(".label_busca").show();
+
+   });
+
+  // Fim autocomplete
   //Filtros consultas mapas
   $(".filtro").click(function ()
    {
      $(".consulta").show();
      $(".txt_busca").show();
      $(".label_busca").show();
+     $(".txt_busca").val("Digite parte da busca").css("color","gray");
    });
-
    $(".sem_filtro").click(function ()
     {
       $(".consulta").show();
       $(".txt_busca").val("");
-
+      $(".txt_busca").hide();
       $(".label_busca").hide();
     });
     $(".txt_busca").focus(function(){
-       $(".txt_busca").val("");
+       $(".txt_busca,#search").val("");
     });
 
   // Fim Filtros
 
 
+// Letras em maiusculo
 
+$("input").keyup(function(){
+    $(this).val($(this).val().toUpperCase());
+  })
+
+// Fim Letra em maiusculo
 
 
 
@@ -69,9 +94,6 @@ function add_fields(link, association, content) {
 function hide_field(link,div) {
   $(div).toggle();
 }
-
-
-
 });
 
 

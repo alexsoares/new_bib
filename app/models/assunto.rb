@@ -14,7 +14,4 @@ class Assunto < ActiveRecord::Base
 #    end
 #  end
 
-  def before_save
-    self.descricao.upcase!
-end
 end
