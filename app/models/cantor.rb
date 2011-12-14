@@ -1,6 +1,6 @@
 class Cantor < ActiveRecord::Base
 
-  has_and_belongs_to_many :musicas, :dependent => :destroy
+  has_and_belongs_to_many :musicas
 
 
 def before_save
