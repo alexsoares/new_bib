@@ -203,7 +203,7 @@ end
     @autores  = Autor.all(:order => "nome ASC")
     @areas = Area.all(:order => 'nome ASC')
     @editoras = Editora.all(:order => 'nome ASC') 
-    @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id])
+    @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id], :order => 'local_guardado ASC')
 
   end
 end

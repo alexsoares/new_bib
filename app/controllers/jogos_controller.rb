@@ -64,6 +64,7 @@ def create_local
 def consultaJog
  unless params[:search].present?
    if params[:type_of].to_i == 3
+     @contador = Jogo.find(:all, :order => 'nome ASC')
      @jogos = Jogo.paginate :all, :page => params[:page], :per_page => 10,:order => 'nome ASC'
      render :update do |page|
        page.replace_html 'jogos', :partial => "jogos"
@@ -71,12 +72,14 @@ def consultaJog
    end
  else
     if params[:type_of].to_i == 1
+        @contador = Jogo.find(:all, :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC')
         @jogos = Jogo.paginate :all,:page => params[:page], :per_page => 10, :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
         render :update do |page|
           page.replace_html 'jogos', :partial => "jogos"
         end
       else if params[:type_of].to_i == 2
-         @jogos = Jogo.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["faixa_etaria like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+        @contador = Jogo.find(:all, :conditions => ["faixa_etaria like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC')
+        @jogos = Jogo.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["faixa_etaria like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
           render :update do |page|
             page.replace_html 'jogos', :partial => "jogos"
           end
