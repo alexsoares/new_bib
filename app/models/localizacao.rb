@@ -11,4 +11,8 @@ class Localizacao < ActiveRecord::Base
   def add_unidade(unidade)
     self.unidade_id = unidade
   end
+
+  def concat_locale
+      "#{self.local_guardado} - #{self.unidade.nome}"
+  end
 end

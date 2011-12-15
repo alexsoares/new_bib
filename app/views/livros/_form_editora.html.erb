@@ -1,0 +1,32 @@
+	<div style='display:none'>
+		<div id='inline_editora' style='padding:10px; background:#EEE9E9;'>
+          <h2>EDITORA</h2>
+          <% form_remote_for(:editora,:url => { :action => 'create_editora' }, :success => "$.fn.colorbox.close()") do |f|%>
+            <%= error_messages_for 'contact' %>
+            <table>
+              <tr>
+                <td>
+                  <%= f.label :nome %>
+                  <%= f.text_field :nome %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= f.label :cidade %>
+                  <%= f.text_field :cidade %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= f.label :pais %>
+                  <%= f.text_field :pais %>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="botao"><%= submit_tag 'Criar'  %></div></td>
+              </tr>
+            </table>
+          <%end%>
+          <hr>
+        </div>
+	</div>

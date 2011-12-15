@@ -2,6 +2,10 @@ class LivrosController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
 
+    def create_editora
+      
+    end
+
     def livro
     @livro = Identificacao.find(:all,:conditions => ["livro like ?",params[:nome_livro]+"%"])
     @livro_hash = []
@@ -202,8 +206,13 @@ end
     @identificacoes  = Identificacao.all(:order => 'livro ASC')
     @autores  = Autor.all(:order => "nome ASC")
     @areas = Area.all(:order => 'nome ASC')
-    @editoras = Editora.all(:order => 'nome ASC') 
-    @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id], :order => 'local_guardado ASC')
+    @editoras = Editora.all(:order => 'nome ASC')
+    if current_user.unidade_id == 53
+      @localizacoes = Localizacao.all(:order => 'local_guardado ASC')
+    else
+      @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id], :order => 'local_guardado ASC')
+    end
+    
 
   end
 end

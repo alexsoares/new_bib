@@ -1,20 +1,23 @@
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
   <table  align="center" bgcolor="#F5F5F5">
-    <tr><td><%= text_field_tag :teste %></td></tr>
     <tr>
       <td >
         <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />
         <%= f.text_field :tombo_l, :size => "10" %>
       </td>
       <td colspan="2">
-        <b>Para selecionar o  <i>Título</i> clicar caixa dentro da caixa.      </b>
+        <%unless @livro.identificacao_id.present?%><b>Para selecionar o  <i>Título</i> clicar caixa dentro da caixa.      </b><%end%>
       </td>
     </tr>
     <tr>
       <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %></b><br/>
-        <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
+        <%if @livro.identificacao_id.present?%>
+          <%= @livro.identificacao.livro%>
+        <%else%>
+          <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
+        <%end%>
       </td>
     </tr>
     <tr>
@@ -60,8 +63,9 @@
     </tr>
     <tr>
       <td>
-        <b><%= f.label :editora_id %></b><br />
-        <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
+        <b><%= f.label :editora_id %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_editora", :class =>"inline"%>
+        <div id="editora"><%= render "campos_editora"%></div>
       </td>
       <td colspan="2">
         <br />
@@ -104,7 +108,8 @@
     </tr>
   <% end %>
 </table>
-    
+
+    <%= render "form_editora" %>
     <%= render "form_autor" %>
     <%= render "form_assunto" %>
     <%= render "form_local" %>

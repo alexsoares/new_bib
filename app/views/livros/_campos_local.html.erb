@@ -1,1 +1,6 @@
-    <%= collection_select :livro, :localizacao_id ,@localizacoes,:id,:local_guardado, :include_blank => "Selecione" %>
+<%if current_user.unidade_id == 53%>
+  <%= collection_select :livro, :localizacao_id ,@localizacoes,:id,:concat_locale, :include_blank => "Selecione" %>
+<%else%>
+  <%= collection_select :livro, :localizacao_id ,@localizacoes,:id,:local_guardado, :include_blank => "Selecione" %>
+<%end%>
+
