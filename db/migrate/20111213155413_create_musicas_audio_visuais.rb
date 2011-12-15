@@ -9,5 +9,6 @@ class CreateMusicasAudioVisuais < ActiveRecord::Migration
   end
 
   def self.down
+     drop_table :musicas_audio_visuais
   end
 end

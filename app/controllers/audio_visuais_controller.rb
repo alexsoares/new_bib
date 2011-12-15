@@ -74,24 +74,38 @@ class AudioVisuaisController < ApplicationController
    end
  end
 
-   def create_autor
-    @autor = Autor.new(params[:autor])
-    if @autor.save
-      @autores = Autor.all
-      @livro = Livro.new
+   def create_cantor
+    @cantor = Cantor.new(params[:cantor])
+    if @cantor.save
+      @cantores = Cantor.all
+      @audio_visual = AudioVisual.new
       render :update do |page|
-        page.replace_html 'autores', :partial => "campos_autor"
-        page.replace_html 'aviso', :text => "AUTOR CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O AUTOR"
+        page.replace_html 'cantores', :partial => "campos_cantor"
+        page.replace_html 'aviso', :text => "CANTOR CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O AUTOR"
       end
 
     end
   end
+   def create_musica
+    @musica = Musica.new(params[:musica])
+    if @musica.save
+      @musicas = Musica.all
+      @audio_visual = AudioVisual.new
+      render :update do |page|
+        page.replace_html 'musicas', :partial => "campos_musica"
+        page.replace_html 'aviso', :text => "MÚSICA CADASTRADA, SELECIOINAR A MUSICA E CONTINUAR O CADASTRO"
+      end
 
+    end
+  end
+  
   protected
 
   def load_resources
+    @cantores= Cantor.all(:order => 'nome ASC')
     @musicas= Musica.all(:order => 'nome ASC')
     @generos= Genero.all(:order => 'nome ASC')
+
     @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id])
 end
 

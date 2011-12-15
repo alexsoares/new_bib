@@ -32,11 +32,26 @@
       </td>
     </tr>
     <tr>
-       <td> <b> Musica:</b>
+      <td colspan="3">
+      <font size="2" color="red">================> Preencher estes campos somente quando tratar-se de MÚSICA <================</font>
+      </td>
+    </tr>
+    <tr>
+       <td colspan="2"> <b> Musica(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_musica", :class =>"inline" %>
         <div id="musica"><%= render "campos_musica"%></div>
       </td>
+     <td> <b> Interprete(s):</b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_cantor", :class =>"inline" %>
+        <div id="cantor"><%= render "campos_cantor"%></div>
+      </td>
     </tr>
+        <tr>
+      <td colspan="3">
+      <font size="2" color="red">=================================================================================</font>
+      </td>
+    </tr>
+
     <tr>
       <td colspan="3">
         <div id= "musica" style="margin-left: 0px"></div>
@@ -80,4 +95,5 @@
 
     <%= render "form_local" %>
     <%= render "form_musica" %>
+    <%= render "form_cantor" %>
 
