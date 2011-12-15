@@ -101,13 +101,6 @@ def consultaGen
       render :update do |page|
         page.replace_html 'generos', :partial => "generos"
       end
-      else if params[:type_of].to_i == 2
-        @contador = Genero.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
-        @generos = Genero.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-        render :update do |page|
-          page.replace_html 'generos', :partial => "generos"
-        end
-      end
     end
   end
 end

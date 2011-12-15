@@ -60,13 +60,6 @@ def consultaAut
       render :update do |page|
         page.replace_html 'autores', :partial => "autores"
       end
-      else if params[:type_of].to_i == 2
-        @contador = Autor.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
-        @autores = Autor.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-        render :update do |page|
-           page.replace_html 'autores', :partial => "autores"
-         end
-      end
     end
   end
 end

@@ -55,8 +55,7 @@ def consultaAre
     end
   else
     if params[:type_of].to_i == 1
-      t = params[:search].to_s
-      @contador = Area.find_all_by_nome(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+      @contador = Area.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
       @areas = Area.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
       render :update do |page|
         page.replace_html 'areas', :partial => "areas"
