@@ -44,13 +44,30 @@ class EditorasController < ApplicationController
   end
 
 def consultaEdi
- if (params[:search].nil? || params[:search].empty?)
-   $t=01;
-    @editoras = Editora.paginate :page => params[:page], :per_page => 10,  :conditions => ["nome like ? ", ""],:order => 'nome ASC'
- else
-     $t=0;
-    @editoras = Editora.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-
- end
+  unless params[:search].present?
+    if params[:type_of].to_i == 3
+      @contador = Editora.all.count
+      @editoras = Editora.paginate :all,:page => params[:page], :order => 'nome ASC', :per_page => 10
+      render :update do |page|
+        page.replace_html 'editoras', :partial => "editoras"
+      end
+    end
+  else
+    if params[:type_of].to_i == 1
+      @contador = Editora.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+      @editoras = Editora.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+      render :update do |page|
+        page.replace_html 'editoras', :partial => "editoras"
+      end
+      else if params[:type_of].to_i == 2
+        @contador = Editora.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+        @editoras = Editora.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+        render :update do |page|
+           page.replace_html 'editoras', :partial => "editoras"
+         end
+      end
+    end
+  end
 end
+
 end

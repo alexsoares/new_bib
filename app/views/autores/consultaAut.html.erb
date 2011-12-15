@@ -1,58 +1,34 @@
 <% title "AUTORES", :id =>"autores" %>
  <div class="tabs">
    <div id="caixa_titulo">
-    <font size="3"><strong>CONSULTAS AUTORES</strong></font><br/>
-  </div>
-  <div class="tabs">
-  <br/>
-  <table width="100%" align="center" >
-    <tr>
-      <% form_tag consultaAut_path :method => 'get' do %>
-       <td  colspan="2"align="right"><font size="4"> Digitar dado para consulta:</font>
-         <%= text_field_tag :search, params[:search] %>
-         <%= submit_tag "Filtrar" %>
-       </td>
-      <% end %>
-   </tr>
-  </table>
- 
-  <br/>
-  <hr>
-  <div class="tabs">
-    <table bgcolor="#DCDCDC" width="100%">
-         <tr>
-            <th width="630">Nome</th>
-            <th colspan="4">Administração</th>
-         </tr>
-          <% for autor in @autores %>
-          <tr bgcolor="#F5F5F5">
-            <td align=""><%=h autor.nome %></td>
-            <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), autor, :title => "Visualizar Autor" %></td>
-            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
-               <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_autor_path(autor),  :title => "Editar Autor" %></td>
-               <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), autor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Autor" %></td>
-            <%else%>
-               <td align="center"> --- </td>
-               <td align="center"> --- </td>
-            <%end%>
-          </tr>
-          <% end %>
-      </table>
-      <table bgcolor="#DCDCDC" width="100%">
-         <tr >
-           <td align="left" colspan="4"><%= will_paginate @autores%></td>
-       </tr>
-      </table>
+    <font size="3"><strong>CONSULTA AUTORES</strong></font><br/>
    </div>
+  <div class="tabs">
+    <% form_remote_tag :url => consultaAut_path, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
+         <table width="100%" align="center" bgcolor="#DCDCDC" >
+          <tr>
+            <td>
+               <a href="#" class="filtro"><%= radio_button_tag(:type_of, "1") %></a>Nome
 
+               <a href="#" class="sem_filtro"><%= radio_button_tag(:type_of, "3") %></a>Todos
+            </td>
+         </tr>
+         <tr>
+           <td><div class="consulta" style="display:none"> <%= render "/shared/consulta" %> </div></td>
+         </tr>
+        </table>
+    <% end %>
+    <br/>
+    <hr>
+    <div id="autores"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
+    <br/>
   <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
      <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaAut_path, :title => "Nova Consulta" %></td>
     </tr>
-   
   </table>
-  </div>
-</div>
+ </div>
+ </div>
 
 

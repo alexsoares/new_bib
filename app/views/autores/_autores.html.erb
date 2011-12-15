@@ -1,0 +1,33 @@
+  <table>
+    <tr>
+      <td align="right"><b>TOTAL DE AUTORES: </b>
+         <font color ="red "size="2"><b><%= @contador %></b></font>
+      </td>
+   </tr>
+  </table>
+  <div class="tabs">
+    <table bgcolor="#DCDCDC" width="100%">
+         <tr>
+            <th width="630">Nome</th>
+            <th colspan="4">Administração</th>
+         </tr>
+          <% for autor in @autores %>
+          <tr bgcolor="#F5F5F5">
+            <td align=""><%=h autor.nome %></td>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), autor, :title => "Visualizar Autor" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+               <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_autor_path(autor),  :title => "Editar Autor" %></td>
+               <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), autor, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Autor" %></td>
+            <%else%>
+               <td align="center"> --- </td>
+               <td align="center"> --- </td>
+            <%end%>
+          </tr>
+          <% end %>
+      </table>
+      <table bgcolor="#DCDCDC" width="100%">
+         <tr >
+           <td align="left" colspan="4"><%= will_paginate @autores%></td>
+       </tr>
+      </table>
+   </div>

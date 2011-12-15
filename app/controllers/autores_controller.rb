@@ -43,15 +43,33 @@ class AutoresController < ApplicationController
     redirect_to autores_url
   end
 
+
 def consultaAut
- if (params[:search].nil? || params[:search].empty?)
-   $t=01;
-    @autores = Autor.paginate :page => params[:page], :per_page => 10,  :conditions => ["nome like ? ", ""],:order => 'nome ASC'
- else
-     $t=0;
-    @autores = Autor.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-    
- end
+  unless params[:search].present?
+    if params[:type_of].to_i == 3
+      @contador = Autor.all.count
+      @autores = Autor.paginate :all,:page => params[:page], :order => 'nome ASC', :per_page => 10
+      render :update do |page|
+        page.replace_html 'autores', :partial => "autores"
+      end
+    end
+  else
+    if params[:type_of].to_i == 1
+      @contador = Autor.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+      @autores = Autor.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+      render :update do |page|
+        page.replace_html 'autores', :partial => "autores"
+      end
+      else if params[:type_of].to_i == 2
+        @contador = Autor.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+        @autores = Autor.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+        render :update do |page|
+           page.replace_html 'autores', :partial => "autores"
+         end
+      end
+    end
+  end
 end
+
 
 end

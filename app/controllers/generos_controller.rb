@@ -86,14 +86,30 @@ class GenerosController < ApplicationController
   end
 
 def consultaGen
- if (params[:search].nil? || params[:search].empty?)
-   $t=01;
-     @generos = Genero.paginate :page => params[:page], :per_page => 10,  :conditions => ["nome like ? ", ""],:order => 'nome ASC'
- else
-     $t=0;
-     @generos = Genero.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-
- end
+  unless params[:search].present?
+    if params[:type_of].to_i == 3
+      @contador = Genero.all.count
+      @generos = Genero.paginate :all,:page => params[:page], :order => 'nome ASC', :per_page => 10
+      render :update do |page|
+        page.replace_html 'generos', :partial => "generos"
+      end
+    end
+  else
+    if params[:type_of].to_i == 1
+      @contador = Genero.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+      @generos = Genero.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+      render :update do |page|
+        page.replace_html 'generos', :partial => "generos"
+      end
+      else if params[:type_of].to_i == 2
+        @contador = Genero.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+        @generos = Genero.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+        render :update do |page|
+          page.replace_html 'generos', :partial => "generos"
+        end
+      end
+    end
+  end
 end
 
 end

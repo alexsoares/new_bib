@@ -43,15 +43,32 @@ class AreasController < ApplicationController
     redirect_to areas_url
   end
 
-def consultaAre
- if (params[:search].nil? || params[:search].empty?)
-   $t=01;
-    @areas = Area.paginate :page => params[:page], :per_page => 10,  :conditions => ["nome like ? ", ""],:order => 'nome ASC'
- else
-     $t=0;
-    @areas = Area.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
 
- end
+def consultaAre
+  unless params[:search].present?
+    if params[:type_of].to_i == 3
+      @contador = Area.all.count
+      @areas = Area.paginate :all,:page => params[:page], :order => 'nome ASC', :per_page => 10
+      render :update do |page|
+        page.replace_html 'areas', :partial => "areas"
+      end
+    end
+  else
+    if params[:type_of].to_i == 1
+      @contador = Area.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+      @areas = Area.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+      render :update do |page|
+        page.replace_html 'areas', :partial => "areas"
+      end
+      else if params[:type_of].to_i == 2
+        @contador = Area.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+        @areas = Area.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+        render :update do |page|
+           page.replace_html 'areas', :partial => "areas"
+         end
+      end
+    end
+  end
 end
 
 end
