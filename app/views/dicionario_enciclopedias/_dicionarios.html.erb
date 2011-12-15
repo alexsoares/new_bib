@@ -1,20 +1,19 @@
-  <table>
+ <table>
     <tr>
       <td align="right"><b>TOTAL DE EXEMPLARES: </b>
          <font color ="red "size="2"><b><%= @contador %></b></font>
       </td>
    </tr>
   </table>
-   <div class="tabs">
-   <table bgcolor="#DCDCDC" width="100%">
-         <tr>
+  <div class="tabs">
+    <table bgcolor="#DCDCDC" width="100%">
+       <tr bgcolor="#DCDCDC" >
            <th width="40%">Titulo</th>
            <th width="25%">Subitítulo</th>
            <th width="20%">Coleção</th>
            <th align="center">Vol.</th>
            <th colspan="3">Administração</th>
          </tr>
-
         <% for dicionario_enciclopedia in @dicionario_enciclopedias %>
           <tr  bgcolor="#F5F5F5">
             <td align="left"><%=h dicionario_enciclopedia.identificacao.livro %></td>
@@ -31,12 +30,13 @@
             <%end%>
           </tr>
         <% end %>
-      </table>
-      <%if ($t==1)%>
-      <table bgcolor="#DCDCDC" width="100%">
-         <tr >
-           <td align="left" colspan="4"><%= will_paginate @dicionario_enciclopedias%></td>
-       </tr>
-      </table>
-      <%end%>
-   </div>
+     </table>
+     <table bgcolor="#DCDCDC" width="100%">
+      <tr >
+        <td align="left" colspan="4"><%if @dicionario_enciclopedias.present?%><%= will_paginate @dicionario_enciclopedia %><%end%></td>
+      </tr>
+    </table>
+  </div>
+
+
+

@@ -1,29 +1,27 @@
 <% form_for @dicionario_enciclopedia do |f| %>
   <%= f.error_messages %>
-  <table align="center" bgcolor="#F5F5F5">
+  <table align="center" width="100%" bgcolor="#F5F5F5">
     <tr>
-      <td colspan="3">
-        <%= f.label :tombo_l, "Tombo Local:"%><br />
+      <td colspan="3" >
+        <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />
         <%= f.text_field :tombo_l, :size => "10" %>
-     </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-  
-        <%= f.label :identificacao_id,"Título: " %><br/>
-        <div id="ident"><%=render "campos_identificacao"%></div>
-      </td>
-      <td width="100%">
-        <%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "20x20"), "#inline_busca", :class =>"inline"  %>
+        
       </td>
     </tr>
     <tr>
       <td colspan="3">
-        <%= observe_field 'dicionario_enciclopedia_identificacao_id',
-                                :update => "subtitulo",
-                                :with => :dicionario_enciclopedia_identificacao_id,
-                                :url => { :action => 'subtitulo' } %>
-        <div id= 'subtitulo'></div>
+        <b><%= f.label :identificacao_id,"Título: " %>
+        <font  size="1"><%unless @dicionario_enciclopedia.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
+        <%if @dicionario_enciclopedia.identificacao_id.present?%>
+           <%= @dicionario_enciclopedia.identificacao.livro%>
+        <%else%>
+           <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
+        <%end%>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div id= 'subtitulo' style="margin-left: 16px"></div>
       </td>
     </tr>
     <tr>
@@ -31,45 +29,46 @@
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <%= f.label :colecao, "Coleção:" %><br />
-        <%= f.text_field :colecao, :size => "55" %>
+      <td colspan="2" width="55%">
+        <b><%= f.label :colecao, "Coleção:" %></b><br />
+        <%= f.text_field :colecao, :size => "45" %>
       </td>
       <td>
-        <%= f.label :volume, "Volume:" %><br />
+        <b><%= f.label :volume, "Volume:" %></b><br />
         <%= f.text_field :volume, :size =>"2" %>
       </td>
     </tr>
     <tr>
       <td colspan="3">
-        <%= f.label :localizacao_id,"Selecione a localização: " %>
+        <b><%= f.label :localizacao_id,"Localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline" %>
         <div id="local"><%= render "campos_local"%></div>
       </td>
     </tr>
     <tr>
      <td>
-        <%= f.label :editora_id %><br />
+        <b><%= f.label :editora_id%></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_editora", :class =>"inline"%><br />
         <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
       </td>
       <td colspan="2">
-        <%= f.label :tipo,"Tipo: " %><br/>
+        <b><%= f.label :tipo,"Tipo: " %></b><br/>
         <%= f.select :tipo, DicionarioEnciclopedia::TIPO_DIC_ENC, :include_blank => '---Selecione---'%>
       </td>
     <tr/>
     <tr>
       <td>
-        <%= f.label :local_edicao, "Local Edição:" %><br />
+        <b><%= f.label :local_edicao, "Local Edição:" %></b><br/>
         <%= f.text_field :local_edicao, :size => "30" %>
       </td>
       <td colspan="2">
-        <%= f.label :data_edicao, "Data:" %><br />
+        <b><%= f.label :data_edicao, "Data:" %></b><br/>
         <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
      </td>
     </tr>
     <tr>
       <td colspan="3">
-        <%= f.label :obs, 'Observação:' %><br />
+        <b><%= f.label :obs, 'Observação:' %></b><br/>
         <%= f.text_area :obs, :size => "30x3" %>
       </td>
     </tr>
@@ -79,7 +78,6 @@
   <% end %>
 </table>
 
-
-
+    <%= render "form_editora" %>
     <%= render "form_local" %>
     <%= render "form_busca" %>
