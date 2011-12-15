@@ -1,4 +1,12 @@
-      <table>
+  <table>
+    <tr>
+      <td align="right"><b>TOTAL DE LIVROS: </b>
+         <font color ="red "size="2"><b><%= @contador %></b></font>
+      </td>
+   </tr>
+  </table>
+  <div class="tabs">
+    <table bgcolor="#DCDCDC" width="100%">
         <tr bgcolor="#DCDCDC" >
             <th width="400">Identificacao</th>
             <th width="100">Area</th>
@@ -7,9 +15,9 @@
         </tr>
          <% for livro in @livros %>
             <tr bgcolor="	#F5F5F5">
-                <td><%=h livro.identificacao.livro%></td>
-                <td><%=h livro.area.nome %></td>
-                <td><%=h livro.editora.nome %></td>
+                <td align="left"><%=h livro.identificacao.livro%></td>
+                <td align="left"><%=h livro.area.nome %></td>
+                <td align="left"><%=h livro.editora.nome %></td>
                 <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), livro, :title => "Exibir Periódico" %></td>
                 <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
                     <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(livro), :title => "Editar Livro" %></td>
@@ -26,3 +34,4 @@
         <td align="left" colspan="4"><%if @livros.present?%><%= will_paginate @livros %><%end%></td>
       </tr>
     </table>
+  </div>

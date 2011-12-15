@@ -3,27 +3,57 @@ class DicionarioEnciclopediasController < ApplicationController
   before_filter :login_required
   before_filter :load_resources
 
-def consultaDic
- if (params[:search].nil? || params[:search].empty?)
-   $t=01;
-    @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :page => params[:page], :per_page => 10, :joins => :identificacao,  :conditions => ["livro like ? ", ""],:order => 'livro ASC'
- else
-    if params[:type_of].to_i == 1
-     $t=0;
-     @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","DICIONÁRIO"], :order => 'livro ASC')
-     else if params[:type_of].to_i == 2
-       $t=0;
-       @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC')
-       else if params[:type_of].to_i == 3
-         $t=0;
-         @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"], :order => 'livro ASC')
-       else
-         @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'
+ def consultaDic
+   unless params[:search].present?
+     if params[:type_of].to_i == 6
+       @contador = DicionarioEnciclopedia.all.count
+       @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10, :joins => :identificacao,:order => 'livro ASC'
+       render :update do |page|
+         page.replace_html 'dicionarios', :partial => "dicionarios"
        end
+     end
+   else
+      if params[:type_of].to_i == 1
+          @contador = DicionarioEnciclopedia.all(:joins => :identificacao, :conditions => ["livro like ?", "%" + params[:search].to_s + "%"]).count
+           @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","DICIONÁRIO"], :order => 'livro ASC')
+          render :update do |page|
+            page.replace_html 'dicionarios', :partial => "dicionarios"
+          end
+          else if params[:type_of].to_i == 2
+            @contador = DicionarioEnciclopedia.all(:joins => :area, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+            @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC')
+            render :update do |page|
+              page.replace_html 'dicionarios', :partial => "dicionarios"
+            end
+            else if params[:type_of].to_i == 3
+              @contador = DicionarioEnciclopedia.all(:joins => :autores, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+               @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"], :order => 'livro ASC')
+              render :update do |page|
+                page.replace_html 'dicionarios', :partial => "dicionarios"
+              end
+              else if params[:type_of].to_i == 4
+                @contador = DicionarioEnciclopedia.all(:joins => :assuntos, :conditions => ["descricao like ?", "%" + params[:search].to_s + "%"]).count
+                @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC')
+                render :update do |page|
+                  page.replace_html 'dicionarios', :partial => "dicionarios"
+                end
+                else if params[:type_of].to_i == 5
+                  @contador = DicionarioEnciclopedia.all(:joins => :editora, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+                  @dicionario_enciclopedias = DicionarioEnciclopedia.find(:all, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC')
+                  render :update do |page|
+                    page.replace_html 'dicionarios', :partial => "dicionarios"
+                  end
+                end
+              end
+            end
+          end
       end
-    end
-  end
- end
+   end
+end
+
+
+
+
 
   def index
     @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'livro ASC'

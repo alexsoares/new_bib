@@ -62,6 +62,7 @@ def create_local
 def consultaMap
  unless params[:search].present?
    if params[:type_of].to_i == 3
+     @contador = Mapa.all.count
      @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10,:order => 'titulo ASC'
      render :update do |page|
        page.replace_html 'mapas', :partial => "mapas"
@@ -69,12 +70,14 @@ def consultaMap
    end
  else
     if params[:type_of].to_i == 1
+       @contador = Mapa.all(:conditions => ["titulo like ?", "%" + params[:search].to_s + "%"]).count
        @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["titulo like ? ", "%" + params[:search].to_s + "%"],:order => 'titulo ASC'
         render :update do |page|
           page.replace_html 'mapas', :partial => "mapas"
         end
       else if params[:type_of].to_i == 2
-         @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ? ", "%" + params[:search].to_s + "%"],:order => 'subtitulo ASC'
+           @contador = Mapa.all(:conditions => ["subtitulo like ?", "%" + params[:search].to_s + "%"]).count
+        @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ? ", "%" + params[:search].to_s + "%"],:order => 'titulo ASC'
           render :update do |page|
             page.replace_html 'mapas', :partial => "mapas"
           end
