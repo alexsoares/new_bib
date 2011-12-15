@@ -146,7 +146,7 @@ end
       end
   end
 
-    def return      
+  def return      
       session[:identificacao_id] = params[:selected]
       @identificacao = Identificacao.find(params[:selected])
       render :update do |page|

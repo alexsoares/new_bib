@@ -92,18 +92,7 @@ def create_local
   end
 
 
-  def filtrar
-    if params[:busca].present?
-      @identificacoes = Identificacao.all(:conditions =>["livro like ?", ""+params[:busca][:busca]+"%"])
-    end
-     @dicionario_enciclopedia = DicionarioEnciclopedia.new
-      render :update do |page|
-        page.replace_html 'ident', :partial => "campos_identificacao"
-        page.replace_html 'aviso', :text => "Filtrado!"
-      end
-
-  end
-
+  
 
   def edit
     @dicionario_enciclopedia = DicionarioEnciclopedia.find(params[:id])
@@ -133,12 +122,32 @@ def create_local
    end
 
 
+def filtrar
+    if params[:busca].present?
+      @identificacoes = Identificacao.all(:conditions =>["livro like ?", params[:busca][:busca]+"%"])
+    end
+      render :update do |page|
+        page.replace_html 'lista_dicionarios', :partial => "lista_dicionarios"
+      end
+  end
+
+
+ def return
+      session[:identificacao_id] = params[:selected]
+      @identificacao = Identificacao.find(params[:selected])
+      render :update do |page|
+        page.replace_html 'identificacao', :text => @identificacao.livro
+        page.replace_html 'subtitulo', :text => "<b>Subtitulo: </b>#{@identificacao.subtitulo}"
+      end
+  end
+
+
     protected
 
   def load_resources
     @areas = Area.all(:order => 'nome ASC')
     @editoras = Editora.all(:order => 'nome ASC')
-    @localizacoes = Localizacao.all
+    @localizacoes = Localizacao.all(:order => 'local_guardado ASC')
     @identificacoes  = Identificacao.all(:order => 'livro ASC')
   end
 

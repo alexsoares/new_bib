@@ -2,17 +2,16 @@
   <%= f.error_messages %>
   <table  align="center" bgcolor="#F5F5F5">
     <tr>
-      <td >
+      <td colspan="3" >
         <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />
         <%= f.text_field :tombo_l, :size => "10" %>
       </td>
-      <td colspan="2">
-        <%unless @livro.identificacao_id.present?%><b>Para selecionar o  <i>Título</i> clicar caixa dentro da caixa.      </b><%end%>
-      </td>
+
     </tr>
     <tr>
       <td colspan="3">
-        <b><%= f.label :identificacao_id,"Título: " %></b><br/>
+        <b><%= f.label :identificacao_id,"Título: " %>
+        <font  size="1"><%unless @livro.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
         <%if @livro.identificacao_id.present?%>
           <%= @livro.identificacao.livro%>
         <%else%>
@@ -36,13 +35,12 @@
       </td>
     </tr>
     <tr>
-      <td><b><i>
-         Para selecionar mais de um autor <br/> precionar a tecla <i>CTRL</i> e selecionar <br/>as opções desejadas ===========>
-      </i></b>
-      </td>
-      <td colspan="2">
+      <td colspan="3">
         <b><%= f.label :autor_id, "Autor(es). " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_autor", :class =>"inline" %>
+        <b><i><font  size="1">
+         ( Para selecionar mais de um autor precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
+      </font></i></b>
         <div id="autor"><%= render "campos_autor"%></div>     
       </td>
     </tr>
@@ -83,13 +81,12 @@
      </td>
     </tr>
     <tr>
-      <td><b><i>
-         Para selecionar mais de um assunto <br/> precionar a tecla <i>CTRL</i> e selecionar <br/>as opções desejadas ===========>
-      </i></b>
-      </td>
-      <td colspan="2">
+      <td colspan="3">
         <b><%= f.label :assunto_id, "Assunto(s). " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline"%>
+        <b><i><font size="1">
+            ( Para selecionar mais de um assunto precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
+      </font></i></b>
         <div id="assuntos"><%= render "campos_assunto"%></div>        
       </td>
     </tr>
