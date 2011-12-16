@@ -16,7 +16,11 @@
                         <%end%>
                      <strong>Editora:</strong>   <%=h @livro.editora.nome %><br/>
                      <strong>Edição:</strong>   <%=h @livro.edicao %>ª<br/>
-                     <strong>Data Edição:</strong>   <%=h @livro.data_edicao.strftime("%Y") %><br/>
+                     <% if @livro.data_edicao.nil? %>
+                         <strong>Data Edição:</strong><br/>
+                     <%else%>
+                        <strong>Data Edição:</strong>   <%=h @livro.data_edicao.strftime("%Y") %><br/>
+                     <%end%>
                      <strong>Local Edição:</strong>   <%=h @livro.local_edicao %><br/>
                      <strong>Assuntos relacionados:</strong><br/>
                         <% @livro.assuntos.each do |assunto| %>
@@ -30,7 +34,14 @@
                      <strong>Tombo Seduc:</strong>   <%=h @livro.id %><br/>
                      <strong>Tombo Local:</strong>   <%=h @livro.tombo_l %><br/>
                      <strong>Tipo de aquisição:</strong>   <%=h @livro.localizacao.aquisicao%><br/>
-                     <strong>Data Aquisição:</strong>   <%=h @livro.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+
+                     <% if @livro.localizacao.data_aquisicao.nil? %><br/>
+                         <strong>Data Aquisição:</strong>
+                     <%else%>
+                        <strong>Data Aquisição:</strong>   <%=h @livro.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
+                     <%end%>
+
+
                      <strong>Localização:</strong>   <%=h @livro.localizacao.local_guardado %><br/>
                      <strong>Unidade:</strong>   <%=h @livro.localizacao.unidade.nome %><br/>
                      <strong>Observação:</strong>   <%=h @livro.obs%><br/>
