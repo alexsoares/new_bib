@@ -38,10 +38,10 @@ jQuery(document).ready(function( $ ){
    });
    $(".sem_filtro").click(function ()
     {
-      $(".consulta").show();
       $(".txt_busca").val("");
       $(".txt_busca").hide();
       $(".label_busca").hide();
+      $(".consulta").show();
     });
     $(".txt_busca").focus(function(){
        $(".txt_busca,#search").val("");
