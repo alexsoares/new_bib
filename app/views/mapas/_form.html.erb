@@ -22,11 +22,11 @@
     <tr>
       <td align="lef">
          <b><%= f.label :tipo, 'Tipo:' %></b><br />
-         <%= f.select :tipo, Mapas::TIPO_MAPA, :include_blank => '---Selecione---'%>
+         <%= f.select :tipo, Mapa::TIPO_MAPA, :include_blank => '---Selecione---'%>
       </td>
       <td align="lef">
          <b><%= f.label :formato,'Formato:' %></b><br />
-        <%= f.select :formato, Mapas::FORMATO_MAPA, :include_blank => '---Selecione---'%>
+        <%= f.select :formato, Mapa::FORMATO_MAPA, :include_blank => '---Selecione---'%>
       </td>
       <td align="lef">
          <b><%= f.label :ano, 'Ano:' %></b><br />
