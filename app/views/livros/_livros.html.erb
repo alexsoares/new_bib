@@ -31,7 +31,7 @@
      </table>
      <table bgcolor="#DCDCDC" width="100%">
       <tr >
-        <td align="left" colspan="4"><%if @livros.present?%><%= will_paginate @livros %><%end%></td>
+        <td align="left" colspan="4"><%if @livros.present?%><%= will_paginate @livros, :update => "livros" %><%end%></td>
       </tr>
     </table>
   </div>

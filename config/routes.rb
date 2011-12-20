@@ -22,8 +22,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :mapas
   map.resources :dicionario_enciclopedias
   map.resources :livros
-  map.resources :audio_visuais
-
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'

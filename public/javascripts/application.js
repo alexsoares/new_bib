@@ -12,7 +12,9 @@ jQuery(document).ready(function( $ ){
 
 // Fim cadastro musica
 
-  $("#localizacao_data_aquisicao").datepicker($.datepicker.regional[ "pt-BR" ]);
+$.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+$("#localizacao_data_aquisicao").datepicker({dateFormat: 'dd-mm-yy', changeYear: true, changeMonth: true, yearRange: '-60:+0'});
+
 
 
 

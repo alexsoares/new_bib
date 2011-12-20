@@ -76,15 +76,29 @@ end
       render :action => 'new'
     end
   end
+    def create_editora
+      @editora = Editora.new(params[:editora])
+      if @editora.save
+        @livro = Livro.new
+        render :update do |page|
+          page.replace_html 'editora', :partial => "shared/campos/campos_editora"
+          page.replace_html 'aviso', :text => "EDITORA CADASTRADA, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR A EDITORA"
+        end
+
+      end
+
+    end
+
 
 def create_local
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)
+    y = @localizacao.data_aquisicao
     if @localizacao.save
       @localizacoes = Localizacao.all
       @dicionario_enciclopedia = DicionarioEnciclopedia.new
       render :update do |page|
-        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'local', :partial => "shared/campos/campos_local"
         page.replace_html 'aviso', :text => "NOVO DICIONÁRIO & ENCICLOPÉDIA CADASTRADO, CONTINUE O CADASTRO"
       end
 

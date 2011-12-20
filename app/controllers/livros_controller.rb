@@ -3,6 +3,15 @@ class LivrosController < ApplicationController
   before_filter :load_resources
 
     def create_editora
+      @editora = Editora.new(params[:editora])
+      if @editora.save
+        @livro = Livro.new
+        render :update do |page|
+          page.replace_html 'editora', :partial => "shared/campos/campos_editora"
+          page.replace_html 'aviso', :text => "EDITORA CADASTRADA, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR A EDITORA"
+        end
+
+      end
       
     end
 
@@ -21,19 +30,23 @@ class LivrosController < ApplicationController
 
   def index
 
-      @livro = Identificacao.all :order => 'livro ASC'
-      @livros = Livro.paginate :all, :page => params[:page], :per_page => 10
+       @contador = Livro.all.count
+       @livros = Livro.paginate :all, :page => params[:page], :per_page => 10, :joins => :identificacao,:order => 'livro ASC'
 
-    @livro_hash = []
-    @livro.each do |id|
-      @livro_hash <<  id.livro
-    end
 
-    respond_to do |format|
-      format.html
-      format.js
-      format.json  { render :json => @livro_hash }
-    end
+      #@livro = Identificacao.all :order => 'livro ASC'
+      #@livros = Livro.paginate :all, :page => params[:page], :per_page => 10
+
+    #@livro_hash = []
+    #@livro.each do |id|
+    #  @livro_hash <<  id.livro
+    #end
+
+    #respond_to do |format|
+    #  format.html
+    #  format.js
+    #  format.json  { render :json => @livro_hash }
+    #end
 
   end
 
@@ -162,7 +175,7 @@ end
       @autores = Autor.all
       @livro = Livro.new
       render :update do |page|
-        page.replace_html 'autores', :partial => "campos_autor"
+        page.replace_html 'autores', :partial => "shared/campos/campos_autor"
         page.replace_html 'aviso', :text => "AUTOR CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O AUTOR"
       end
 
@@ -175,7 +188,7 @@ end
       @assuntos = Assunto.all
       @livro = Livro.new
       render :update do |page|
-        page.replace_html 'assuntos', :partial => "campos_assunto"
+        page.replace_html 'assuntos', :partial => "shared/campos/campos_assunto"
         page.replace_html 'aviso', :text => "ASSUNTO CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O ASSUNTO"
       end
 
@@ -189,7 +202,7 @@ end
       @localizacoes = Localizacao.all
       @livro = Livro.new
       render :update do |page|
-        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'local', :partial => "shared/campos/campos_local"
         page.replace_html 'aviso', :text => "NOVA LOCALIZAÇÃO CADASTRADA, CONTINUE O CADASTRO"
       end
 

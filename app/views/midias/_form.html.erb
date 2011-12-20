@@ -13,9 +13,6 @@
       <td align="left">
         <b><%= f.label :genero_id,"Genero: " %></b><br/>
         <%= f.collection_select :genero_id ,@generos,:id,:nome, :include_blank => "Selecionar" %>
-         <%= observe_field :audio_visual_genero_id,
-            :with => :audio_visual_genero_id,            
-            :url => { :action => 'musica1' } %>
       </td>
 
     </tr>
@@ -32,23 +29,13 @@
       </td>
     </tr>   
     <tr class="musica">
-      <td colspan="3">
-          <font size="2" color="red">================> Preencher estes campos somente quando tratar-se de MÚSICA <================</font>
-      </td>
-    </tr>
-    <tr class="musica">
        <td colspan="2"> <b> Musica(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_musica", :class =>"inline" %>
-        <div id="musica"><%= render "campos_musica"%></div>
+        <div id="musica"><%= render "shared/campos/campos_musica"%></div>
       </td>
      <td> <b> Interprete(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_cantor", :class =>"inline" %>
-        <div id="cantor"><%= render "campos_cantor"%></div>
-      </td>
-    </tr>
-    <tr class="musica">
-      <td colspan="3">
-      <font size="2" color="red">=================================================================================</font>
+        <div id="cantor"><%= render "shared/campos/campos_cantor"%></div>
       </td>
     </tr>
     <tr>
@@ -92,7 +79,7 @@
   <% end %>
 </table>
 
-    <%= render "form_local" %>
-    <%= render "form_musica" %>
-    <%= render "form_cantor" %>
+    <%= render "shared/forms/form_local" %>
+    <%= render "shared/forms/form_musica" %>
+    <%= render "shared/forms/form_cantor" %>
 

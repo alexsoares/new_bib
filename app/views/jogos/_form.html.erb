@@ -31,7 +31,7 @@
       <td align="lef">
         <b><%= f.label :localizacao_id,"Selecione a localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline" %>
-        <div id="local"><%= render "campos_local"%></div>
+        <div id="local"><%= render "shared/campos/campos_local"%></div>
 
       </td>
     <tr>
@@ -48,4 +48,4 @@
    </table>
 <% end %>
 
-    <%= render "form_local" %>
+    <%= render "shared/forms/form_local" %>

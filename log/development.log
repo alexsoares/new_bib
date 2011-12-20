@@ -20251,3 +20251,4 @@ Rendering midias/show
   [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
   [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
 Completed in 130ms (View: 51, DB: 12) | 200 OK [http://localhost/midias/5]
+DEPRECATION WARNING: require "activesupport" is deprecated and will be removed in Rails 3. Use require "active_support" instead.. (called from /home/alexandre/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/activesupport.rb:2)

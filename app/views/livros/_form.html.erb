@@ -6,7 +6,6 @@
         <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />
         <%= f.text_field :tombo_l, :size => "10" %>
       </td>
-
     </tr>
     <tr>
       <td colspan="3">
@@ -41,7 +40,7 @@
         <b><i><font  size="1">
          ( Para selecionar mais de um autor precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
       </font></i></b>
-        <div id="autor"><%= render "campos_autor"%></div>     
+        <div id="autor"><%= render "shared/campos/campos_autor"%></div>
       </td>
     </tr>
     <tr>
@@ -54,7 +53,7 @@
       <td>
         <b><%= f.label :localizacao_id,"Localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline"%>
-        <div id="local"><%= render "campos_local"%></div>
+        <div id="local"><%= render "shared/campos/campos_local"%></div>
       </td>
       <td width="75%">
       </td>
@@ -63,7 +62,7 @@
       <td>
         <b><%= f.label :editora_id %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_editora", :class =>"inline"%>
-        <div id="editora"><%= render "campos_editora"%></div>
+        <div id="editora"><%= render "shared/campos/campos_editora"%></div>
       </td>
       <td colspan="2">
         <br />
@@ -87,7 +86,7 @@
         <b><i><font size="1">
             ( Para selecionar mais de um assunto precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
       </font></i></b>
-        <div id="assuntos"><%= render "campos_assunto"%></div>        
+        <div id="assuntos"><%= render "shared/campos/campos_assunto"%></div>
       </td>
     </tr>
     <tr>
@@ -106,8 +105,8 @@
   <% end %>
 </table>
 
-    <%= render "form_editora" %>
-    <%= render "form_autor" %>
-    <%= render "form_assunto" %>
-    <%= render "form_local" %>
+    <%= render "shared/forms/form_editora" %>
+    <%= render "shared/forms/form_autor" %>
+    <%= render "shared/forms/form_assunto" %>
+    <%= render "shared/forms/form_local" %>
     <%= render "form_busca" %>
