@@ -1,52 +1,61 @@
-<% title "Audio Visual" %>
+<% title "AUDIO VISUAIS" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+    <font size="5"><strong><%=h "#{@audio_visual.titulo}" %></strong></font><br/>
+    <font size="4"><%=h @audio_visual.tipo %> - <%=h "#{@audio_visual.genero.nome}" %></font><br/>
+       <div id="telaShow">
+         <div id="linhaCentral">
+           <div id="conteudoEsquerda">
+              <h3><b><i><font color="DimGrey">Informações sobre o <%=h @audio_visual.tipo %></font></i></b></h3>
+                  <hr>
+                    <strong>Producao:</strong> <%=h @audio_visual.producao %><br/>
+                    <strong>Local Producao:</strong> <%=h @audio_visual.local_producao %><br/>
+                     <% if @audio_visual.data_producao.nil? %>
+                        <strong>Ano Producao:</strong><br/>
+                     <%else%>
+                        <strong>Ano Producao:</strong> <%=h @audio_visual.data_producao.strftime("%Y") %><br/>
+                     <%end%>
+                     <% if @audio_visual.genero.nome == 'MUSICA' %>
+                          <strong>Música:</strong><br/>
+                          <% @audio_visual.musicas.each do |musica| %>
+                               <b>-</b> <%="#{musica.nome}" %><br/>
+                          <%end%>
+                        <%end%>
+                     <% if @audio_visual.genero.nome == 'MUSICA' %>
+                         <strong>Intérprete:</strong><br/>
+                         <% @audio_visual.cantores.each do |cantor| %>
+                                 <b>-</b> <%="#{cantor.nome}" %><br/>
+                        <%end%>
+                     <%end%>
+                </div>
+                <div id="colunaDireita">
+                  <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
+                  <hr>
+                     <strong>Tombo Seduc:</strong> <%=h @audio_visual.tombo_seduc %><br/>
+                     <strong>Tombo Local:</strong>  <%=h @audio_visual.tombo_l %><br/>
+                      <strong>Localização:</strong>   <%=h @audio_visual.localizacao.local_guardado %><br/>
+                     <strong>Unidade:</strong>   <%=h @audio_visual.localizacao.unidade.nome %><br/>
+                     <strong>Observação:</strong>   <%=h @audio_visual.obs %><br/>
+                </div>
 
-<p>
-  <strong>Genero Midia:</strong>
-  <%=h @audio_visual.genero_midia %>
-</p>
-<p>
-  <strong>Localizacao:</strong>
-  <%=h @audio_visual.localizacao %>
-</p>
-<p>
-  <strong>Tombo Seduc:</strong>
-  <%=h @audio_visual.tombo_seduc %>
-</p>
-<p>
-  <strong>Tombo L:</strong>
-  <%=h @audio_visual.tombo_l %>
-</p>
-<p>
-  <strong>Tipo:</strong>
-  <%=h @audio_visual.tipo %>
-</p>
-<p>
-  <strong>Titulo:</strong>
-  <%=h @audio_visual.titulo %>
-</p>
-<p>
-  <strong>Subtitulo:</strong>
-  <%=h @audio_visual.subtitulo %>
-</p>
-<p>
-  <strong>Producao:</strong>
-  <%=h @audio_visual.producao %>
-</p>
-<p>
-  <strong>Local Producao:</strong>
-  <%=h @audio_visual.local_producao %>
-</p>
-<p>
-  <strong>Data Producao:</strong>
-  <%=h @audio_visual.data_producao %>
-</p>
-<p>
-  <strong>Obs:</strong>
-  <%=h @audio_visual.obs %>
-</p>
+              </div>
+            </div>
+    <table>
+          <tr>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), consultaAud_path, :title => "Audio Visuais Cadastrados" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_audio_visual_path(@audio_visual), :title => "Editar Audio Visual" %></td>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @audio_visual, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Audio Visual" %></td>
+                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_audio_visual_path, :title => "Cadastrar Audio Visual" %></td>
+            <%else%>
+                <td align="center"> </td>
+                <td align="center"> </td>
+                <td align="center"> </td>
+            <%end%>
 
-<p>
-  <%= link_to "Edit", edit_audio_visual_path(@audio_visual) %> |
-  <%= link_to "Destroy", @audio_visual, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", audio_visuais_path %>
-</p>
+          </tr>
+      </table>
+
+</div>
+

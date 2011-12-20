@@ -3,7 +3,7 @@ class AudioVisuaisController < ApplicationController
   before_filter :load_resources
 
   def index
-   @audio_visuais = AudioVisual.paginate :page => params[:page], :per_page => 10, :joins => :identificacao, :order => 'titulo ASC'
+   @audio_visuais = AudioVisual.paginate :page => params[:page], :per_page => 10, :order => 'titulo ASC'
 
   end
 
@@ -98,7 +98,55 @@ class AudioVisuaisController < ApplicationController
 
     end
   end
-  
+
+def consultaAud
+   unless params[:search].present?
+     if params[:type_of].to_i == 6
+       @contador = AudioVisual.all.count
+       @audio_visuais = AudioVisual.paginate :all, :page => params[:page], :per_page => 10,:order => 'titulo ASC'
+       render :update do |page|
+         page.replace_html 'audio_visuais', :partial => "audio_visuais"
+       end
+     end
+   else
+      if params[:type_of].to_i == 1
+         @contador = AudioVisual.all(:conditions => ["titulo like ?", "%" + params[:search].to_s + "%"]).count
+         @audio_visuais = AudioVisual.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["titulo like ? ", "%" + params[:search].to_s + "%"],:order => 'titulo ASC'
+          render :update do |page|
+            page.replace_html 'audio_visuais', :partial => "audio_visuais"
+          end
+          else if params[:type_of].to_i == 2
+            @contador = AudioVisual.all(:joins => :genero, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+            @audio_visuais = AudioVisual.paginate :all, :page => params[:page], :per_page => 10, :joins => :genero,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+            render :update do |page|
+              page.replace_html 'audio_visuais', :partial => "audio_visuais"
+            end
+            else if params[:type_of].to_i == 3
+              @contador = AudioVisual.all(:joins => :musicas, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+              @audio_visuais = AudioVisual.paginate :all, :page => params[:page], :per_page => 10, :joins => :musicas,  :conditions => ["nome like ? ","%" + params[:search].to_s + "%"],:order => 'nome ASC'
+              render :update do |page|
+                page.replace_html 'audio_visuais', :partial => "audio_visuais_mus"
+              end
+              else if params[:type_of].to_i == 4
+                @contador = AudioVisual.all(:joins => :cantores, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+                @audio_visuais = AudioVisual.paginate :page => params[:page], :per_page => 10, :joins => :cantores,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+                render :update do |page|
+                  page.replace_html 'audio_visuais', :partial => "audio_visuais_can"
+                end
+                else if params[:type_of].to_i == 5
+                  @contador = AudioVisual.all(:joins => :editora, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+                  @audio_visuais = AudioVisual.paginate :page => params[:page], :per_page => 10, :joins => :editora,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+                  render :update do |page|
+                    page.replace_html 'audio_visuais', :partial => "audio_visuais"
+                  end
+                end
+              end
+            end
+          end
+      end
+   end
+end
+
   protected
 
   def load_resources

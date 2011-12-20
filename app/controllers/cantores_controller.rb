@@ -83,14 +83,29 @@ class CantoresController < ApplicationController
   end
 
 def consultaCan
- if (params[:search].nil? || params[:search].empty?)
-   $t=01;
-    @cantores = Cantor.paginate :page => params[:page], :per_page => 10,  :conditions => ["nome like ? ", ""],:order => 'nome ASC'
- else
-     $t=0;
-    @cantores = Cantor.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
-
- end
+  unless params[:search].present?
+    if params[:type_of].to_i == 3
+      @contador = Cantor.all.count
+      @cantores = Cantor.paginate :all,:page => params[:page], :order => 'nome ASC', :per_page => 10
+      render :update do |page|
+        page.replace_html 'cantores', :partial => "cantores"
+      end
+    end
+  else
+    if params[:type_of].to_i == 1
+      @contador = Cantor.all(:conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
+      @cantores = Cantor.paginate :page => params[:page], :per_page => 10, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+      render :update do |page|
+        page.replace_html 'cantores', :partial => "cantores"
+      end
+    end
+  end
 end
 
+def showCan
+  @contador = AudioVisual.all.count
+  @audio_visuais = AudioVisual.all(:joins => "inner join audio_visuais_cantores on audio_visuais.cantor_id", :conditions => ['cantor_id =?', params[:id]])
+  @buscas = Ponto.all(:joins => "inner join estagiarios on pontos.estagiario_id=estagiarios.id",:conditions => ["estagiarios.desligado = 0 and estagiarios.flag = 0 and pontos.created_at between ? and ?", inicio_mes,termino_mes],:group => 'estagiario_id', :select => 'estagiarios.id, sum(pontos.total_trabalhado) as "total_trabalhado", estagiarios.nome' )
+
+end
 end

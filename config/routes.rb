@@ -1,12 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :musicas
-
   map.resources :cantores
-
   map.resources :generos
-
   map.resources :roles_users
-
   map.resources :configuracaos
   map.resources :importar
   map.resources :emprestimos
@@ -46,7 +42,6 @@ ActionController::Routing::Routes.draw do |map|
   map.consultaLiv '/consultaLiv', :controller => 'livros', :action => 'consultaLiv'
   map.consultaJog '/consultaJog', :controller => 'jogos', :action => 'consultaJog'
   map.consultaMap '/consultaMap', :controller => 'mapas', :action => 'consultaMap'
-  #map.consultaPer '/consultaPer', :controller => 'periodicos', :action => 'consultaPer'
   map.consultaAut '/consultaAut', :controller => 'autores', :action => 'consultaAut'
   map.consultaAre '/consultaAre', :controller => 'areas', :action => 'consultaAre'
   map.consultaEdi '/consultaEdi', :controller => 'editoras', :action => 'consultaEdi'
@@ -54,7 +49,9 @@ ActionController::Routing::Routes.draw do |map|
   map.consultaGen '/consultaGen', :controller => 'generos', :action => 'consultaGen'
   map.consultaCan '/consultaCan', :controller => 'cantores', :action => 'consultaCan'
   map.consultaMus '/consultaMus', :controller => 'musicas', :action => 'consultaMus'
+  map.consultaAud '/consultaAud', :controller => 'audio_visuais', :action => 'consultaAud'
 
+  map.showCan '/showCan', :controller => 'cantores', :action => 'showCan'
 
   map.resource :session
   map.resources :editoras

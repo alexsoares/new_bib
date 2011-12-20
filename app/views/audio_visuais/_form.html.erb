@@ -30,13 +30,13 @@
         <b><%= f.label :subtitulo, "Subtítulo:" %></b><br />
         <%= f.text_field :subtitulo, :size => "70" %>
       </td>
-    </tr>
-    <tr>
+    </tr>   
+    <tr class="musica">
       <td colspan="3">
-      <font size="2" color="red">================> Preencher estes campos somente quando tratar-se de MÚSICA <================</font>
+          <font size="2" color="red">================> Preencher estes campos somente quando tratar-se de MÚSICA <================</font>
       </td>
     </tr>
-    <tr>
+    <tr class="musica">
        <td colspan="2"> <b> Musica(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_musica", :class =>"inline" %>
         <div id="musica"><%= render "campos_musica"%></div>
@@ -46,12 +46,11 @@
         <div id="cantor"><%= render "campos_cantor"%></div>
       </td>
     </tr>
-        <tr>
+    <tr class="musica">
       <td colspan="3">
       <font size="2" color="red">=================================================================================</font>
       </td>
     </tr>
-
     <tr>
       <td colspan="3">
         <div id= "musica" style="margin-left: 0px"></div>

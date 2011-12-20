@@ -4,6 +4,7 @@ class Identificacao < ActiveRecord::Base
 
   has_many :dicionario_enciclopedias
   has_many :livros
+  has_many :audio_visuais
 
   
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111215155707) do
+ActiveRecord::Schema.define(:version => 20111219100236) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(:version => 20111215155707) do
     t.datetime "updated_at"
   end
 
+  create_table "audio_visuais_cantores", :id => false, :force => true do |t|
+    t.integer "audio_visual_id", :null => false
+    t.integer "cantor_id",       :null => false
+  end
+
+  create_table "audio_visuais_musicas", :id => false, :force => true do |t|
+    t.integer "audio_visual_id", :null => false
+    t.integer "musica_id",       :null => false
+  end
+
   create_table "autores", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at"
@@ -59,11 +69,6 @@ ActiveRecord::Schema.define(:version => 20111215155707) do
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "cantores_audio_visuais", :id => false, :force => true do |t|
-    t.integer "autor_id",        :null => false
-    t.integer "audio_visual_id", :null => false
   end
 
   create_table "configuracaos", :force => true do |t|
@@ -225,11 +230,6 @@ ActiveRecord::Schema.define(:version => 20111215155707) do
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "musicas_audio_visuais", :id => false, :force => true do |t|
-    t.integer "musica_id",       :null => false
-    t.integer "audio_visual_id", :null => false
   end
 
   create_table "periodicos", :force => true do |t|
