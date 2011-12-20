@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111219100236) do
+ActiveRecord::Schema.define(:version => 20111220135052) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -28,7 +28,12 @@ ActiveRecord::Schema.define(:version => 20111219100236) do
     t.integer "livro_id",   :null => false
   end
 
-  create_table "audio_visuais", :force => true do |t|
+  create_table "audio_visuais_musicas", :id => false, :force => true do |t|
+    t.integer "audio_visual_id", :null => false
+    t.integer "musica_id",       :null => false
+  end
+
+  create_table "audios", :force => true do |t|
     t.integer  "genero_id"
     t.integer  "localizacao_id"
     t.string   "tombo_seduc"
@@ -44,14 +49,9 @@ ActiveRecord::Schema.define(:version => 20111219100236) do
     t.datetime "updated_at"
   end
 
-  create_table "audio_visuais_cantores", :id => false, :force => true do |t|
-    t.integer "audio_visual_id", :null => false
-    t.integer "cantor_id",       :null => false
-  end
-
-  create_table "audio_visuais_musicas", :id => false, :force => true do |t|
-    t.integer "audio_visual_id", :null => false
-    t.integer "musica_id",       :null => false
+  create_table "audios_cantores", :id => false, :force => true do |t|
+    t.integer "audio_id",  :null => false
+    t.integer "cantor_id", :null => false
   end
 
   create_table "autores", :force => true do |t|
@@ -69,6 +69,11 @@ ActiveRecord::Schema.define(:version => 20111219100236) do
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "cantores_midias", :id => false, :force => true do |t|
+    t.integer "midia_id",  :null => false
+    t.integer "cantor_id", :null => false
   end
 
   create_table "configuracaos", :force => true do |t|
@@ -224,6 +229,27 @@ ActiveRecord::Schema.define(:version => 20111219100236) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "titulo"
+  end
+
+  create_table "midias", :force => true do |t|
+    t.integer  "genero_id"
+    t.integer  "localizacao_id"
+    t.string   "tombo_l"
+    t.string   "tombo_seduc"
+    t.string   "tipo"
+    t.string   "titulo"
+    t.string   "subtitulo"
+    t.string   "producao"
+    t.string   "local_producao"
+    t.datetime "data_producao"
+    t.string   "obs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "midias_musicas", :id => false, :force => true do |t|
+    t.integer "midias_id", :null => false
+    t.integer "musica_id", :null => false
   end
 
   create_table "musicas", :force => true do |t|

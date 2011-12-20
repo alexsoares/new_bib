@@ -1,0 +1,68 @@
+<% title "MÍDIAS" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+    <font size="5"><strong><%=h "#{@midia.titulo}" %></strong></font><br/>
+    <font size="4"><%=h @midia.tipo %> - <%=h "#{@midia.genero.nome}" %></font><br/>
+       <div id="telaShow">
+         <div id="linhaCentral">
+           <div id="conteudoEsquerda">
+              <h3><b><i><font color="DimGrey">Informações sobre o <%=h @midia.tipo %></font></i></b></h3>
+                  <hr>
+                    <strong>Producao:</strong> <%=h @midia.producao %><br/>
+                    <strong>Local Producao:</strong> <%=h @midia.local_producao %><br/>
+                     <% if @midia.data_producao.nil? %>
+                        <strong>Ano Producao:</strong><br/>
+                     <%else%>
+                        <strong>Ano Producao:</strong> <%=h @midia.data_producao.strftime("%Y") %><br/>
+                     <%end%>
+                     <strong>Forma Aquisição:</strong> <%=h @midia.localizacao.aquisicao %><br/>
+                     <% if @midia.localizacao.data_aquisicao.nil? %>
+                        <strong>Data Aquisição:</strong><br/>
+                     <%else%>
+                        <strong>Data Aquisição::</strong> <%=h @midia.localizacao.data_aquisicao.strftime("%d/%m/%Y") %><br/>
+                     <%end%>
+                     <% if @midia.genero.nome == 'MUSICA' %>
+                          <strong>Música:</strong><br/>
+                          <% @midia.musicas.each do |musica| %>
+                               <b>-</b> <%="#{musica.nome}" %><br/>
+                          <%end%>
+                        <%end%>
+                     <% if @midia.genero.nome == 'MUSICA' %>
+                         <strong>Intérprete:</strong><br/>
+                         <% @midia.cantores.each do |cantor| %>
+                                 <b>-</b> <%="#{cantor.nome}" %><br/>
+                        <%end%>
+                     <%end%>
+                </div>
+                <div id="colunaDireita">
+                  <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
+                  <hr>
+                     <strong>Tombo Seduc:</strong> <%=h @midia.tombo_seduc %><br/>
+                     <strong>Tombo Local:</strong>  <%=h @midia.tombo_l %><br/>
+                      <strong>Localização:</strong>   <%=h @midia.localizacao.local_guardado %><br/>
+                     <strong>Unidade:</strong>   <%=h @midia.localizacao.unidade.nome %><br/>
+                     <strong>Observação:</strong>   <%=h @midia.obs %><br/>
+                </div>
+
+              </div>
+            </div>
+    <table>
+          <tr>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), consultaMid_path, :title => "Mídias Cadastradas" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_midia_path(@midia), :title => "Editar Mídia" %></td>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @midia, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Mídia" %></td>
+                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_midia_path, :title => "Cadastrar Mídia" %></td>
+            <%else%>
+                <td align="center"> </td>
+                <td align="center"> </td>
+                <td align="center"> </td>
+            <%end%>
+
+          </tr>
+      </table>
+
+</div>
+
+

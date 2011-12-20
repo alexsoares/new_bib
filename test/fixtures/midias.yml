@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  genero: 
+  localizacao: 
+  tomboL: MyString
+  tomboS: MyString
+  tipo: MyString
+  titulo: MyString
+  subtitulo: MyString
+  producao: MyString
+  local_producao: MyString
+  data_producao: 2011-12-20 11:50:17
+  obs: MyString
+
+two:
+  genero: 
+  localizacao: 
+  tomboL: MyString
+  tomboS: MyString
+  tipo: MyString
+  titulo: MyString
+  subtitulo: MyString
+  producao: MyString
+  local_producao: MyString
+  data_producao: 2011-12-20 11:50:17
+  obs: MyString

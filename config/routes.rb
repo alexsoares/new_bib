@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :midias
+
   map.resources :musicas
   map.resources :cantores
   map.resources :generos
@@ -50,6 +52,7 @@ ActionController::Routing::Routes.draw do |map|
   map.consultaCan '/consultaCan', :controller => 'cantores', :action => 'consultaCan'
   map.consultaMus '/consultaMus', :controller => 'musicas', :action => 'consultaMus'
   map.consultaAud '/consultaAud', :controller => 'audio_visuais', :action => 'consultaAud'
+  map.consultaMid '/consultaMid', :controller => 'midias', :action => 'consultaMid'
 
   map.showCan '/showCan', :controller => 'cantores', :action => 'showCan'
 

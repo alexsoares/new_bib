@@ -1,0 +1,44 @@
+<h1>Listing midias</h1>
+
+<table>
+  <tr>
+    <th>Genero</th>
+    <th>Localizacao</th>
+    <th>Tombol</th>
+    <th>Tombos</th>
+    <th>Tipo</th>
+    <th>Titulo</th>
+    <th>Subtitulo</th>
+    <th>Producao</th>
+    <th>Local producao</th>
+    <th>Data producao</th>
+    <th>Aquisicao</th>
+    <th>Data quisicao</th>
+    <th>Obs</th>
+  </tr>
+
+<% @midias.each do |midia| %>
+  <tr>
+    <td><%=h midia.genero %></td>
+    <td><%=h midia.localizacao %></td>
+    <td><%=h midia.tomboL %></td>
+    <td><%=h midia.tomboS %></td>
+    <td><%=h midia.tipo %></td>
+    <td><%=h midia.titulo %></td>
+    <td><%=h midia.subtitulo %></td>
+    <td><%=h midia.producao %></td>
+    <td><%=h midia.local_producao %></td>
+    <td><%=h midia.data_producao %></td>
+    <td><%=h midia.aquisicao %></td>
+    <td><%=h midia.data_quisicao %></td>
+    <td><%=h midia.obs %></td>
+    <td><%= link_to 'Show', midia %></td>
+    <td><%= link_to 'Edit', edit_midia_path(midia) %></td>
+    <td><%= link_to 'Destroy', midia, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New midia', new_midia_path %>
