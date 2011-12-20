@@ -8,7 +8,7 @@
       </td>
      <td align="lef">
           <b><%= f.label :tipo, 'Tipo:' %></b><br />
-          <%= f.select :tipo, AudioVisual::TIPO, :include_blank => '---Selecionar---'%>
+          <%= f.select :tipo, Midia::TIPO, :include_blank => '---Selecionar---'%>
      </td>
       <td align="left">
         <b><%= f.label :genero_id,"Genero: " %></b><br/>
@@ -63,7 +63,7 @@
       <td colspan="3"  align="left">
         <b><%= f.label :localizacao_id,"Localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline"%>
-        <div id="local"><%= render "campos_local"%></div>
+        <div id="local"><%= render "shared/campos/campos_local"%></div>
       </td>
 
     </tr>

@@ -1,4 +1,4 @@
 <div class="fields">
-  <%= select_tag("audio_visual[cantor_ids][]", options_for_select(@cantores.collect { |ff| [truncate(ff.nome, :length => 20, :omission => "..."), ff.id] }, @audio_visual.cantores.collect { |fs| fs.id }),
-        {:multiple=>true, :id => "audio_visual_cantor_ids", :size => 5}) %>
+  <%= select_tag("midia[cantor_ids][]", options_for_select(@cantores.collect { |ff| [truncate(ff.nome, :length => 20, :omission => "..."), ff.id] }, @midia.cantores.collect { |fs| fs.id }),
+        {:multiple=>true, :id => "midia_cantor_ids", :size => 5}) %>
 </div>

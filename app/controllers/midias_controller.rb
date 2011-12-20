@@ -88,7 +88,7 @@ class MidiasController < ApplicationController
       @localizacoes = Localizacao.all
       @midia = Midia.new
       render :update do |page|
-        page.replace_html 'local', :partial => "campos_local"
+        page.replace_html 'local', :partial => "shared/campos/campos_local"
         page.replace_html 'aviso', :text => "NOVA LOCALIZAÇÃO CADASTRADA, CONTINUE O CADASTRO"
       end
 
@@ -96,24 +96,13 @@ class MidiasController < ApplicationController
   end
 
 
- def musica1
-  $var = params[:midia_genero_id].to_i
-   if ($var== 17)
-    render :update do |page|
-        page.replace_html "musica", :partial=> "musica"
-    end
-   else
-     render :nothing => true
-   end
- end
-
    def create_cantor
     @cantor = Cantor.new(params[:cantor])
     if @cantor.save
       @cantores = Cantor.all
       @midia = Midia.new
       render :update do |page|
-        page.replace_html 'cantores', :partial => "campos_cantor"
+        page.replace_html 'cantores', :partial => "shared/campos/campos_cantor"
         page.replace_html 'aviso', :text => "CANTOR CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O AUTOR"
       end
 
@@ -125,7 +114,7 @@ class MidiasController < ApplicationController
       @musicas = Musica.all
       @midia = Midia.new
       render :update do |page|
-        page.replace_html 'musicas', :partial => "campos_musica"
+        page.replace_html 'musicas', :partial => "shared/campos/campos_musica"
         page.replace_html 'aviso', :text => "MÚSICA CADASTRADA, SELECIOINAR A MUSICA E CONTINUAR O CADASTRO"
       end
 
@@ -138,7 +127,12 @@ protected
     @cantores= Cantor.all(:order => 'nome ASC')
     @musicas= Musica.all(:order => 'nome ASC')
     @generos= Genero.all(:order => 'nome ASC')
-    @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id])
+    if current_user.unidade_id == 53
+      @localizacoes = Localizacao.all(:order => 'local_guardado ASC')
+    else
+      @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id], :order => 'local_guardado ASC')
+    end
+
 end
 
 end
