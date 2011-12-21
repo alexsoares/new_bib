@@ -203,6 +203,7 @@ end
       @livro = Livro.new
       render :update do |page|
         page.replace_html 'local', :partial => "shared/campos/campos_local"
+
         page.replace_html 'aviso', :text => "NOVA LOCALIZAÇÃO CADASTRADA, CONTINUE O CADASTRO"
       end
 

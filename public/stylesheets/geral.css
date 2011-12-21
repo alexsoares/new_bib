@@ -1,6 +1,12 @@
 .musica{
     display:none;
 }
+#lista_dicionarios{
+    height:120px;
+    width:750px;
+    border: solid 1px;
+    overflow: auto;
+}
 #lista_livros {
     height:120px;
     width:750px;

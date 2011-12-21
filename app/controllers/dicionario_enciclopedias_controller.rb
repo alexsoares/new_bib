@@ -69,6 +69,9 @@ end
 
   def create
     @dicionario_enciclopedia = DicionarioEnciclopedia.new(params[:dicionario_enciclopedia])
+    @dicionario_enciclopedia.identificacao_id = session[:identificacao_id]
+    session[:identificacao_id] = nil
+    @dicionario_enciclopedia.tombo_seduc = 1
     if @dicionario_enciclopedia.save
       flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @dicionario_enciclopedia
@@ -93,7 +96,6 @@ end
 def create_local
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)
-    y = @localizacao.data_aquisicao
     if @localizacao.save
       @localizacoes = Localizacao.all
       @dicionario_enciclopedia = DicionarioEnciclopedia.new

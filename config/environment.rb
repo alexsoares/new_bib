@@ -2,7 +2,6 @@
 
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
-
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
@@ -24,7 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "searchlogic", :version => "2.4.14"
   config.gem 'i18n', :version => '0.3.7'
   config.gem 'rdoc'
-    
+  #config.gem 'brazilian-rails', '2.1.15'
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -56,3 +55,4 @@ ActionMailer::Base.smtp_settings = {
 WillPaginate::ViewHelpers.pagination_options[:renderer] = 'RemoteLinkRenderer'
 WillPaginate::ViewHelpers.pagination_options[:previous_label]=I18n.t("pagination.prev")
 WillPaginate::ViewHelpers.pagination_options[:next_label]=I18n.t("pagination.next")
+require 'brstring'
