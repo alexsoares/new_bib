@@ -60,7 +60,7 @@ def consultaTit
         page.replace_html 'titulos', :partial => "titulos"
       end
       else if params[:type_of].to_i == 2
-        @contador = Identificacao.all(:conditions => ["livro like ?", "%" + params[:search].to_s + "%"]).count
+        @contador = Identificacao.all(:conditions => ["subtitulo like ?", "%" + params[:search].to_s + "%"]).count
         @identificacaos = Identificacao.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ?", "%" + params[:search].to_s + "%"],:order => 'livro ASC'
         render :update do |page|
           page.replace_html 'titulos', :partial => "titulos"
