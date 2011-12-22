@@ -14,7 +14,7 @@
       </td>
       <td align="lef">
           <b><%= f.label :faixa_etaria, 'Faixa Etária:' %></b><br />
-          <%= f.select :faixa_etaria, Jogo::FAIXA_ETARIA, :include_blank => '---Selecione---'%>
+          <%= f.select :faixa_etaria, Jogo::FAIXA_ETARIA, :include_blank => '--Selecionar--'%>
       </td>
     <tr>
     </tr>
@@ -29,7 +29,7 @@
     <tr>
     </tr>
       <td align="lef">
-        <b><%= f.label :localizacao_id,"Selecione a localização: " %></b>
+        <b><%= f.label :localizacao_id,"Selecionar a localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline" %>
         <div id="local"><%= render "shared/campos/campos_local"%></div>
 

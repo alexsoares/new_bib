@@ -1,4 +1,8 @@
 class CantoresController < ApplicationController
+
+  before_filter :login_required
+  before_filter :load_resources
+
   # GET /cantores
   # GET /cantores.xml
   def index
@@ -98,14 +102,33 @@ def consultaCan
       render :update do |page|
         page.replace_html 'cantores', :partial => "cantores"
       end
+      else if params[:type_of].to_i == 2
+       render :update do |page|
+         page.replace_html 'consulta_cantores', :partial => "consulta_cantor"
+      end
+     end
     end
   end
 end
 
 def showCan
   @contador = AudioVisual.all.count
-  @audio_visuais = AudioVisual.all(:joins => "inner join audio_visuais_cantores on audio_visuais.cantor_id", :conditions => ['cantor_id =?', params[:id]])
   @buscas = Ponto.all(:joins => "inner join estagiarios on pontos.estagiario_id=estagiarios.id",:conditions => ["estagiarios.desligado = 0 and estagiarios.flag = 0 and pontos.created_at between ? and ?", inicio_mes,termino_mes],:group => 'estagiario_id', :select => 'estagiarios.id, sum(pontos.total_trabalhado) as "total_trabalhado", estagiarios.nome' )
 
 end
+
+def consulta_cantor
+       session[:cantor] = params[:cantor_id]
+       @cantores = Cantor.find(session[:cantor])
+       render :update do |page|
+         page.replace_html 'dadoscantores', :partial => "cantores"
+      end
+  end
+
+protected
+
+  def load_resources
+        @cantores= Cantor.all(:order => 'nome ASC')
+  end
+
 end

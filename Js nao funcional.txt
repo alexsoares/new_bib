@@ -25,7 +25,7 @@ $("#livro_data_edicao_1i").multiselect({
 
 $("#livro_assunto_ids").multiselect({
    selectedText: "# of # selected",
-   noneSelectedText: 'Selecione os assuntos',
+   noneSelectedText: 'Selecionar os assuntos',
    header: false,
 
 });

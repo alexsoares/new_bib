@@ -48,7 +48,15 @@ $("#localizacao_data_aquisicao").datepicker({dateFormat: 'dd-mm-yy', changeYear:
      $(".txt_busca").show();
      $(".label_busca").show();
      $(".txt_busca").val("Digite parte da busca").css("color","gray");
+
    });
+
+   $(".filtro1").click(function ()
+   {
+     $(".consulta_cantor").show();
+     
+   });
+
    $(".sem_filtro").click(function ()
     {
       $(".txt_busca").val("");

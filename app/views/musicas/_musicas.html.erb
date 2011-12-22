@@ -1,10 +1,4 @@
-<table>
-    <tr>
-      <td align="right"><b>TOTAL DE MUSICAS: </b>
-         <font color ="red "size="2"><b><%= @contador %></b></font>
-      </td>
-   </tr>
-  </table>
+
   <div class="tabs">
     <table bgcolor="#DCDCDC" width="100%">
        <tr bgcolor="#DCDCDC" >
@@ -14,22 +8,31 @@
            <th colspan="3">Administração</th>
         </tr>
          <tr bgcolor="#F5F5F5">
-            <td align="left"><%= @musicas.nome %></td>
-            <td align="left"></td>
-            <td align="left"></td>
-            <td align="left"></td>
+           <%$t=0%>
            <% @musicas.midias.each do |midia| %>
-           <tr bgcolor="#F5F5F5">
-              <td align="left"></td>
+              <%$t = $t+1%>
+              <tr bgcolor="#F5F5F5">
+              <td align="left"><%= @musicas.nome %></td>
               <td><%= midia.tipo %></td>
               <td><%= midia.titulo %></td>
+              <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), midia, :title => "Exibir Mídia" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_midia_path(midia), :title => "Editar Midia" %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), midia, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Mídia" %></td>
+            <%else%>
+                <td align="center"> --- </td>
+                <td align="center"> --- </td>
+            <%end%>
            <%end%>
-
-
           </tr>
-  
-     </table>
+    </table>
   </div>
+<table>
+    <tr>
+      <td align="right"><b>TOTAL: </b>
+         <font color ="red "size="2"><b><%=$t %></b></font>
+      </td>
+   </tr>
 
 
 

@@ -22,11 +22,11 @@
     <tr>
       <td align="lef">
          <b><%= f.label :tipo, 'Tipo:' %></b><br />
-         <%= f.select :tipo, Mapa::TIPO_MAPA, :include_blank => '---Selecione---'%>
+         <%= f.select :tipo, Mapa::TIPO_MAPA, :include_blank => '--Selecionar--'%>
       </td>
       <td align="lef">
          <b><%= f.label :formato,'Formato:' %></b><br />
-        <%= f.select :formato, Mapa::FORMATO_MAPA, :include_blank => '---Selecione---'%>
+        <%= f.select :formato, Mapa::FORMATO_MAPA, :include_blank => '--Selecionar--'%>
       </td>
       <td align="lef">
          <b><%= f.label :ano, 'Ano:' %></b><br />
@@ -37,7 +37,7 @@
     <tr>
       <td align="lef">
         <b><%= f.label :editora_id, 'Editora:' %></b><br />
-        <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "Selecione" %>
+        <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "--Selecionar--" %>
       </td>
       <td align="lef">
         <b><%= f.label :local_edicao,'Local Edição:' %></b><br />
@@ -51,7 +51,7 @@
     </tr>
     <tr>
       <td align="lef" colspan="3">
-        <b><%= f.label :localizacao_id,"Selecione a localização: " %></b>
+        <b><%= f.label :localizacao_id,"Selecionar a localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline"%>
         <div id="local"><%= render "shared/campos/campos_local"%></div>
 

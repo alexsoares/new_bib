@@ -46,7 +46,7 @@
     <tr>
        <td colspan="3">
         <b><%= f.label :area_id,"Area: " %></b><br/>
-        <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "Selecione" %>
+        <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "--Selecionar--" %>
       </td>
     </tr>
     <tr>

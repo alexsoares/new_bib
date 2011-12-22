@@ -26,11 +26,11 @@
     <tr>
       <td align="lef">
          <b><%= f.label :tipo, 'Tipo:' %></b><br />
-         <%= f.select :tipo, Periodico::TIPO_PERIODICO, :include_blank => '---Selecione---'%>
+         <%= f.select :tipo, Periodico::TIPO_PERIODICO, :include_blank => '--Selecionar--'%>
       </td>
       <td align="lef">
          <b> <%= f.label :periodicidade, 'Periodicidade:' %></b><br />
-         <%= f.select :periodicidade, Periodico::PERIODICIDADE, :include_blank => '---Selecione---'%>
+         <%= f.select :periodicidade, Periodico::PERIODICIDADE, :include_blank => '--Selecionar--'%>
       </td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@
 
     <tr>
       <td align="lef">
-        <b><%= f.label :localizacao_id,"Selecione a localização: " %></b>
+        <b><%= f.label :localizacao_id,"Selecionar a localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local" %>
         <div id="local"><%= render "shared/campos/campos_local"%></div>
 

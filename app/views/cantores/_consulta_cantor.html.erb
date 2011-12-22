@@ -1,0 +1,11 @@
+  <table width="100%" align="center" >
+   <tr>
+     <td colspan="2"align="right"><font size="4"> <b class="label_busca">Selecionar Cantor:</b></font>
+       <%= collection_select :cantor,:id,@cantores,:id,:nome, :include_blank => "--Selecionar--" %>
+               <%= observe_field 'cantor_id',
+                   :update => "cantores",
+                   :url    => { :action => 'consulta_cantor'},
+                   :with   => 'cantor_id' %>
+     </td>
+   </tr>
+  </table>

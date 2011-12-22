@@ -88,10 +88,10 @@ class MusicasController < ApplicationController
   end
 
 def consulta_musica
-     session[:musica] = params[:musica_id]
-       $T = Musica.find(session[:musica])
+       session[:musica] = params[:musica_id]
+       @musicas = Musica.find(session[:musica])
        render :update do |page|
-         page.replace_html 'musicas', :partial => "musicas"
+         page.replace_html 'dadosmusicas', :partial => "musicas"
       end
   end
 

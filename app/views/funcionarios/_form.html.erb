@@ -14,7 +14,7 @@
   </p>
   <p>
     <%= f.label :unidade_id,"Unidades: " %><br/>
-    <%= f.collection_select :unidade_id ,@unidades,:id,:nome, :include_blank => "Selecione" %>
+    <%= f.collection_select :unidade_id ,@unidades,:id,:nome, :include_blank => "Selecionar" %>
   </p>
   <p><%= f.submit %></p>
 <% end %>

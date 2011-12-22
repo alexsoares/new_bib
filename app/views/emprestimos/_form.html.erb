@@ -2,7 +2,7 @@
   <%= f.error_messages %>
   <p>
     <%= f.label :tipo_emprestimo %><br />
-    <%= f.select :tipo_emprestimo, Emprestimo::Tipo, :include_blank => "Selecione" %>
+    <%= f.select :tipo_emprestimo, Emprestimo::Tipo, :include_blank => "--Selecionar--" %>
     <%= observe_field 'emprestimo_tipo_emprestimo',
       :update => "tipo",
       :url    => { :action => 'tipo_para' },
@@ -13,7 +13,7 @@
       <div id="tipo"></div>
   </p>
   <p>
-    <p><a class='inline' href="#inline_content">Selecione o aluno</a></p>
+    <p><a class='inline' href="#inline_content">Selecionar o aluno</a></p>
   </p>
   <p><%= f.submit "Salvar" %></p>
 <% end %>
@@ -46,7 +46,7 @@
                     :url => {:controller => :emprestimos,
                     :action => :classe } do |form| %>
                   <tr>
-                      <%= collection_select :classe, :id_classe, @classes, :id_classe, :classe_descricao, :include_blank => ' -- Selecione -- '  %>
+                      <%= collection_select :classe, :id_classe, @classes, :id_classe, :classe_descricao, :include_blank => ' -- Selecionar -- '  %>
                       <%= select :classe, :ano_letivo, Aluno::D %>
                   </tr>
                   <%= submit_tag "Filtrar", :name => nil %>
