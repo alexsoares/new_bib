@@ -1,0 +1,27 @@
+<% title "MÚSICAS", :id =>"musicas" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>CONSULTA MÚSICA</strong></font><br/>
+  </div>
+  <div class="tabs">
+       <table width="100%" align="center" bgcolor="#DCDCDC" >
+         <tr>
+           <td>
+              <div id="musica"><%= render "shared/consulta_musica"%></div>
+           </td>
+         </tr>
+        </table>
+    <br/>
+    <hr>
+       <div id="musicas"></div>
+    <br/>
+    <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaMus_path, :title => "Nova Consulta" %></td>
+    </tr>
+  </table>
+ </div>
+ </div>
+
+

@@ -1,4 +1,8 @@
 class MusicasController < ApplicationController
+
+  before_filter :login_required
+  before_filter :load_resources
+
   # GET /musicas
   # GET /musicas.xml
   def index
@@ -81,5 +85,19 @@ class MusicasController < ApplicationController
       format.html { redirect_to(musicas_url) }
       format.xml  { head :ok }
     end
+  end
+
+def consulta_musica
+     session[:musica] = params[:musica_id]
+       $T = Musica.find(session[:musica])
+       render :update do |page|
+         page.replace_html 'musicas', :partial => "musicas"
+      end
+  end
+
+protected
+
+  def load_resources
+        @musicas= Musica.all(:order => 'nome ASC')
   end
 end

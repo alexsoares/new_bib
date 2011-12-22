@@ -121,6 +121,56 @@ class MidiasController < ApplicationController
     end
   end
 
+
+ def consultaMid
+   unless params[:search].present?
+     if params[:type_of].to_i == 6
+       @contador = Midia.all.count
+       @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:order => 'titulo ASC'
+       render :update do |page|
+         page.replace_html 'midias', :partial => "midias"
+       end
+     end
+   else
+      if params[:type_of].to_i == 1
+          @contador = Midia.all(:conditions =>  ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","CD"]).count
+          @midias = Midia.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","CD"], :order => 'titulo ASC'
+          render :update do |page|
+            page.replace_html 'midias', :partial => "midias"
+          end
+          else if params[:type_of].to_i == 2
+          @contador = Midia.all(:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","DVD"]).count
+          @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","DVD"], :order => 'titulo ASC'
+            render :update do |page|
+              page.replace_html 'midias', :partial => "midias"
+            end
+            else if params[:type_of].to_i == 3
+              @contador = Midia.all(:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","VHS"]).count
+              @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","VHS"], :order => 'titulo ASC'
+              render :update do |page|
+                page.replace_html 'midias', :partial => "midias"
+              end
+              else if params[:type_of].to_i == 4
+               @contador = Midia.all(:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"]).count
+               @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"], :order => 'titulo ASC'
+                render :update do |page|
+                  page.replace_html 'midias', :partial => "midias"
+                end
+                else if params[:type_of].to_i == 5
+                  @contador = Midia.all(:conditions => ["titulo like ? and genero_id =?", "%","17"]).count
+                  @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and genero_id =?", "%" ,"17"], :order => 'titulo ASC'
+                  render :update do |page|
+                    page.replace_html 'midias', :partial => "midias"
+                  end
+                end
+              end
+            end
+          end
+      end
+   end
+end
+
+
 protected
 
   def load_resources
