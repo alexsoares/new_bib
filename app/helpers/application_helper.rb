@@ -18,4 +18,12 @@ module ApplicationHelper
     field.tag(:input, options) + javascript_tag(js)
   end
 
+  def define_model(model)
+    model
+  end
+
+  def encontra_model(path)
+    a,b,c = path.split("/")
+    b
+  end
 end

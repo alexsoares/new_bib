@@ -5,13 +5,14 @@ class DicionarioEnciclopedia < ActiveRecord::Base
   belongs_to :editora
   belongs_to :localizacao
   belongs_to :identificacao
-  after_save :auto_inc_tombo_seduc
+  after_create :auto_inc_tombo_seduc
   
   TIPO_DIC_ENC = %w(DICIONÁRIO ENCICLOPÉDIA OUTROS)
 
 
   def auto_inc_tombo_seduc
     self.tombo_seduc = self.id
+    self.save
   end
 
 end
