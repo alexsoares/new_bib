@@ -1,4 +1,8 @@
 class AssuntosController < ApplicationController
+  before_filter :login_required
+  before_filter :load_resources
+
+
   def index
     @assuntos = Assunto.all
   end
@@ -41,5 +45,19 @@ class AssuntosController < ApplicationController
     @assunto.destroy
     flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to assuntos_url
+  end
+
+def consulta_assunto
+       session[:assunto] = params[:assunto_id]
+       @assuntos = Assunto.find(session[:assunto])
+       render :update do |page|
+         page.replace_html 'dadosassuntos', :partial => "assuntos"
+      end
+  end
+
+protected
+
+  def load_resources
+        @assuntos= Assunto.all(:order => 'descricao ASC')
   end
 end

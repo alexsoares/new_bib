@@ -1,0 +1,11 @@
+  <table width="100%" align="center" >
+   <tr>
+     <td colspan="2"align="right"><font size="4"> <b class="label_busca">Selecionar Assunto:</b></font>
+       <%= collection_select :assunto,:id,@assuntos,:id,:descricao, :include_blank => "--Selecionar--" %>
+               <%= observe_field 'assunto_id',
+                   :update => "assuntos",
+                   :url    => { :action => 'consulta_assunto'},
+                   :with   => 'assunto_id' %>
+     </td>
+   </tr>
+  </table>

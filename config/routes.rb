@@ -51,8 +51,9 @@ ActionController::Routing::Routes.draw do |map|
   map.consultaMus '/consultaMus', :controller => 'musicas', :action => 'consultaMus'
   map.consultaAud '/consultaAud', :controller => 'audio_visuais', :action => 'consultaAud'
   map.consultaMid '/consultaMid', :controller => 'midias', :action => 'consultaMid'
+  map.consultaAsu '/consultaAsu', :controller => 'assuntos', :action => 'consultaAsu'
 
-  map.showCan '/showCan', :controller => 'cantores', :action => 'showCan'
+  
 
   map.resource :session
   map.resources :editoras
