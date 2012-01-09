@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.resources :consultas ,:only => [:index], :collection => {:criar_consulta => :get}
   map.resources :midias
 
   map.resources :musicas

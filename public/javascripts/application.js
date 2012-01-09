@@ -1,5 +1,21 @@
 jQuery(document).ready(function( $ ){
 
+//Codigo para gerar 2 multi-selects para assuntos
+$('#add').click(function() {
+  return !$('#todos option:selected').remove().appendTo('#livro_assunto_ids');
+ });
+ $('#remove').click(function() {
+  return !$('#livro_assunto_ids option:selected').remove().appendTo('#todos');
+ });
+//Fim do codigo
+$("#search").focusout(function(){
+  var char = $(this).val().length;
+  if (char <= 3) {
+    $("span#error_message").show().html("Favor digitar mais de 3 letras").fadeOut(3000).css('color','red').css('font','10px');
+  };
+});
+
+
 //Cadastro Musica
     $('select#midia_genero_id').change(function(){
       if ($(this).val() == 17){
@@ -101,7 +117,7 @@ $(".grid").flexigrid({
     url: 'livros.json'
 });
 
-$( "input:submit" ).button();
+$( "input:submit, .botao" ).button();
 $( "#datepicker" ).datepicker();
 $( ".tabs" ).tabs();
 

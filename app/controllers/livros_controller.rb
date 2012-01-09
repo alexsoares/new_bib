@@ -24,6 +24,8 @@ class LivrosController < ApplicationController
     respond_to do |format|
       format.js
       format.json  { render :json => @livro_hash.to_json }
+      
+
     end
   end
 
@@ -42,11 +44,12 @@ class LivrosController < ApplicationController
     #  @livro_hash <<  id.livro
     #end
 
-    #respond_to do |format|
-    #  format.html
+    respond_to do |format|
+      format.html
+      format.json { render :json => Identificacao.paginate(:page => params[:page], :per_page => 10) }
     #  format.js
     #  format.json  { render :json => @livro_hash }
-    #end
+    end
 
   end
 

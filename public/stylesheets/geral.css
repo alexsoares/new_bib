@@ -1,6 +1,11 @@
 .musica{
     display:none;
 }
+#sql {
+       border: solid 1px;
+       height:40px;
+       width:350px;
+}
 #lista_dicionarios{
     height:120px;
     width:750px;
