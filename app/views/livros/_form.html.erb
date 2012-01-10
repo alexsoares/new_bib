@@ -10,6 +10,7 @@
     <tr>
       <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_titulo", :class =>"inline" %>
         <font  size="1"><%unless @livro.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
         <%if @livro.identificacao_id.present?%>
           <%= @livro.identificacao.livro%>
@@ -107,6 +108,7 @@
 
     <%= render "shared/forms/form_editora" %>
     <%= render "shared/forms/form_autor" %>
+    <%= render "shared/forms/form_titulo" %>
     <%= render "shared/forms/form_assunto" %>
     <%= render "shared/forms/form_local" %>
     <%= render "form_busca" %>

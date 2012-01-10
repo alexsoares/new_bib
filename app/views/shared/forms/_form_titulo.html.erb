@@ -1,0 +1,30 @@
+<div style='display:none'>
+  <div id='inline_titulo' style='padding:10px; background:#EEE9E9;'>
+    <h2>Titulos</h2>
+      <% form_remote_for(:titulo,:url => { :action => 'create_titulo' }, :success => "$.fn.colorbox.close();$('select').multiselect('refresh')") do |f|%>
+        <%= error_messages_for 'contact' %>
+        <table  width="100%" bgcolor="#F5F5F5">
+          <tr>
+            <td><b><%= f.label :codigo, 'Código:' %></b><br/>
+            <%= f.text_field :codigo %></td>
+         </tr>
+         <tr>
+            <td><b><%= f.label :livro, "Título" %>:</b><br/>
+            <%= f.text_field :livro %></td>
+         </tr>
+         <tr>
+            <td><b><%= f.label :subtitulo,'Subtítulo:' %></b><br/>
+            <%= f.text_field :subtitulo %></td>
+         </tr>
+         <tr>
+            <td><b><%= f.label :obs, 'Observação:' %></b><br/>
+                   <%= f.text_area(:obs, :cols =>28, :rows => "2") %></td>
+         </tr>
+         <tr>
+            <td colspan="2"><%= f.submit "Salvar" %></td>
+          </tr>
+        </table>
+      <%end%>
+      <hr>
+  </div>
+</div>
