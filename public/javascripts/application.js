@@ -8,6 +8,18 @@ $('#add').click(function() {
   return !$('#livro_assunto_ids option:selected').remove().appendTo('#todos');
  });
 //Fim do codigo
+
+//Codigo para gerar 2 multi-selects para autores
+$('#add_autores').click(function() {
+  return !$('#todos_autores option:selected').remove().appendTo('#livro_autor_ids');
+ });
+ $('#remove_autores').click(function() {
+  return !$('#livro_autor_ids option:selected').remove().appendTo('#todos_autores');
+ });
+//Fim do codigo
+
+
+
 $("#search").focusout(function(){
   var char = $(this).val().length;
   if (char <= 3) {
@@ -79,7 +91,15 @@ $("#localizacao_data_aquisicao").datepicker({dateFormat: 'dd-mm-yy', changeYear:
       $(".txt_busca").hide();
       $(".label_busca").hide();
       $(".consulta").show();
+      $("#unidade_corrente").hide();
     });
+   $(".sem_filtro#unidade").click(function ()
+    {
+      $("#unidade_corrente").show();
+      $(".consulta").show();
+    });
+
+
     $(".txt_busca").focus(function(){
        $(".txt_busca,#search").val("");
     });

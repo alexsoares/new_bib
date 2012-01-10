@@ -1,10 +1,16 @@
+
 <div class="fields">
   <tr>
     <td><%= select_tag("todos", options_for_select(@assuntos.collect { |ff| [ff.descricao, ff.id] }, @livro.assuntos.collect { |fs| fs.id }), {:multiple=>true, :id => "todos", :size => 5, :class => "lista_assuntos"}) %></td>
-    <td><select multiple="multiple" name="livro[assunto_ids][]" id="livro_assunto_ids" class="lista_assuntos"></select></td>
+    <%if @assuntos_selecionados.present?%>
+      <td><%= select_tag("livro[assunto_ids][]", options_for_select(@assuntos_selecionados.collect { |ff| [truncate(ff.descricao, :length => 20, :omission => "..."), ff.id] }, @livro.assuntos.collect { |fs| fs.id }), {:multiple=>true, :id => "livro_assunto_ids", :size => 5, :class => "lista_assuntos"}) %></td>
+    <%else%>
+      <td><select multiple="multiple" name="livro[assunto_ids][]" id="livro_assunto_ids" class="lista_assuntos"></select></td>
+    <%end%>
   </tr>
   <tr>
     <td><a class="botao" href="#" id="add">&gt;&gt;</a></td>
     <td><a class="botao" href="#" id="remove">&lt;&lt;</a></td>
   </tr>
 </div>
+

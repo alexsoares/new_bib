@@ -1,4 +1,15 @@
+
 <div class="fields">
-        <%= select_tag("livro[autor_ids][]", options_for_select(@autores.collect { |ff| [truncate(ff.nome, :length => 20, :omission => "..."), ff.id] }, @livro.autores.collect { |fs| fs.id }),
-                   {:multiple=>true, :id => "livro_autor_ids", :size => 5}) %>
+  <tr>
+    <td><%= select_tag("todos_autores", options_for_select(@autores.collect { |ff| [truncate(ff.nome, :length => 20, :omission => "..."), ff.id] }, @livro.autores.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_autores", :size => 5, :class => "lista_autores"}) %></td>
+    <%if @autores_selecionados.present?%>
+      <td><%= select_tag("livro[autor_ids][]", options_for_select(@autores_selecionados.collect { |ff| [truncate(ff.nome, :length => 20, :omission => "..."), ff.id] }, @livro.autores.collect { |fs| fs.id }), {:multiple=>true, :id => "livro_autor_ids", :size => 5, :class => "lista_autores"}) %></td>
+    <%else%>
+      <td><select multiple="multiple" name="livro[autor_ids][]" id="livro_autor_ids" class="lista_autores"></select></td>
+    <%end%>
+  </tr>
+  <tr>
+    <td><a class="botao" href="#" id="add_autores">&gt;&gt;</a></td>
+    <td><a class="botao" href="#" id="remove_autores">&lt;&lt;</a></td>
+  </tr>
 </div>

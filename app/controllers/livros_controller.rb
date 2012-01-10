@@ -76,6 +76,10 @@ class LivrosController < ApplicationController
 
   def edit
     @livro = Livro.find(params[:id])
+    @autores_selecionados = @livro.autores
+    @autores =  @autores - @autores_selecionados
+    @assuntos_selecionados = @livro.assuntos
+    @assuntos = @assuntos - @assuntos_selecionados
   end
 
   def update
@@ -231,9 +235,9 @@ end
     @areas = Area.all(:order => 'nome ASC')
     @editoras = Editora.all(:order => 'nome ASC')
     if current_user.unidade_id == 53
-      @localizacoes = Localizacao.all(:order => 'local_guardado ASC')
+      @localizacoes = Localizacao.all(:include => :unidade,:order => 'local_guardado ASC')
     else
-      @localizacoes = Localizacao.all(:conditions => ['unidade_id = ?', current_user.unidade_id], :order => 'local_guardado ASC')
+      @localizacoes = Localizacao.all(:include => :unidade, :conditions => ['unidade_id = ?', current_user.unidade_id], :order => 'local_guardado ASC')
     end
     
 

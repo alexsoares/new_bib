@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :musicas
   map.resources :cantores
   map.resources :generos
-  map.resources :roles_users
+  map.resources :roles_users, :collection => {:lista_users => :get}
   map.resources :configuracaos
   map.resources :importar
   map.resources :emprestimos

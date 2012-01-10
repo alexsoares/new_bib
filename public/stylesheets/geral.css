@@ -1,3 +1,15 @@
+#unidade_corrente {
+       position:absolute;
+       width:340px;
+       top:50px;
+       left:15px;
+       text-align:center;
+       border: solid 1px;
+       height:20px;
+       width:100px;
+       background-color:white;
+
+}
 .musica{
     display:none;
 }
@@ -133,6 +145,7 @@
     height:410px;
     border-style:double;
     border-color:#CDC9C9;
+    overflow: auto;
 }
 
 #linhaCentral {

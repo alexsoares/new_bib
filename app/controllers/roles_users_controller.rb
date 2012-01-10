@@ -6,6 +6,21 @@ class RolesUsersController < ApplicationController
   # GET /role_users
   # GET /role_users.xml
 
+  def lista_users
+    if params[:type_of].to_i == 6
+      @role_users = RolesUser.paginate :page => params[:page], :per_page => 10, :joins => :user, :order => 'login ASC'
+    else
+      if params[:type_of].to_i == 1
+        @role_users = RolesUser.paginate :page => params[:page], :per_page => 10, :joins => :user, :conditions => ["users.unidade_id = ?", current_user.unidade_id],:order => 'login ASC'
+      end
+    end
+
+    render :update do |page|
+      page.replace_html 'users', :partial => "users"
+    end
+
+  end
+
   def load_user
     @users = User.find_by_sql("SELECT login,id FROM users where id in (select user_id from roles_users where role_id = 4)")
   end

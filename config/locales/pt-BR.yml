@@ -1,7 +1,7 @@
 "pt-BR":
     pagination:
-      next: "Próximo"
-      prev: "Anterior"
+      next: ">"
+      prev: "<"
     date:
       formats:
         default: "%d/%m/%Y"
