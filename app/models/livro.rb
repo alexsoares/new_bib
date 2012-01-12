@@ -4,7 +4,7 @@ class Livro < ActiveRecord::Base
   has_and_belongs_to_many :assuntos
   has_and_belongs_to_many :autores
   attr_accessor :qtde_livros, :tombos, :usuario
-  has_many :tombos
+  #has_many :tombos
   
   belongs_to :identificacao
   belongs_to :area
@@ -27,7 +27,8 @@ class Livro < ActiveRecord::Base
     multi = Tombo.new
     multi.livro_id = self.id
     multi.user_id = self.usuario
-    multi.index_tombo = "#{self.id} - #{self.usuario.id}"
+    multi.index_tombo = "#{self.id} - #{self.usuario}"
+    multi.qtde_livro = self.qtde_livros
     multi.save
   end
 

@@ -79,14 +79,22 @@ class LivrosController < ApplicationController
 
   def create
     qtd = params[:livro][:qtde_livros].to_i
+    if qtd == 0
+      qtd = 1
+    end
     tombos = params[:livro][:tombos].split(";")
-    if tombos.count == qtd
       i = 0
       @livros_cad = []
       qtd.times do
         @livro = Livro.new(params[:livro])
         @livro.identificacao_id = session[:identificacao_id]
-        @livro.usuario = current_user
+        @livro.usuario = current_user.id
+        if params[:livro][:qtde_livros].to_i == 0
+          @livro.qtde_livros = 1
+        else
+          @livro.qtde_livros = params[:livro][:qtde_livros].to_i
+        end
+
         @livro.tombo_l = tombos[i]
         #@livros_cad << @livro.tombo_l
         @livro.save
@@ -95,15 +103,13 @@ class LivrosController < ApplicationController
       session[:identificacao_id] = nil
         redirect_to livros_cadastrados_livros_path
       #render :action => 'livros_cadastrados', :collection => @livros_cad
-    else
-      @livro.errors.add :qtde_livros, "A quantidade de tombos inserida, não corresponde a qtde de livros. Arrume ambos para prosseguir!"
-      render :action => 'new'
-    end
   end
 
 
   def livros_cadastrados
-    @livros_cad = Tombo.all(:conditions => ["user_id = ? and (created_at between ? and ?)",current_user,Time.now - 1.minutes, Time.now])
+    limit = Tombo.last(:conditions => ["user_id = ?", current_user])
+    @livros_cad = Tombo.all(:conditions => ["user_id = ?", current_user], :limit => limit.qtde_livro)
+    t = 0
   end
 
   def edit

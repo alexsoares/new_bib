@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120111153630) do
+ActiveRecord::Schema.define(:version => 20120112152935) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -305,6 +305,7 @@ ActiveRecord::Schema.define(:version => 20120111153630) do
     t.string   "index_tombo"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "qtde_livro"
   end
 
   create_table "unidades", :force => true do |t|
