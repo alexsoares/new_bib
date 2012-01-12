@@ -78,16 +78,33 @@ class LivrosController < ApplicationController
   end
 
   def create
-    @livro = Livro.new(params[:livro])
-    @livro.identificacao_id = session[:identificacao_id]
-    session[:identificacao_id] = nil
-
-    if @livro.save
-      flash[:notice] = "CADASTRADO COM SUCESSO."
-      redirect_to @livro
+    qtd = params[:livro][:qtde_livros].to_i
+    tombos = params[:livro][:tombos].split(";")
+    if tombos.count == qtd
+      i = 0
+      @livros_cad = []
+      qtd.times do
+        @livro = Livro.new(params[:livro])
+        @livro.identificacao_id = session[:identificacao_id]
+        @livro.usuario = current_user
+        @livro.tombo_l = tombos[i]
+        #@livros_cad << @livro.tombo_l
+        @livro.save
+        i += 1
+      end
+      session[:identificacao_id] = nil
+        redirect_to livros_cadastrados_livros_path
+      #render :action => 'livros_cadastrados', :collection => @livros_cad
     else
+      @livro = Livro.new(params[:livro])
+      @livro.errors.add :qtde_livros, "A quantidade de tombos inserida, não corresponde a qtde de livros. Arrume ambos para prosseguir!"
       render :action => 'new'
     end
+  end
+
+
+  def livros_cadastrados
+    @livros_cad = Tombo.all(:conditions => ["user_id = ? and (created_at between ? and ?)",current_user,Time.now - 1.minutes, Time.now])
   end
 
   def edit

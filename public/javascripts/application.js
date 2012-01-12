@@ -1,5 +1,32 @@
 jQuery(document).ready(function( $ ){
 
+//Codigo para validar quantidade indicada com numero de tombos
+$("#livro_tombos").on("focusout",function(){
+var elemento = $("#livro_tombos").val().split(";");
+if ($("#livro_qtde_livros").val() != elemento.length){
+alert("A quantidade de tombos digitados é diferente da quantidade informada, \nfavor verificar antes de continuar. Numero de tombos atual: " + elemento.length + " e a quantidade informado foi: " + $("#livro_qtde_livros").val());
+$("#livro_tombos").focus();
+}
+});
+
+
+//Codigo para Multi-tombos - cadastro de livros
+
+$("#type_0").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#livro_qtde_livros").val("").attr("disabled", false).css("background-color", "#ffffff");
+    $("#exibe_aviso").show().fadeOut(3000).fadeIn(3000).fadeOut(3000).css("background-color", "red");
+});
+$("#type_1").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#livro_qtde_livros").val("1").attr("disabled", true).css("background-color", "#cccccc");
+});
+
+
+
+
 //Codigo para gerar 2 multi-selects para assuntos
 $('#add').click(function() {
   return !$('#todos option:selected').remove().appendTo('#livro_assunto_ids');
@@ -81,8 +108,7 @@ $("#localizacao_data_aquisicao").datepicker({dateFormat: 'dd-mm-yy', changeYear:
 
    $(".filtro1").click(function ()
    {
-     $(".consulta_cantor").show();
-     
+     $(".consulta_cantor").show();   
    });
 
    $(".sem_filtro").click(function ()

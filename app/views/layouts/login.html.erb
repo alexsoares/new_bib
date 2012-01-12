@@ -4,6 +4,7 @@
   <head>
     <title><%= "Sistema de Biblioteca - BIBLO. Você está em: #{h(yield(:title) || 'Sem titulo')}" %></title>
     <%= stylesheet_link_tag 'application','layout.css' %>
+    <%= javascript_include_tag 'jquery-1.7','jrails','verify'  %>
 
     <%= yield(:head) %>
   </head>

@@ -1,0 +1,12 @@
+<% title "Log" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @log.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_log_path(@log) %> |
+  <%= link_to "Destroy", @log, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", logs_path %>
+</p>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111220135052) do
+ActiveRecord::Schema.define(:version => 20120111153630) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20111220135052) do
   end
 
   create_table "audio_visuais", :force => true do |t|
-    t.integer  "genero_id"
+    t.integer  "genero_midia_id"
     t.integer  "localizacao_id"
     t.string   "tombo_seduc"
     t.string   "tombo_l"
@@ -136,7 +136,7 @@ ActiveRecord::Schema.define(:version => 20111220135052) do
   end
 
   create_table "identificacaos", :force => true do |t|
-    t.integer  "codigo"
+    t.string   "codigo"
     t.string   "livro"
     t.string   "subtitulo"
     t.text     "obs"
@@ -203,6 +203,14 @@ ActiveRecord::Schema.define(:version => 20111220135052) do
     t.datetime "updated_at"
   end
 
+  create_table "logs", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "acao"
+    t.string   "area"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "mapas", :force => true do |t|
     t.integer  "editora_id"
     t.integer  "localizacao_id"
@@ -244,6 +252,7 @@ ActiveRecord::Schema.define(:version => 20111220135052) do
 
   create_table "musicas", :force => true do |t|
     t.string   "nome"
+    t.string   "interprete"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -286,6 +295,14 @@ ActiveRecord::Schema.define(:version => 20111220135052) do
 
   create_table "tipos", :force => true do |t|
     t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tombos", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "livro_id"
+    t.string   "index_tombo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

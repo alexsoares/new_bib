@@ -1,0 +1,9 @@
+<% form_for @log do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_id,"Usuario" %><br />
+    <%= current_user.login %>
+    <%= f.hidden_field(:user_id, :value => current_user) %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

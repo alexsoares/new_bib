@@ -3,10 +3,24 @@
   <table  align="center" bgcolor="#F5F5F5">
     <tr>
       <td colspan="3" >
-        <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />
-        <%= f.text_field :tombo_l, :size => "10" %>
+        <b>Tombo Local:</b><br />
+        <%= radio_button_tag(:type,"0") %>Multi-Tombos
+        <%= radio_button_tag(:type,"1") %>Unico
       </td>
     </tr>
+      <tr>   
+          <td>
+            <div id="tipo_tombo" style="display:none">
+              <p><%= f.label :qtde_livros, "Qtde:" %><br/>
+              <%= f.text_field :qtde_livros, :size => "5" %></p>
+              <p>
+              <%= f.label :tombos %><br/>
+              <%= f.text_field :tombos %></p>
+            </div>
+            <div id="exibe_aviso" style="display:none">Separe os tombos por ';'</div>
+          </td>
+      </tr>
+
     <tr>
       <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %>
@@ -103,9 +117,9 @@
     <tr>
       <td colspan="3"><%= f.submit "Salvar" %></td>
     </tr>
-  <% end %>
 </table>
 
+<% end %>
     <%= render "shared/forms/form_editora" %>
     <%= render "shared/forms/form_autor" %>
     <%= render "shared/forms/form_titulo" %>

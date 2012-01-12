@@ -1,8 +1,10 @@
 class Livro < ActiveRecord::Base
-  after_create :auto_inc_tombo_seduc
+  after_create :auto_inc_tombo_seduc, :multi_tombo
   #attr_accessible :assunto, :identificacao, :area, :editora, :localizacao, :tombo_seduc, :tombo_l, :colecao, :edicao, :data_edicao, :local_edicao, :resumo, :obs
   has_and_belongs_to_many :assuntos
   has_and_belongs_to_many :autores
+  attr_accessor :qtde_livros, :tombos, :usuario
+  has_many :tombos
   
   belongs_to :identificacao
   belongs_to :area
@@ -12,7 +14,7 @@ class Livro < ActiveRecord::Base
   #accepts_nested_attributes_for :localizacao, :reject_if => lambda {|a| a[:local_guardado].blank?}, :allow_destroy => true
   validates_presence_of :identificacao_id, :message => "Campo obrigatório"
   validates_presence_of :area_id, :message => "Campo obrigatório"
-  validates_presence_of :tombo_l, :message => "Campo obrigatório"
+  #validates_presence_of :tombo_l, :message => "Campo obrigatório"
   validates_presence_of :autor_ids, :message => "Campo obrigatório"
   validates_presence_of :localizacao_id, :message => "Campo obrigatório"
   validates_presence_of :editora_id, :message => "Campo obrigatório"
@@ -20,6 +22,14 @@ class Livro < ActiveRecord::Base
   validates_presence_of :assunto_ids, :message => "Campo obrigatório"
   
 
+
+  def multi_tombo
+    multi = Tombo.new
+    multi.livro_id = self.id
+    multi.user_id = self.usuario
+    multi.index_tombo = "#{self.id} - #{self.usuario.id}"
+    multi.save
+  end
 
   def auto_inc_tombo_seduc
     self.tombo_seduc = self.id

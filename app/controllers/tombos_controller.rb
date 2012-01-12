@@ -1,0 +1,2 @@
+class TombosController < ApplicationController
+end

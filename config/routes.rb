@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :logs
+
+  map.resources :logs
+
 
   map.resources :consultas ,:only => [:index], :collection => {:criar_consulta => :get}
   map.resources :midias
@@ -23,7 +27,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :mapas
   map.resources :mapas
   map.resources :dicionario_enciclopedias
-  map.resources :livros
+  map.resources :livros, :collection => {:livros_cadastrados => :get}
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'

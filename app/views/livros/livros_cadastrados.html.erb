@@ -1,0 +1,14 @@
+<% if @livros_cad.present?%>
+  <%if @livros_cad.count > 1%>
+    <%kind = "Multi-Tombos"%>
+  <%else%>
+    <%kind = "Uni-Tombo"%>
+  <%end%>
+  <h2>Livros Cadastrados em <%= "#{kind}" %></h2>
+    <%@livros_cad.each do |livro_cad| %>
+      <ul>
+        <%= link_to livro_cad.livro.tombo_l,livro_cad.livro %>
+        <li><%= "#{livro_cad.livro.tombo_l} - #{livro_cad.livro.identificacao.livro}" %></li>
+      </ul>
+    <%end%>
+<%end%>
