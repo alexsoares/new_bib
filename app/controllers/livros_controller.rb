@@ -96,7 +96,6 @@ class LivrosController < ApplicationController
         redirect_to livros_cadastrados_livros_path
       #render :action => 'livros_cadastrados', :collection => @livros_cad
     else
-      @livro = Livro.new(params[:livro])
       @livro.errors.add :qtde_livros, "A quantidade de tombos inserida, não corresponde a qtde de livros. Arrume ambos para prosseguir!"
       render :action => 'new'
     end
