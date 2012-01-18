@@ -2,19 +2,15 @@
   <%= f.error_messages %>
   <table  align="center" bgcolor="#F5F5F5" width="100%">
     <tr>
-      <td align="left">
-        <b><%= f.label :tombo_l, "Tombo Local:"%></b><br />
-        <%= f.text_field :tombo_l, :size => "10" %>
-      </td>
-     <td align="lef">
-          <b><%= f.label :tipo, 'Tipo:' %></b><br />
-          <%= f.select :tipo, Midia::TIPO, :include_blank => '---Selecionar---'%>
-     </td>
-      <td align="left">
-        <b><%= f.label :genero_id,"Genero: " %></b><br/>
+      <td colspan="3"align="left">
+        <b><%= f.label :tombo_l, "Tombo Local:"%></b>
+         <%= f.text_field :tombo_l, :size => "10" %>
+
+        <b><%= f.label :tipo, 'Tipo:' %></b>
+         <%= f.select :tipo, Midia::TIPO, :include_blank => '---Selecionar---'%>
+        <b><%= f.label :genero_id,"Genero: " %></b>
         <%= f.collection_select :genero_id ,@generos,:id,:nome, :include_blank => "Selecionar" %>
       </td>
-
     </tr>
     <tr>
       <td colspan="3" align="left">
@@ -27,13 +23,13 @@
         <b><%= f.label :subtitulo, "Subtítulo:" %></b><br />
         <%= f.text_field :subtitulo, :size => "70" %>
       </td>
-    </tr>   
+    </tr>
     <tr class="musica">
-       <td colspan="2"> <b> Musica(s):</b>
+      <td colspan="2"> <b> Musica(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_musica", :class =>"inline" %>
         <div id="musica"><%= render "shared/campos/campos_musica"%></div>
       </td>
-     <td> <b> Interprete(s):</b>
+      <td class="musica"> <b> Interprete(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_cantor", :class =>"inline" %>
         <div id="cantor"><%= render "shared/campos/campos_cantor"%></div>
       </td>
@@ -53,9 +49,7 @@
       <td colspan="2" align="left">
         <b><%= f.label :local_producao, "Local:" %></b><br />
         <%= f.text_field :local_producao, :size => "35" %>
-      </td>
-      <td align="left">
-        <b><%= f.label :data_producao, "Ano:" %></b><br />
+        <b><%= f.label :data_producao, "Ano:" %></b>
         <%= f.date_select(:data_producao, :order => [:year], :start_year => (Date.today.year)-50) %>
      </td>
     </tr>

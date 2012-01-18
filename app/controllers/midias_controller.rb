@@ -37,6 +37,10 @@ class MidiasController < ApplicationController
   # GET /midias/1/edit
   def edit
     @midia = Midia.find(params[:id])
+    @musicas_selecionados = @midia.musicas
+    @musicas =  @musicas - @musicas_selecionados
+
+
   end
 
 

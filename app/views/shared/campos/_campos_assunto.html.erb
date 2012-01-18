@@ -1,4 +1,3 @@
-
 <div class="fields">
   <tr>
     <td><%= select_tag("todos", options_for_select(@assuntos.collect { |ff| [ff.descricao, ff.id] }, @livro.assuntos.collect { |fs| fs.id }), {:multiple=>true, :id => "todos", :size => 5, :class => "lista_assuntos"}) %></td>

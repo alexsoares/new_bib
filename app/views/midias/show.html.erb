@@ -22,17 +22,13 @@
                         <strong>Data Aquisição::</strong> <%=h @midia.localizacao.data_aquisicao.strftime("%d/%m/%Y") %><br/>
                      <%end%>
                      <% if @midia.genero.nome == 'MUSICA' %>
+                   <hr>
                           <strong>Música:</strong><br/>
                           <% @midia.musicas.each do |musica| %>
                                <b>-</b> <%="#{musica.nome}" %><br/>
                           <%end%>
                         <%end%>
-                     <% if @midia.genero.nome == 'MUSICA' %>
-                         <strong>Intérprete:</strong><br/>
-                         <% @midia.cantores.each do |cantor| %>
-                                 <b>-</b> <%="#{cantor.nome}" %><br/>
-                        <%end%>
-                     <%end%>
+
                 </div>
                 <div id="colunaDireita">
                   <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
@@ -42,6 +38,15 @@
                       <strong>Localização:</strong>   <%=h @midia.localizacao.local_guardado %><br/>
                      <strong>Unidade:</strong>   <%=h @midia.localizacao.unidade.nome %><br/>
                      <strong>Observação:</strong>   <%=h @midia.obs %><br/>
+
+
+                     <% if @midia.genero.nome == 'MUSICA' %>
+                   <hr>
+                         <strong>Intérprete:</strong><br/>
+                         <% @midia.cantores.each do |cantor| %>
+                                 <b>-</b> <%="#{cantor.nome}" %><br/>
+                        <%end%>
+                     <%end%>
                 </div>
 
               </div>

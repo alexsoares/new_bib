@@ -14,6 +14,15 @@ body {
    height: 100px;
   }
 
+  select.lista_musicas {
+   width:300px;
+   height: 100px;
+  }
+
+  select.lista_cantores {
+   width:300px;
+   height: 100px;
+  }
 
 a img {
   border: none;

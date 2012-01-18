@@ -46,6 +46,26 @@ $('#add_autores').click(function() {
 //Fim do codigo
 
 
+//Codigo para gerar 2 multi-selects para musicas
+$('#add_musicas').click(function() {
+  return !$('#todas_musicas option:selected').remove().appendTo('#midia_musica_ids');
+ });
+ $('#remove_musicas').click(function() {
+  return !$('#midia_musica_ids option:selected').remove().appendTo('#todas_musicas');
+ });
+//Fim do codigo
+
+
+
+//Codigo para gerar 2 multi-selects para cantores
+$('#add_cantores').click(function() {
+  return !$('#todos_cantores option:selected').remove().appendTo('#midia_cantor_ids');
+ });
+ $('#remove_cantores').click(function() {
+  return !$('#midia_cantor_ids option:selected').remove().appendTo('#todos_cantores');
+ });
+//Fim do codigo
+
 
 $("#search").focusout(function(){
   var char = $(this).val().length;

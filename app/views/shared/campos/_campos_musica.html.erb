@@ -1,4 +1,14 @@
 <div class="fields">
-        <%= select_tag("midia[musica_ids][]", options_for_select(@musicas.collect { |ff| [truncate(ff.nome, :length => 20, :omission => "..."), ff.id] }, @midia.musicas.collect { |fs| fs.id }),
-                   {:multiple=>true, :id => "midia_musica_ids", :size => 5}) %>
+  <tr class="musica">
+    <td><%= select_tag("todas_musicas", options_for_select(@musicas.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.musicas.collect { |fs| fs.id }), {:multiple=>true, :id => "todas_musicas", :size => 5, :class => "lista_musicas"}) %></td>
+    <%if @musicas_selecionadas.present?%>
+      <td><%= select_tag("midia[musica_ids][]", options_for_select(@musicas_selecionadas.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.musicas.collect { |fs| fs.id }), {:multiple=>true, :id => "midia_musica_ids", :size => 5, :class => "lista_musicas"}) %></td>
+    <%else%>
+      <td><select multiple="multiple" name="midia[musica_ids][]" id="midia_musica_ids" class="lista_musicas"></select></td>
+    <%end%>
+  </tr>
+  <tr class="musica">
+    <td><a class="botao" href="#" id="add_musicas">&gt;&gt;</a></td>
+    <td><a class="botao" href="#" id="remove_musicas">&lt;&lt;</a></td>
+  </tr>
 </div>
