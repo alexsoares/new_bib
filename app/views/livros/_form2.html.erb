@@ -1,0 +1,128 @@
+<% form_for @livro do |f| %>
+  <%= f.error_messages %>
+  <table  align="center" bgcolor="#F5F5F5">
+    <tr>
+      <td colspan="3" >
+        <b>Tombo Local:</b><br />
+        <%= radio_button_tag(:type,"0") %>Multi-Tombos
+        <%= radio_button_tag(:type,"1") %>Unico
+      </td>
+    </tr>
+      <tr>   
+          <td>
+            <div id="tipo_tombo" style="display:none">
+              <p><%= f.label :qtde_livros, "Qtde:" %><br/>
+              <%= f.text_field :qtde_livros, :size => "5" %></p>
+              <p>
+              <%= f.label :lista_tombos %><br/>
+              <%= f.text_field :lista_tombos %></p>
+            </div>
+            <div id="exibe_aviso" style="display:none">Separe os tombos por ';'</div>
+          </td>
+      </tr>
+
+    <tr>
+      <td colspan="3">
+        <b><%= f.label :identificacao_id,"Título: " %>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_titulo", :class =>"inline" %>
+        <font  size="1"><%unless @livro.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
+        <%if @livro.identificacao_id.present?%>
+          <%= @livro.identificacao.livro%>
+        <%else%>
+          <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
+        <%end%>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div id= 'subtitulo' style="margin-left: 16px"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <b><%= f.label :colecao, "Coleção:" %></b><br />
+        <%= f.text_field :colecao, :size => "55" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <b><%= f.label :autor_id, "Autor(es). " %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_autor", :class =>"inline" %>
+        <b><i><font  size="1">
+         ( Para selecionar mais de um autor precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
+      </font></i></b>
+        <div id="autor"><%= render "shared/campos/campos_autor"%></div>
+      </td>
+    </tr>
+    <tr>
+       <td colspan="3">
+        <b><%= f.label :area_id,"Area: " %></b><br/>
+        <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "--Selecionar--" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b><%= f.label :localizacao_id,"Localização: " %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline"%>
+        <div id="local"><%= render "shared/campos/campos_local"%></div>
+      </td>
+      <td width="75%">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b><%= f.label :editora_id %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_editora", :class =>"inline"%>
+        <div id="editora"><%= render "shared/campos/campos_editora"%></div>
+      </td>
+      <td colspan="2">
+        <br />
+        <%= f.text_field :edicao, :size => "1" %><b>ª<%= f.label :edicao, " Edição" %></b>
+      </td>
+    <tr/>
+    <tr>
+      <td>
+        <b><%= f.label :local_edicao, "Local Edição:" %></b><br />
+        <%= f.text_field :local_edicao, :size => "30" %>
+      </td>
+      <td colspan="2">
+        <b><%= f.label :data_edicao, "Data:" %></b><br />
+        <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
+     </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <b><%= f.label :assunto_id, "Assunto(s). " %></b>
+        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline"%>
+        <b><i><font size="1">
+            ( Para selecionar mais de um assunto precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
+      </font></i></b>        
+      </td>
+      <div id="assuntos"><%= render "shared/campos/campos_assunto"%></div>
+    </tr>
+    <tr>
+      <td>
+        <b><%= f.label :resumo, 'Resumo:' %></b><br />
+        <%= f.text_area :resumo, :size => "30x3" %>
+      </td>
+      <td colspan="2">
+        <b><%= f.label :obs, 'Observação:' %></b><br />
+        <%= f.text_area :obs, :size => "30x3" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"><%= f.submit "Salvar" %></td>
+    </tr>
+</table>
+
+<% end %>
+    <%= render "shared/forms/form_editora" %>
+    <%= render "shared/forms/form_autor" %>
+    <%= render "shared/forms/form_titulo" %>
+    <%= render "shared/forms/form_assunto" %>
+    <%= render "shared/forms/form_local" %>
+    <%= render "form_busca" %>

@@ -16,7 +16,7 @@ class CreateUsers < ActiveRecord::Migration
 
     end
     add_index :users, :login, :unique => true
-    User.create :login => 'administrador', :email => 'informatica@seducpma.com',:password => 's3inf09', :password_confirmation => 's3inf09'
+    User.create :login => 'administrador', :email => 'administrador@seducpma.com',:password => 's3inf09', :password_confirmation => 's3inf09'
   end
 
   def self.down

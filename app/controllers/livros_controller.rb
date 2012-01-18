@@ -82,7 +82,7 @@ class LivrosController < ApplicationController
     if qtd == 0
       qtd = 1
     end
-    tombos = params[:livro][:tombos].split(";")
+    tombos = params[:livro][:lista_tombos].split(";")
       i = 0
       @livros_cad = []
       qtd.times do
@@ -108,7 +108,7 @@ class LivrosController < ApplicationController
 
   def livros_cadastrados
     limit = Tombo.last(:conditions => ["user_id = ?", current_user])
-    @livros_cad = Tombo.all(:conditions => ["user_id = ?", current_user], :limit => limit.qtde_livro)
+    @livros_cad = Tombo.all(:conditions => ["user_id = ?", current_user], :limit => limit.qtde_livro, :order => "id DESC")
     t = 0
   end
 

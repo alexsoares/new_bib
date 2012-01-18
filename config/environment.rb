@@ -49,7 +49,7 @@ ActionMailer::Base.smtp_settings = {
    :address => "smtp.gmail.com",
    :port => 587,
    :authentication => :plain,
-   :user_name => "informatica@seducpma.com", #Você pode usar o Google Apps!
+   :user_name => "administrador@seducpma.com", #Você pode usar o Google Apps!
    :password => 'infoseducpma'
 }
 WillPaginate::ViewHelpers.pagination_options[:renderer] = 'RemoteLinkRenderer'

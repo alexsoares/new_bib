@@ -1,3 +1,9 @@
+#livro_per_user {
+    height:120px;
+    width:825px;
+    border: solid 1px;
+    overflow: auto;
+}
 #unidade_corrente {
        position:absolute;
        width:340px;
