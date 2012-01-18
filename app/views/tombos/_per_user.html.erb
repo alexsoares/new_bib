@@ -1,4 +1,7 @@
 <%if @livros_per_user.present? %>
+  <%if @no_livros_per_user.present?%>
+    <h3><%= "#{@no_livros_per_user.count} livros excluídos por este usuário" %></h3>
+  <%end%>
   <table width="100%" align="center" border="1" frame="box" rules="all">
     <th width="30%">Tombo Seduc</th>
     <th width="30%">Tombo Local</th>
