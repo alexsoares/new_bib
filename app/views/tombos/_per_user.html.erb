@@ -9,7 +9,11 @@
         <%= user.livro.id %>
       </td>
       <td>
-        <%= user.livro.tombo_l %>
+        <% if (user.livro.tombo_l).present? %>
+          <%= user.livro.tombo_l %>
+        <%else%>
+          <%= "<b>Sem Tombo</b>" %>
+        <%end%>
       </td>
       <td>
         <%= user.livro.identificacao.livro %>
