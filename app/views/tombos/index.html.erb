@@ -1,5 +1,18 @@
 <div id="tabs">
-  <h3><%= "Total de livros cadastrados desde 14/01/2012: #{@tombos}" %></h3>
+  <table border="1" width="80%" align="center" frame="box" rules="all">
+    <tr>
+      <th colspan="2" align="center">Livros cadastrados</th>
+    </tr>
+    <tr>
+      <td><%= "Total de livros cadastrados apartir de 14/01/2012: #{@tombos}" %></td>
+      <td rowspan="2">
+        <%= @tombos + @livros %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= "Total de livros cadastrados antes 14/01/2012: #{@livros}" %></td>
+    </tr>
+  </table>
 	<ul>
 		<li><a href="tombos/usuario.html">Por usuário</a></li>
 		<li><a href="tombos/diarios.html">Diarios</a></li>

@@ -1,7 +1,7 @@
-<h2>Cadastro de Livros Diarios</h2>
-<% atual_inicio = Date.today + 0.hours - 1.day%>
+<h2 align="center">Cadastro de Livros Diarios</h2>
+<% atual_inicio = Date.today + 0.hours%>
 <% anterior_inicio = atual_inicio - 1.day%>
-<table border="1" width="70%">
+<table border="1" width="70%" align="center">
 <% @users.each do |usuario| %>
   <th colspan="6" align="center">
     <%= "Login: #{usuario.login}" %>
