@@ -1,5 +1,9 @@
 jQuery(document).ready(function( $ ){
 
+//Codigo Abas log
+
+$("#tabs").tabs();
+// Fim codigo
 //Codigo para validar quantidade indicada com numero de tombos
 $("#livro_tombos").on("focusout",function(){
 var elemento = $("#livro_tombos").val().split(";");
