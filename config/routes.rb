@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :tombos,:only => [:index]
+  map.resources :tombos,:only => [:index], :collection => {:usuario => :get, :diarios => :get}
 
   map.resources :logs
 
