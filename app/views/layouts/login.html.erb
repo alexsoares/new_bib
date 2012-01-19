@@ -4,7 +4,7 @@
   <head>
     <title><%= "Sistema de Biblioteca - BIBLO. Você está em: #{h(yield(:title) || 'Sem titulo')}" %></title>
     <%= stylesheet_link_tag 'geral',"pepper-grinder/jquery-ui-1.8.16.custom"%>
-    <%= javascript_include_tag 'jquery-1.7','jquery-ui-1.8.16.custom.min',"jquery-ui-i18n.min",'jrails''application.js' %>
+    <%= javascript_include_tag 'jquery-1.7','jquery-ui-1.8.16.custom.min',"jquery-ui-i18n.min",'jrails','application.js' %>
 
     <%= yield(:head) %>
   </head>
