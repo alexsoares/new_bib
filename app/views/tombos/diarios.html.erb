@@ -1,0 +1,20 @@
+<h2>Diarios</h2>
+<% atual_inicio = Date.today + 0.hours - 1.day%>
+<% anterior_inicio = atual_inicio - 1.day%>
+<table border="1">
+<% @users.each do |usuario| %>
+  <th colspan="6">
+    <%= usuario.login %>
+  </th>
+  <% busca = usuario.tombos.all(:include => [:livro],:conditions => ["created_at between ? and ?",atual_inicio,(atual_inicio + 23.hours + 59.minutes)]) %>
+  <% busca_anterior = usuario.tombos.all(:include => [:livro],:conditions => ["created_at < ?", atual_inicio]) %>
+  <tr>
+    <td colspan="2">Anterior</td>
+    <td colspan="2">Atual</td>
+  </tr>
+  <tr>
+    <td colspan="2"><%=  busca_anterior.count %></td>
+    <td colspan="2"><%= busca.count %></td>
+  </tr>
+<%end%>
+</table>
