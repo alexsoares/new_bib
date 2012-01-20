@@ -2,6 +2,7 @@ class TombosController < ApplicationController
   before_filter :load_resources
   def index
     @tombos = Tombo.all.count
+    @livros = Livro.all(:conditions => ["id not in (select livro_id from tombos)"]).count
     @no_tombos = Tombo.all(:conditions => ["livro_id not in (select id from livros)"]).count
   end
 
@@ -29,6 +30,6 @@ class TombosController < ApplicationController
   protected
 
   def load_resources
-    @users = User.all
+    @users = User.all(:conditions => ["activated_at is not null"])
   end
 end
