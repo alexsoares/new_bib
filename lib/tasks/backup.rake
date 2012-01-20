@@ -1,6 +1,6 @@
 SHARED_PATH = "/home/servidor/biblioteca.seducpma.com/shared"
 DB_BACKUP_DIR = File.join(SHARED_PATH, "db")
-BACKUP_SERVER = "alexandre@200.232.60.242:~/backup/biblioteca.seducpma.com"
+BACKUP_SERVER = "alexandre@192.168.0.249:~/backup/biblioteca.seducpma.com"
 
 namespace :backup do
   task :run => :database do
@@ -15,7 +15,7 @@ namespace :backup do
   task :database => :environment do
     FileUtils.mkdir_p(DB_BACKUP_DIR)
     db_backup_file = File.join(DB_BACKUP_DIR, "backup-#{Time.now.strftime("%Y%m%d%H%M%S")}.sql.gz")
-    `mysqldump --single-transaction --flush-logs --add-drop-table --add-locks --create-options --disable-keys --extended-insert --quick -uroot -ps3inf05 pontuacao_production | gzip > #{db_backup_file}`
+    `mysqldump --single-transaction --flush-logs --add-drop-table --add-locks --create-options --disable-keys --extended-insert --quick -uroot -ps3inf05 biblioteca_production | gzip > #{db_backup_file}`
     FileUtils.rm(Dir.glob("#{DB_BACKUP_DIR}/*.sql.gz").sort.reverse[5..-1]||[])
   end
 end
