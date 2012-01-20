@@ -5,19 +5,32 @@
       <td colspan="3" >
         <b>Tombo Local:</b><br />
         <%= radio_button_tag(:type,"0") %>Multi-Tombos
-        <%= radio_button_tag(:type,"1") %>Unico
+        <%= radio_button_tag(:type,"1") %>Único
       </td>
     </tr>
       <tr>
-          <td>
+          <td colspan="3">
             <div id="tipo_tombo" style="display:none">
-              <p><%= f.label :qtde_livros, "Qtde:" %><br/>
-              <%= f.text_field :qtde_livros, :size => "5" %></p>
-              <p>
-              <%= f.label :lista_tombos %><br/>
-              <%= f.text_field :lista_tombos %></p>
+              <table>
+                <tr>
+                  <td>
+                    <b><%= f.label :qtde_livros, "Qtde:" %></b>
+                  </td>
+                  <td>
+                    <b><%= f.label :lista_tombos, "Tombo(s):" %></b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= f.text_field :qtde_livros, :size => "2" %>
+                  </td>
+                  <td>
+                   <%= f.text_field :lista_tombos, :size => "73"%>
+                  </td>
+                </tr>
+              </table>
             </div>
-            <div id="exibe_aviso" style="display:none">Separe os tombos por ';'</div>
+            <div id="exibe_aviso" style="display:none"><b>Separar os números dos tombos por ';'</b></div>
           </td>
       </tr>
 

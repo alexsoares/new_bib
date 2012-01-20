@@ -20,7 +20,7 @@ $("#type_0").click(function ()
 {
     $("#tipo_tombo").show();
     $("#livro_qtde_livros").val("").attr("disabled", false).css("background-color", "#ffffff");
-    $("#exibe_aviso").show().fadeOut(3000).fadeIn(3000).fadeOut(3000).css("background-color", "red");
+    $("#exibe_aviso").show().fadeOut(3000).fadeIn(3000).fadeOut(3000).css("background-color", "yellow");
 });
 $("#type_1").click(function ()
 {

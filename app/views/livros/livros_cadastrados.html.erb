@@ -1,14 +1,35 @@
+<% title "LIVROS" %>
 <% if @livros_cad.present?%>
   <%if @livros_cad.count > 1%>
     <%kind = "Multi-Tombos"%>
   <%else%>
     <%kind = "Uni-Tombo"%>
   <%end%>
-  <h2>Livros Cadastrados em <%= "#{kind}" %></h2>
-    <%@livros_cad.each do |livro_cad| %>
-      <ul>
-        <%= link_to livro_cad.livro.tombo_l,livro_cad.livro %>
-        <li><%= "#{livro_cad.livro.tombo_l} - #{livro_cad.livro.identificacao.livro}" %></li>
-      </ul>
-    <%end%>
-<%end%>
+<div class ="tabs">
+  <div id="topoShow"></div>
+   <div id="caixa_titulo">
+     <font size="3"><strong>Livros Cadastrados em <%= "#{kind}" %> </strong></font><br/>
+   </div>
+  <%end%>
+  </i>Clicar no nome do livros para vizualizar dados</i></b>
+     <table  width="100%" bgcolor="#F5F5F5">
+       <%@livros_cad.each do |livro_cad| %>
+       <tr>
+         <td width="10%"><strong>Tombo:</strong>  <%= link_to"#{livro_cad.livro.tombo_l} - #{livro_cad.livro.identificacao.livro}",livro_cad.livro %></td>
+       </tr>
+       <%end%>
+     </table>
+        <table>
+          <tr>
+            <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), livros_path, :title => "Livros Cadastrados" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_livro_path, :title => "Cadastrar Livro" %></td>
+            <%else%>
+                <td align="center"> </td>
+            <%end%>
+          </tr>
+        </table>
+  
+</div>
+

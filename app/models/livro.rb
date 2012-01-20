@@ -14,7 +14,7 @@ class Livro < ActiveRecord::Base
   #accepts_nested_attributes_for :localizacao, :reject_if => lambda {|a| a[:local_guardado].blank?}, :allow_destroy => true
   validates_presence_of :identificacao_id, :message => "Campo obrigatório"
   validates_presence_of :area_id, :message => "Campo obrigatório"
-  validates_presence_of :lista_tombos, :message => "Campo obrigatório", :if => :qtd_dif_num?
+  validates_presence_of :lista_tombos, :message => "Campo obrigatório"
   validates_presence_of :autor_ids, :message => "Campo obrigatório"
   validates_presence_of :localizacao_id, :message => "Campo obrigatório"
   validates_presence_of :editora_id, :message => "Campo obrigatório"
