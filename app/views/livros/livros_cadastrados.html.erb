@@ -11,11 +11,16 @@
      <font size="3"><strong>Livros Cadastrados em <%= "#{kind}" %> </strong></font><br/>
    </div>
   <%end%>
-  </i>Clicar no nome do livros para vizualizar dados</i></b>
-     <table  width="100%" bgcolor="#F5F5F5">
-       <%@livros_cad.each do |livro_cad| %>
+    <div class="tabs">
+    <table width="100%" bgcolor="#DCDCDC">
        <tr>
-         <td width="10%"><strong>Tombo:</strong>  <%= link_to"#{livro_cad.livro.tombo_l} - #{livro_cad.livro.identificacao.livro}",livro_cad.livro %></td>
+         <td  align="left"><strong>Tombo / Livro</strong> </td>
+         <td  align="left"><strong>Administração</strong> </td>
+       </tr>
+       <%@livros_cad.each do |livro_cad| %>
+       <tr bgcolor="#F5F5F5">
+        <td width="90%">  <%= "#{livro_cad.livro.tombo_l} - #{livro_cad.livro.identificacao.livro}"%></td>
+         <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), livro_cad.livro, :title => "Visualizar Titulo" %></td>
        </tr>
        <%end%>
      </table>
@@ -30,6 +35,6 @@
             <%end%>
           </tr>
         </table>
-  
-</div>
+   </div>
+ </div>
 
