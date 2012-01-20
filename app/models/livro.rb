@@ -4,7 +4,7 @@ class Livro < ActiveRecord::Base
   has_and_belongs_to_many :assuntos
   has_and_belongs_to_many :autores
   attr_accessor :qtde_livros, :lista_tombos, :usuario
-  #has_many :tombos
+  has_many :tombos
   
   belongs_to :identificacao
   belongs_to :area
