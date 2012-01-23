@@ -8,6 +8,7 @@
   <div class="tabs">
     <table bgcolor="#DCDCDC" width="100%">
         <tr bgcolor="#DCDCDC" >
+            <th width="50">Tombo</th>
             <th width="400">Identificacao</th>
             <th width="100">Area</th>
             <th width="100">Editora</th>
@@ -15,6 +16,7 @@
         </tr>
          <% for livro in @livros %>
             <tr bgcolor="	#F5F5F5">
+                <td align="left"><%=h livro.tombo_l%></td>
                 <td align="left"><%=h livro.identificacao.livro%></td>
                 <td align="left"><%=h livro.area.nome %></td>
                 <td align="left"><%=h livro.editora.nome %></td>
