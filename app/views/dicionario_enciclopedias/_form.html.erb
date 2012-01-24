@@ -9,6 +9,39 @@
       </td>
     </tr>
     <tr>
+            <td colspan="3" >
+        <b>Tombo Local:</b><br />
+        <%= radio_button_tag(:type,"10") %>Multi-Tombos
+        <%= radio_button_tag(:type,"11") %>Único
+      </td>
+    </tr>
+      <tr>
+          <td colspan="3">
+            <div id="tipo_tombo" style="display:none">
+              <table>
+                <tr>
+                  <td>
+                    <b><%= f.label :qtde, "Qtde:" %></b>
+                  </td>
+                  <td>
+                    <b><%= f.label :lista_tombos, "Tombo(s):" %></b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= f.text_field :qtde, :size => "2" %>
+                  </td>
+                  <td>
+                   <%= f.text_field :lista_tombos, :size => "73"%>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="exibe_aviso" style="display:none"><b>Separar os números dos tombos por ';'</b></div>
+          </td>
+      </tr>
+      
+    <tr>
       <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %>
         <font  size="1"><%unless @dicionario_enciclopedia.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>

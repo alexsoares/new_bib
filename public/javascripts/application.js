@@ -31,6 +31,47 @@ $("#type_1").click(function ()
 
 
 
+
+
+
+
+
+
+$("#dicionario_enciclopedia_tombos").on("focusout",function(){
+var elemento = $("#dicionario_enciclopedia_tombos").val().split(";");
+if ($("#dicionario_enciclopedia_qtde").val() != elemento.length){
+alert("A quantidade de tombos digitados é diferente da quantidade informada, \nfavor verificar antes de continuar. Numero de tombos atual: " + elemento.length + " e a quantidade informado foi: " + $("#dicionario_enciclopedia_qtde").val());
+$("#dicionario_enciclopedia_tombos").focus();
+}
+});
+
+
+//Codigo para Multi-tombos - cadastro de dicionarios
+
+$("#type_10").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#dicionario_enciclopedia_qtde").val("").attr("disabled", false).css("background-color", "#ffffff");
+    $("#exibe_aviso").show().fadeOut(3000).fadeIn(3000).fadeOut(3000).css("background-color", "yellow");
+});
+$("#type_11").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#dicionario_enciclopedia_qtde").val("1").attr("disabled", true).css("background-color", "#cccccc");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Codigo para gerar 2 multi-selects para assuntos
 $('#add').click(function() {
   return !$('#todos option:selected').remove().appendTo('#livro_assunto_ids');

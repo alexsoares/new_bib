@@ -68,17 +68,50 @@ end
   end
 
   def create
-    @dicionario_enciclopedia = DicionarioEnciclopedia.new(params[:dicionario_enciclopedia])
-    @dicionario_enciclopedia.identificacao_id = session[:identificacao_id]
-    session[:identificacao_id] = nil
-    @dicionario_enciclopedia.tombo_seduc = 1
-    if @dicionario_enciclopedia.save
-      flash[:notice] = "CADASTRADO COM SUCESSO."
-      redirect_to @dicionario_enciclopedia
-    else
-      render :action => 'new'
+    qtd = params[:dicionario_enciclopedia][:qtde].to_i
+    if qtd == 0
+      qtd = 1
     end
+    tombos = params[:dicionario_enciclopedia][:lista_tombos].split(";")
+      i = 0
+      @livros_cad = []
+      qtd.times do
+        @dicionario_enciclopedia = DicionarioEnciclopedia.new(params[:dicionario_enciclopedia])
+        @dicionario_enciclopedia.identificacao_id = session[:identificacao_id]
+        @dicionario_enciclopedia.usuario = current_user.id
+        if params[:dicionario_enciclopedia][:qtde].to_i == 0
+          @dicionario_enciclopedia.qtde = 1
+        else
+          @dicionario_enciclopedia.qtde = params[:dicionario_enciclopedia][:qtde].to_i
+        end
+
+        @dicionario_enciclopedia.tombo_l = tombos[i]
+        #@livros_cad << @livro.tombo_l
+        @dicionario_enciclopedia.save
+        i += 1
+      end
+      session[:identificacao_id] = nil
+        redirect_to dicionario_enciclopedia_cadastrados_dicionario_enciclopedia_path
+      #render :action => 'livros_cadastrados', :collection => @
+
+
+
+
+
+
+    #@dicionario_enciclopedia = DicionarioEnciclopedia.new(params[:dicionario_enciclopedia])
+    #@dicionario_enciclopedia.identificacao_id = session[:identificacao_id]
+    #session[:identificacao_id] = nil
+    #@dicionario_enciclopedia.tombo_seduc = 1
+    #if @dicionario_enciclopedia.save
+    #  flash[:notice] = "CADASTRADO COM SUCESSO."
+    #  redirect_to @dicionario_enciclopedia
+    #else
+    #  render :action => 'new'
+    #end
   end
+
+
     def create_editora
       @editora = Editora.new(params[:editora])
       if @editora.save
