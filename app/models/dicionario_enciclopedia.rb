@@ -24,7 +24,7 @@ def qtd_dif_num?
     multi.dicionario_enciclopedia_id = self.id
     multi.user_id = self.usuario
     multi.index_tombo = "#{self.id} - #{self.usuario}"
-    multi.qtde = self.qtde
+    multi.qtde_livro = self.qtde
     multi.save
   end
 

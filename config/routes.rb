@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :tombos,:only => [:index], :collection => {:usuario => :get, :diarios => :get}
+  map.resources :tombos,:only => [:index], :collection => {:usuario => :get, :livros_diarios => :get,:de_diarios => :get}
 
   map.resources :logs
 
@@ -26,7 +26,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :periodicos
   map.resources :mapas
   map.resources :mapas
-  map.resources :dicionario_enciclopedias
+  map.resources :dicionario_enciclopedias, :collection => {:de_cadastrados => :get}
   map.resources :livros, :collection => {:livros_cadastrados => :get}
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'

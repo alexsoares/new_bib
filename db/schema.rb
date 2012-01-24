@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120112152935) do
+ActiveRecord::Schema.define(:version => 20120124094912) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -306,6 +306,7 @@ ActiveRecord::Schema.define(:version => 20120112152935) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "qtde_livro"
+    t.integer  "dicionario_enciclopedia_id"
   end
 
   create_table "unidades", :force => true do |t|

@@ -91,7 +91,7 @@ end
         i += 1
       end
       session[:identificacao_id] = nil
-        redirect_to dicionario_enciclopedia_cadastrados_dicionario_enciclopedia_path
+        redirect_to de_cadastrados_dicionario_enciclopedias_path
       #render :action => 'livros_cadastrados', :collection => @
 
 
@@ -111,8 +111,13 @@ end
     #end
   end
 
+  def de_cadastrados
+    limit = Tombo.last(:conditions => ["user_id = ? and dicionario_enciclopedia_id is not null", current_user])
+    @de_cad = Tombo.all(:conditions => ["user_id = ? and dicionario_enciclopedia_id is not null", current_user], :limit => limit.qtde_livro, :order => "id DESC")
+    t = 0
+  end
 
-    def create_editora
+  def create_editora
       @editora = Editora.new(params[:editora])
       if @editora.save
         @livro = Livro.new

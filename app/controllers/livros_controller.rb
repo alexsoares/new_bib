@@ -107,8 +107,8 @@ class LivrosController < ApplicationController
 
 
   def livros_cadastrados
-    limit = Tombo.last(:conditions => ["user_id = ?", current_user])
-    @livros_cad = Tombo.all(:conditions => ["user_id = ?", current_user], :limit => limit.qtde_livro, :order => "id DESC")
+    limit = Tombo.last(:conditions => ["user_id = ? and livro_id is not null", current_user])
+    @livros_cad = Tombo.all(:conditions => ["user_id = ? and livro_id is not null", current_user], :limit => limit.qtde_livro, :order => "id DESC")
     t = 0
   end
 

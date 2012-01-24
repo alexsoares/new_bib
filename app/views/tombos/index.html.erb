@@ -1,4 +1,11 @@
 <div id="tabs">
+    <ul>
+        <li><a href="#fix">Relatório Geral</a></li>
+		<li><a href="tombos/usuario.html">Livros por usuário</a></li>
+		<li><a href="tombos/livros_diarios.html">Livros diarios</a></li>
+        <li><a href="tombos/de_diarios.html">Enciclopédias diarios</a></li>
+	</ul>
+    <div id="fix">
   <table border="1" width="80%" align="center" frame="box" rules="all">
     <tr>
       <th colspan="2" align="center">Livros cadastrados</th>
@@ -6,20 +13,25 @@
     <tr>
       <td><%= "Total de livros cadastrados apartir de 14/01/2012: #{@tombos}" %></td>
       <td rowspan="3">
-        <%= @tombos + @livros - @no_tombos %>
+        <%= @tombos_livros + @livros - @no_livros_tombos %>
       </td>
     </tr>
     <tr>
       <td><%= "Total de livros cadastrados antes 14/01/2012: #{@livros}" %></td>
     </tr>
     <tr>
-      <td><%= "Livros excluídos por necessidades: #{@no_tombos}" %></td>
+      <td><%= "Livros excluídos por necessidades: #{@no_livros_tombos}" %></td>
+    </tr>
+    <tr>
+      <th colspan="2" align="center">Enciclopédias e Dicionarios cadastrados</th>
+    </tr>
+    <tr>
+      <td><%= "Total de Dicionarios e Enciclopédias cadastradas:" %></td>
+      <td><%=@de%></td>
     </tr>
   </table>
-    <ul>
-		<li><a href="tombos/usuario.html">Por usuário</a></li>
-		<li><a href="tombos/diarios.html">Diarios</a></li>
-	</ul>
+
+    </div>
 </div>
 
 
