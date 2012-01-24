@@ -5,15 +5,18 @@
     </tr>
     <tr>
       <td><%= "Total de livros cadastrados apartir de 14/01/2012: #{@tombos}" %></td>
-      <td rowspan="2">
-        <%= @tombos + @livros %>
+      <td rowspan="3">
+        <%= @tombos + @livros - @no_tombos %>
       </td>
     </tr>
     <tr>
       <td><%= "Total de livros cadastrados antes 14/01/2012: #{@livros}" %></td>
     </tr>
+    <tr>
+      <td><%= "Livros excluídos por necessidades: #{@no_tombos}" %></td>
+    </tr>
   </table>
-	<ul>
+    <ul>
 		<li><a href="tombos/usuario.html">Por usuário</a></li>
 		<li><a href="tombos/diarios.html">Diarios</a></li>
 	</ul>

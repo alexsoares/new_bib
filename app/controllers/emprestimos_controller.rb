@@ -82,6 +82,6 @@ protected
     else
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
     end
-    @funcionarios = Funcionario.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
+    @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
   end
 end
