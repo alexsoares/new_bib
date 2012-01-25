@@ -37,6 +37,7 @@
     <tr>
       <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %>
+        
         <font  size="1"><%unless @dicionario_enciclopedia.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
         <%if @dicionario_enciclopedia.identificacao_id.present?%>
            <%= @dicionario_enciclopedia.identificacao.livro%>

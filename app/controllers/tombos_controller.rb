@@ -57,6 +57,6 @@ class TombosController < ApplicationController
   protected
 
   def load_resources
-    @users = User.all(:conditions => ["activated_at is not null"])
+    @users = User.all(:conditions => ["activated_at is not null"],:order => 'login ASC')
   end
 end

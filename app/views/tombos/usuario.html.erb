@@ -1,9 +1,27 @@
-<h2>Livros cadastrados por usuario</h2>
-<% form_remote_tag :url => {:action => 'select_user'}, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
-  Selecione o usuario
-  <%= collection_select :tombo,:user,@users,:id,:login, :include_blank => "--Selecionar--" %>
-  <%= submit_tag "Enviar"  %>
-<% end %>
-<hr>
-<div id="livro_per_user"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
-<div id="count"></div>
+<% title "RELATÓRIO" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>LIVROS CADASTRADOS POR USUÁRIO</strong></font><br/>
+   </div>
+  <div class="tabs">
+    <% form_remote_tag :url => {:action => 'select_user'}, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
+         <table width="100%" align="center" bgcolor="#DCDCDC" >
+         <tr>
+           <td width="90%" align="right">Selecione o usuario: <%= collection_select :tombo,:user,@users,:id,:login, :include_blank => "--Selecionar--" %>
+           <td align="right"><%= submit_tag "Enviar"  %><td>
+         </tr>
+        </table>
+    <% end %>
+
+  <hr>
+  <div id="livro_per_user"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
+    <font color="blue"><div id="count"></div> </font>
+  </div>
+    <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    </tr>
+  </table>
+</div>
+
+

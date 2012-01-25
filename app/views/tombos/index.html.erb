@@ -1,3 +1,4 @@
+
 <div id="tabs">
     <ul>
         <li><a href="#fix">Relatório Geral</a></li>
@@ -5,14 +6,18 @@
 		<li><a href="tombos/livros_diarios.html">Livros diarios</a></li>
         <li><a href="tombos/de_diarios.html">Enciclopédias diarios</a></li>
 	</ul>
-    <div id="fix">
-  <table border="1" width="80%" align="center" frame="box" rules="all">
+ <div id="fix">
+ <br/>
+ <font size="6" color=#BDB76B><i><b>RELATÓRIO</b></i></font>
+ <br/><br/>
+  <div class="tabs">
+  <table width="100%" align="center"  bgcolor="#F5F5F5" border="1" >
     <tr>
       <th colspan="2" align="center">Livros cadastrados</th>
     </tr>
     <tr>
       <td><%= "Total de livros cadastrados apartir de 14/01/2012: #{@tombos}" %></td>
-      <td rowspan="3">
+      <td rowspan="3" align="center">
         <%= @tombos_livros + @livros - @no_livros_tombos %>
       </td>
     </tr>
@@ -27,11 +32,15 @@
     </tr>
     <tr>
       <td><%= "Total de Dicionarios e Enciclopédias cadastradas:" %></td>
-      <td><%=@de%></td>
+      <td align="center"><%=@de%></td>
     </tr>
   </table>
-
-    </div>
+  <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    </tr>
+  </table>
+  </div>
+ </div>
 </div>
-
 
