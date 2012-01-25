@@ -6,11 +6,14 @@
 </p>
 <p>
   <strong>Professor:</strong>
-  <%=h @emprestimo.professor %>
+  <%=h "#{Aluno.find(@emprestimo.professor_id).matricula_funcionario} | #{Aluno.find(@emprestimo.professor_id).nome}" %>
 </p>
 <p>
+  <% t = (@emprestimo.aluno).present? %>
+  <%unless (@emprestimo.aluno).present?%>
   <strong>Aluno:</strong>
   <%=h @emprestimo.aluno %>
+  <%end%>
 </p>
 
 <p>

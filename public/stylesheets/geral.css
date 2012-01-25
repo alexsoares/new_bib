@@ -4,6 +4,7 @@
     border: solid 1px;
     overflow: auto;
 }
+
 #unidade_corrente {
        position:absolute;
        width:340px;

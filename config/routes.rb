@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :logs
 
 
-  map.resources :consultas ,:only => [:index], :collection => {:criar_consulta => :get}
+  map.resources :consultas ,:only => [:index], :collection => {:criar_consulta => :get, :lista_tombo => :get}
   map.resources :midias
 
   map.resources :musicas

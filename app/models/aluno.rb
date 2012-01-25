@@ -8,4 +8,11 @@ class Aluno < AutenticacaoDatabase
       "#{self.id_escola} - #{self.unidade.nome}"
   end
 
+  def concat_func
+     r =  "#{self.id_escola} - #{self.nome}"
+      t = 0
+      "#{self.id_escola} - #{self.nome}"
+  end
+
+
 end

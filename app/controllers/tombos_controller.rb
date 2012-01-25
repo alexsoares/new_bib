@@ -3,8 +3,8 @@ class TombosController < ApplicationController
   def index
     @tombos_livros = Tombo.all(:conditions => ["livro_id is not null"]).count
     @tombos_de = Tombo.all(:conditions => ["dicionario_enciclopedia_id is not null"]).count
-    @livros = Livro.all(:conditions => ["id not in (select livro_id from tombos)"]).count
-    @de = DicionarioEnciclopedia.all(:conditions => ["id not in (select dicionario_enciclopedia_id from tombos)"]).count
+    @livros = Livro.all(:conditions => ["id not in (select livro_id from tombos where livro_id is not null)"]).count
+    @de = DicionarioEnciclopedia.all.count
     @no_livros_tombos = Tombo.all(:conditions => ["livro_id not in (select id from livros) and dicionario_enciclopedia_id is null"]).count
     @no_de_tombos = Tombo.all(:conditions => ["dicionario_enciclopedia_id not in (select id from dicionario_enciclopedias) and livro_id is null"]).count
   end
