@@ -2,6 +2,18 @@ class DicionarioEnciclopediasController < ApplicationController
 
   before_filter :login_required
   before_filter :load_resources
+    def create_titulo
+      @titulo = Identificacao.new(params[:titulo])
+      if @titulo.save
+        session[:identificacao_id] = @titulo.id
+        @livro = Livro.new
+        render :update do |page|
+          page.replace_html 'aviso', :text => "Titulo Inserido, favor selecioná-lo"
+          page.replace_html 'identificacao', :text => @titulo.livro
+          page.replace_html 'subtitulo', :text => "<b>Subtitulo: </b>#{@titulo.subtitulo}"
+        end
+      end
+    end
 
  def consultaDic
    unless params[:search].present?

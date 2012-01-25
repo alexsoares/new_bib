@@ -5,11 +5,21 @@ class ConsultasController < ApplicationController
       render :partial => "lista_campos"
   end
 
-  def teste
-    t = params[:livro][:assunto_ids]
-    u = 0
+  def lista_tombo
+    @tombo_livros = Livro.all(:conditions => ["tombo_seduc <> id"])
   end
 
+  def corrigir_tombos
+    tombo_livros = Livro.all(:conditions => ["tombo_seduc <> id"])
+    tombo_livros.each do |tombo|
+      tombo.tombo_seduc = tombo.id
+      tombo.save
+    end
+#    redirect_to lista_tombo_consultas_path
+    render :update do |page|
+      page.replace_html "status", :text => "Problemas solucionados"
+    end
+  end
 
   def criar_consulta
     #@campos = User.column_names

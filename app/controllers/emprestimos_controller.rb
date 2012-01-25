@@ -14,6 +14,8 @@ class EmprestimosController < ApplicationController
 
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])
+    @emprestimo.unidade_id = current_user.unidade_id
+    @emprestimo.data_emprestimo = Time.now
     if @emprestimo.save
       flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
       redirect_to @emprestimo
@@ -44,10 +46,8 @@ class EmprestimosController < ApplicationController
   end
 
   def tipo_para
-    if params[:emprestimo_tipo_emprestimo].to_i == 1
+    if params[:emprestimo_tipo_emprestimo].to_i == 0
       render :partial => "funcionario"
-    else
-      render :partial => "aluno"
     end
   end
   def busca
@@ -82,6 +82,12 @@ protected
     else
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
     end
-    @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
+    if current_user.unidade_id = 53
+      @funcionarios = Aluno.all(:conditions => ["matricula_funcionario is not null"])
+    else
+      @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
+    end
+
+    t = 0
   end
 end
