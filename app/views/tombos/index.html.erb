@@ -23,9 +23,9 @@
       <th colspan="2" bgcolor=#E6E6FA> TOTAL DICIONÁRIOS E ENCICLOPÉDIAS </th>
     </tr>
     <tr>
-      <td><%= "Dicionarios e Enciclopédias cadastradas: #{@de}" %></td>
+      <td><%= "Dicionarios e Enciclopédias cadastradas: #{@tombos_de}" %></td>
       <td rowspan="2"  valign="center" align="center">
-          <%=  %>
+          <%= @tombos_de + @de - @no_de_tombos %>
       </td>
     </tr>
     <tr>

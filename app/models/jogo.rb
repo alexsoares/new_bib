@@ -4,7 +4,7 @@ class Jogo < ActiveRecord::Base
 
     belongs_to :localizacao
 
-  FAIXA_ETARIA = %w(0-3_ANOS 4-5_ANOS 6-7_ANOS  8-10_ANOS 11-13_ANOS 14_OU_MAIS TODAS)
+  FAIXA_ETARIA = %w(3_ANOS 5_ANOS 6_ANOS  10_ANOS 14_ANOS 18_ANOS TODAS_IDADES)
 
 
 
