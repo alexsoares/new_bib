@@ -1,8 +1,7 @@
 body {
 	padding:0;
 	background-color:#444;
-	font:italic 14px/1.5em
-	Verdana, Arial, Serif;
+	font:italic 14px/1.5em	Verdana, Arial, Serif;
     height:500px;
     }
   select.lista_assuntos {

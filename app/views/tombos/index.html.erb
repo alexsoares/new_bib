@@ -7,37 +7,92 @@
         <li><a href="tombos/de_diarios.html">Enciclopédias diarios</a></li>
 	</ul>
  <div id="fix">
- <br/>
- <font size="6" color=#BDB76B><i><b>RELATÓRIO</b></i></font>
+
+   <div id="quadro1">
+     <br/>
+     <div id="quadro2">
+       <br/>
+        <div id="quadro3">
+           <br/>
+
+ <font size="6" color=#BDBF6B><i><b>RELATÓRIO</b></i></font>
  <br/><br/>
   <div class="tabs">
   <table width="100%" align="center"  bgcolor="#F5F5F5" border="1" >
     <tr>
-      <th colspan="2" align="center">Livros cadastrados</th>
+      <th colspan="2" bgcolor=#E6E6FA> TOTAL DICIONÁRIOS E ENCICLOPÉDIAS </th>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td><%= "Total de livros cadastrados apartir de 14/01/2012: #{@tombos}" %></td>
-      <td rowspan="3" align="center">
-=======
-      <td><%= "Total de livros cadastrados apartir de 14/01/2012: #{@tombos_livros}" %></td>
-      <td rowspan="3">
->>>>>>> e0fb52026eb1480671ce8c82d7b18a0ad820eb15
-        <%= @tombos_livros + @livros - @no_livros_tombos %>
+      <td><%= "Dicionarios e Enciclopédias cadastradas: #{@de}" %></td>
+      <td rowspan="2"  valign="center" align="center">
+          <%=  %>
       </td>
     </tr>
     <tr>
-      <td><%= "Total de livros cadastrados antes 14/01/2012: #{@livros}" %></td>
+       <td><%= "Dicionarios e Enciclopédias excluidas: #{}" %></td>
+    </tr>
+        <tr>
+      <th colspan="2" bgcolor=#E6E6FA> TOTAL JOGOS </th>
     </tr>
     <tr>
-      <td><%= "Livros excluídos por necessidades: #{@no_livros_tombos}" %></td>
+      <td><%= "Jogos cadastrados: #{}" %></td>
+      <td rowspan="2"  valign="center" align="center">
+          <%=  %>
+      </td>
     </tr>
     <tr>
-      <th colspan="2" align="center">Enciclopédias e Dicionarios cadastrados</th>
+       <td><%= "Jogos excluidos: #{}" %></td>
     </tr>
     <tr>
-      <td><%= "Total de Dicionarios e Enciclopédias cadastradas:" %></td>
-      <td align="center"><%=@de%></td>
+      <th colspan="2" bgcolor=#E6E6FA>TOTAL LIVROS</th>
+    </tr>
+    <tr>
+      <td><%= "Livros cadastrados: #{@tombos_livros}" %></td>
+      <td rowspan="2"  valign="center" align="center">
+          <%= @tombos_livros + @livros - @no_livros_tombos %>
+      </td>
+    </tr>
+    <tr>
+       <td><%= "Livros excluídos: #{@no_livros_tombos}" %></td>
+    </tr>
+    <tr>
+      <th colspan="2" bgcolor=#E6E6FA> TOTAL MAPAS </th>
+    </tr>
+    <tr>
+      <td><%= "Mapas cadastrados: #{}" %></td>
+      <td rowspan="2"  valign="center" align="center">
+          <%=  %>
+      </td>
+    </tr>
+    <tr>
+       <td><%= "Mapas excluidos: #{}" %></td>
+    </tr>
+    <tr>
+      <th colspan="2" bgcolor=#E6E6FA> TOTAL MÍDIAS </th>
+    </tr>
+    <tr>
+      <td><%= "Mídias cadastradas: #{@de}" %></td>
+      <td rowspan="2"  valign="center" align="center">
+          <%=  %>
+      </td>
+    </tr>
+    <tr>
+       <td><%= "Mídias excluidas: #{}" %></td>
+    </tr>
+    <tr>
+      <th colspan="2" bgcolor=#E6E6FA> TOTAL PERIÓDICOS </th>
+    </tr>
+    <tr>
+      <td><%= "Periódicos cadastrados: #{@de}" %></td>
+      <td rowspan="2"  valign="center" align="center">
+          <%=  %>
+      </td>
+    </tr>
+    <tr>
+       <td><%= "Periódicos excluios: #{}" %></td>
+    </tr>
+    <tr>
+      <th colspan="2" bgcolor=#E6E6FA> TOTAL GERAL DE EXEMPLARES NA BIBLIOTÉCA: </th>
     </tr>
   </table>
   <table>
@@ -45,6 +100,11 @@
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
     </tr>
   </table>
+  </div>
+
+
+   </div>
+  </div>
   </div>
  </div>
 </div>
