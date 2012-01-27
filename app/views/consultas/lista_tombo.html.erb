@@ -1,7 +1,7 @@
 <h2>Lista Livros e Tombos para correcao de tombos locais</h2>
 
 <%= "#{@tombo_livros.count} livros com o tombo seduc com problemas" %>
-  <% form_remote_tag :url => {:action => "corrigir_tombos", :controller => "consultas"}, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
+  <% form_remote_tag :url => {:action => "corrigir_tombos", :controller => "consultas"}, :method => :get,:loading => "$('#status').show()" do %>
          <table width="100%" align="center" bgcolor="#DCDCDC" >
          <tr>
            <td><%= submit_tag "Resolver Problemas"  %></td>

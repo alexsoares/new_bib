@@ -44,14 +44,57 @@ class MidiasController < ApplicationController
   end
 
 
-  def create
-    @midia = Midia.new(params[:midia])
-    if @midia.save
-      flash[:notice] = "Successfully created audio visual."
-      redirect_to @midia
-    else
-      render :action => 'new'
+    def create
+    qtd = params[:midia][:qtde_midias].to_i
+    if qtd == 0
+      qtd = 1
     end
+    tombos = params[:midia][:lista_tombos].split(";")
+      i = 0
+      qtd.times do
+        @midia = Midia.new(params[:midia])
+        @midia.usuario = current_user.id
+        if params[:midia][:qtde_midias].to_i == 0
+          @midia.qtde_midias = 1
+        else
+          @midia.qtde_midias = params[:midia][:qtde_midias].to_i
+        end
+
+        @midia.tombo_l = tombos[i]
+        #@livros_cad << @livro.tombo_l
+        if qtd == 1
+          if @midia.save
+              flash[:notice] = "Successfully created audio visual."
+              redirect_to @midia
+            else
+              render :action => 'new'
+          end
+        else
+          @midia.save
+        end
+        i += 1
+      end
+      if qtd == 1
+      else
+        redirect_to midias_cadastradas_midias_path
+      end
+      #render :action => 'livros_cadastrados', :collection => @livros_cad
+  end
+
+
+
+#  def create
+#    @midia = Midia.new(params[:midia])
+#    if @midia.save
+#      flash[:notice] = "Successfully created audio visual."
+#      redirect_to @midia
+#    else
+#      render :action => 'new'
+#    end
+#  end
+  def midias_cadastradas
+    limit = Tombo.last(:conditions => ["user_id = ? and midia_id is not null", current_user])
+    @midias_cad = Tombo.all(:conditions => ["user_id = ? and midia_id is not null", current_user], :limit => limit.qtde_livro, :order => "id DESC")
   end
 
 

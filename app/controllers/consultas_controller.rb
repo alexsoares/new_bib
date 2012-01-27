@@ -1,4 +1,8 @@
 class ConsultasController < ApplicationController
+  def index
+
+
+  end
   def tabela_selecionada
       tabela = params[:tabelas]
       @campos = (tabela.camelize.singularize.constantize).column_names.insert(0,"*")

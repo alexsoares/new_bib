@@ -2,10 +2,39 @@
   <%= f.error_messages %>
   <table  align="center" bgcolor="#F5F5F5" width="100%">
     <tr>
-      <td colspan="3"align="left">
-        <b><%= f.label :tombo_l, "Tombo Local:"%></b>
-         <%= f.text_field :tombo_l, :size => "10" %>
-
+      <td colspan="3" >
+        <b>Tombo Local:</b><br />
+        <%= radio_button_tag(:type_midia,"0") %>Multi-Tombos
+        <%= radio_button_tag(:type_midia,"1") %>Único
+      </td>
+    </tr>
+      <tr>
+          <td colspan="3">
+            <div id="tipo_tombo" style="display:none">
+              <table>
+                <tr>
+                  <td>
+                    <b><%= f.label :qtde_midias, "Qtde:" %></b>
+                  </td>
+                  <td>
+                    <b><%= f.label :lista_tombos, "Tombo(s):" %></b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= f.text_field :qtde_midias, :size => "2" %>
+                  </td>
+                  <td>
+                   <%= f.text_field :lista_tombos, :size => "73"%>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="exibe_aviso" style="display:none"><b>Separar os números dos tombos por ';'</b></div>
+          </td>
+      </tr>
+    <tr>
+      <td>
         <b><%= f.label :tipo, 'Tipo:' %></b>
          <%= f.select :tipo, Midia::TIPO, :include_blank => '---Selecionar---'%>
         <b><%= f.label :genero_id,"Genero: " %></b>

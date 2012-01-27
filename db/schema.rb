@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120124094912) do
+ActiveRecord::Schema.define(:version => 20120127092930) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(:version => 20120124094912) do
     t.integer "livro_id",   :null => false
   end
 
-  create_table "audios", :force => true do |t|
-    t.integer  "genero_id"
+  create_table "audio_visuais", :force => true do |t|
+    t.integer  "genero_midia_id"
     t.integer  "localizacao_id"
     t.string   "tombo_seduc"
     t.string   "tombo_l"
@@ -136,7 +136,7 @@ ActiveRecord::Schema.define(:version => 20120124094912) do
   end
 
   create_table "identificacaos", :force => true do |t|
-    t.integer  "codigo"
+    t.string   "codigo"
     t.string   "livro"
     t.string   "subtitulo"
     t.text     "obs"
@@ -252,6 +252,7 @@ ActiveRecord::Schema.define(:version => 20120124094912) do
 
   create_table "musicas", :force => true do |t|
     t.string   "nome"
+    t.string   "interprete"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -306,6 +307,7 @@ ActiveRecord::Schema.define(:version => 20120124094912) do
     t.datetime "updated_at"
     t.integer  "qtde_livro"
     t.integer  "dicionario_enciclopedia_id"
+    t.integer  "midia_id"
   end
 
   create_table "unidades", :force => true do |t|

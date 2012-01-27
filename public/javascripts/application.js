@@ -1,15 +1,68 @@
 jQuery(document).ready(function( $ ){
 
+//Tombos midias
+
+//Codigo para validar quantidade indicada com numero de tombos
+$("#midia_lista_tombos").on("focusout",function(){
+var elemento = $("#midia_lista_tombos").val().split(";");
+if ($("#midia_qtde_midias").val() != elemento.length){
+alert("A quantidade de tombos digitados é diferente da quantidade informada, \nfavor verificar antes de continuar. Numero de tombos atual: " + elemento.length + " e a quantidade informado foi: " + $("#livro_qtde_livros").val());
+$("#midia_lista_tombos").focus();
+}
+});
+
+
+//Codigo para Multi-tombos - cadastro de midias
+
+$("#type_midia_0").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#midia_qtde_midias").val("").attr("disabled", false).css("background-color", "#ffffff");
+    $("#exibe_aviso").show().fadeOut(3000).fadeIn(3000).fadeOut(3000).css("background-color", "yellow");
+});
+$("#type_midia_1").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#midia_qtde_midias").val("1").attr("disabled", true).css("background-color", "#cccccc");
+});
+
+// Tombos midias até aqui
+
+
+
+// Teste progressBar
+
+$("#password").keyup(function(){
+    var data = $(this).val();
+    var len = data.length;
+    console.log(len);
+
+
+    var total = null;
+    total = len * 10;
+    barUpdate(total);
+
+});
+function barUpdate(total) {
+    $("#progressBar").progressbar({
+        value: total
+    });
+
+}
+
+// Fim Teste
+
 //Codigo Abas log
 
 $("#tabs").tabs();
 // Fim codigo
+
 //Codigo para validar quantidade indicada com numero de tombos
-$("#livro_tombos").on("focusout",function(){
-var elemento = $("#livro_tombos").val().split(";");
+$("#livro_lista_tombos").on("focusout",function(){
+var elemento = $("#livro_lista_tombos").val().split(";");
 if ($("#livro_qtde_livros").val() != elemento.length){
 alert("A quantidade de tombos digitados é diferente da quantidade informada, \nfavor verificar antes de continuar. Numero de tombos atual: " + elemento.length + " e a quantidade informado foi: " + $("#livro_qtde_livros").val());
-$("#livro_tombos").focus();
+$("#livro_lista_tombos").focus();
 }
 });
 
@@ -37,11 +90,13 @@ $("#type_1").click(function ()
 
 
 
-$("#dicionario_enciclopedia_tombos").on("focusout",function(){
-var elemento = $("#dicionario_enciclopedia_tombos").val().split(";");
+
+
+$("#dicionario_enciclopedia_lista_tombos").on("focusout",function(){
+var elemento = $("#dicionario_enciclopedia_lista_tombos").val().split(";");
 if ($("#dicionario_enciclopedia_qtde").val() != elemento.length){
 alert("A quantidade de tombos digitados é diferente da quantidade informada, \nfavor verificar antes de continuar. Numero de tombos atual: " + elemento.length + " e a quantidade informado foi: " + $("#dicionario_enciclopedia_qtde").val());
-$("#dicionario_enciclopedia_tombos").focus();
+$("#dicionario_enciclopedia_lista_tombos").focus();
 }
 });
 
