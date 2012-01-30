@@ -20,10 +20,8 @@ class DataFile < ActiveRecord::Base
     # write the file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
     File.open(path).readlines.each do |linha|
-      nome, cidade, pais = linha.split(/#/)
-      Temp.create(:nome=>nome, :cidade=> cidade, :pais => pais)
+      nome = linha.split(/#/)
+      Temp.create(:nome=>nome)
     end
-
   end
-
 end

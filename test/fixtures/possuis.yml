@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  unidade: 
+  tombo: MyString
+  status: false
+  tipo: 1
+  livro: 
+  dicionario_enciclopedia: 
+  jogo: 
+  mapa: 
+  midia: 
+
+two:
+  unidade: 
+  tombo: MyString
+  status: false
+  tipo: 1
+  livro: 
+  dicionario_enciclopedia: 
+  jogo: 
+  mapa: 
+  midia: 

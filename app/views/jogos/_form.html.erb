@@ -1,13 +1,40 @@
 <% form_for @jogos do |f| %>
   <%= f.error_messages %>
   <table width="100%" bgcolor="#F5F5F5">
-     <tr>
-      <td align="lef">
-          <b><%= f.label :tombo_l, 'Tombo Local:' %></b><br />
-          <%= f.text_field :tombo_l, :size => "10" %>
-      </td>
     <tr>
+      <td colspan="3" >
+        <b>Tombo Local:</b><br />
+        <%= radio_button_tag(:type_jogos,"0") %>Multi-Tombos
+        <%= radio_button_tag(:type_jogos,"1") %>Único
+      </td>
     </tr>
+    <tr>
+          <td colspan="3">
+            <div id="tipo_tombo" style="display:none">
+              <table>
+                <tr>
+                  <td>
+                    <b><%= f.label :qtde_jogos, "Qtde:" %></b>
+                  </td>
+                  <td>
+                    <b><%= f.label :lista_tombos, "Tombo(s):" %></b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= f.text_field :qtde_jogos, :size => "2" %>
+                  </td>
+                  <td>
+                   <%= f.text_field :lista_tombos, :size => "73"%>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="exibe_aviso" style="display:none"><b>Separar os números dos tombos por ';'</b></div>
+          </td>
+    </tr>
+
+    <tr>
       <td align="lef">
           <b><%= f.label :nome, 'Nome:' %></b><br />
           <%= f.text_field :nome %>
@@ -16,8 +43,8 @@
           <b><%= f.label :faixa_etaria, 'Faixa Etária:' %></b><br />
           ATÉ <%= f.select :faixa_etaria, Jogo::FAIXA_ETARIA, :include_blank => '--Selecionar--'%>
       </td>
-    <tr>
     </tr>
+    <tr>
       <td align="lef">
           <b><%= f.label :tipo,'Tipo:' %></b><br />
           <%= f.text_field :tipo %>
@@ -26,22 +53,22 @@
           <b><%= f.label :fabricante, 'Fabricante:' %></b><br />
           <%= f.text_field :fabricante %>
       </td>
-    <tr>
     </tr>
+    <tr>
       <td align="lef">
         <b><%= f.label :localizacao_id,"Selecionar a localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline" %>
         <div id="local"><%= render "shared/campos/campos_local"%></div>
 
       </td>
-    <tr>
     </tr>
+    <tr>
       <td align="lef">
           <b><%= f.label :obs, 'Observação:' %></b><br />
           <%= f.text_area :obs,:size => "30x3" %>
       </td>
-    <tr>
     </tr>
+    <tr>
       <td><%= f.submit'Salvar' %>
       </td>
     </tr>

@@ -1,5 +1,37 @@
 jQuery(document).ready(function( $ ){
 
+// Codigo para jogos
+
+//Codigo para validar quantidade indicada com numero de tombos
+$("#jogo_lista_tombos").on("focusout",function(){
+var elemento = $("#jogo_lista_tombos").val().split(";");
+if ($("#jogo_qtde_jogos").val() != elemento.length){
+alert("A quantidade de tombos digitados é diferente da quantidade informada, \nfavor verificar antes de continuar. Numero de tombos atual: " + elemento.length + " e a quantidade informado foi: " + $("#jogo_qtde_jogos").val());
+$("#jogo_lista_tombos").focus();
+}
+});
+
+
+//Codigo para Multi-tombos - cadastro de midias
+
+$("#type_jogos_0").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#jogo_qtde_jogos").val("").attr("disabled", false).css("background-color", "#ffffff");
+    $("#exibe_aviso").show().fadeOut(3000).fadeIn(3000).fadeOut(3000).css("background-color", "yellow");
+});
+$("#type_jogos_1").click(function ()
+{
+    $("#tipo_tombo").show();
+    $("#jogo_qtde_jogos").val("1").attr("disabled", true).css("background-color", "#cccccc");
+});
+
+
+
+// Até aqui
+
+
+
 //Tombos midias
 
 //Codigo para validar quantidade indicada com numero de tombos

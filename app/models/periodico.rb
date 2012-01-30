@@ -1,6 +1,6 @@
 class Periodico < ActiveRecord::Base
   #attr_accessible :localizacao, :tombo_seduc, :tombo_l, :tipo, :titulo, :subtitulo, :colecao, :producao, :periodicidade, :issn, :local_producao, :data_producao, :obs
-
+  has_many :possuis
   belongs_to :localizacao
 
   PERIODICIDADE = %w(DIARIO SEMANAL QUINZENAL MENSAL BIMESTRAL SEMETRAL ANUAL OUTROS)

@@ -27,10 +27,8 @@ class ImportarController < ApplicationController
   def efetivar_importacao
     temp = Temp.all
     temp.each do |f|
-      importacao = Editora.new
+      importacao = Musica.new
       importacao.nome = f.nome
-      importacao.cidade = f.cidade
-      importacao.pais = f.pais
       importacao.save
       f.destroy
     end

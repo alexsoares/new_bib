@@ -1,4 +1,5 @@
 class Midia < ActiveRecord::Base
+  has_many :possuis
   belongs_to :genero
   belongs_to :localizacao
   has_many :tombos

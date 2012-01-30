@@ -1,7 +1,7 @@
 	<div style='display:none'>
 		<div id='inline_musica' style='padding:10px; background:#EEE9E9;'>
           <h2>MUSICAS</h2>
-          <% form_remote_for(:musica,:url => { :action => 'create_musica' }, :success => "$.fn.colorbox.close()") do |f|%>
+          <% form_remote_for(:musica,:url => { :action => 'create_musica' }, :success => "$.fn.colorbox.close();$('.musica').hide();") do |f|%>
             <%= error_messages_for 'contact' %>
             <table>
               <tr>

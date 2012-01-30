@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :logs
 
 
-  map.resources :consultas ,:only => [:index], :collection => {:criar_consulta => :get, :lista_tombo => :get}
+  map.resources :consultas ,:only => [:index], :collection => {:gerar_tombos => :get,:criar_consulta => :get, :lista_tombo => :get}
   map.resources :midias, :collection => {:midias_cadastradas => :get}
 
   map.resources :musicas
@@ -22,7 +22,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :autores
   map.resources :itens_assuntos
   map.resources :assuntos
-  map.resources :jogos
+  map.resources :jogos, :collection => {:jogos_cadastrados => :get}
   map.resources :periodicos
   map.resources :mapas
   map.resources :mapas

@@ -6,4 +6,5 @@ class Unidade < ActiveRecord::Base
   belongs_to :tipo
   has_many :localizacoes
   has_many :emprestimos
+  has_many :possuis
 end

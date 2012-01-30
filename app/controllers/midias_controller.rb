@@ -44,7 +44,7 @@ class MidiasController < ApplicationController
   end
 
 
-    def create
+  def create
     qtd = params[:midia][:qtde_midias].to_i
     if qtd == 0
       qtd = 1
@@ -161,7 +161,7 @@ class MidiasController < ApplicationController
       @musicas = Musica.all
       @midia = Midia.new
       render :update do |page|
-        page.replace_html 'musicas', :partial => "shared/campos/campos_musica"
+        page.replace_html 'musica', :partial => "shared/campos/campos_musica"
         page.replace_html 'aviso', :text => "MÚSICA CADASTRADA, SELECIOINAR A MUSICA E CONTINUAR O CADASTRO"
       end
 

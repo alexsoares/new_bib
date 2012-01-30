@@ -17,14 +17,41 @@ class JogosController < ApplicationController
   end
 
   def create
-    @jogos = Jogo.new(params[:jogo])
-    if @jogos.save
-      flash[:notice] = "CADASTRADO COM SUCESSO."
-      redirect_to @jogos
-    else
-      render :action => 'new'
+    qtd = params[:jogo][:qtde_jogos].to_i
+    if qtd == 0
+      qtd = 1
     end
+    tombos = params[:jogo][:lista_tombos].split(";")
+      i = 0
+      qtd.times do
+        @jogos = Jogo.new(params[:jogo])
+        @jogos.usuario = current_user.id
+        if params[:jogo][:qtde_jogos].to_i == 0
+          @jogos.qtde_jogos = 1
+        else
+          @jogos.qtde_jogos = params[:jogo][:qtde_jogos].to_i
+        end
+
+        @jogos.tombo_l = tombos[i]
+        #@livros_cad << @livro.tombo_l
+        if qtd == 1
+          if @jogos.save
+              flash[:notice] = "Successfully created audio visual."
+              redirect_to @jogos
+            else
+              render :action => 'new'
+          end
+        else
+          @jogos.save
+        end
+        i += 1
+      end
+      if qtd == 1
+      else
+        redirect_to jogos_cadastrados_jogos_path
+      end
   end
+
 
 def create_local
     @localizacao = Localizacao.new(params[:localizacao])
@@ -59,6 +86,11 @@ def create_local
     @jogos.destroy
     flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to jogos_url
+  end
+
+  def jogos_cadastrados
+    limit = Tombo.last(:conditions => ["user_id = ? and jogo_id is not null", current_user])
+    @jogos_cad = Tombo.all(:conditions => ["user_id = ? and jogo_id is not null", current_user], :limit => limit.qtde_livro, :order => "id DESC")
   end
 
 def consultaJog

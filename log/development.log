@@ -1368,3 +1368,169 @@ Processing JogosController#consultaJog (for 127.0.0.1 at 2012-01-27 13:50:57) [G
   [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
 Rendered jogos/_jogos (106.1ms)
 Completed in 163ms (View: 114, DB: 6) | 200 OK [http://localhost/consultaJog?authenticity_token=0Frhq%2BHgCJXJln2W87xPDPUcxxruNpyuuQDG4G9Ai7E%3D&type_of=3&search=&authenticity_token=0Frhq%2BHgCJXJln2W87xPDPUcxxruNpyuuQDG4G9Ai7E%3D&_=1327679457222]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateIdentificacaos (20111103140712)
+Migrating to CreateLocalizacoes (20111103142802)
+Migrating to CreateAreas (20111103142908)
+Migrating to CreateEditoras (20111103143141)
+Migrating to CreateRoles (20111103143650)
+Migrating to CreateUsers (20111103145438)
+Migrating to CreateLivros (20111103172501)
+Migrating to CreateDicionarioEnciclopedias (20111103173835)
+Migrating to CreateMapas (20111103180754)
+Migrating to CreatePeriodicos (20111104131658)
+Migrating to CreateJogos (20111104135250)
+Migrating to CreateAssuntos (20111108095000)
+Migrating to CreateItensAssuntos (20111108101214)
+Migrating to CreateAutores (20111108110739)
+Migrating to CreateMusicas (20111108120056)
+Migrating to AddTituloToMapas (20111108144756)
+Migrating to AddUnidadeToUsers (20111108171531)
+Migrating to CreateUnidades (20111108172431)
+Migrating to AssuntosLivros (20111110175329)
+Migrating to AddCamposToUnidades (20111117152552)
+Migrating to CreateTipos (20111117153922)
+Migrating to CreateUnidadesGpds (20111117161434)
+Migrating to CreateAutoresLivros (20111123143345)
+Migrating to CreateFuncionarios (20111124125844)
+Migrating to CreateItensEmprestimos (20111124135232)
+Migrating to CreateEmprestimos (20111124135514)
+Migrating to AddStatusToLivros (20111125085948)
+Migrating to AddCampoValidacaoToFuncionarios (20111125090211)
+Migrating to EmprestimosLivros (20111125173829)
+Migrating to AddDataEmprestimoToEmprestimos (20111125175024)
+Migrating to AddDataDevolucaoToEmprestimos (20111125175051)
+Migrating to CreateConfiguracaos (20111125175410)
+Migrating to CreateDataFiles (20111129170714)
+Migrating to CreateTemps (20111201175053)
+Migrating to CreateGeneros (20111212142507)
+Migrating to CreateCantores (20111212145844)
+Migrating to CreateMidias (20111220135017)
+Migrating to CreateCantoresMidias (20111220135036)
+Migrating to CreateMidiasMusicas (20111220135052)
+Migrating to CreateLogs (20120111100920)
+Migrating to CreateTombos (20120111153630)
+Migrating to AddCamposToTombos (20120112152935)
+Migrating to AddDicionarioToTombos (20120124094912)
+Migrating to AddMidiaToTombos (20120127092930)
+Migrating to CreatePossuis (20120130130543)
+Migrating to AddJogoToTombos (20120130145615)
+  [4;36;1mSQL (617.3ms)[0m   [0;1mALTER TABLE `tombos` ADD `jogo_id` int(11)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120130145615')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `areas`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `areas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `areas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `assuntos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `assuntos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `assuntos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `assuntos_livros`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `assuntos_livros`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `audio_visuais`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `audio_visuais`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `audio_visuais`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `autores`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `autores`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `autores`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `autores_livros`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `autores_livros`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW KEYS FROM `autores_livros`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `cantores`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `cantores`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `cantores`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `cantores_midias`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `cantores_midias`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `cantores_midias`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `configuracaos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `configuracaos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `configuracaos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `data_files`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `data_files`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `data_files`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `dicionario_enciclopedias`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `dicionario_enciclopedias`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `editoras`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `editoras`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `editoras`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `emprestimos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `emprestimos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `emprestimos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `emprestimos_livros`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `emprestimos_livros`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `funcionarios`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `funcionarios`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `funcionarios`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `generos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `generos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `generos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `identificacaos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `identificacaos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `identificacaos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `itens_assuntos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `itens_assuntos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `itens_assuntos`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `itens_emprestimos`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `itens_emprestimos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `itens_emprestimos`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `jogos`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `jogos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `jogos`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `livros`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `livros`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW KEYS FROM `livros`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localizacoes`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `localizacoes`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `localizacoes`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `logs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `logs`[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mSHOW FIELDS FROM `mapas`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `mapas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `mapas`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `midias`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `midias`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `midias`[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1mSHOW FIELDS FROM `midias_musicas`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `midias_musicas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `midias_musicas`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `musicas`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mdescribe `musicas`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW KEYS FROM `musicas`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `periodicos`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `periodicos`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mSHOW KEYS FROM `periodicos`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `possuis`[0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1mdescribe `possuis`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `possuis`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `temps`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `temps`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `temps`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `tipos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `tipos`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW KEYS FROM `tipos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `tombos`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `tombos`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mSHOW KEYS FROM `tombos`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `unidades`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `unidades`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `unidades`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `unidades_gpds`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `unidades_gpds`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (4.6ms)[0m   [0mSHOW KEYS FROM `users`[0m

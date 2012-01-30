@@ -1,8 +1,40 @@
 class ConsultasController < ApplicationController
+  before_filter :load_resources
   def index
+  end
 
+  def gerar_tombos
+      @tabelas = []
+      @tables.each do |z|
+      elementos = z.split("_")
+      if (elementos.count == 1) or (elementos[1] != 'dicionario')
+        @tabelas << z
+      end
+    end
+    @tabelas.insert(0,"")
 
   end
+
+  def criacao_possui
+    tabela = (params[:tabela].singularize.capitalize!).camelize.constantize
+    tabela = tabela
+    (tabela.all).each do |z|
+      possui = Possui.new
+      possui.unidade_id = 3
+      if params[:tabela] == 'livros'
+        possui.tombo = "li-#{z.tombo_l}"
+        possui.livro_id = z.id
+      else
+        if params[:tabela] == 'dicionario_enciclopedias'
+
+        end
+      end
+      possui.status = 1
+      possui.save
+    end
+    render :nothing => true
+  end
+
   def tabela_selecionada
       tabela = params[:tabelas]
       @campos = (tabela.camelize.singularize.constantize).column_names.insert(0,"*")
@@ -47,4 +79,12 @@ class ConsultasController < ApplicationController
     @result = tabela.constantize.all(:select => campos)
     t = 0
   end
+
+  protected
+
+  def load_resources
+    @tables = ActiveRecord::Base.connection.tables
+  end
+
+
 end

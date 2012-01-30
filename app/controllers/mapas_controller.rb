@@ -43,7 +43,7 @@ def create_local
   end
 
   def update
-    @mapas = Mapas.find(params[:id])
+    @mapas = Mapa.find(params[:id])
     if @mapas.update_attributes(params[:mapa])
       flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @mapas
