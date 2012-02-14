@@ -18,11 +18,11 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-# every 1.day do
-#   rake "backup:run"
-# end
-
-
-  every 5.minutes do
-    rake "backup:run"
+  every 1.day, :at => '0:30 am' do
+    rake "bbackup:run"
   end
+
+
+#  every 5.minutes do
+#    rake "backup:run"
+#  end

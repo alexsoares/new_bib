@@ -1,0 +1,22 @@
+	<div style='display:none'>
+		<div id='inline_content' style='padding:10px; background:#fff;'>
+                <table width="100%">
+                  <h2><%= current_user.unidade.nome %></h2>
+                  <hr>
+
+                  <% form_remote_for :classe, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()",
+                    :url => {:controller => :emprestimos,
+                    :action => :classe } do |form| %>
+                  <tr>
+                      <%= collection_select :classe, :id_classe, @classes, :id_classe, :classe_descricao, :include_blank => ' -- Selecionar -- '  %>
+                      <%= select :classe, :ano_letivo, Aluno::D %>
+                  </tr>
+                  <%= submit_tag "Filtrar", :name => nil %>
+                  <% end %>
+                </table>
+                <hr/>
+                <br/>
+                <div id="classe">
+                </div>
+        </div>
+	</div>

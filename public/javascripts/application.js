@@ -1,4 +1,17 @@
 jQuery(document).ready(function( $ ){
+$('select#emprestimo_tipo_emprestimo').change(function(){
+  if ($(this).val() == 1){
+    $(".professor").hide();
+    $(".aluno").show();
+  }
+  else if ($(this).val() == 0){
+    $(".aluno").hide();
+    $(".professor").show();
+  }
+});
+
+
+
 
 // Codigo para jogos
 

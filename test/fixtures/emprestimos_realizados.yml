@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  emprestimo: 
+  dpu: 
+  ativo: false
+
+two:
+  emprestimo: 
+  dpu: 
+  ativo: false

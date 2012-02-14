@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120130145615) do
+ActiveRecord::Schema.define(:version => 20120202091301) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -96,6 +96,26 @@ ActiveRecord::Schema.define(:version => 20120130145615) do
     t.datetime "updated_at"
   end
 
+  create_table "dpus", :force => true do |t|
+    t.integer  "unidade_id"
+    t.string   "tombo"
+    t.integer  "livro_id"
+    t.integer  "dicionario_enciclopedia_id"
+    t.integer  "jogo_id"
+    t.integer  "mapa_id"
+    t.integer  "midia_id"
+    t.integer  "periodico_id"
+    t.boolean  "status"
+    t.integer  "tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dpus_emprestimos", :id => false, :force => true do |t|
+    t.integer "autor_id", :null => false
+    t.integer "livro_id", :null => false
+  end
+
   create_table "editoras", :force => true do |t|
     t.string   "nome"
     t.string   "cidade"
@@ -106,7 +126,7 @@ ActiveRecord::Schema.define(:version => 20120130145615) do
 
   create_table "emprestimos", :force => true do |t|
     t.integer  "tipo_emprestimo"
-    t.integer  "professor_id"
+    t.integer  "funcionario"
     t.integer  "aluno"
     t.integer  "unidade_id"
     t.datetime "created_at"
@@ -118,6 +138,14 @@ ActiveRecord::Schema.define(:version => 20120130145615) do
   create_table "emprestimos_livros", :id => false, :force => true do |t|
     t.integer "autor_id", :null => false
     t.integer "livro_id", :null => false
+  end
+
+  create_table "emprestimos_realizados", :force => true do |t|
+    t.integer  "emprestimo_id"
+    t.integer  "dpu_id"
+    t.boolean  "ativo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "funcionarios", :force => true do |t|

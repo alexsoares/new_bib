@@ -4,35 +4,52 @@ class ConsultasController < ApplicationController
   end
 
   def gerar_tombos
-      @tabelas = []
-      @tables.each do |z|
-      elementos = z.split("_")
-      if (elementos.count == 1) or (elementos[1] != 'dicionario')
-        @tabelas << z
-      end
-    end
-    @tabelas.insert(0,"")
-
   end
 
   def criacao_possui
-    tabela = (params[:tabela].singularize.capitalize!).camelize.constantize
-    tabela = tabela
+    t = params[:tabela]
+    tabela = (params[:tabela].capitalize).camelize.constantize
+
     (tabela.all).each do |z|
-      possui = Possui.new
+      possui = Dpu.new
       possui.unidade_id = 3
-      if params[:tabela] == 'livros'
+      if params[:tabela].to_s == 'Livro'
         possui.tombo = "li-#{z.tombo_l}"
         possui.livro_id = z.id
       else
-        if params[:tabela] == 'dicionario_enciclopedias'
-
+        if params[:tabela].to_s == 'Dicionario_enciclopedia'
+          possui.tombo = "de-#{z.tombo_l}"
+          possui.dicionario_enciclopedia_id = z.id
+        else
+          if params[:tabela].to_s == 'Jogo'
+            possui.tombo = "jg-#{z.tombo_l}"
+            possui.jogo_id = z.id
+          else
+            if params[:tabela].to_s == 'Midia'
+              possui.tombo = "md-#{z.tombo_l}"
+              possui.midia_id = z.id
+            else
+              if params[:tabela].to_s == 'Mapa'
+                possui.tombo = "mp-#{z.tombo_l}"
+                possui.mapa_id = z.id
+              else
+                if params[:tabela].to_s == 'Periodico'
+                  possui.tombo = "pd-#{z.tombo_l}"
+                  possui.periodico_id = z.id
+                end
+              end
+            end
+          end
         end
       end
       possui.status = 1
       possui.save
     end
-    render :nothing => true
+#    index = (Possui::TABELAS).index {|v| v == params[:tabela].to_s}
+ #   (Possui::TABELAS).delete_at(index)
+    render :update do |page|
+      page.replace_html "tabelas", :partial => "tabelas"
+    end
   end
 
   def tabela_selecionada

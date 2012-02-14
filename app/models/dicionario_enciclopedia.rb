@@ -5,7 +5,8 @@ class DicionarioEnciclopedia < ActiveRecord::Base
   has_and_belongs_to_many :autores
   attr_accessor :qtde, :lista_tombos, :usuario
   has_many :tombos
-
+  has_many :possuis
+  has_many :dpus
   belongs_to :area
   belongs_to :editora
   belongs_to :localizacao

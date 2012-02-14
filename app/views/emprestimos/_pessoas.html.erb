@@ -11,7 +11,7 @@
       <tr>
         <td>
            <% if aluno.aluno_ra.present? %>
-              <%= link_to aluno.aluno_ra, new_emprestimo_path(:pessoa => aluno.id_pessoa)  %>
+              <%= link_to_remote(aluno.aluno_ra, :success => "$.fn.colorbox.close()", :url => { :action => "retorno", :pessoa => aluno.id_pessoa}) %>
              <%else%>             
              <% if aluno.matricula_funcionario.present? %>
                <%= aluno.matricula_funcionario %>

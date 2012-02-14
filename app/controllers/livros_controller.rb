@@ -89,6 +89,7 @@ class LivrosController < ApplicationController
         @livro = Livro.new(params[:livro])
         @livro.identificacao_id = session[:identificacao_id]
         @livro.usuario = current_user.id
+        @livro.unidade = current_user.unidade_id
         if params[:livro][:qtde_livros].to_i == 0
           @livro.qtde_livros = 1
         else

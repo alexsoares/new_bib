@@ -1,9 +1,7 @@
   <% form_remote_tag :url => {:action => "criacao_possui", :controller => "consultas"}, :method => :get,:loading => "$('#status').show()",:success => "$('#status').hide();" do %>
          <table width="100%" align="center" bgcolor="#DCDCDC" >
          <tr>
-           <td>
-             <%= select_tag :tabela,options_for_select(@tabelas) %>
-           </td>
+           <td id="tabelas"><%= render "tabelas" %></td>
          </tr>
          <tr>
            <td><%= submit_tag "Resolver Problemas"  %></td>

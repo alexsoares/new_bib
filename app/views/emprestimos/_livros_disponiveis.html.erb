@@ -1,0 +1,14 @@
+<% if @disponiveis.present? %>
+<table>
+  <tr>
+    <th>Tombo</th>
+    <th>Nome</th>
+  </tr>
+<% @disponiveis.each do |disp|%>
+  <tr>
+    <td><%= link_to_remote(disp.livro.tombo_l, :success => "$.fn.colorbox.close()", :url => { :action => "retorno_livro", :emprestimo => disp.id}) %></td>
+    <td><%= disp.livro.identificacao.livro %></td>
+  </tr>
+<%end%>
+</table>
+<%end%>

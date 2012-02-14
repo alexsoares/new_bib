@@ -3,6 +3,7 @@ class Jogo < ActiveRecord::Base
   #attr_accessible :localizacao, :tombo_seduc, :tombo_l, :nome, :faixa_etaria, :tipo, :fabricante, :obs
   attr_accessor :qtde_jogos, :lista_tombos, :usuario
     has_many :possuis
+    has_many :dpus
     belongs_to :localizacao
     has_many :tombos
     validates_presence_of :localizacao_id,:tombo_l, :nome, :faixa_etaria, :fabricante

@@ -7,4 +7,5 @@ class Unidade < ActiveRecord::Base
   has_many :localizacoes
   has_many :emprestimos
   has_many :possuis
+  has_many :dpus
 end

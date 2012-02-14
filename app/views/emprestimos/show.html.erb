@@ -1,18 +1,14 @@
 <% title "Emprestimo" %>
 
 <p>
-  <strong>Tipo Emprestimo:</strong>
-  <%=h @emprestimo.tipo_emprestimo %>
-</p>
-<p>
-  <strong>Professor:</strong>
-  <%=h "#{Aluno.find(@emprestimo.professor_id).matricula_funcionario} | #{Aluno.find(@emprestimo.professor_id).nome}" %>
-</p>
-<p>
-  <% t = (@emprestimo.aluno).present? %>
-  <%unless (@emprestimo.aluno).present?%>
-  <strong>Aluno:</strong>
-  <%=h @emprestimo.aluno %>
+  <% if @emprestimo.tipo_emprestimo == 0 %>
+    <strong>Professor:</strong>
+    <% funcionario = Aluno.find(@emprestimo.funcionario) %>
+    <%=h "#{funcionario.matricula_funcionario} | #{funcionario.nome}" %>
+  <%else%>
+    <strong>Aluno:</strong>
+    <% aluno = Aluno.find(@emprestimo.aluno) %>
+    <%=h "#{aluno.aluno_ra} | #{aluno.nome} | #{aluno.classe_descricao}" %>
   <%end%>
 </p>
 

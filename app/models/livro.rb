@@ -3,9 +3,10 @@ class Livro < ActiveRecord::Base
   #attr_accessible :assunto, :identificacao, :area, :editora, :localizacao, :tombo_seduc, :tombo_l, :colecao, :edicao, :data_edicao, :local_edicao, :resumo, :obs
   has_and_belongs_to_many :assuntos
   has_and_belongs_to_many :autores
-  attr_accessor :qtde_livros, :lista_tombos, :usuario
+  attr_accessor :qtde_livros, :lista_tombos, :usuario, :unidade
   has_many :tombos
   has_many :possuis
+  has_many :dpus
   
   belongs_to :identificacao
   belongs_to :area
@@ -40,6 +41,15 @@ class Livro < ActiveRecord::Base
 
   def auto_inc_tombo_seduc
     self.tombo_seduc = self.id
+  end
+
+  def disponibiliza
+    disponivel = Dpu.new
+    disponivel.livro_id = self.id
+    disponivel.tipo = 1
+    disponivel.tombo = "li-#{self.id}"
+    disponivel.unidade_id = self.unidade
+    disponivel.save
   end
 
 end
