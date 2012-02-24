@@ -111,11 +111,6 @@ ActiveRecord::Schema.define(:version => 20120202091301) do
     t.datetime "updated_at"
   end
 
-  create_table "dpus_emprestimos", :id => false, :force => true do |t|
-    t.integer "autor_id", :null => false
-    t.integer "livro_id", :null => false
-  end
-
   create_table "editoras", :force => true do |t|
     t.string   "nome"
     t.string   "cidade"
@@ -126,7 +121,7 @@ ActiveRecord::Schema.define(:version => 20120202091301) do
 
   create_table "emprestimos", :force => true do |t|
     t.integer  "tipo_emprestimo"
-    t.integer  "funcionario"
+    t.integer  "professor_id"
     t.integer  "aluno"
     t.integer  "unidade_id"
     t.datetime "created_at"

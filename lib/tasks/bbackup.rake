@@ -1,6 +1,6 @@
 SHARED_PATH = "/home/servidor/biblioteca.seducpma.com/shared"
 DB_BACKUP_DIR = File.join(SHARED_PATH, "db")
-BACKUP_SERVER = "alexandre@192.168.0.249:~/backup/biblioteca.seducpma.com"
+BACKUP_SERVER = "analistas@192.168.0.249:~/backup/biblioteca.seducpma.com"
 
 namespace :bbackup do
   task :run => :database do

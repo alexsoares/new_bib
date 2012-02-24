@@ -17,12 +17,17 @@ class EmprestimosController < ApplicationController
     @emprestimo.dpu = params[:emprestimo]
     @emprestimo.data_emprestimo = Time.now
     if (session[:pessoa]).present?
-      @emprestimo.aluno = session[:pessoa]
-    end
-    if @emprestimo.save
-      flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
-      redirect_to @emprestimo
+      @emprestimo.aluno = session[:pessoa]    
+      if @emprestimo.save
+        flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
+        redirect_to @emprestimo
+        session[:pessoa] = nil
+        session[:emprestimo] = nil
+      else
+        render :action => 'new'
+      end
     else
+      flash[:notice] = "Problemas no emprestimo. Selecione um aluno/funcionario."
       render :action => 'new'
     end
   end
@@ -121,14 +126,11 @@ class EmprestimosController < ApplicationController
 
 protected
   def load_resources
-    if current_user.unidade_id = 53
+    if current_user.unidade_id == 53
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011"], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
-    else
-      @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
-    end
-    if current_user.unidade_id = 53
       @funcionarios = Aluno.all(:conditions => ["matricula_funcionario is not null"])
     else
+      @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
       @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
     end
     @livros_disponiveis = Dpu.all(:include => [],:conditions => ["status = 1 and unidade_id = ?", 3], :limit => 10)

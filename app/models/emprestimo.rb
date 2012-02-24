@@ -9,6 +9,7 @@ class Emprestimo < ActiveRecord::Base
   after_create :cria_emprestimos_realizados
   #attr_accessible :tipo_emprestimo, :professor, :aluno
   belongs_to :unidade
+  validates_presence_of :tipo_emprestimo, :dpu
   #accepts_nested_attributes_for :dpus, :reject_if => lambda {|a| a[:conteudo].blank?}, :allow_destroy => true
   attr_accessor :dpu
 
