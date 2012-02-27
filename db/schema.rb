@@ -28,22 +28,6 @@ ActiveRecord::Schema.define(:version => 20120202091301) do
     t.integer "livro_id",   :null => false
   end
 
-  create_table "audio_visuais", :force => true do |t|
-    t.integer  "genero_midia_id"
-    t.integer  "localizacao_id"
-    t.string   "tombo_seduc"
-    t.string   "tombo_l"
-    t.string   "tipo"
-    t.string   "titulo"
-    t.string   "subtitulo"
-    t.string   "producao"
-    t.string   "local_producao"
-    t.date     "data_producao"
-    t.string   "obs"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "autores", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at"
@@ -121,7 +105,7 @@ ActiveRecord::Schema.define(:version => 20120202091301) do
 
   create_table "emprestimos", :force => true do |t|
     t.integer  "tipo_emprestimo"
-    t.integer  "professor_id"
+    t.integer  "funcionario"
     t.integer  "aluno"
     t.integer  "unidade_id"
     t.datetime "created_at"
@@ -159,7 +143,7 @@ ActiveRecord::Schema.define(:version => 20120202091301) do
   end
 
   create_table "identificacaos", :force => true do |t|
-    t.string   "codigo"
+    t.integer  "codigo"
     t.string   "livro"
     t.string   "subtitulo"
     t.text     "obs"
