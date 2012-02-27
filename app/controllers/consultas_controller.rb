@@ -7,9 +7,7 @@ class ConsultasController < ApplicationController
   end
 
   def criacao_possui
-    t = params[:tabela]
     tabela = (params[:tabela].capitalize).camelize.constantize
-
     (tabela.all).each do |z|
       possui = Dpu.new
       possui.unidade_id = 3

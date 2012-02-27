@@ -1,5 +1,5 @@
 class Jogo < ActiveRecord::Base
-  after_create :multi_tombo
+  after_create :multi_tombo, :auto_inc_tombo_seduc, :cria_possui_jg
   #attr_accessible :localizacao, :tombo_seduc, :tombo_l, :nome, :faixa_etaria, :tipo, :fabricante, :obs
   attr_accessor :qtde_jogos, :lista_tombos, :usuario
     has_many :possuis
@@ -21,7 +21,17 @@ class Jogo < ActiveRecord::Base
 
 
   def auto_inc_tombo_seduc
-    self.tombo_seduc =+ 1
+    self.tombo_seduc = self.id
   end
+
+  def cria_possui_jg
+    possui = Possui.new
+    possui.unidade_id = 3
+    possui.tombo = "jg-#{self.tombo_l}"
+    possui.jogo_id = self.id
+    possui.status = 1
+    possui.save
+  end
+
 
 end

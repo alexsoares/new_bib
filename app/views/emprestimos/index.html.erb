@@ -1,21 +1,26 @@
 <% title "Emprestimos" %>
-
 <table>
-  <tr>
-    <th>Tipo Emprestimo</th>
-    <th>Professor</th>
-    <th>Aluno</th>
-  </tr>
-  <% for emprestimo in @emprestimos %>
+  <%if @emprestimos.present?%>
     <tr>
-      <td><%=h emprestimo.tipo_emprestimo %></td>
-      <td><%=h emprestimo.professor %></td>
-      <td><%=h emprestimo.aluno %></td>
-      <td><%= link_to "Show", emprestimo %></td>
-      <td><%= link_to "Edit", edit_emprestimo_path(emprestimo) %></td>
-      <td><%= link_to "Destroy", emprestimo, :confirm => 'Are you sure?', :method => :delete %></td>
+      <th>Emprestado para</th>
+      <th>RA / Matricula</th>
+      <th>Data do empréstimo</th>
+      <th>Data de devolução</th>
     </tr>
-  <% end %>
+    <% for emprestimo in @emprestimos %>
+      <tr>
+        <td><%=h emprestimo.emprestado_para %></td>
+        <td><%=h emprestimo.exibe_ra_mat %></td>
+        <td><%=h emprestimo.data_emprestimo.strftime("%d/%m/%Y") %></td>
+        <td><%=h emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
+        <td><%= link_to "Show", emprestimo %></td>
+        <td><%= link_to "Edit", edit_emprestimo_path(emprestimo) %></td>
+        <td><%= link_to "Destroy", emprestimo, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  <%else%>
+      <h1><%= "Não existe emprestimos vigente" %></h1>
+  <%end%>
 </table>
 
-<p><%= link_to "New Emprestimo", new_emprestimo_path %></p>
+<p><%= link_to "Emprestar", new_emprestimo_path %></p>

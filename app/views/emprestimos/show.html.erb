@@ -1,16 +1,25 @@
 <% title "Emprestimo" %>
 
-<p>
-  <% if @emprestimo.tipo_emprestimo == 0 %>
-    <strong>Professor:</strong>
-    <% funcionario = Aluno.find(@emprestimo.funcionario) %>
-    <%=h "#{funcionario.matricula_funcionario} | #{funcionario.nome}" %>
-  <%else%>
-    <strong>Aluno:</strong>
-    <% aluno = Aluno.find(@emprestimo.aluno) %>
-    <%=h "#{aluno.aluno_ra} | #{aluno.nome} | #{aluno.classe_descricao}" %>
-  <%end%>
-</p>
+<table class="divisoes">
+  <th>Nome</th>
+  <th>RA / Matricula</th>
+  <th>Devolver em</th>
+  <tr>
+    <td><%= @emprestimo.emprestado_para %></td>
+    <td><%= @emprestimo.exibe_ra_mat %></td>
+    <td><%= @emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
+  </tr>
+  <tr><td align="center" colspan="3">Livros emprestados</td></tr>
+  <tr>
+    <td colspan="3" align="center">
+      <ul>
+        <%@emprestimo.emprestimos_realizados.each do |er|%>
+          <li><%= er.dpu.livro.identificacao.livro %></li>
+        <%end%>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 <p>
   <%= link_to "Edit", edit_emprestimo_path(@emprestimo) %> |

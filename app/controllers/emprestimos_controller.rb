@@ -1,7 +1,7 @@
 class EmprestimosController < ApplicationController
   before_filter :load_resources
   def index
-    @emprestimos = Emprestimo.all
+    @emprestimos = Emprestimo.all(:conditions => ["unidade_id = ? and data_emprestimo < data_devolucao", current_user.unidade_id])
   end
 
   def show
@@ -14,7 +14,7 @@ class EmprestimosController < ApplicationController
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])
     @emprestimo.unidade_id = current_user.unidade_id
-    @emprestimo.dpu = params[:emprestimo]
+    @emprestimo.dpu = session[:emprestimo]
     @emprestimo.data_emprestimo = Time.now
     if (session[:pessoa]).present?
       @emprestimo.aluno = session[:pessoa]    
