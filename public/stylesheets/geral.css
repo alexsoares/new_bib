@@ -1,9 +1,9 @@
 #livros{
-    height:120px;
-    width:790px;
-    border: solid 1px;
+    height:auto;
+    width:auto;
+    
     overflow: auto;
-    background-color:#CDC1C5;
+
 }
 #aluno{
     height:20px;
