@@ -14,9 +14,12 @@ class EmprestimosController < ApplicationController
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])
     @emprestimo.unidade_id = current_user.unidade_id
-    @emprestimo.dpu = session[:emprestimo]
+    emprestimos = []
+    emprestimos << session[:emprestimo]
+    @emprestimo.dpu = emprestimos
     @emprestimo.data_emprestimo = Time.now
     @emprestimo.pessoa = session[:pessoa]
+    t = session[:pessoa]
     if (session[:pessoa]).present?
       
       if @emprestimo.save
@@ -95,7 +98,7 @@ class EmprestimosController < ApplicationController
       end
   end
 
-    def retorno_livro
+  def retorno_livro
       session[:emprestimo] = params[:emprestimo]
       livro = Livro.find(params[:emprestimo])
         render :update do |page|

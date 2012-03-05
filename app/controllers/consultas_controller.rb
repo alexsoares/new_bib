@@ -7,48 +7,50 @@ class ConsultasController < ApplicationController
   end
 
   def criacao_possui
-    tabela = (params[:tabela].capitalize).camelize.constantize
-    (tabela.all).each do |z|
-      possui = Dpu.new
-      possui.unidade_id = 3
-      if params[:tabela].to_s == 'Livro'
-        possui.tombo = "li-#{z.tombo_l}"
-        possui.livro_id = z.id
-      else
-        if params[:tabela].to_s == 'Dicionario_enciclopedia'
-          possui.tombo = "de-#{z.tombo_l}"
-          possui.dicionario_enciclopedia_id = z.id
+    if (params[:tabela]).present?
+      tabela = (params[:tabela].singularize.capitalize).camelize.constantize
+      (tabela.all).each do |z|
+        possui = Dpu.new
+        possui.unidade_id = 3
+        if tabela.to_s == 'Livro'
+          possui.tombo = "li-#{z.tombo_l}"
+          possui.livro_id = z.id
         else
-          if params[:tabela].to_s == 'Jogo'
-            possui.tombo = "jg-#{z.tombo_l}"
-            possui.jogo_id = z.id
+          if tabela.to_s == 'Dicionario_enciclopedia'
+            possui.tombo = "de-#{z.tombo_l}"
+            possui.dicionario_enciclopedia_id = z.id
           else
-            if params[:tabela].to_s == 'Midia'
-              possui.tombo = "md-#{z.tombo_l}"
-              possui.midia_id = z.id
+            if tabela.to_s == 'Jogo'
+              possui.tombo = "jg-#{z.tombo_l}"
+              possui.jogo_id = z.id
             else
-              if params[:tabela].to_s == 'Mapa'
-                possui.tombo = "mp-#{z.tombo_l}"
-                possui.mapa_id = z.id
+              if tabela.to_s == 'Midia'
+                possui.tombo = "md-#{z.tombo_l}"
+                possui.midia_id = z.id
               else
-                if params[:tabela].to_s == 'Periodico'
-                  possui.tombo = "pd-#{z.tombo_l}"
-                  possui.periodico_id = z.id
+                if tabela.to_s == 'Mapa'
+                  possui.tombo = "mp-#{z.tombo_l}"
+                  possui.mapa_id = z.id
+                else
+                  if tabela.to_s == 'Periodico'
+                    possui.tombo = "pd-#{z.tombo_l}"
+                    possui.periodico_id = z.id
+                  end
                 end
               end
             end
           end
         end
+        possui.status = 1
+        possui.save
       end
-      possui.status = 1
-      possui.save
-    end
 #    index = (Possui::TABELAS).index {|v| v == params[:tabela].to_s}
  #   (Possui::TABELAS).delete_at(index)
     render :update do |page|
       page.replace_html "tabelas", :partial => "tabelas"
     end
   end
+end
 
   def tabela_selecionada
       tabela = params[:tabelas]

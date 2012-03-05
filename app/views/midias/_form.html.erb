@@ -1,6 +1,6 @@
 <% form_for @midia do |f| %>
   <%= f.error_messages %>
-  <table  align="center" bgcolor="#F5F5F5" width="100%">
+  <table align="center" bgcolor="#F5F5F5" width="100%">
     <tr>
       <td colspan="3" >
         <b>Tombo Local:</b><br />
@@ -34,7 +34,7 @@
           </td>
       </tr>
     <tr>
-      <td>
+      <td colspan="3">
         <b><%= f.label :tipo, 'Tipo:' %></b>
          <%= f.select :tipo, Midia::TIPO, :include_blank => '---Selecionar---'%>
         <b><%= f.label :genero_id,"Genero: " %></b>
