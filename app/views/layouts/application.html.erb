@@ -75,6 +75,17 @@
                     </ul>
                   </div>
                 </li>
+                <li><a href="#"><b>Emprestimos</b></a>
+                  <div class="select_sub">
+                    <ul class="sub">
+                      <li><%= link_to "Empréstimo", new_emprestimo_path %></li>
+                      <li><%= link_to "Devolução"  %></li>
+                      
+                    </ul>
+                  </div>
+                </li>
+
+
 
                 <% if current_user.has_role?('admin') or current_user.has_role?('escola')  %>
                 <li><a href="#"><b>Gerenciamento</b></a>

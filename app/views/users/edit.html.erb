@@ -1,0 +1,66 @@
+<br/><br/>
+<table class="tabelas" width="60%" align="center">
+  <tr>
+    <td align="left">
+      <h1>ALTERAÇÂO DE SENHA E EMAIL</h1>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <fieldset><legend><font  size=4>Usuário</font></legend>
+          <%= error_messages_for :user %>
+          <% form_for(@user) do |f| %>
+           <font  size="2">
+              <table>
+                <tr>
+                  <td align="left"> <b>Usuários:</b></td>
+                  <td align="left"> <b><%= @user.login %></b></td>
+                </tr>
+                 <tr>
+                   <td align="left"><b> Cadastrado desde:</b></td>
+                   <td align="left"> <%= @user.created_at.strftime("%d/%m/%y") %></td>
+                </tr>
+                <tr>
+                  <td align="left"> <b>Nova Senha:</b></td>
+                  <td> <%= f.password_field :password %></td>
+                </tr>
+                <tr>
+                  <td align="left"> <b>Confirmação Nova Senha:</b></td>
+                  <td> <%= f.password_field :password_confirmation %></td>
+                </tr>
+                <tr>
+                  <td align="left"> <b>Unidade:</b></td>
+                 <%if @user.unidade_id == 53%>
+                    <td align="left"><b>Seduc - Administrador do Sistema</b></td>
+                  <%else%>
+                    <%if @user.unidade_id == 99%>
+                      <td align="left"><b>Estagiário Itinerante</b></td>
+                    <%else%>
+                      <td align="left"><b><%= f.label @user.unidade.nome %></b></td>
+                    <%end%>
+                  <%end%>
+                </tr>
+                <tr>
+                  <td align="left"> <b>Email:</b></td>
+                  <td> <%= f.text_field :email %></td>
+                </tr>
+         </table>
+       </font>
+     </fieldset>
+      <table>
+        <tr>
+         <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+         <td width="6%" align="left"><%= f.submit "Salvar" %></td>
+         <td></td>
+         <% end %>
+         
+        </tr>
+     </table>
+   </td>
+ </tr>
+</table>
+<br/>
+
+ 
+
+
