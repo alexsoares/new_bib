@@ -9,9 +9,9 @@
     <td><%= @emprestimo.exibe_ra_mat %></td>
     <td><%= @emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
   </tr>
-  <tr><td align="center" colspan="3">Livros emprestados</td></tr>
+  <tr><td colspan="3">Livros emprestados</td></tr>
   <tr>
-    <td colspan="3" align="center">
+    <td colspan="3">
       <ul>
         <%@emprestimo.emprestimos_realizados.each do |er|%>
           <li><%= er.dpu.livro.identificacao.livro %></li>

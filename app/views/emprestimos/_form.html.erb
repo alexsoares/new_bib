@@ -1,16 +1,41 @@
 <% form_for @emprestimo do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :tipo_emprestimo,"Emprestimo para:" %><br />
-    <%= f.select :tipo_emprestimo, Emprestimo::Tipo, :include_blank => "--Selecionar--" %>
-  </p> 
-  <a id="pessoa" class='inline' href="#inline_content"><div id="aluno" class="aluno"style="display:none">Selecione o Aluno:</div></a>
-  <a class='inline' href="#inline_content"><div id="professor" class="professor" style="display:none">Selecione o Funcionario:</div></a>
-  <a class='inline' href="#inline_emp_livro"><div id="livro">Selecione o livro</div></a>
 
-  <p><%= f.submit "Salvar" %></p>
+<table>
+  <tr>
+    <td colspan="2">
+      <%= f.label :tipo_emprestimo,"Emprestimo para:" %><br />
+      <%= f.select :tipo_emprestimo, Emprestimo::Tipo, :include_blank => "--Selecionar--" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="retorna_pessoa">Clique no botão a frente >></div>
+    </td>
+    <td id="aluno" class="aluno" style="display:none">
+      <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "35x35"), "#inline_content", :class =>"inline" %>
+    </td>
+    <td id="funcionario" class="professor" style="display:none">
+      <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "35x35"), "#inline_professor", :class =>"inline" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="retorna_livro">Clique no botão a frente e selecione o livro. >></div>
+    </td>
+    <td>
+      <%= link_to image_tag("/stylesheets/images/livro.png", :size => "35x35"), "#inline_emp_livro", :class =>"inline" %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <%= f.submit "Salvar" %>
+    </td>
+  </tr>
+</table>
 <% end %>
 <%= render "form_inline_content" %>
+<%= render "form_inline_professor" %>
 
 
 
@@ -27,6 +52,10 @@
                     <td>
                        <a href="#" class="filtro"><%= form.radio_button(:type_of, "0") %></a>Livros
                        <a href="#" class="filtro"><%= form.radio_button(:type_of, "1") %></a>Dicionario/Enciclopedia
+                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "2") %></a>Jogos
+                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "3") %></a>Mapas
+                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "4") %></a>Midias
+                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "5") %></a>Periodicos
                     </td>
                   </tr>
                   <tr>

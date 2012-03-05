@@ -10,7 +10,7 @@ $('select#emprestimo_tipo_emprestimo').change(function(){
   }
 });
 
-
+$( "#configuracao_data_criacao" ).datepicker({dateFormat: 'dd-mm-yy', changeYear: true, changeMonth: true, yearRange: '-60:+0'});
 
 
 // Codigo para jogos

@@ -11,17 +11,40 @@
       background-color: #F5F5F5;
       padding: 4px 8px;
       padding-bottom: 4px;
+      text-align: center;
     }
+    #classe{
+    height:380px;
+    width:760px;
+    border: solid 1px;
+    overflow: auto;
+    background-color:#CDC1C5;
+
+}
 #livros{
     height:120px;
-    width:790px;
+    width:760px;
     border: solid 1px;
     overflow: auto;
     background-color:#CDC1C5;
 }
-#aluno{
+#pessoas{
+    height:320px;
+    width:740px;
+    border: solid 1px;
+    overflow: auto;
+    background-color:#CDC1C5;
+}
+#retorna_livro{
     height:20px;
-    width:575px;
+    width:450px;
+    border: solid 1px;
+}
+
+
+#retorna_pessoa{
+    height:20px;
+    width:450px;
     border: solid 1px;
 }
 #livro{

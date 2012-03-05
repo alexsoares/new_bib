@@ -14,4 +14,5 @@
   inflect.irregular 'cantor','cantores'
   inflect.irregular 'item','itens'
   inflect.irregular 'autor','autores'
+  inflect.irregular 'configuracao', 'configuracoes'
  end

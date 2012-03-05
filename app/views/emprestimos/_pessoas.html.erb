@@ -1,4 +1,4 @@
-<%if @alunos.present?%>
+<%if @pessoas.present?%>
 <table border="1" class="tabelas" width="100%">
   <tr>
     <th>Identificação</th>
@@ -7,23 +7,23 @@
     <th>Tipo</th>
   </tr>
   
-    <% @alunos.each do |aluno| %>
+    <% @pessoas.each do |pessoa| %>
       <tr>
         <td>
-           <% if aluno.aluno_ra.present? %>
-              <%= link_to_remote(aluno.aluno_ra, :success => "$.fn.colorbox.close()", :url => { :action => "retorno", :pessoa => aluno.id_pessoa}) %>
+           <% if pessoa.aluno_ra.present? %>
+              <%= link_to_remote(pessoa.aluno_ra, :success => "$.fn.colorbox.close()", :url => { :action => "retorno", :pessoa => pessoa.id_pessoa}) %>
              <%else%>             
-             <% if aluno.matricula_funcionario.present? %>
-               <%= aluno.matricula_funcionario %>
+             <% if pessoa.matricula_funcionario.present? %>
+              <%= link_to_remote(pessoa.matricula_funcionario, :success => "$.fn.colorbox.close()", :url => { :action => "retorno", :pessoa => pessoa.id_pessoa}) %>
              <%end%>
            <%end%>
         </td>
         <td>
-          <%= aluno.nome %>
+          <%= pessoa.nome %>
         </td>
-        <td><%= aluno.nome_escola %></td>
+        <td><%= pessoa.nome_escola.present? ? pessoa.nome_escola : "PMA" %></td>
         <td>
-           <% if aluno.aluno_ra.present? %>
+           <% if pessoa.aluno_ra.present? %>
             <%= "Aluno" %>
            <%else%>
             <%= "Funcionario" %>

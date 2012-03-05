@@ -57,11 +57,15 @@ class ConsultasController < ApplicationController
   end
 
   def lista_tombo
-    @tombo_livros = Livro.all(:conditions => ["tombo_seduc <> id"])
+    if params[:tabela].present?
+      tabela = params[:tabela].camelize.singularize.constantize
+      @tombo_livros = tabela.all(:conditions => ["tombo_seduc <> id"])
+    end
   end
 
   def corrigir_tombos
-    tombo_livros = Livro.all(:conditions => ["tombo_seduc <> id"])
+    tabela = params[:tabela].camelize.singularize.constantize
+    tombo_livros = tabela.all(:conditions => ["tombo_seduc <> id"])
     tombo_livros.each do |tombo|
       tombo.tombo_seduc = tombo.id
       tombo.save

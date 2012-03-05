@@ -1,0 +1,20 @@
+<% form_for @configuracao do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :tipo_config %><br />
+    <%= f.select :tipo_config, Configuracao::Tipo, :include_blank => '--Selecionar--'%>
+  </p>
+  <p>
+    <%= f.label :data_criacao %><br />
+    <%= f.text_field :data_criacao, :size => 5 %>
+  </p>
+  <p>
+    <%= f.label :dias_posse %><br />
+    <%= f.text_field :dias_posse, :size => 5 %>
+  </p>
+  <p>
+    <%= f.label :dias_para_aviso %><br />
+    <%= f.text_field :dias_para_aviso, :size => 5 %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -11,9 +11,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :cantores
   map.resources :generos
   map.resources :roles_users, :collection => {:lista_users => :get}
-  map.resources :configuracaos
+  map.resources :configuracoes
   map.resources :importar
-  map.resources :emprestimos, :collection => {:alunos => :get,:classe => :get, :dpu => :get, :busca => :get}
+  map.resources :emprestimos, :collection => {:funcionario => :get, :alunos => :get,:classe => :get, :dpu => :get, :busca => :get}
   map.resources :itens_emprestimos
   map.resources :funcionarios
   map.resources :tipos
