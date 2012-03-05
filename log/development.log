@@ -4096,3 +4096,939 @@ Processing ConsultasController#criacao_possui (for 127.0.0.1 at 2012-03-05 11:20
   [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1367, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-11097', '2012-03-05 14:22:14')[0m
   [4;36;1mSQL (41.7ms)[0m   [0;1mCOMMIT[0m
   [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1368, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-6571', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (68.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (1.1ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1369, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5694', '2012-03-05 14:22:14')[0m
+  [4;36;1mSQL (105.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1370, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5695', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1371, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-7900', '2012-03-05 14:22:14')[0m
+  [4;36;1mSQL (42.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (2.5ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1372, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5687', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1373, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5685', '2012-03-05 14:22:14')[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1374, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-2683', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1375, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-6572', '2012-03-05 14:22:14')[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1376, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5674', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (42.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1377, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5688', '2012-03-05 14:22:14')[0m
+  [4;36;1mSQL (41.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1378, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-9345', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (43.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (1.0ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1379, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-6450', '2012-03-05 14:22:14')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1380, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5705', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (41.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1381, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-5686', '2012-03-05 14:22:14')[0m
+  [4;36;1mSQL (34.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1382, 1, '2012-03-05 14:22:14', NULL, NULL, 'li-2679', '2012-03-05 14:22:14')[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1383, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5676', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (34.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1384, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-6563', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1385, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5699', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1386, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5706', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (35.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1387, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-6564', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1388, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-2684', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (35.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1389, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-7061', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1390, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5696', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (44.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1391, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-6565', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1392, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-6566', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (42.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1393, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-2703', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1394, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5697', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.6ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1395, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-6567', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.7ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1396, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-11045', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (41.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1397, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5673', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1399, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-2678', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (36.1ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1400, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5679', '2012-03-05 14:22:15')[0m
+  [4;36;1mSQL (168.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (67.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1402, 1, '2012-03-05 14:22:15', NULL, NULL, 'li-5698', '2012-03-05 14:22:15')[0m
+  [4;35;1mSQL (82.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1403, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-12533', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (69.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1404, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5700', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1405, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-2666', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (27.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1406, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-1917', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (27.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1407, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5702', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (27.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1408, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5677', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (34.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1409, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-3432', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (43.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1410, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-2677', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (35.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1411, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5681', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (27.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1412, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5707', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (27.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1413, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-6578', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (35.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1414, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-10665', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (35.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1415, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-7869', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (35.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1416, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5701', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (35.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1417, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-6575', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (40.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1418, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5690', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (43.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1419, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-6848', '2012-03-05 14:22:16')[0m
+  [4;36;1mSQL (43.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1420, 1, '2012-03-05 14:22:16', NULL, NULL, 'li-5092', '2012-03-05 14:22:16')[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1421, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-10666', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (38.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1422, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-6574', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1423, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5691', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (54.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.5ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1424, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-6576', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (35.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1425, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5678', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (37.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1426, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-6577', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1427, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-11916', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (42.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1428, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-2667', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (41.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1429, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5704', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1430, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-6451', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1431, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5698', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1432, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5125', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1433, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-2673', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1434, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5675', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (36.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1435, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-6562', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (27.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1436, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-1369', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (35.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1437, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5695', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (27.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1438, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-6650', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1439, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-5703', '2012-03-05 14:22:17')[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1440, 1, '2012-03-05 14:22:17', NULL, NULL, 'li-6649', '2012-03-05 14:22:17')[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1441, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-2689', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (41.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1442, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-11959', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1443, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-6648', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (43.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1444, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-7945', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1445, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-5682', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1446, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-4570', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (36.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1447, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-5684', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1448, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-9748', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1449, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-7001', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1450, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-0861', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1451, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-2682', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1452, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-1852', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1453, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-7998', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1454, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-7965', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1455, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-2795', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (46.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.6ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1456, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-2669', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (57.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1457, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-2785', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1458, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-11661', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1459, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-2685', '2012-03-05 14:22:18')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1460, 1, '2012-03-05 14:22:18', NULL, NULL, 'li-2766', '2012-03-05 14:22:18')[0m
+  [4;35;1mSQL (43.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1461, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-10085', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (35.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1462, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2791', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (27.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1463, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-11658', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (36.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1464, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-7196', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (35.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1465, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2659', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (52.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1466, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2792', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (61.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1467, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2792', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (52.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1468, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-9083', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (91.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1469, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2664', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1470, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2765', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (43.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1471, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-11560', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1472, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2762', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (52.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.5ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1473, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2695', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (52.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1474, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-10086', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1475, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-9077', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1476, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-11157', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1477, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2668', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (35.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1478, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-2775', '2012-03-05 14:22:19')[0m
+  [4;35;1mSQL (34.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1479, 1, '2012-03-05 14:22:19', NULL, NULL, 'li-9081', '2012-03-05 14:22:19')[0m
+  [4;36;1mSQL (36.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1480, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-11903', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (33.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1481, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2788', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (27.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1482, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-10087', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (33.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1483, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2690', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (34.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1484, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2760', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (39.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1485, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2686', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (42.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1486, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-10089', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (42.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1487, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-12103', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (43.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1488, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-11954', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1489, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-9079', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1490, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2770', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (43.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1491, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2681', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (42.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1492, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-10088', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (38.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.7ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1493, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2786', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (42.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.5ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1494, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-9085', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (59.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1495, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-2764', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1496, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-5139', '2012-03-05 14:22:20')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1497, 1, '2012-03-05 14:22:20', NULL, NULL, 'li-8100', '2012-03-05 14:22:20')[0m
+  [4;36;1mSQL (43.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1498, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-10725', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.5ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1499, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2793', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1500, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-10668', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1501, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2772', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1502, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-10091', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1503, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-11506', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (35.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1504, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-10668', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (34.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.9ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1505, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2774', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (33.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1506, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-9086', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (35.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1507, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2767', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (34.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1508, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-1899', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1509, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2696', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1510, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2755', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (35.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1511, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-9084', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1512, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-10716', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (34.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1513, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-10090', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1514, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2697', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1515, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-5123', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (44.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1516, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-11409', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (43.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1517, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-2661', '2012-03-05 14:22:21')[0m
+  [4;36;1mSQL (43.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1518, 1, '2012-03-05 14:22:21', NULL, NULL, 'li-9078', '2012-03-05 14:22:21')[0m
+  [4;35;1mSQL (43.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1519, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-6076', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1520, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-9082', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (43.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1521, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-1083', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (42.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1522, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2693', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (42.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1523, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-1172', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1524, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-736', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (43.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1525, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2660', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (51.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1526, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-9080', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (42.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1527, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-9675', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1528, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2694', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1529, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-7044', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1530, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-8093', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (35.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1531, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-1482', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (34.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1532, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2665', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (35.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1533, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-0832', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1534, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2778', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1535, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2663', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1536, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-12472', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1537, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2789', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1538, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-2688', '2012-03-05 14:22:22')[0m
+  [4;35;1mSQL (34.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1539, 1, '2012-03-05 14:22:22', NULL, NULL, 'li-12560', '2012-03-05 14:22:22')[0m
+  [4;36;1mSQL (42.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1540, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-5398', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1541, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-11545', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1542, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-1237', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (43.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1543, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-2675', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (55.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.5ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1544, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-11497', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (77.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1545, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-2687', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (39.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1546, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-95', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (43.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.6ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1547, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-11032', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1548, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-11505', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1549, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-12404', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1550, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-7747', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1551, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-5927', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1552, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-6056', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (42.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1553, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-12338', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1554, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-4986', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1555, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-10905', '2012-03-05 14:22:23')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1556, 1, '2012-03-05 14:22:23', NULL, NULL, 'li-2877', '2012-03-05 14:22:23')[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1557, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-7947', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (35.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1558, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-4045', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (34.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1559, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-11700', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (34.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1560, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-11432', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1561, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-12499', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (34.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1562, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-4043', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1563, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-12501', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (35.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1564, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-4042', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (34.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1565, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-4041', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (42.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1566, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-2154', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1567, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-12059', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (42.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1568, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-9612', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1569, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-2158', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1570, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-1674', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (42.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1571, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-4040', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (42.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1572, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-2156', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (42.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1573, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-11524', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (42.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1574, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-8106', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (42.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1575, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-2763', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1576, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-8110', '2012-03-05 14:22:24')[0m
+  [4;35;1mSQL (43.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1577, 1, '2012-03-05 14:22:24', NULL, NULL, 'li-2756', '2012-03-05 14:22:24')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1578, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2783', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (42.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1579, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-3008', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (43.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1580, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-0964', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1581, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2707', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1582, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2773', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1583, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-8075', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (35.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1584, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2798', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (35.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1585, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-8104', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1586, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-7247', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1587, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-0963', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1588, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2754', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (35.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1589, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-8103', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (34.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1590, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2779', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1591, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-0962', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1592, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2757', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1593, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-7803', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1594, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2771', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1595, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2734', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1596, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2769', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1597, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-0966', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (35.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1598, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-7788', '2012-03-05 14:22:25')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1599, 1, '2012-03-05 14:22:25', NULL, NULL, 'li-2711', '2012-03-05 14:22:25')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1600, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-8107', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (43.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1601, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2768', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1602, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2777', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (35.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1603, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2753', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1604, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2782', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1605, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-6473', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (43.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1606, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2787', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (43.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (37.5ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1607, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-5113', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (89.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1608, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2752', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (51.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1609, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2790', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1610, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-6475', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (34.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1611, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2776', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (34.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1612, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-6471', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1613, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2751', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (34.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1614, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2784', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1615, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-6448', '2012-03-05 14:22:26')[0m
+  [4;36;1mSQL (35.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1616, 1, '2012-03-05 14:22:26', NULL, NULL, 'li-2796', '2012-03-05 14:22:26')[0m
+  [4;35;1mSQL (34.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1617, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-2732', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (34.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1618, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-5867', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (42.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1619, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-6472', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (42.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.6ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1620, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-2758', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1621, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-0571', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (42.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1622, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-6474', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1623, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-2715', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1624, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-2781', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (35.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1625, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-5864', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1626, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-6480', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1627, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-2709', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1628, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-6476', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1629, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-0364', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (1.0ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1630, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-7584', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1631, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-5862', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1632, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-2731', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (42.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1633, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-4850', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1634, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-5865', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1635, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-11950', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1636, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-2713', '2012-03-05 14:22:27')[0m
+  [4;35;1mSQL (36.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1637, 1, '2012-03-05 14:22:27', NULL, NULL, 'li-5848', '2012-03-05 14:22:27')[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1638, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-6484', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1639, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-4862', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1640, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-2729', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (34.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1641, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-5875', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1642, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-6446', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1643, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-6320', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1644, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-5851', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (27.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1645, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-2714', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (35.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1646, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-6485', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1647, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-4392', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1648, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-4876', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (43.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1649, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-6482', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (42.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1650, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-0232', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (43.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1651, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-4875', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (43.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1652, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-2719', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1653, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-6488', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1654, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-4847', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (40.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1655, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-5872', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (42.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1656, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-0834', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (42.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1657, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-6447', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (43.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1658, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-4444', '2012-03-05 14:22:28')[0m
+  [4;35;1mSQL (35.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1659, 1, '2012-03-05 14:22:28', NULL, NULL, 'li-2721', '2012-03-05 14:22:28')[0m
+  [4;36;1mSQL (35.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.4ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1660, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-9500', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (43.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1661, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-6489', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (41.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1662, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-0033', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (43.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1663, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-3538', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1664, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-2744', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1665, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-6486', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (37.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1666, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-4395', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (35.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.4ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1667, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-5866', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1668, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-6490', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (36.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1669, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-2739', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (35.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1670, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-6487', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1671, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-2727', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1672, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-0979', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (41.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1673, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-3552', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.6ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1674, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-12339', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (42.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1675, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-4445', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1676, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-2726', '2012-03-05 14:22:29')[0m
+  [4;35;1mSQL (43.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1677, 1, '2012-03-05 14:22:29', NULL, NULL, 'li-0822', '2012-03-05 14:22:29')[0m
+  [4;36;1mSQL (35.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1678, 1, '2012-03-05 14:22:30', NULL, NULL, 'li-5866', '2012-03-05 14:22:30')[0m
+  [4;35;1mSQL (35.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1679, 1, '2012-03-05 14:22:30', NULL, NULL, 'li-4870', '2012-03-05 14:22:30')[0m
+  [4;36;1mSQL (35.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDpu Create (0.3ms)[0m   [0;1mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1680, 1, '2012-03-05 14:22:30', NULL, NULL, 'li-8108', '2012-03-05 14:22:30')[0m
+  [4;35;1mSQL (35.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDpu Create (0.3ms)[0m   [0mINSERT INTO `dpus` (`tipo`, `jogo_id`, `midia_id`, `periodico_id`, `unidade_id`, `livro_id`, `status`, `created_at`, `mapa_id`, `dicionario_enciclopedia_id`, `tombo`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, 3, 1681, 1, '2012-03-05 14:22:30', NULL, NULL, 'li-2722', '2012-03-05 14:22:30')[0m
+  [4;36;1mSQL (45.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
