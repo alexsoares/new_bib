@@ -1,0 +1,45 @@
+ <div class="tabs">
+    <table bgcolor="#DCDCDC" width="100%">
+         <tr>
+           <th width="200">Assunto</th>
+           <th width="150">Unidade</th>
+           <th width="50">Tombo</th>
+           <th width="300">Livro</th>
+           <th colspan="3">Administração</th
+         </tr>
+          <tr bgcolor="#F5F5F5">
+           <%$t=0%>
+           <% @autores.livros.each do |livro| %>
+              <%$t = $t+1%>
+              <tr bgcolor="#F5F5F5">
+              <td align="left"><%= @autores.nome %></td>
+              <td align="left"><%= livro.localizacao.unidade.nome%></td>
+              <td align="left"><%= livro.tombo_l%></td>
+              <td align="left"><%= livro.identificacao.livro %></td>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), livro, :title => "Exibir Livro" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(livro), :title => "Editar Livro" %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), livro, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Livro" %></td>
+            <%else%>
+                <td align="center"> --- </td>
+                <td align="center"> --- </td>
+            <%end%>
+
+
+           <%end%>
+          </tr>
+    </table>
+  </div>
+<table>
+    <tr>
+      <td align="right"><b>TOTAL: </b>
+         <font color ="red "size="2"><b><%=$t %></b>  </font> <b>EXEMPLAR(ES) </b>
+      </td>
+   </tr>
+
+</table>
+
+
+
+
+

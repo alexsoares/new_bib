@@ -1,4 +1,7 @@
 class AutoresController < ApplicationController
+
+ before_filter :load_resources
+
   def index
     @autores = Autor.paginate :page => params[:page], :order => 'nome ASC', :per_page => 10
     
@@ -65,4 +68,16 @@ def consultaAut
 end
 
 
+def consulta_autor_livro
+       session[:autor] = params[:autor_id]
+       @autores = Autor.find(session[:autor])
+       render :update do |page|
+         page.replace_html 'dadosautores', :partial => "autores_livros"
+      end
+  end
+protected
+
+  def load_resources
+        @autores= Autor.all(:order => 'nome ASC')
+  end
 end

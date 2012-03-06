@@ -1,24 +1,23 @@
-
   <div class="tabs">
     <table bgcolor="#DCDCDC" width="100%">
-       <tr bgcolor="#DCDCDC" >
-           <th width="200">Música</th>
+         <tr>
+           <th width="200">Musica</th>
            <th width="50">Tipo</th>
            <th width="50">Tombo</th>
-           <th width="150">Titulo</th>
-           <th width="150">Unidade</th>
+           <th width="200">Título</th>
+           <th width="200">Unidade</th>
            <th colspan="3">Administração</th
-        </tr>
-         <tr bgcolor="#F5F5F5">
-           <%$t=0%>
-           <% @musicas.midias.each do |midia| %>
+         </tr>
+          <%$t = 0%>
+          <% @cantores.midias.each do |midia| %>
+           <% midia.musicas.each do |musica| %>
               <%$t = $t+1%>
               <tr bgcolor="#F5F5F5">
-              <td align="left"><%= @musicas.nome %></td>
+              <td align="left"><%= musica.nome%></td>
               <td align="left"><%= midia.tipo %></td>
               <td align="left"><%= midia.tombo_l %></td>
               <td align="left"><%= midia.titulo %></td>
-              <td align="left"><%=midia.localizacao.unidade.nome%></td>
+              <td align="left"><%= midia.localizacao.unidade.nome %></td>
               <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), midia, :title => "Exibir Mídia" %></td>
             <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
                 <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_midia_path(midia), :title => "Editar Midia" %></td>
@@ -27,6 +26,7 @@
                 <td align="center"> --- </td>
                 <td align="center"> --- </td>
             <%end%>
+            <%end%>
            <%end%>
           </tr>
     </table>
@@ -34,10 +34,10 @@
 <table>
     <tr>
       <td align="right"><b>TOTAL: </b>
-         <font color ="red "size="2"><b><%=$t %></b></font>
+         <font color ="red "size="2"><b><%=$t %></b></font> <b>EXEMPLAR(ES) </b>
       </td>
    </tr>
 
+</table>
 
-
-
+         

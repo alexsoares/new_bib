@@ -1,4 +1,7 @@
 class AreasController < ApplicationController
+
+before_filter :load_resources
+
   def index
     @areas = Area.paginate :page => params[:page], :order => 'nome ASC', :per_page => 10
     
@@ -63,5 +66,20 @@ def consultaAre
     end
   end
 end
+
+def consulta_area_livro
+       session[:area] = params[:area_id]
+       @areas = Area.find(session[:area])
+       render :update do |page|
+         page.replace_html 'dadosareas', :partial => "areas_livro"
+      end
+  end
+
+
+protected
+
+  def load_resources
+        @areas= Area.all(:order => 'nome ASC')
+  end
 
 end
