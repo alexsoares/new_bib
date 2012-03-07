@@ -4,12 +4,21 @@ class UsersController < ApplicationController
   include AuthenticatedSystem
   layout :layout?
 
+  before_filter :load_users
+  def load_users
+    @users =User.find(:all, :order => 'login ASC')
+  end
+  
   def layout?
     if logged_in?
       "application"
     else
       "user"
     end
+  end
+
+  def edit
+    @user = current_user
   end
 
   # render new.rhtml

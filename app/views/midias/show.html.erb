@@ -8,13 +8,9 @@
            <div id="conteudoEsquerda">
               <h3><b><i><font color="DimGrey">Informações sobre o <%=h @midia.tipo %></font></i></b></h3>
                   <hr>
+                    <strong>Titulo:</strong> <%=h @midia.titulo %><br/>
                     <strong>Producao:</strong> <%=h @midia.producao %><br/>
-                    <strong>Local Producao:</strong> <%=h @midia.local_producao %><br/>
-                     <% if @midia.data_producao.nil? %>
-                        <strong>Ano Producao:</strong><br/>
-                     <%else%>
-                        <strong>Ano Producao:</strong> <%=h @midia.data_producao.strftime("%Y") %><br/>
-                     <%end%>
+                    <strong>Local Producao:</strong> <%=h @midia.local_producao %> - <%=h @midia.data_producao.strftime("%Y") %><br/>
                      <strong>Forma Aquisição:</strong> <%=h @midia.localizacao.aquisicao %><br/>
                      <% if @midia.localizacao.data_aquisicao.nil? %>
                         <strong>Data Aquisição:</strong><br/>

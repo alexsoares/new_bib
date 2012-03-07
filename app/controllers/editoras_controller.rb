@@ -1,4 +1,7 @@
 class EditorasController < ApplicationController
+
+  before_filter :load_resources
+
   def index
     @editoras = Editora.paginate :page => params[:page], :order => 'nome ASC', :per_page => 10
 
@@ -62,5 +65,21 @@ def consultaEdi
     end
   end
 end
+
+def consulta_editora_livro
+       session[:editora] = params[:editora_id]
+       @editoras = Editora.find(session[:editora])
+       render :update do |page|
+         page.replace_html 'dadoseditoras', :partial => "editoras_livro"
+      end
+  end
+
+
+protected
+
+  def load_resources
+        @editoras= Editora.all(:order => 'nome ASC')
+  end
+
 
 end

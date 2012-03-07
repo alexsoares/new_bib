@@ -1,0 +1,34 @@
+<% title "EDITORA", :id =>"editoras" %>
+ <div class="tabs">
+   <div id="caixa_titulo">
+    <font size="3"><strong>CONSULTA LIVRO POR EDITORA</strong></font><br/>
+  </div>
+  <div class="tabs">
+       <table width="100%" align="center" bgcolor="#DCDCDC" >
+         <tr>
+           <td>
+              <div id="area"><%= render "shared/consulta_editora_livro"%></div>
+           </td>
+         </tr>
+        </table>
+    <br/>
+    <hr>
+       <div id="dadoseditoras"></div>
+    <table>
+    <tr>
+     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaEdiLiv_path, :title => "Nova Consulta" %></td>
+    </tr>
+  </table>
+ </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
