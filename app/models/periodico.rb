@@ -3,7 +3,8 @@ class Periodico < ActiveRecord::Base
   has_many :possuis
   has_many :dpus
   belongs_to :localizacao
-  after_create :cria_possui_pd, :auto_inc_tombo_seduc
+  after_create :cria_possui_pd, :auto_inc_tombo_seduc, :disponibiliza_pd
+  attr_accessor :usuario,:unidade
 
   PERIODICIDADE = %w(DIARIO SEMANAL QUINZENAL MENSAL BIMESTRAL SEMETRAL ANUAL OUTROS)
   TIPO_PERIODICO = %w(ANUARIO BOLETIM JORNAL REVISTA OUTROS)
@@ -15,11 +16,20 @@ class Periodico < ActiveRecord::Base
 
   def cria_possui_pd
     possui = Possui.new
-    possui.unidade_id = 3
+    possui.unidade_id = self.unidade
     possui.tombo = "pd-#{self.tombo_l}"
     possui.periodico_id = self.id
     possui.status = 1
     possui.save
+  end
+
+  def disponibiliza_pd
+    disp = Dpu.new
+    disp.unidade_id = self.unidade
+    disp.tombo = "pd-#{self.tombo_l}"
+    disp.periodico_id = self.id
+    disp.status = 1
+    disp.save
   end
 
 

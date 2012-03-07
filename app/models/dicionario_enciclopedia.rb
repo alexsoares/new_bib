@@ -1,9 +1,9 @@
 class DicionarioEnciclopedia < ActiveRecord::Base
   #attr_accessible :editora, :area, :localizacao, :identificacao, :tombo_seduc, :tombo_l, :colecao, :tipo, :volume, :data_edicao, :local_edicao, :obs
   attr_accessor :check
-  after_create :auto_inc_tombo_seduc, :multi_tombo, :cria_possui_de
+  after_create :auto_inc_tombo_seduc, :multi_tombo, :cria_possui_de,:cria_disponibiliza_de
   has_and_belongs_to_many :autores
-  attr_accessor :qtde, :lista_tombos, :usuario
+  attr_accessor :qtde, :lista_tombos, :usuario,unidade
   has_many :tombos
   has_many :possuis
   has_many :dpus
@@ -35,11 +35,20 @@ def qtd_dif_num?
 
   def cria_possui_de
     possui = Possui.new
-    possui.unidade_id = 3
+    possui.unidade_id = self.unidade
     possui.tombo = "de-#{self.tombo_l}"
     possui.enciclopedia_dicionario_id = self.id
     possui.status = 1
     possui.save
+  end
+
+  def cria_disponibiliza_de
+    disp = Dpu.new
+    disp.unidade_id = self.unidade
+    disp.tombo = "mp-#{self.tombo_l}"
+    disp.enciclopedia_dicionario_id = self.id
+    disp.status = 1
+    disp.save
   end
 
 

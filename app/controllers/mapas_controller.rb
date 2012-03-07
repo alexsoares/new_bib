@@ -16,6 +16,9 @@ class MapasController < ApplicationController
 
   def create
     @mapas = Mapa.new(params[:mapa])
+    @mapas.usuario = current_user.id
+    @mapas.unidade = current_user.unidade_id
+    Log.gera_log("CRIACAO", "MAPAS", current_user.id,@mapas.id)
     if @mapas.save
       flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @mapas

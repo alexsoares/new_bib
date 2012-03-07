@@ -87,6 +87,7 @@ class LivrosController < ApplicationController
       @livros_cad = []
       qtd.times do
         @livro = Livro.new(params[:livro])
+        Log.gera_log("CRIACAO", "LIVROS", current_user.id,@livro.id)
         @livro.identificacao_id = session[:identificacao_id]
         @livro.usuario = current_user.id
         @livro.unidade = current_user.unidade_id

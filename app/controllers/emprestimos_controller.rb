@@ -99,11 +99,39 @@ class EmprestimosController < ApplicationController
   end
 
   def retorno_livro
-      session[:emprestimo] = params[:emprestimo]
-      livro = Livro.find(params[:emprestimo])
-        render :update do |page|
-          page.replace_html 'retorna_livro', :text => livro.identificacao.livro
+      session[:emprestimo] << params[:emprestimo]
+      t = session[:emprestimo]
+      t.each do |z|
+        o = z
+        y = 0
+      end
+      if (params[:tipo]).to_s == 'li'
+        objeto = Livro.find(params[:emprestimo])
+      else
+        if (params[:tipo]).to_s == 'de'
+          objeto = DicionarioEnciclopedia.find(params[:emprestimo])
+        else
+          if (params[:tipo]).to_s == 'md'
+            objeto = Midia.find(params[:emprestimo])
+          else
+            if (params[:tipo]).to_s == 'mp'
+              objeto = Mapa.find(params[:emprestimo])
+            else
+              if (params[:tipo]).to_s == 'jg'
+                objeto = Jogo.find(params[:emprestimo])
+              else
+                if (params[:tipo]).to_s == 'pe'         
+                  objeto = Periodico.find(params[:emprestimo])
+                end
+              end
+            end
+          end
         end
+      end
+
+      render :update do |page|
+          page.insert_html :bottom, 'retorna_livro', :text => "<li> * "+objeto.identificacao.livro + "    <a href=#>Remover</a></li>"
+      end
   end
 
 
@@ -120,6 +148,7 @@ class EmprestimosController < ApplicationController
       end
     end
     if @disponiveis.present?
+      session[:emprestimo] = []
       render :update do |page|
         page.replace_html 'livros', :partial => "livros_disponiveis",:locals => {:some_variable => "somevalue",:some_other_variable => 5}
       end

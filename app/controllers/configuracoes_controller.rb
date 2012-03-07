@@ -1,6 +1,6 @@
 class ConfiguracoesController < ApplicationController
   def index
-    @configuracaos = Configuracao.all
+    @configuracaos = Configuracao.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
   end
 
   def show
@@ -12,7 +12,8 @@ class ConfiguracoesController < ApplicationController
   end
 
   def create   
-    @configuracao = Configuracao.new(params[:configuracao])    
+    @configuracao = Configuracao.new(params[:configuracao])
+    @configuracao.unidade_id = current_user.unidade_id
     if @configuracao.save
       flash[:notice] = "CADASTRADO COM SUCESSO."
       Log.gera_log("CRIACAO", "CONFIGURACAO", current_user.id,@configuracao.id)

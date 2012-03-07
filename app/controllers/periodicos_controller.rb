@@ -18,6 +18,9 @@ class PeriodicosController < ApplicationController
 
   def create
     @periodicos = Periodico.new(params[:periodico])
+    @periodicos.usuario = current_user.id
+    @periodicos.unidade = current_user.unidade_id
+    Log.gera_log("CRIACAO", "PERIODICOS", current_user.id,@periodicos.id)
     if @periodicos.save
       flash[:notice] = "CADASTRADO COM SUCESSO."
       redirect_to @periodicos

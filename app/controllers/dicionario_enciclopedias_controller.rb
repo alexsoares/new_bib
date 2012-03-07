@@ -91,6 +91,8 @@ end
         @dicionario_enciclopedia = DicionarioEnciclopedia.new(params[:dicionario_enciclopedia])
         @dicionario_enciclopedia.identificacao_id = session[:identificacao_id]
         @dicionario_enciclopedia.usuario = current_user.id
+        @dicionario_enciclopedia.unidade = current_user.unidade_id
+        Log.gera_log("CRIACAO", "DICIONARIO", current_user.id,@dicionario_enciclopedia.id)
         if params[:dicionario_enciclopedia][:qtde].to_i == 0
           @dicionario_enciclopedia.qtde = 1
         else
