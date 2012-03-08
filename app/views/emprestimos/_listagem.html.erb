@@ -1,8 +1,13 @@
 <% form_remote_for :pessoa, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()",
    :url => {:controller => :emprestimos,
    :action => :busca } do |form| %>
-   <b>Primeiro Nome</b>
+  <p><b>Primeiro Nome</b>
    <%= text_field :pessoa, :nome %>
    <%= submit_tag "Filtrar", :name => nil %>
 <% end %>
-<div id="pessoas"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
+  </p>
+   <table align="center">
+     <tr>
+          <td> <div id="pessoas"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div></td>
+     </tr>
+   </table>
