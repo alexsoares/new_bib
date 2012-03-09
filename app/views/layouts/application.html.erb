@@ -30,25 +30,13 @@
                 <li><a href="#"><b>Cadastros</b></a>
                   <div class="select_sub">
                     <ul class="sub">
-                      
+
                       <li><%= link_to "Dicio. & Enciclo.", new_dicionario_enciclopedia_path %></li>
                       <li><%= link_to "Jogos", new_jogo_path %></li>
                       <li><%= link_to "Livros", new_livro_path %></li>
                       <li><%= link_to "Mapas", new_mapa_path %></li>
                       <li><%= link_to "Mídias", new_midia_path %></li>
                       <li><%= link_to "Periodicos" %></li>
-                      <li> __ </li>
-                      <li><%= link_to "Autores", new_autor_path %></li>
-                      <% if current_user.has_role?('admin')%>
-                         <li><%= link_to "Áreas", new_area_path %></li>
-                      <%end%>
-                      <li><%= link_to "Cantores", new_cantor_path %></li>
-                      <li><%= link_to "Editoras", new_editora_path %></li>
-                      <% if current_user.has_role?('admin')%>
-                         <li><%= link_to "Gêneros", new_genero_path %></li>
-                      <%end%>
-
-                      <li><%= link_to "Títulos", new_identificacao_path %></li>
                     </ul>
                   </div>
                 </li>
@@ -77,7 +65,7 @@
                     <ul class="sub">
                       <li><%= link_to "Empréstimo", new_emprestimo_path %></li>
                       <li><%= link_to "Devolução"  %></li>
-                      
+
                     </ul>
                   </div>
                 </li>
