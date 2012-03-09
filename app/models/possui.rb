@@ -8,6 +8,6 @@ class Possui < ActiveRecord::Base
   belongs_to :periodico
 
 
-  TABELAS = %w(Livros Mapas Midias Periodicos Dicionario_enciclopedias)
+  TABELAS = %w(Jogos Livros Mapas Midias Periodicos Dicionario_enciclopedias)
 
 end

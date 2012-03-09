@@ -22,11 +22,9 @@
 
 }
 #livros{
-    height:120px;
+    height:220px;
     width:760px;
     border: solid 1px;
-    height:auto;
-    width:auto;
     overflow: auto;
 
 }

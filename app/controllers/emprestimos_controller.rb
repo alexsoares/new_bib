@@ -101,40 +101,17 @@ class EmprestimosController < ApplicationController
   def retorno_livro
       session[:emprestimo] << params[:emprestimo]
       t = session[:emprestimo]
-      t.each do |z|
-        o = z
-        y = 0
-      end
       if (params[:tipo]).to_s == 'li'
         objeto = Livro.find(params[:emprestimo])
       else
         if (params[:tipo]).to_s == 'de'
           objeto = DicionarioEnciclopedia.find(params[:emprestimo])
-        else
-          if (params[:tipo]).to_s == 'md'
-            objeto = Midia.find(params[:emprestimo])
-          else
-            if (params[:tipo]).to_s == 'mp'
-              objeto = Mapa.find(params[:emprestimo])
-            else
-              if (params[:tipo]).to_s == 'jg'
-                objeto = Jogo.find(params[:emprestimo])
-              else
-                if (params[:tipo]).to_s == 'pe'         
-                  objeto = Periodico.find(params[:emprestimo])
-                end
-              end
-            end
-          end
         end
       end
-
       render :update do |page|
-          page.insert_html :bottom, 'retorna_livro', :text => "<li> * "+objeto.identificacao.livro + "    <a href=#>Remover</a></li>"
+          page.insert_html :bottom, 'retorna_livro', :text => "<li id="+ objeto.identificacao_id.to_s + "> * "+objeto.identificacao.livro + "</li>"
       end
   end
-
-
 
   def dpu
     id = Identificacao.all(:conditions => ["livro like ?",params[:livro][:dcu] + "%"], :select => "id")
@@ -146,11 +123,11 @@ class EmprestimosController < ApplicationController
         id_livro = Livro.all(:include => [:identificacao],:conditions => ["identificacao_id in (?) and status = 1",id])
         @disponiveis = Dpu.all(:include => [:livro], :conditions => ["livro_id in (?) and status = 1",id_livro])
       end
-    end
+    end  
     if @disponiveis.present?
       session[:emprestimo] = []
       render :update do |page|
-        page.replace_html 'livros', :partial => "livros_disponiveis",:locals => {:some_variable => "somevalue",:some_other_variable => 5}
+        page.replace_html 'livros', :partial => "livros_disponiveis"
       end
     else
       render :update do |page|

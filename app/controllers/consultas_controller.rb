@@ -16,7 +16,7 @@ class ConsultasController < ApplicationController
           possui.tombo = "li-#{z.tombo_l}"
           possui.livro_id = z.id
         else
-          if tabela.to_s == 'Dicionario_enciclopedia'
+          if tabela.to_s == 'DicionarioEnciclopedia'
             possui.tombo = "de-#{z.tombo_l}"
             possui.dicionario_enciclopedia_id = z.id
           else

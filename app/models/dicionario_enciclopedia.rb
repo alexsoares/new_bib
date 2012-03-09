@@ -3,7 +3,7 @@ class DicionarioEnciclopedia < ActiveRecord::Base
   attr_accessor :check
   after_create :auto_inc_tombo_seduc, :multi_tombo, :cria_possui_de,:cria_disponibiliza_de
   has_and_belongs_to_many :autores
-  attr_accessor :qtde, :lista_tombos, :usuario,unidade
+  attr_accessor :qtde, :lista_tombos, :usuario,:unidade
   has_many :tombos
   has_many :possuis
   has_many :dpus
