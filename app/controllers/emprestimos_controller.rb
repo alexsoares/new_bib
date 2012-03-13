@@ -16,8 +16,9 @@ class EmprestimosController < ApplicationController
     @emprestimo.unidade_id = current_user.unidade_id
     @emprestimo.dpu = session[:emprestimo]
     @emprestimo.data_emprestimo = Time.now
+    @emprestimo.pessoa = session[:pessoa]
     if (session[:pessoa]).present?
-      @emprestimo.aluno = session[:pessoa]    
+      
       if @emprestimo.save
         flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
         redirect_to @emprestimo
@@ -52,30 +53,20 @@ class EmprestimosController < ApplicationController
     flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to emprestimos_url
   end
-
-  def tipo_para
-    if params[:emprestimo_tipo_emprestimo].to_i == 0
-      render :partial => "funcionario"
-    else
-      if params[:emprestimo_tipo_emprestimo].to_i == 1
-        render :partial => "aluno"
-      end
-    end
-  end
   
   def busca
     if params[:pessoa].present?
       if params[:pessoa][:nome].present?
        if current_user.unidade.unidades_gpd_id == 15
-        @alunos = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1))",session[:ano_letivo].to_i,params[:pessoa][:nome]])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1))",session[:ano_letivo].to_i,params[:pessoa][:nome]])
        else
-        @alunos = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1)) and id_escola = ?",session[:ano_letivo].to_i,params[:pessoa][:nome], current_user.unidade.unidades_gpd_id])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1)) and id_escola = ?",session[:ano_letivo].to_i,params[:pessoa][:nome], current_user.unidade.unidades_gpd_id])
        end
       else
        if current_user.unidade.unidades_gpd_id == 15
-        @alunos = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null)",session[:ano_letivo].to_i])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null)",session[:ano_letivo].to_i])
        else
-        @alunos = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null and id_escola = ?)",session[:ano_letivo].to_i, current_user.unidade.unidades_gpd_id])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null and id_escola = ?)",session[:ano_letivo].to_i, current_user.unidade.unidades_gpd_id])
        end        
       end
       #@alunos = Aluno.all(:conditions => ["(classe_ano = 2011 or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome('JOAO',1) and pes_dtnasc = '2002-01-06')",])
@@ -100,27 +91,48 @@ class EmprestimosController < ApplicationController
       @pessoa = Aluno.find(params[:pessoa])
       session[:pessoa] = params[:pessoa]
       render :update do |page|
-        page.replace_html 'aluno', :text => @pessoa.nome
+        page.replace_html 'retorna_pessoa', :text => @pessoa.nome
       end
   end
 
     def retorno_livro
       session[:emprestimo] = params[:emprestimo]
       livro = Livro.find(params[:emprestimo])
-      render :update do |page|
-        page.replace_html 'livro', :text => livro.identificacao.livro
-      end
+        render :update do |page|
+          page.replace_html 'retorna_livro', :text => livro.identificacao.livro
+        end
   end
 
 
 
   def dpu
     id = Identificacao.all(:conditions => ["livro like ?",params[:livro][:dcu] + "%"], :select => "id")
-    id_livro = Livro.all(:include => [:identificacao],:conditions => ["identificacao_id in (?) and status = 1",id])
-    @disponiveis = Dpu.all(:include => [:livro], :conditions => ["livro_id in (?) and status = 1",id_livro])
-    render :update do |page|
-      page.replace_html 'livros', :partial => "livros_disponiveis"
+    if (params[:livro][:type_of]).to_i == 1
+      id_de = DicionarioEnciclopedia.all(:include => [:identificacao],:conditions => ["identificacao_id in (?)",id])
+      @disponiveis = Dpu.all(:include => [:dicionario_enciclopedia], :conditions => ["dicionario_enciclopedia_id in (?) and status = 1",id_de])
+    else
+      if (params[:livro][:type_of]).to_i == 0
+        id_livro = Livro.all(:include => [:identificacao],:conditions => ["identificacao_id in (?) and status = 1",id])
+        @disponiveis = Dpu.all(:include => [:livro], :conditions => ["livro_id in (?) and status = 1",id_livro])
+      end
     end
+    if @disponiveis.present?
+      render :update do |page|
+        page.replace_html 'livros', :partial => "livros_disponiveis",:locals => {:some_variable => "somevalue",:some_other_variable => 5}
+      end
+    else
+      render :update do |page|
+        page.replace_html 'livros', :text => "Nenhum exemplar disponivel com este nome nesta unidade. Se desejar consulte entre as unidades"
+      end
+
+    end
+  end
+
+  def funcionario
+      @pessoas = Aluno.all(:conditions => ["nome like ? and matricula_funcionario is not null",params[:funcionario][:nome] + "%"])
+      render :update do |page|
+        page.replace_html 'pessoas', :partial => "pessoas"
+      end
   end
 
 

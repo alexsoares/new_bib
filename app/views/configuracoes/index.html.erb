@@ -1,0 +1,27 @@
+<% title "Configurações" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Data Criacao</th>
+    <th>Dias Posse</th>
+    <th>Dias Para Aviso</th>
+  </tr>
+  <% for configuracao in @configuracaos %>
+    <tr>
+      <td>
+        <% configuracao.logs.each do |user| %>
+          <%= user.user.login %>
+        <%end%>
+      </td>
+      <td><%=h configuracao.data_criacao %></td>
+      <td><%=h configuracao.dias_posse %></td>
+      <td><%=h configuracao.dias_para_aviso %></td>
+      <td><%= link_to "Exibir", configuracao %></td>
+      <td><%= link_to "Alterar", edit_configuracao_path(configuracao) %></td>
+      <td><%= link_to "Apagar", configuracao, :confirm => 'Confirma?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Configuracao", new_configuracao_path %></p>

@@ -3,15 +3,23 @@ class Emprestimo < ActiveRecord::Base
   has_many :dpus, :through => :emprestimos_realizados
 
   Tipo = {'Funcionário' => 0, 'Aluno' => 1}
-  after_create :cria_emprestimos_realizados
+  after_create :cria_emprestimos_realizados,:kind_of
   #attr_accessible :tipo_emprestimo, :professor, :aluno
   belongs_to :unidade
   #validates_presence_of :tipo_emprestimo, :dpu
   # :dpu => Disponiveis para empréstimos por unidade
   #accepts_nested_attributes_for :dpus, :reject_if => lambda {|a| a[:conteudo].blank?}, :allow_destroy => true
-  attr_accessor :dpu
+  attr_accessor :dpu, :pessoa
+  validates_presence_of :dpu, :message => "Ao menos 1 livro deverá ser selecionado."
 
 
+  def kind_of
+    if self.tipo_emprestimo == 0
+      self.funcionario = self.pessoa
+    else
+      self.aluno = self.pessoa
+    end
+  end
   def cria_emprestimos_realizados
     er = EmprestimosRealizados.new
     er.ativo = 1

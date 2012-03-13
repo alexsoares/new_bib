@@ -1,13 +1,17 @@
 <h2>Lista Livros e Tombos para correcao de tombos locais</h2>
-
-<%= "#{@tombo_livros.count} livros com o tombo seduc com problemas" %>
+<% if @tombo_livros.present? %>
+  <%= "#{@tombo_livros.count} livros com o tombo seduc com problemas" %>
+<%end%>
   <% form_remote_tag :url => {:action => "corrigir_tombos", :controller => "consultas"}, :method => :get,:loading => "$('#status').show()" do %>
-         <table width="100%" align="center" bgcolor="#DCDCDC" >
+        <table width="100%" bgcolor="#DCDCDC" >
+         <tr>
+           <td><%= select_tag :tabela,options_for_select(Possui::TABELAS) %></td>
+         </tr>
          <tr>
            <td><%= submit_tag "Resolver Problemas"  %></td>
          </tr>
         </table>
     <% end %>
-    <hr>
+    <hr/>
     <div id="areas"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
     <br/>

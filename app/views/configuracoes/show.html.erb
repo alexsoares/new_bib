@@ -1,0 +1,24 @@
+<% title "Configura data limite para empréstimos" %>
+
+<p>
+  <strong>Criado para:</strong>
+  <%=h @configuracao.invoke_type %>
+</p>
+<p>
+  <strong>Data Criacao:</strong>
+  <%=h @configuracao.data_criacao %>
+</p>
+<p>
+  <strong>Dias Posse:</strong>
+  <%=h @configuracao.dias_posse %>
+</p>
+<p>
+  <strong>Dias Para Aviso:</strong>
+  <%=h @configuracao.dias_para_aviso %>
+</p>
+
+<p>
+  <%= link_to "Alterar", edit_configuracao_path(@configuracao) %> |
+  <%= link_to "Apagar", @configuracao, :confirm => 'Confirma?', :method => :delete %> |
+  <%= link_to "Voltar", configuracoes_path %>
+</p>
