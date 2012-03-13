@@ -99,12 +99,6 @@ class EmprestimosController < ApplicationController
   end
 
   def retorno_livro
-      session[:emprestimo] = params[:emprestimo]
-      livro = Livro.find(params[:emprestimo])
-        render :update do |page|
-          page.replace_html 'retorna_livro', :text => livro.identificacao.livro
-  end
-  def retorno_livro
       session[:emprestimo] << params[:emprestimo]
       t = session[:emprestimo]
       if (params[:tipo]).to_s == 'li'
@@ -128,16 +122,6 @@ class EmprestimosController < ApplicationController
       if (params[:livro][:type_of]).to_i == 0
         id_livro = Livro.all(:include => [:identificacao],:conditions => ["identificacao_id in (?) and status = 1",id])
         @disponiveis = Dpu.all(:include => [:livro], :conditions => ["livro_id in (?) and status = 1",id_livro])
-      end
-    end  
-    if @disponiveis.present?
-      session[:emprestimo] = []
-      render :update do |page|
-        page.replace_html 'livros', :partial => "livros_disponiveis"
-      end
-    else
-      render :update do |page|
-        page.replace_html 'livros', :text => "Nenhum exemplar disponivel com este nome nesta unidade. Se desejar consulte entre as unidades"
       end
     end
     if @disponiveis.present?

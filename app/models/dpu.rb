@@ -6,8 +6,8 @@ class Dpu < ActiveRecord::Base
   belongs_to :mapa
   belongs_to :midia
   belongs_to :periodico
-  has_many :emprestimos, :through => "emprestimos_realizados"
-
+  #has_many :emprestimos, :through => "emprestimos_realizados"
+  has_and_belongs_to_many :empresimos
   TABELAS = %w(Jogo Livro Mapa Midia Periodico Dicionario_enciclopedia)
 
   def busca_livro

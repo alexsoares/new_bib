@@ -9,7 +9,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120307115452) do
+ActiveRecord::Schema.define(:version => 20120313121842) do
+
   create_table "areas", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at"
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20120307115452) do
     t.text     "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "status",           :default => true
   end
 
   create_table "dpus", :force => true do |t|
@@ -110,6 +112,11 @@ ActiveRecord::Schema.define(:version => 20120307115452) do
     t.integer  "tipo"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "dpus_emprestimos", :id => false, :force => true do |t|
+    t.integer "dpu_id",        :null => false
+    t.integer "emprestimo_id", :null => false
   end
 
   create_table "editoras", :force => true do |t|
@@ -129,11 +136,9 @@ ActiveRecord::Schema.define(:version => 20120307115452) do
     t.datetime "updated_at"
     t.date     "data_emprestimo"
     t.date     "data_devolucao"
-  end
-
-  create_table "emprestimos_livros", :id => false, :force => true do |t|
-    t.integer "autor_id", :null => false
-    t.integer "livro_id", :null => false
+    t.date     "dt_emprestimo"
+    t.date     "dt_devolucao"
+    t.integer  "dias_atrasados"
   end
 
   create_table "emprestimos_realizados", :force => true do |t|
@@ -253,6 +258,7 @@ ActiveRecord::Schema.define(:version => 20120307115452) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "titulo"
+    t.boolean  "status",         :default => true
   end
 
   create_table "midias", :force => true do |t|
@@ -300,6 +306,7 @@ ActiveRecord::Schema.define(:version => 20120307115452) do
     t.string   "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "status",         :default => true
   end
 
   create_table "possuis", :force => true do |t|
