@@ -1,36 +1,35 @@
 
 <% if @disponiveis.present? %>
-<table>
+<table border="1" class="tabelas" width="100%" align=" center">
   <tr>
-    <th>Tombo</th>
+    <th width =" 20%">Tombo Local</th>
     <th>Nome</th>
   </tr>
 <% @disponiveis.each do |disp|%>
   <tr>
     <%if disp.livro_id.present? %>
       <td><%= link_to_remote(disp.livro.tombo_l, :success => "$.fn.colorbox.close()", :url => { :action => "retorno_livro", :emprestimo => disp.livro_id, :tipo => 'li'}) %></td>
-
-      <td><%= disp.livro.identificacao.livro %></td>
+      <td align="left"><%= disp.livro.identificacao.livro %></td>
     <%else%>
       <%if disp.dicionario_enciclopedia_id.present? %>
         <td><%= link_to_remote(disp.dicionario_enciclopedia.tombo_l, :success => "$.fn.colorbox.close()", :url => { :action => "retorno_livro", :emprestimo => disp.dicionario_enciclopedia_id, :tipo => 'de'}) %></td>
-        <td><%= disp.dicionario_enciclopedia.identificacao.livro %></td>
+        <td align="left"><%= disp.dicionario_enciclopedia.identificacao.livro %></td>
       <%else%>
         <%if disp.jogo_id.present? %>
           <td><%= link_to_remote(disp.jogo.tombo_l, :success => "$.fn.colorbox.close()", :url => { :action => "retorno_livro", :emprestimo => disp.jogo_id, :tipo => 'jg'}) %></td>
-          <td><%= disp.jogo.identificacao.livro %></td>          
+          <td align="left"><%= disp.jogo.identificacao.livro %></td>
         <%else%>
           <%if disp.mapa_id.present? %>
             <td><%= link_to_remote(disp.mapa.tombo_l, :success => "$.fn.colorbox.close()", :url => { :action => "retorno_livro", :emprestimo => disp.mapa_id, :tipo => 'mp'}) %></td>
-            <td><%= disp.mapa.identificacao.livro %></td>          
+            <td align="left"><%= disp.mapa.identificacao.livro %></td>
           <%else%>
             <%if disp.midia_id.present? %>
               <td><%= link_to_remote(disp.midia.tombo_l, :success => "$.fn.colorbox.close()", :url => { :action => "retorno_livro", :emprestimo => disp.midia_id, :tipo => 'md'}) %></td>
-              <td><%= disp.midia.identificacao.livro %></td>            
+              <td align="left"><%= disp.midia.identificacao.livro %></td>
             <%else%>
               <%if disp.periodico_id.present? %>
                 <td><%= link_to_remote(disp.periodico.tombo_l, :success => "$.fn.colorbox.close()", :url => { :action => "retorno_livro", :emprestimo => disp.periodico_id, :tipo => 'pe'}) %></td>
-                <td><%= disp.periodico.identificacao.livro %></td>
+                <td align="left"><%= disp.periodico.identificacao.livro %></td>
               <%end%>
             <%end%>
           <%end%>

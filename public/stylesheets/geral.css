@@ -18,7 +18,7 @@
     width:760px;
     border: solid 1px;
     overflow: auto;
-    background-color:#CDC1C5;
+    background-color:#F5F5F5;
 
 }
 #livros{
@@ -26,19 +26,20 @@
     width:auto;
     border: solid 1px;
     overflow: auto;
-
+    background-color:#f5f5f5;
 }
 #pessoas{
     height:320px;
     width:740px;
     border: solid 1px;
     overflow: auto;
-    background-color:#CDC1C5;
+    background-color:#F5F5F5;
 }
 #retorna_livro{
     height:300px;
     width:660px;
     border: solid 1px;
+
 }
 
 
@@ -113,13 +114,14 @@
     width:750px;
     border: solid 1px;
     overflow: auto;
+    background-color:#F5F5F5
 }
 #lista_livros {
     height:120px;
     width:750px;
     border: solid 1px;
     overflow: auto;
-
+    background-color:#F5F5F5
 }
 #identificacao {
     height:20px;

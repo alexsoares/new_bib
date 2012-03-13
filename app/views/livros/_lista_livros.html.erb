@@ -5,9 +5,10 @@
   
   <%@identificacoes.each do |livro|%>
     <tr>
-      <td><%= livro.truncated_value %></td>
+      <td><%= link_to_remote(livro.livro, :success => "$.fn.colorbox.close()", :url => { :action => "return", :selected => livro}) %></td>
+      <!--<td><%= livro.truncated_value %></td>-->
       <td><%= livro.subtitulo %></td>
-      <td><%= link_to_remote("Selecionar", :success => "$.fn.colorbox.close()", :url => { :action => "return", :selected => livro}) %></td>
+  
     </tr>
   <%end%>
 </table>
