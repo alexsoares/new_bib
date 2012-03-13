@@ -17,7 +17,10 @@
     <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
-     <td align="left"><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "20x20"), consultaMus_path, :title => "Nova Consulta" %></td>
+     <td width="6%"align="left"><%= link_to image_tag("/stylesheets/images/consulta.png", :size => "40x40"), consultaMus_path, :title => "Nova Consulta" %></td>
+     <% if current_user.has_role?('admin') %>
+        <td align="left"><%= link_to image_tag("/stylesheets/images/cadastrar.gif", :size => "30x30"), new_musica_path, :title => "Cadastrar Música" %></td>
+     <%end%>
     </tr>
   </table>
  </div>

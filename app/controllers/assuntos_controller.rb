@@ -55,6 +55,13 @@ def consulta_assunto
       end
   end
 
+def consulta_assunto_livro
+       session[:assunto] = params[:assunto_id]
+       @assuntos = Assunto.find(session[:assunto])
+       render :update do |page|
+         page.replace_html 'dadosassuntos', :partial => "assuntos_livro"
+      end
+  end
 protected
 
   def load_resources

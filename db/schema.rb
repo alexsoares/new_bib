@@ -9,8 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120229123424) do
-
+ActiveRecord::Schema.define(:version => 20120307115452) do
   create_table "areas", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at"
@@ -66,13 +65,14 @@ ActiveRecord::Schema.define(:version => 20120229123424) do
     t.integer "cantor_id", :null => false
   end
 
-  create_table "configuracaos", :force => true do |t|
+  create_table "configuracoes", :force => true do |t|
     t.integer  "tipo",            :null => false
     t.date     "data_criacao",    :null => false
     t.integer  "dias_posse"
     t.integer  "dias_para_aviso"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "unidade_id"
   end
 
   create_table "data_files", :force => true do |t|
@@ -189,7 +189,7 @@ ActiveRecord::Schema.define(:version => 20120229123424) do
 
   create_table "jogos", :force => true do |t|
     t.integer  "localizacao_id"
-    t.string   "tombo_seduc"
+    t.integer  "tombo_seduc",    :default => 0
     t.string   "tombo_l"
     t.string   "nome"
     t.string   "faixa_etaria"
@@ -198,6 +198,7 @@ ActiveRecord::Schema.define(:version => 20120229123424) do
     t.string   "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "status",         :default => true
   end
 
   create_table "livros", :force => true do |t|
@@ -239,7 +240,7 @@ ActiveRecord::Schema.define(:version => 20120229123424) do
   create_table "mapas", :force => true do |t|
     t.integer  "editora_id"
     t.integer  "localizacao_id"
-    t.string   "tombo_seduc"
+    t.integer  "tombo_seduc"
     t.string   "tombo_l"
     t.string   "tipo"
     t.string   "subtitulo"
@@ -258,7 +259,7 @@ ActiveRecord::Schema.define(:version => 20120229123424) do
     t.integer  "genero_id"
     t.integer  "localizacao_id"
     t.string   "tombo_l"
-    t.string   "tombo_seduc"
+    t.integer  "tombo_seduc",    :default => 0
     t.string   "tipo"
     t.string   "titulo"
     t.string   "subtitulo"
@@ -268,6 +269,7 @@ ActiveRecord::Schema.define(:version => 20120229123424) do
     t.string   "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "status"
   end
 
   create_table "midias_musicas", :id => false, :force => true do |t|
@@ -284,8 +286,8 @@ ActiveRecord::Schema.define(:version => 20120229123424) do
 
   create_table "periodicos", :force => true do |t|
     t.integer  "localizacao_id"
-    t.string   "tombo_seduc"
-    t.string   "tombo_l"
+    t.integer  "tombo_seduc",    :default => 0
+    t.string   "tombo_l",        :default => "0"
     t.string   "tipo"
     t.string   "titulo"
     t.string   "subtitulo"

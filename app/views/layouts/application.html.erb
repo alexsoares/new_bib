@@ -30,25 +30,13 @@
                 <li><a href="#"><b>Cadastros</b></a>
                   <div class="select_sub">
                     <ul class="sub">
-                      
+
                       <li><%= link_to "Dicio. & Enciclo.", new_dicionario_enciclopedia_path %></li>
                       <li><%= link_to "Jogos", new_jogo_path %></li>
                       <li><%= link_to "Livros", new_livro_path %></li>
                       <li><%= link_to "Mapas", new_mapa_path %></li>
                       <li><%= link_to "Mídias", new_midia_path %></li>
-                      <li><%= link_to "Periodicos", new_periodico_path %></li>
-                      <li> __ </li>
-                      <li><%= link_to "Autores", new_autor_path %></li>
-                                       <% if current_user.has_role?('admin')%>
-                         <li><%= link_to "Áreas", new_area_path %></li>
-                      <%end%>
-                      <li><%= link_to "Cantores", new_cantor_path %></li>
-                      <li><%= link_to "Editoras", new_editora_path %></li>
-                      <% if current_user.has_role?('admin')%>
-                         <li><%= link_to "Gêneros", new_genero_path %></li>
-                      <%end%>
-
-                      <li><%= link_to "Títulos", new_identificacao_path %></li>
+                      <li><%= link_to "Periodicos" %></li>
                     </ul>
                   </div>
                 </li>
@@ -61,21 +49,26 @@
                       <li><%= link_to "Livros", consultaLiv_path %></li>
                       <li><%= link_to "Mapas", consultaMap_path %></li>
                       <li><%= link_to "Mídias", consultaMid_path %></li>
-
                       <li> __ </li>
-                      
-                      <li><%= link_to "Autores", consultaAut_path %></li>
-                      <li><%= link_to "Áreas", consultaAre_path %></li>
-                      <li><%= link_to "Assuntos", consultaAsu_path %></li>
-                      <li><%= link_to "Cantores", consultaCan_path %></li>
-                      <li><%= link_to "Editoras", consultaEdi_path %></li>
-                      <li><%= link_to "Gêneros", consultaGen_path %></li>
+                      <li><%= link_to "Autores/Livros", consultaAutLiv_path %></li>
+                      <li><%= link_to "Áreas/Livros", consultaAreLiv_path %></li>
+                      <li><%= link_to "Assuntos/Livros", consultaAsuLiv_path %></li>
+                      <li><%= link_to "Editoras/Livros", consultaEdiLiv_path %></li>
                       <li><%= link_to "Músicas", consultaMus_path %></li>
+                      <li><%= link_to "Cantores/Musicas", consultaCanMus_path %></li>
                       <li><%= link_to "Títulos", consultaTit_path %></li>
                     </ul>
                   </div>
                 </li>
+                <li><a href="#"><b>Emprestimos</b></a>
+                  <div class="select_sub">
+                    <ul class="sub">
+                      <li><%= link_to "Empréstimo", new_emprestimo_path %></li>
+                      <li><%= link_to "Devolução"  %></li>
 
+                    </ul>
+                  </div>
+                </li>
                 <% if current_user.has_role?('admin') or current_user.has_role?('escola')  %>
                 <li><a href="#"><b>Gerenciamento</b></a>
                   <div class="select_sub">
@@ -83,6 +76,15 @@
                       <li><%= link_to "Associar Usuários", new_roles_user_path %></li>
                       <li><%= link_to 'Gerenciar Usuários', roles_users_path %></li>
                       <li><%= link_to 'Log', tombos_path %></li>
+                      <li> __ </li>
+                      <li><%= link_to "Autores", consultaAut_path %></li>
+                      <li><%= link_to "Áreas", consultaAre_path %></li>
+                      <li><%= link_to "Assuntos", consultaAsu_path %></li>
+                      <li><%= link_to "Cantores", consultaCan_path %></li>
+                      <li><%= link_to "Editoras", consultaEdi_path %></li>
+                      <li><%= link_to "Gêneros", consultaGen_path %></li>
+                      <li><%= link_to "Músicas", consultaMus_path %></li>
+                      <li><%= link_to "Títulos", consultaTit_path %></li
                     </ul>
                   </div>
                 </li>

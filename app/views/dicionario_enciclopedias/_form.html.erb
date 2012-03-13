@@ -36,14 +36,14 @@
       
     <tr>
       <td colspan="3">
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_titulo", :class =>"inline" %>
+        
         <b><%= f.label :identificacao_id,"Título: " %>
         
-        <font  size="1"><%unless @dicionario_enciclopedia.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
+        <font  color="red" size="1"><%unless @dicionario_enciclopedia.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
         <%if @dicionario_enciclopedia.identificacao_id.present?%>
            <%= @dicionario_enciclopedia.identificacao.livro%>
         <%else%>
-           <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
+           <a class='inline' href="#inline_busca"><div id="identificacao">Selecionar Título</div></a>
         <%end%>
       </td>
     </tr>

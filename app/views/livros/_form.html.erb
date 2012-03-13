@@ -3,7 +3,7 @@
   <table  align="center" bgcolor="#F5F5F5">
     <tr>
       <td colspan="3" >
-        <b>Tombo Local:</b><br />
+        <b>Tombo Local:</b>
         <%= radio_button_tag(:type,"0") %>Multi-Tombos
         <%= radio_button_tag(:type,"1") %>Único
       </td>
@@ -25,7 +25,7 @@
                     <%= f.text_field :qtde_livros, :size => "2" %>
                   </td>
                   <td>
-                   <%= f.text_field :lista_tombos, :size => "73"%>
+                   <%= f.text_field :lista_tombos, :size => "68"%>
                   </td>
                 </tr>
               </table>
@@ -37,12 +37,11 @@
     <tr>
       <td colspan="3">
         <b><%= f.label :identificacao_id,"Título: " %>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_titulo", :class =>"inline" %>
-        <font  size="1"><%unless @livro.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto.)<%end%></font> </b><br/>
+         <font  color="red" size="1"><%unless @livro.identificacao_id.present?%>( Para selecionar o  <i>Título</i> clicar dentro da caixa de texto) <%end%></font> </b><br/>
         <%if @livro.identificacao_id.present?%>
           <%= @livro.identificacao.livro%>
         <%else%>
-          <a class='inline' href="#inline_busca"><div id="identificacao"></div></a>
+          <a class='inline' href="#inline_busca"><div id="identificacao">Selecionar Título</div></a>
         <%end%>
       </td>
     </tr>
@@ -63,17 +62,19 @@
     </tr>
     <tr>
       <td colspan="3">
-        <b><%= f.label :autor_id, "Autor(es). " %></b>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_autor", :class =>"inline" %>
-        <b><i><font  size="1">
-         ( Para selecionar mais de um autor precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
+        <b><%= f.label :autor_id, "Autor(es). " %></b><br/>
+        <b><i><font color="red" size="1">
+         (Caso não conste o nome do autor na lista abaixo, favor entrar em contato com a Informática SEDUC e solicitar a inclusão - Fone: 3475-7515)
       </font></i></b>
         <div id="autor"><%= render "shared/campos/campos_autor"%></div>
       </td>
     </tr>
     <tr>
        <td colspan="3">
-        <b><%= f.label :area_id,"Area: " %></b><br/>
+        <b><%= f.label :area_id,"Area: " %></b>
+        <b><i><font color="red" size="1">
+         (Caso não conste a Área na lista abaixo, favor entrar em contato com a Informática SEDUC e solicitar a inclusão)
+         </font></i></b>
         <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "--Selecionar--" %>
       </td>
     </tr>
@@ -111,9 +112,7 @@
       <td colspan="3">
         <b><%= f.label :assunto_id, "Assunto(s). " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline"%>
-        <b><i><font size="1">
-            ( Para selecionar mais de um assunto precionar a tecla <i>CTRL</i> e selecionar as opções desejadas )
-      </font></i></b>
+
       </td>
       <div id="assuntos"><%= render "shared/campos/campos_assunto"%></div>
     </tr>

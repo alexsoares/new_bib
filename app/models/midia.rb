@@ -4,8 +4,8 @@ class Midia < ActiveRecord::Base
   belongs_to :genero
   belongs_to :localizacao
   has_many :tombos
-  after_create :multi_tombo, :cria_possui_md, :auto_inc_tombo_seduc
-  attr_accessor :qtde_midias, :lista_tombos, :usuario
+  after_create :multi_tombo, :cria_possui_md, :auto_inc_tombo_seduc, :cria_disponibiliza_md
+  attr_accessor :qtde_midias, :lista_tombos, :usuario, :unidade
 
   has_and_belongs_to_many :musicas
   has_and_belongs_to_many :cantores
@@ -34,11 +34,21 @@ class Midia < ActiveRecord::Base
   end
   def cria_possui_md
     possui = Possui.new
-    possui.unidade_id = 3
+    possui.unidade_id = self.unidade
     possui.tombo = "md-#{self.tombo_l}"
     possui.midia_id = self.id
     possui.status = 1
     possui.save
   end
+
+  def cria_disponibiliza_md
+    disp = Dpu.new
+    disp.unidade_id = self.unidade
+    disp.tombo = "md-#{self.tombo_l}"
+    disp.midia_id = self.id
+    disp.status = 1
+    disp.save
+  end
+
 
 end

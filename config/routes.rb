@@ -49,16 +49,20 @@ ActionController::Routing::Routes.draw do |map|
   map.consultaJog '/consultaJog', :controller => 'jogos', :action => 'consultaJog'
   map.consultaMap '/consultaMap', :controller => 'mapas', :action => 'consultaMap'
   map.consultaAut '/consultaAut', :controller => 'autores', :action => 'consultaAut'
+  map.consultaAutLiv '/consultaAutLiv', :controller => 'autores', :action => 'consultaAutLiv'
   map.consultaAre '/consultaAre', :controller => 'areas', :action => 'consultaAre'
+  map.consultaAreLiv '/consultaAreLiv', :controller => 'areas', :action => 'consultaAreLiv'
   map.consultaEdi '/consultaEdi', :controller => 'editoras', :action => 'consultaEdi'
+  map.consultaEdiLiv '/consultaEdiLiv', :controller => 'editoras', :action => 'consultaEdiLiv'
   map.consultaTit '/consultaTit', :controller => 'identificacaos', :action => 'consultaTit'
   map.consultaGen '/consultaGen', :controller => 'generos', :action => 'consultaGen'
   map.consultaCan '/consultaCan', :controller => 'cantores', :action => 'consultaCan'
+  map.consultaCanMus '/consultaCanMus', :controller => 'cantores', :action => 'consultaCanMus'
   map.consultaMus '/consultaMus', :controller => 'musicas', :action => 'consultaMus'
   map.consultaAud '/consultaAud', :controller => 'audio_visuais', :action => 'consultaAud'
   map.consultaMid '/consultaMid', :controller => 'midias', :action => 'consultaMid'
   map.consultaAsu '/consultaAsu', :controller => 'assuntos', :action => 'consultaAsu'
-
+  map.consultaAsuLiv '/consultaAsuLiv', :controller => 'assuntos', :action => 'consultaAsuLiv'
   
 
   map.resource :session

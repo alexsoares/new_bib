@@ -10,7 +10,8 @@ class Emprestimo < ActiveRecord::Base
   # :dpu => Disponiveis para empréstimos por unidade
   #accepts_nested_attributes_for :dpus, :reject_if => lambda {|a| a[:conteudo].blank?}, :allow_destroy => true
   attr_accessor :dpu, :pessoa
-  validates_presence_of :dpu, :message => "Ao menos 1 livro deverá ser selecionado."
+  validates_presence_of :dpu, :message => ": Ao menos 1 livro deverá ser selecionado."
+
 
 
   def kind_of
@@ -30,15 +31,19 @@ class Emprestimo < ActiveRecord::Base
   end
 
   def update_dpu
-    disponibilidade = Dpu.find((self.dpu).to_i)
-    disponibilidade.status = 0
-    disponibilidade.save
+    self.dpu.each do |z|
+      disponibilidade = Dpu.find((z).to_i)
+      disponibilidade.status = 0
+      disponibilidade.save
+    end
   end
 
   def emprestado_para
     if self.tipo_emprestimo == 0
+      t = self.funcionario
       "Professor: #{Aluno.find((self.funcionario).to_i).nome}"
     else
+      t = self.aluno
       "Aluno: #{Aluno.find((self.aluno).to_i).nome}"
     end
   end

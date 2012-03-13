@@ -125,6 +125,15 @@ def consulta_cantor
       end
   end
 
+
+def consulta_cantor_musica
+       session[:cantor] = params[:cantor_id]
+       @cantores = Cantor.find(session[:cantor])
+       render :update do |page|
+         page.replace_html 'dadoscantores', :partial => "cantores_musica"
+      end
+  end
+
 protected
 
   def load_resources

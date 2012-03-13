@@ -1,0 +1,11 @@
+  <table width="100%" align="center" >
+   <tr>
+     <td colspan="2"align="right"><font size="4"> <b class="label_busca">Selecionar Editora:</b></font>
+       <%= collection_select :editora,:id,@editoras,:id,:nome, :include_blank => "--Selecionar--" %>
+               <%= observe_field 'editora_id',
+                   :update => "editoras",
+                   :url    => { :action => 'consulta_editora_livro'},
+                   :with   => 'editora_id' %>
+     </td>
+   </tr>
+  </table>

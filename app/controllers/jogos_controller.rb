@@ -26,6 +26,8 @@ class JogosController < ApplicationController
       qtd.times do
         @jogos = Jogo.new(params[:jogo])
         @jogos.usuario = current_user.id
+        @jogos.unidade = current_user.unidade_id
+        Log.gera_log("CRIACAO", "JOGOS", current_user.id,@jogos.id)
         if params[:jogo][:qtde_jogos].to_i == 0
           @jogos.qtde_jogos = 1
         else

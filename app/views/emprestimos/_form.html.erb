@@ -1,30 +1,29 @@
 <% form_for @emprestimo do |f| %>
-  <%= f.error_messages %>
-
-<table>
+<%= f.error_messages %>
+<table bgcolor="#F5F5F5">
   <tr>
     <td colspan="2">
-      <%= f.label :tipo_emprestimo,"Emprestimo para:" %><br />
+      <%= f.label :tipo_emprestimo,"Emprestimo para:" %>
       <%= f.select :tipo_emprestimo, Emprestimo::Tipo, :include_blank => "--Selecionar--" %>
     </td>
   </tr>
   <tr>
     <td>
-      <div id="retorna_pessoa">Clique no botão a frente >></div>
+      <div id="retorna_pessoa"> <font size="2"><b>Clique no botão à frente e selecione a pessoa -------------------------------------------------------------------------------------------></b></font></div>
     </td>
     <td id="aluno" class="aluno" style="display:none">
-      <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "35x35"), "#inline_content", :class =>"inline" %>
+      <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_content", :class =>"inline" %>
     </td>
     <td id="funcionario" class="professor" style="display:none">
-      <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "35x35"), "#inline_professor", :class =>"inline" %>
+      <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_professor", :class =>"inline" %>
     </td>
   </tr>
   <tr>
     <td>
-      <div id="retorna_livro">Clique no botão a frente e selecione o livro. >></div>
+      <ul id="retorna_livro"><font size="2"><b>Clique no botão a frente e selecione o livro.-----------------------------------------------------------------------------------------------></b></font></ul>
     </td>
-    <td>
-      <%= link_to image_tag("/stylesheets/images/livro.png", :size => "35x35"), "#inline_emp_livro", :class =>"inline" %>
+    <td valign="top">
+      <%= link_to image_tag("/stylesheets/images/livro2.png", :size => "35x35"), "#inline_emp_livro", :class =>"inline" %>
     </td>
   </tr>
   <tr>
@@ -52,10 +51,6 @@
                     <td>
                        <a href="#" class="filtro"><%= form.radio_button(:type_of, "0") %></a>Livros
                        <a href="#" class="filtro"><%= form.radio_button(:type_of, "1") %></a>Dicionario/Enciclopedia
-                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "2") %></a>Jogos
-                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "3") %></a>Mapas
-                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "4") %></a>Midias
-                       <a href="#" class="filtro"><%= form.radio_button(:type_of, "5") %></a>Periodicos
                     </td>
                   </tr>
                   <tr>

@@ -14,9 +14,12 @@ class EmprestimosController < ApplicationController
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])
     @emprestimo.unidade_id = current_user.unidade_id
-    @emprestimo.dpu = session[:emprestimo]
+    emprestimos = []
+    emprestimos << session[:emprestimo]
+    @emprestimo.dpu = emprestimos
     @emprestimo.data_emprestimo = Time.now
     @emprestimo.pessoa = session[:pessoa]
+    t = session[:pessoa]
     if (session[:pessoa]).present?
       
       if @emprestimo.save
@@ -95,15 +98,26 @@ class EmprestimosController < ApplicationController
       end
   end
 
-    def retorno_livro
+  def retorno_livro
       session[:emprestimo] = params[:emprestimo]
       livro = Livro.find(params[:emprestimo])
         render :update do |page|
           page.replace_html 'retorna_livro', :text => livro.identificacao.livro
-        end
   end
-
-
+  def retorno_livro
+      session[:emprestimo] << params[:emprestimo]
+      t = session[:emprestimo]
+      if (params[:tipo]).to_s == 'li'
+        objeto = Livro.find(params[:emprestimo])
+      else
+        if (params[:tipo]).to_s == 'de'
+          objeto = DicionarioEnciclopedia.find(params[:emprestimo])
+        end
+      end
+      render :update do |page|
+          page.insert_html :bottom, 'retorna_livro', :text => "<li id="+ objeto.identificacao_id.to_s + "> * "+objeto.identificacao.livro + "</li>"
+      end
+  end
 
   def dpu
     id = Identificacao.all(:conditions => ["livro like ?",params[:livro][:dcu] + "%"], :select => "id")
@@ -114,6 +128,16 @@ class EmprestimosController < ApplicationController
       if (params[:livro][:type_of]).to_i == 0
         id_livro = Livro.all(:include => [:identificacao],:conditions => ["identificacao_id in (?) and status = 1",id])
         @disponiveis = Dpu.all(:include => [:livro], :conditions => ["livro_id in (?) and status = 1",id_livro])
+      end
+    end  
+    if @disponiveis.present?
+      session[:emprestimo] = []
+      render :update do |page|
+        page.replace_html 'livros', :partial => "livros_disponiveis"
+      end
+    else
+      render :update do |page|
+        page.replace_html 'livros', :text => "Nenhum exemplar disponivel com este nome nesta unidade. Se desejar consulte entre as unidades"
       end
     end
     if @disponiveis.present?
@@ -126,6 +150,13 @@ class EmprestimosController < ApplicationController
       end
 
     end
+  end
+
+  def funcionario
+      @pessoas = Aluno.all(:conditions => ["nome like ? and matricula_funcionario is not null",params[:funcionario][:nome] + "%"])
+      render :update do |page|
+        page.replace_html 'pessoas', :partial => "pessoas"
+      end
   end
 
   def funcionario
