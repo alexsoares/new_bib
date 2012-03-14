@@ -129,7 +129,19 @@ $("#type_1").click(function ()
 
 
 
+//Tipo emprestimo
 
+$("#type_0").click(function ()
+{
+    $("#tipo_emprestimo_aluno").show();
+    $("#tipo_emprestimo_professor").hide();
+
+});
+$("#type_1").click(function ()
+{
+    $("#tipo_emprestimo_professor").show();
+    $("#tipo_emprestimo_aluno").hide();
+});
 
 
 
