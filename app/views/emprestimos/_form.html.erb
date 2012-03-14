@@ -1,6 +1,6 @@
 <% form_for @emprestimo do |f| %>
 <%= f.error_messages %>
-<table bgcolor="#F5F5F5">
+<table bgcolor="#F5F5F5" border="1">
   <tr>
     <td colspan="2">
       <%= f.label :tipo_emprestimo,"Emprestimo para:" %>
@@ -9,7 +9,7 @@
   </tr>
   <tr>
     <td>
-      <div id="retorna_pessoa"> <font size="2"><b>Clique no botão à frente e selecione a pessoa -------------------------------------------------------------------------------------------></b></font></div>
+      <div id="retorna_pessoa"> <font size="2"><b>Clique no botão ao lado e selecione a pessoa --------></b></font></div>
     </td>
     <td id="aluno" class="aluno" style="display:none">
       <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_content", :class =>"inline" %>
@@ -18,14 +18,23 @@
       <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_professor", :class =>"inline" %>
     </td>
   </tr>
-  <tr>
-    <td>
-      <ul id="retorna_livro"><font size="2"><b>Clique no botão a frente e selecione o livro.-----------------------------------------------------------------------------------------------></b></font></ul>
-    </td>
-    <td valign="top">
-      <%= link_to image_tag("/stylesheets/images/livro2.png", :size => "35x35"), "#inline_emp_livro", :class =>"inline" %>
-    </td>
-  </tr>
+  <div class="fields">
+    <tr><td colspan="2">Livros</td></tr>
+    <tr>
+      <td><%= select_tag("todos_dpu", options_for_select(@livros_disponiveis.collect { |ff| [truncate(ff.lista_livro , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
+      <td><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
+    </tr>
+    <tr>
+      <td><a class="botao" href="#" id="add_dpu">&gt;&gt;</a></td>
+      <td><a class="botao" href="#" id="remove_dpu">&lt;&lt;</a></td>
+    </tr>
+    <tr>
+      <% dt_emprestimo =  Date.today%>
+      <% dt_devolucao = dt_emprestimo + 3.days %>
+      <td>Data de empréstimo<div id="data_emprestimo" class="data"><%= dt_emprestimo.strftime("%d/%m/%Y") %></div></td>
+      <td>Data de devolução<div id="data_devolucao" class="data"><%= dt_devolucao.strftime("%d/%m/%Y") %></div></td>
+    </tr>
+  </div>
   <tr>
     <td colspan="2">
       <%= f.submit "Salvar" %>

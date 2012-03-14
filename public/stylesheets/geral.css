@@ -5,7 +5,7 @@
   border-color:black;
   width:100%;
 }
-    .divisoes tr {
+.divisoes tr {
       font-size: 12px;
       color: black;
       background-color: #F5F5F5;
@@ -13,7 +13,7 @@
       padding-bottom: 4px;
       text-align: center;
     }
-    #classe{
+#classe{
     height:380px;
     width:760px;
     border: solid 1px;
@@ -44,8 +44,15 @@
 
 #retorna_pessoa{
     height:20px;
-    width:665px;
+    width:350px;
     border: solid 1px;
+}
+.data{
+    height:20px;
+    width:100px;
+    border: solid 1px;
+    background-color: white;
+    text-align: center;
 }
 
 

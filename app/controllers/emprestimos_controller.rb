@@ -160,6 +160,6 @@ protected
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
       @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
     end
-    @livros_disponiveis = Dpu.all(:include => [],:conditions => ["status = 1 and unidade_id = ?", 3], :limit => 10)
+    @livros_disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["livro_id is not null and status = 1 and unidade_id = ?", current_user.unidade_id], :limit=>10)
   end
 end

@@ -17,8 +17,10 @@ class Emprestimo < ActiveRecord::Base
   def kind_of
     if self.tipo_emprestimo == 0
       self.funcionario = self.pessoa
+      self.save
     else
       self.aluno = self.pessoa
+      self.save
     end
   end
 

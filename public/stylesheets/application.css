@@ -17,6 +17,11 @@ body {
    width:300px;
    height: 100px;
   }
+  select.lista_dpus {
+   width:350px;
+   font-size: medium;
+   height: 100px;
+  }
 
   select.lista_cantores {
    width:300px;

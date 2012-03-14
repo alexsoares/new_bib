@@ -14,4 +14,9 @@ class Dpu < ActiveRecord::Base
     self.livro.identificacao.livro.present? ? self.livro.identificacao.livro : "Livro sem titulo"
   end
 
+
+  def lista_livro
+    "#{self.livro.tombo_l} - #{self.livro.identificacao.livro}"
+  end
+
 end
