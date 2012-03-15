@@ -94,7 +94,7 @@ class EmprestimosController < ApplicationController
       @pessoa = Aluno.find(params[:pessoa])
       session[:pessoa] = params[:pessoa]
       render :update do |page|
-        page.replace_html 'tipo_emprestimo_aluno', :text => @pessoa.nome
+        page.replace_html 'tipo_emprestimo', :text => @pessoa.nome
       end
   end
 

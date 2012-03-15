@@ -1,6 +1,6 @@
 <% form_for @emprestimo do |f| %>
 <%= f.error_messages %>
-<table bgcolor="#F5F5F5" border="1">
+<table>
  <tr>
     <td colspan="3" >
         Emprestimo para:
@@ -9,22 +9,25 @@
       </td>
     </tr>
     <tr>
-      <td colspan="3">
-        <div id="tipo_emprestimo_aluno" style="display:none">
-              <%= link_to "Selecionar Aluno","#inline_content", :class =>"inline" %>
-        </div>
-        <div id="tipo_emprestimo_professor" style="display:none">
-              <%= link_to "Selecionar Funcionário", "#inline_professor", :class =>"inline" %>
-        </div>
+      <td>
+        <div id="tipo_emprestimo">Selecione ----------------------------------></div>
       </td>
+      <td id="aluno" class="aluno" style="display:none">
+        <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_content", :class =>"inline" %>
+      </td>
+      <td id="funcionario" class="professor" style="display:none">
+        <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_professor", :class =>"inline" %>
+      </td>
+
     </tr>
 
   <div class="fields">
     <tr><td colspan="2">Livros</td></tr>
     <tr>
       <td><%= select_tag("todos_dpu", options_for_select(@livros_disponiveis.collect { |ff| [truncate(ff.lista_livro , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
-      <td><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
+      <td rowspan="2"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
     </tr>
+    <tr></tr>
     <tr>
       <td><a class="botao" href="#" id="add_dpu">&gt;&gt;</a></td>
       <td><a class="botao" href="#" id="remove_dpu">&lt;&lt;</a></td>

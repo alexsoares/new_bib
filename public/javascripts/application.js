@@ -1,15 +1,21 @@
 jQuery(document).ready(function( $ ){
 
-$('select#emprestimo_tipo_emprestimo').change(function(){
-  if ($(this).val() == 1){
-    $(".professor").hide();
-    $(".aluno").show();
-  }
-  else if ($(this).val() == 0){
-    $(".aluno").hide();
-    $(".professor").show();
-  }
+//Tipo emprestimo
+
+$("#type_0").click(function ()
+{
+    $("#aluno").show();
+    $("#tipo_emprestimo").html("Selecione ---------------------------------->");
+    $("#funcionario").hide();
+
 });
+$("#type_1").click(function ()
+{
+    $("#funcionario").show();
+    $("#tipo_emprestimo").html("Selecione ---------------------------------->");
+    $("#aluno").hide();
+});
+
 
 $( "#configuracao_data_criacao" ).datepicker({dateFormat: 'dd-mm-yy', changeYear: true, changeMonth: true, yearRange: '-60:+0'});
 
@@ -129,19 +135,6 @@ $("#type_1").click(function ()
 
 
 
-//Tipo emprestimo
-
-$("#type_0").click(function ()
-{
-    $("#tipo_emprestimo_aluno").show();
-    $("#tipo_emprestimo_professor").hide();
-
-});
-$("#type_1").click(function ()
-{
-    $("#tipo_emprestimo_professor").show();
-    $("#tipo_emprestimo_aluno").hide();
-});
 
 
 

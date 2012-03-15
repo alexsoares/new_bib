@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem 'i18n', :version => '0.3.7'
   config.gem 'rdoc'
   config.gem 'brazilian-rails', :version =>'2.1.15'
+  config.gem 'time_diff', :version => '0.2.2'
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
