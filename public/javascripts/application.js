@@ -166,17 +166,23 @@ $("#type_11").click(function ()
     $("#dicionario_enciclopedia_qtde").val("1").attr("disabled", true).css("background-color", "#cccccc");
 });
 
-
-
-// Emprestimos
-$('#add_dpu').click(function() {
+// Emprestimos Livros
+$('#add_dpu_livros').click(function() {
   return !$('#todos_dpus option:selected').remove().appendTo('#emprestimo_dpu_ids');
  });
-$('#remove_dpu').click(function() {
+$('#remove_dpu_livros').click(function() {
   return !$('#emprestimo_dpu_ids option:selected').remove().appendTo('#todos_dpus');
  });
 //Fim do codigo
 
+// Emprestimos DE
+$('#add_dpu_de').click(function() {
+  return !$('#todos_dpus_de option:selected').remove().appendTo('#emprestimo_dpu_ids');
+ });
+$('#remove_dpu_de').click(function() {
+  return !$('#emprestimo_dpu_ids option:selected').remove().appendTo('#todos_dpus_de');
+ });
+//Fim do codigo
 
 
 

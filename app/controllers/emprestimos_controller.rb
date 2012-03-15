@@ -161,5 +161,6 @@ protected
       @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
     end
     @livros_disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["livro_id is not null and status = 1 and unidade_id = ?", current_user.unidade_id], :limit=>10)
+    @de_disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["dicionario_enciclopedia_id is not null and status = 1 and unidade_id = ?", current_user.unidade_id], :limit=>10)
   end
 end

@@ -19,4 +19,9 @@ class Dpu < ActiveRecord::Base
     "#{self.livro.tombo_l} - #{self.livro.identificacao.livro}"
   end
 
+  def lista_de
+    "#{self.dicionario_enciclopedia.tombo_l} - #{self.dicionario_enciclopedia.identificacao.livro}"
+  end
+
+
 end

@@ -1,6 +1,6 @@
 <% form_for @emprestimo do |f| %>
 <%= f.error_messages %>
-<table>
+<table border="1">
  <tr>
     <td colspan="3" >
         Emprestimo para:
@@ -25,12 +25,18 @@
     <tr><td colspan="2">Livros</td></tr>
     <tr>
       <td><%= select_tag("todos_dpu", options_for_select(@livros_disponiveis.collect { |ff| [truncate(ff.lista_livro , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
-      <td rowspan="2"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
+      <td rowspan="4"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
     </tr>
-    <tr></tr>
     <tr>
-      <td><a class="botao" href="#" id="add_dpu">&gt;&gt;</a></td>
-      <td><a class="botao" href="#" id="remove_dpu">&lt;&lt;</a></td>
+      <td><a class="botao" href="#" id="add_dpu_livros">&gt;&gt;</a></td>
+      <td><a class="botao" href="#" id="remove_dpu_livros">&lt;&lt;</a></td>
+    </tr>
+    <tr>
+      <td><%= select_tag("todos_dpu_de", options_for_select(@de_disponiveis.collect { |ff| [truncate(ff.lista_de , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus_de", :size => 5, :class => "lista_dpus"}) %></td>
+    </tr>
+    <tr>
+      <td><a class="botao" href="#" id="add_dpu_de">&gt;&gt;</a></td>
+      <td><a class="botao" href="#" id="remove_dpu_de">&lt;&lt;</a></td>
     </tr>
     <tr>
       <% dt_emprestimo =  Date.today%>
