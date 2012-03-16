@@ -10,18 +10,13 @@ class EmprestimosController < ApplicationController
 
   def new
     @emprestimo = Emprestimo.new
+    @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null or dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
   end
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])
     @emprestimo.unidade_id = current_user.unidade_id
-    emprestimos = []
-    emprestimos << session[:emprestimo]
-    @emprestimo.dpu = emprestimos
-    @emprestimo.data_emprestimo = Time.now
     @emprestimo.pessoa = session[:pessoa]
-    t = session[:pessoa]
-    if (session[:pessoa]).present?
-      
+    if (session[:pessoa]).present?     
       if @emprestimo.save
         flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
         redirect_to @emprestimo
@@ -38,6 +33,7 @@ class EmprestimosController < ApplicationController
 
   def edit
     @emprestimo = Emprestimo.find(params[:id])
+    @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null or dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
   end
 
   def update
@@ -159,8 +155,6 @@ protected
     else
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
       @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
-    end
-    @livros_disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["livro_id is not null and status = 1 and unidade_id = ?", current_user.unidade_id], :limit=>10)
-    @de_disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["dicionario_enciclopedia_id is not null and status = 1 and unidade_id = ?", current_user.unidade_id], :limit=>10)
+    end    
   end
 end

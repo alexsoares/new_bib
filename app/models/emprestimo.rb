@@ -4,7 +4,7 @@ class Emprestimo < ActiveRecord::Base
   has_and_belongs_to_many :dpus
   Tipo = {'Funcionário' => 0, 'Aluno' => 1}
   Kind = {'Livro' => 0, 'Dicionario / enciclopedia' => 1}
-  after_create :kind_of
+  after_create :kind_of,:inclui_data
   #after_create :cria_emprestimos_realizados,:kind_of
   belongs_to :unidade
   # :dpu => Disponiveis para empréstimos por unidade
@@ -14,12 +14,19 @@ class Emprestimo < ActiveRecord::Base
 
 
 
+  def inclui_data
+    self.data_emprestimo = Date.today
+  end
+
+
   def kind_of
     if self.tipo_emprestimo == 0
       self.funcionario = self.pessoa
+      self.tipo_emprestimo = 0
       self.save
     else
       self.aluno = self.pessoa
+      self.tipo_emprestimo = 1
       self.save
     end
   end

@@ -9,12 +9,20 @@
     <td><%= @emprestimo.exibe_ra_mat %></td>
     <td><%= @emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
   </tr>
-  <tr><td colspan="3">Livros emprestados</td></tr>
+  <tr><td colspan="3">Emprestimos realizados</td></tr>
   <tr>
     <td colspan="3">
       <ul>
-        <%@emprestimo.emprestimos_realizados.each do |er|%>
-          <li><%= er.dpu.livro.identificacao.livro %></li>
+        <%@emprestimo.dpus.each do |dpu|%>
+          <% if dpu.livro_id.present? %>
+            <b>Livros</b>
+            <li><%= dpu.livro.identificacao.livro %></li>
+          <%else%>
+            <% if dpu.dicionario_enciclopedia_id.present? %>
+              <b>Dicionario Enciclopedia</b>
+              <li><%= dpu.dicionario_enciclopedia.identificacao.livro %></li>
+            <%end%>
+          <%end%>                       
         <%end%>
       </ul>
     </td>

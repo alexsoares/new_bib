@@ -20,28 +20,20 @@
       </td>
 
     </tr>
-
   <div class="fields">
-    <tr><td colspan="2">Livros</td></tr>
+    <tr><td colspan="2">Livros / Dicionarios e Enciclopedias</td></tr>
     <tr>
-      <td><%= select_tag("todos_dpu", options_for_select(@livros_disponiveis.collect { |ff| [truncate(ff.lista_livro , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
-      <td rowspan="4"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
+      <td><%= select_tag("todos_dpu", options_for_select(@disponiveis.collect { |ff| [truncate(ff.lista , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
+      <td rowspan="1"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
     </tr>
     <tr>
-      <td><a class="botao" href="#" id="add_dpu_livros">&gt;&gt;</a></td>
-      <td><a class="botao" href="#" id="remove_dpu_livros">&lt;&lt;</a></td>
-    </tr>
-    <tr>
-      <td><%= select_tag("todos_dpu_de", options_for_select(@de_disponiveis.collect { |ff| [truncate(ff.lista_de , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus_de", :size => 5, :class => "lista_dpus"}) %></td>
-    </tr>
-    <tr>
-      <td><a class="botao" href="#" id="add_dpu_de">&gt;&gt;</a></td>
-      <td><a class="botao" href="#" id="remove_dpu_de">&lt;&lt;</a></td>
+      <td><a class="botao" href="#" id="add_dpu">&gt;&gt;</a></td>
+      <td><a class="botao" href="#" id="remove_dpu">&lt;&lt;</a></td>
     </tr>
     <tr>
       <% dt_emprestimo =  Date.today%>
       <% dt_devolucao = dt_emprestimo + 3.days %>
-      <td>Data de empréstimo<div id="data_emprestimo" class="data"><%= dt_emprestimo.strftime("%d/%m/%Y") %></div></td>
+      <td>Data de empréstimo<div id="data_emprestimo" class="data"><%= @emprestimo.data_devolucao.present? ? @emprestimo.data_devolucao.strftime("%d/%m/%Y") : dt_emprestimo.strftime("%d/%m/%Y") %></div></td>
       <td>Data de devolução<div id="data_devolucao" class="data"><%= dt_devolucao.strftime("%d/%m/%Y") %></div></td>
     </tr>
   </div>

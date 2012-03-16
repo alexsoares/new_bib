@@ -14,14 +14,13 @@ class Dpu < ActiveRecord::Base
     self.livro.identificacao.livro.present? ? self.livro.identificacao.livro : "Livro sem titulo"
   end
 
-
-  def lista_livro
-    "#{self.livro.tombo_l} - #{self.livro.identificacao.livro}"
+  def lista
+    if self.livro_id.present?
+      "#{self.livro.tombo_l} - #{self.livro.identificacao.livro}"
+    else
+      if self.dicionario_enciclopedia_id.present?
+        "#{self.dicionario_enciclopedia.tombo_l} - #{self.dicionario_enciclopedia.identificacao.livro}"
+      end
+    end
   end
-
-  def lista_de
-    "#{self.dicionario_enciclopedia.tombo_l} - #{self.dicionario_enciclopedia.identificacao.livro}"
-  end
-
-
 end
