@@ -8,7 +8,7 @@ class EmprestimosController < ApplicationController
     @emprestimo = Emprestimo.find(params[:id])
   end
 
-  def teste
+  def filtros
   if params[:filtro_ambos].present?
     filtro = params[:filtro_ambos]
   else
@@ -39,7 +39,6 @@ class EmprestimosController < ApplicationController
 
   def new
     @emprestimo = Emprestimo.new
-    @disponiveis = Dpu.find(:all,:conditions => ["id =  0"])
   end
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])
@@ -184,6 +183,7 @@ protected
     else
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
       @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
-    end    
+    end
+    @disponiveis = Dpu.find(:all,:conditions => ["id =  0"])
   end
 end

@@ -16,10 +16,10 @@ class Dpu < ActiveRecord::Base
 
   def lista
     if self.livro_id.present?
-      "#{self.livro.tombo_l} - #{self.livro.identificacao.livro}"
+      "#{self.livro.identificacao.livro} - #{self.livro.tombo_l}"
     else
       if self.dicionario_enciclopedia_id.present?
-        "#{self.dicionario_enciclopedia.tombo_l} - #{self.dicionario_enciclopedia.identificacao.livro}"
+        "#{self.dicionario_enciclopedia.identificacao.livro} - #{self.dicionario_enciclopedia.tombo_l}"
       end
     end
   end

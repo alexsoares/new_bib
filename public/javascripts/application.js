@@ -13,6 +13,13 @@ $("#filtro_1").on("click", function(){
     }
 });
 
+$("#filtro_ambos").on("click", function(){
+    document.f1.filtro_0.checked = false;
+    document.f1.filtro_1.checked = false;
+});
+
+
+
 //
 
 //Tipo emprestimo

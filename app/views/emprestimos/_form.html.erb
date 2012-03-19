@@ -4,8 +4,6 @@
     <tr>
       <td colspan="3" >
         Emprestimo para:
-        <a href="javascript:selecionar_todo()">Marcar todos</a> |
-        <a href="javascript:deselecionar_todo()">Marcar nenhum</a>
         <%= radio_button_tag(:type,"0") %> Alunos
         <%= radio_button_tag(:type,"1") %>Funcionários
       </td>
@@ -29,18 +27,18 @@
         <%= observe_field 'filtro_0',
           :loading => "$('#status').show()" ,
           :success => "$('#status').hide()",
-          :url    => { :action => 'teste'},
+          :url    => { :action => 'filtros'},
           :with   => 'filtro_0' %>
         <%= observe_field 'filtro_1',
           :loading => "$('#status').show()" ,
           :success => "$('#status').hide()",
-          :url    => { :action => 'teste'},
+          :url    => { :action => 'filtros'},
           :with   => 'filtro_1' %>
 
         <%= observe_field 'filtro_ambos',
           :loading => "$('#status').show()" ,
           :success => "$('#status').hide()",
-          :url    => { :action => 'teste'},
+          :url    => { :action => 'filtros'},
           :with   => 'filtro_ambos' %>
 
         <div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div>
