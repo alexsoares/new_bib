@@ -1,0 +1,2 @@
+          <td><%= select_tag("todos_dpu", options_for_select(@disponiveis.collect { |ff| [truncate(ff.lista , :length => 40, :omission => "..."), ff.id] }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
+          <td rowspan="1"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>

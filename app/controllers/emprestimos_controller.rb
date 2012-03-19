@@ -8,9 +8,38 @@ class EmprestimosController < ApplicationController
     @emprestimo = Emprestimo.find(params[:id])
   end
 
+  def teste
+  if params[:filtro_ambos].present?
+    filtro = params[:filtro_ambos]
+  else
+    if params[:filtro_0].present?
+      filtro = params[:filtro_0]
+    else
+      if params[:filtro_1].present?
+        filtro = params[:filtro_1]
+      end
+    end
+  end
+   if (filtro.to_i == 2)
+     @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(dicionario_enciclopedia_id is not null or livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+   else
+     if filtro.to_i == 0
+       @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+     else
+       if filtro.to_i == 1
+         @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+       end
+     end
+   end
+     render :update do |page|
+       page.replace_html 'fields', :partial => "lista_dpu"
+     end
+  end
+
+
   def new
     @emprestimo = Emprestimo.new
-    @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null or dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+    @disponiveis = Dpu.find(:all,:conditions => ["id =  0"])
   end
   def create
     @emprestimo = Emprestimo.new(params[:emprestimo])

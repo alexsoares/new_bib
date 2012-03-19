@@ -1,5 +1,20 @@
 jQuery(document).ready(function( $ ){
 
+//Ajusta filtros
+//
+$("#filtro_0").on("click", function(){
+   if (document.f1.filtro_ambos.checked == true) {
+        document.f1.filtro_ambos.checked = false;
+    }
+});
+$("#filtro_1").on("click", function(){
+   if (document.f1.filtro_ambos.checked == true) {
+        document.f1.filtro_ambos.checked = false;
+    }
+});
+
+//
+
 //Tipo emprestimo
 
 $("#type_0").click(function ()

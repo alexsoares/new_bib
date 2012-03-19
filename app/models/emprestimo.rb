@@ -9,7 +9,7 @@ class Emprestimo < ActiveRecord::Base
   belongs_to :unidade
   # :dpu => Disponiveis para empréstimos por unidade
   #accepts_nested_attributes_for :dpus, :reject_if => lambda {|a| a[:conteudo].blank?}, :allow_destroy => true
-  attr_accessor :dpu, :pessoa, :type
+  attr_accessor :dpu, :pessoa, :type, :filtro,:filtro_ambos
   validates_presence_of :dpu, :message => ": Ao menos 1 livro deverá ser selecionado."
 
 
