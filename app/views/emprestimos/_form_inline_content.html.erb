@@ -1,9 +1,9 @@
 	<div style='display:none'>
-		<div id='inline_content' style='padding:10px; background:#fff;'>
+		<div id='inline_content' style='padding:10px; background:#EEE9E9;'>
                 <table width="100%">
                   <h2><%= current_user.unidade.nome %></h2>
                   <hr/>
-
+                  <b>Classe:</b>
                   <% form_remote_for :classe, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()",
                     :url => {:controller => :emprestimos,
                     :action => :classe } do |form| %>
@@ -14,7 +14,7 @@
                   <%= submit_tag "Filtrar", :name => nil %>
                   <% end %>
                 </table>
-                <hr/>
+
                 <br/>
                 <div id="classe">
                 </div>

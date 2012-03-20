@@ -27,14 +27,14 @@ $("#filtro_ambos").on("click", function(){
 $("#type_0").click(function ()
 {
     $("#aluno").show();
-    $("#tipo_emprestimo").html("Selecione ---------------------------------->");
+    $("#tipo_emprestimo").html("Selecionar ---------------------------------------------->");
     $("#funcionario").hide();
 
 });
 $("#type_1").click(function ()
 {
     $("#funcionario").show();
-    $("#tipo_emprestimo").html("Selecione ---------------------------------->");
+    $("#tipo_emprestimo").html("Selecionar ---------------------------------------------->");
     $("#aluno").hide();
 });
 

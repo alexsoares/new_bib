@@ -1,16 +1,16 @@
 <% form_for @emprestimo, :html => {:name => "f1"} do |f| %>
 <%= f.error_messages %>
-  <table border="1">
+  <table>
     <tr>
       <td colspan="3" >
-        Emprestimo para:
+        <b>Emprestimo para:</b>
         <%= radio_button_tag(:type,"0") %> Alunos
         <%= radio_button_tag(:type,"1") %>Funcionários
       </td>
     </tr>
     <tr>
       <td>
-        <div id="tipo_emprestimo">Selecione ----------------------------------></div>
+        <div id="tipo_emprestimo"><b>Selecionar ----------------------------------------------></b></div>
       </td>
       <td id="aluno" class="aluno" style="display:none">
         <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_content", :class =>"inline" %>
@@ -20,10 +20,11 @@
       </td>
     </tr>
     <tr>
-      <td colspan="3">
-        <%= check_box_tag :filtro_ambos,2 %>Ambos
+      <td colspan="3"><b>Tipo:</b>
+
         <%= radio_button_tag(:filtro,"0") %>Livros
         <%= radio_button_tag(:filtro,"1") %>Dicionario / Enciclopedias
+        <%= check_box_tag :filtro_ambos,2 %>Ambos
         <%= observe_field 'filtro_0',
           :loading => "$('#status').show()" ,
           :success => "$('#status').hide()",
@@ -45,7 +46,7 @@
       </td>
     </tr>
       <div class="fields">
-        <tr><td colspan="2">Livros / Dicionarios e Enciclopedias</td></tr>
+        <tr><td colspan="2"><b>Livros & Dicionarios e Enciclopedias Selecionados</b></td></tr>
         <tr id="fields">
           <td><%= select_tag("todos_dpu", options_for_select(@disponiveis.collect { |ff| [truncate(ff.lista , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
           <td rowspan="1"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
@@ -58,8 +59,8 @@
       <tr>
         <% dt_emprestimo =  Date.today%>
         <% dt_devolucao = dt_emprestimo + 3.days %>
-        <td>Data de empréstimo<div id="data_emprestimo" class="data"><%= @emprestimo.data_devolucao.present? ? @emprestimo.data_emprestimo.strftime("%d/%m/%Y") : dt_emprestimo.strftime("%d/%m/%Y") %></div></td>
-        <td>Data de devolução<div id="data_devolucao" class="data"><%= @emprestimo.data_devolucao.present? ? @emprestimo.data_devolucao.strftime("%d/%m/%Y") : dt_devolucao.strftime("%d/%m/%Y") %></div></td>
+        <td><b>Data de Empréstimo:</b><%= @emprestimo.data_devolucao.present? ? @emprestimo.data_emprestimo.strftime("%d/%m/%Y") : dt_emprestimo.strftime("%d/%m/%Y") %></td>
+        <td><b>Data de Devolução:</b><%= @emprestimo.data_devolucao.present? ? @emprestimo.data_devolucao.strftime("%d/%m/%Y") : dt_devolucao.strftime("%d/%m/%Y") %></td>
       </tr>
       <tr>
         <td colspan="2">

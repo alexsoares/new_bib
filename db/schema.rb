@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
     t.text     "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "status",           :default => true
+    t.boolean  "status"
   end
 
   create_table "dpus", :force => true do |t|
@@ -128,7 +128,7 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
 
   create_table "emprestimos", :force => true do |t|
     t.integer  "tipo_emprestimo"
-    t.integer  "professor_id"
+    t.integer  "funcionario"
     t.integer  "aluno"
     t.integer  "unidade_id"
     t.datetime "created_at"
@@ -168,7 +168,7 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
   end
 
   create_table "identificacaos", :force => true do |t|
-    t.string   "codigo"
+    t.integer  "codigo"
     t.string   "livro"
     t.string   "subtitulo"
     t.text     "obs"

@@ -1,36 +1,55 @@
-<% title "Emprestimo" %>
-
-<table class="divisoes">
-  <th>Nome</th>
-  <th>RA / Matricula</th>
-  <th>Devolver em</th>
-  <tr>
-    <td><%= @emprestimo.emprestado_para %></td>
-    <td><%= @emprestimo.exibe_ra_mat %></td>
-    <td><%= @emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
-  </tr>
-  <tr><td colspan="3">Emprestimos realizados</td></tr>
-  <tr>
-    <td colspan="3">
-      <ul>
-        <%@emprestimo.dpus.each do |dpu|%>
-          <% if dpu.livro_id.present? %>
-            <b>Livros</b>
-            <li><%= dpu.livro.identificacao.livro %></li>
-          <%else%>
-            <% if dpu.dicionario_enciclopedia_id.present? %>
-              <b>Dicionario Enciclopedia</b>
-              <li><%= dpu.dicionario_enciclopedia.identificacao.livro %></li>
-            <%end%>
-          <%end%>                       
+  <% title "EMPRÉSTIMO" %>
+<div class ="tabs">
+  <div id="topoShow"></div>
+   <div id="caixa_titulo">
+     <font size="3"><strong>EMPRESTIMO REALIZADO</strong></font><br/>
+   </div>
+     <table  width="100%" bgcolor="#F5F5F5">
+      <tr>
+        <td width ="20%" ><b>Nome:</b></td>
+        <td><%= @emprestimo.emprestado_para %></td>
+      </tr>
+      <tr>
+        <td><b>RA:</b></td>
+        <td><%= @emprestimo.exibe_ra_mat %></td>
+      </tr>
+      <tr>
+        <td><b>Data Devolução:</b></td>
+        <% if @emprestimo.data_devolucao.nil? %>
+          <td></td>
+        <%else%>
+          <td><%= @emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
         <%end%>
-      </ul>
-    </td>
-  </tr>
-</table>
+      </tr>
+      <tr>
+        <td valign="top"><b>Itens Emprestados:</b></td>
+        <td valign="top">
+         <%@emprestimo.dpus.each do |dpu|%>
+            <% if dpu.livro_id.present? %>
+               <b>-</b> <%= dpu.livro.identificacao.livro %> (Livro)<br/>
+             <%else%>
+               <% if dpu.dicionario_enciclopedia_id.present? %>
+                  <b>-</b><%= dpu.dicionario_enciclopedia.identificacao.livro %> (Dicionário)<br/>
+                <%end%>
+              <%end%>
+         <%end%>
+      </td>
+      </tr>
+    </table>
+        <table>
+          <tr>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+            <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), emprestimos_path, :title => "Empréstimos Cadastradas" %></td>
+            <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+               <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_emprestimo_path(@emprestimo), :title => "Editar Editora" %></td>
+               <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @emprestimo, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Emprestimo" %></td>
+               <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_emprestimo_path, :title => "Cadastrar Emprestimo" %></td>
+            <%else%>
+                <td align="center"> </td>
+                <td align="center"> </td>
+                <td align="center"> </td>
+            <%end%>
+          </tr>
+        </table>
+</div>
 
-<p>
-  <%= link_to "Edit", edit_emprestimo_path(@emprestimo) %> |
-  <%= link_to "Destroy", @emprestimo, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", emprestimos_path %>
-</p>
