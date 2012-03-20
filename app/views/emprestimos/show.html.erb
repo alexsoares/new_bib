@@ -2,10 +2,10 @@
 <div class ="tabs">
   <div id="topoShow"></div>
    <div id="caixa_titulo">
-     <font size="3"><strong>EMPRESTIMO REALIZADO</strong></font><br/>
+     <font size="3"><strong>EMPRESTIMO Nº <%= @emprestimo.id %></strong></font><br/>
    </div>
      <table  width="100%" bgcolor="#F5F5F5">
-      <tr>
+          <tr>
         <td width ="20%" ><b>Nome:</b></td>
         <td><%= @emprestimo.emprestado_para %></td>
       </tr>
@@ -41,9 +41,9 @@
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), emprestimos_path, :title => "Empréstimos Cadastradas" %></td>
             <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
-               <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_emprestimo_path(@emprestimo), :title => "Editar Editora" %></td>
-               <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @emprestimo, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Emprestimo" %></td>
-               <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_emprestimo_path, :title => "Cadastrar Emprestimo" %></td>
+               <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_emprestimo_path(@emprestimo), :title => "Editar Empréstimo" %></td>
+               <td align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @emprestimo, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Emprestimo" %></td>
+               
             <%else%>
                 <td align="center"> </td>
                 <td align="center"> </td>

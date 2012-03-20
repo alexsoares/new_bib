@@ -70,9 +70,9 @@ class Emprestimo < ActiveRecord::Base
 
   def emprestado_para
     if self.tipo_emprestimo == 1
-      "Professor: #{Aluno.find((self.funcionario).to_i).nome}"
+      " #{Aluno.find((self.funcionario).to_i).nome} (Professor)"
     else
-      "Aluno: #{Aluno.find((self.aluno).to_i).nome}"
+      " #{Aluno.find((self.aluno).to_i).nome} (Aluno)"
     end
   end
 

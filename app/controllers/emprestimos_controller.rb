@@ -64,6 +64,9 @@ class EmprestimosController < ApplicationController
   def edit
     @emprestimo = Emprestimo.find(params[:id])
     @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null or dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+    
+
+
   end
 
   def update
