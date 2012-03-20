@@ -44,6 +44,8 @@ class EmprestimosController < ApplicationController
     @emprestimo = Emprestimo.new(params[:emprestimo])
     @emprestimo.unidade_id = current_user.unidade_id
     @emprestimo.pessoa = session[:pessoa]
+    t = params[:type]
+    @emprestimo.tipo_emprestimo = params[:type]
     if (session[:pessoa]).present?     
       if @emprestimo.save
         flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
@@ -123,8 +125,6 @@ class EmprestimosController < ApplicationController
   end
 
   def retorno_livro
-      session[:emprestimo] << params[:emprestimo]
-      t = session[:emprestimo]
       if (params[:tipo]).to_s == 'li'
         objeto = Livro.find(params[:emprestimo])
       else
