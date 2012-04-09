@@ -9,9 +9,9 @@ class ConsultasController < ApplicationController
   def criacao_possui
     if (params[:tabela]).present?
       tabela = (params[:tabela].singularize.capitalize).camelize.constantize
-      (tabela.all).each do |z|
+      (tabela.all(:include => [:localizacao], :conditions => ["localizacoes.unidade_id = ?", current_user.unidade_id])).each do |z|
         possui = Dpu.new
-        possui.unidade_id = 3
+        possui.unidade_id = current_user.unidade_id
         if tabela.to_s == 'Livro'
           possui.tombo = "li-#{z.tombo_l}"
           possui.livro_id = z.id

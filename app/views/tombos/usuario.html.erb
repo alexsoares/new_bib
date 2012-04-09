@@ -6,14 +6,19 @@
   <div class="tabs">
     <% form_remote_tag :url => {:action => 'select_user'}, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
          <table width="100%" align="center" bgcolor="#DCDCDC" >
-         <tr>
-           <td width="90%" align="right">Selecione o usuario: <%= collection_select :tombo,:user,@users,:id,:login, :include_blank => "--Selecionar--" %>
-           <td align="right"><%= submit_tag "Enviar"  %><td>
-         </tr>
+           <tr><th>Selecione a escola:</th></tr>
+           <tr>
+             <td><%= collection_select :unidade,:id, Unidade.all, :id, :nome %></td>
+           </tr>
+           <tr><th>Selecione a escola:</th></tr>
+           <tr>
+             <td><%= collection_select :tombo,:user,@users,:id,:login, :include_blank => "--Selecionar--" %>
+             <%= submit_tag "Enviar"  %></td>
+           </tr>
         </table>
     <% end %>
 
-  <hr>
+  <hr/>
   <div id="livro_per_user"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
     <font color="blue"><div id="count"></div> </font>
   </div>

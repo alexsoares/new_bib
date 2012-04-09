@@ -5,6 +5,10 @@ class CreateEmprestimos < ActiveRecord::Migration
       t.integer :funcionario
       t.integer :aluno
       t.references :unidade
+      t.date :data_emprestimo
+      t.date :data_devolucao
+      t.integer :dias_atrasados, :default => 0
+      t.boolean :status
       t.timestamps
     end
   end

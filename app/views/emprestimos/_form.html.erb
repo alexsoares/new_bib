@@ -4,13 +4,19 @@
     <tr>
       <td colspan="3" >
         <b>Emprestimo para:</b>
-        <%= radio_button_tag(:type,"0") %> Alunos
-        <%= radio_button_tag(:type,"1") %>Funcionários
+        <% unless @emprestimo.tipo_emprestimo.present? %>
+          <%= radio_button_tag(:type,"0") %> Alunos
+          <%= radio_button_tag(:type,"1") %>Funcionários
+        <%end%>
       </td>
     </tr>
     <tr>
       <td>
-        <div id="tipo_emprestimo"><b>Selecionar ----------------------------------------------></b></div>
+        <% unless @emprestimo.tipo_emprestimo.present? %>
+          <div id="tipo_emprestimo"><b>Selecionar ----------------------------------------------></b></div>
+        <%else%>
+          <%= @emprestimo.emprestado_para %>
+        <%end%>
       </td>
       <td id="aluno" class="aluno" style="display:none">
         <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_content", :class =>"inline" %>
@@ -49,7 +55,12 @@
         <tr><td colspan="2"><b>Livros & Dicionarios e Enciclopedias Selecionados</b></td></tr>
         <tr id="fields">
           <td><%= select_tag("todos_dpu", options_for_select(@disponiveis.collect { |ff| [truncate(ff.lista , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
-          <td rowspan="1"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
+          <%if @dpus_selecionados.present?%>
+            <td><%= select_tag("emprestimo[dpu_ids][]", options_for_select(@dpus_selecionados.collect { |ff| [truncate(ff.lista, :length => 40, :omission => "..."), ff.id] }), {:multiple=>true, :id => "emprestimo_dpu_ids", :size => 5, :class => "lista_dpus"}) %></td>
+          <%else%>
+            <td rowspan="1"><select multiple="multiple" name="emprestimo[dpu_ids][]" id="emprestimo_dpu_ids" class="lista_dpus"></select></td>
+          <%end%>
+
         </tr>
         <tr>
           <td><a class="botao" href="#" id="add_dpu">&gt;&gt;</a></td>

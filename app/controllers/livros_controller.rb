@@ -87,7 +87,7 @@ class LivrosController < ApplicationController
       @livros_cad = []
       qtd.times do
         @livro = Livro.new(params[:livro])
-        Log.gera_log("CRIACAO", "LIVROS", current_user.id,@livro.id)
+        #Log.gera_log("CRIACAO", "LIVROS", current_user.id,@livro.id)
         @livro.identificacao_id = session[:identificacao_id]
         @livro.usuario = current_user.id
         @livro.unidade = current_user.unidade_id
@@ -103,7 +103,7 @@ class LivrosController < ApplicationController
         i += 1
       end
       session[:identificacao_id] = nil
-        redirect_to livros_cadastrados_livros_path
+      redirect_to livros_cadastrados_livros_path
       #render :action => 'livros_cadastrados', :collection => @livros_cad
   end
 
@@ -148,40 +148,40 @@ class LivrosController < ApplicationController
 def consultaLiv
    unless params[:search].present?
      if params[:type_of].to_i == 6
-       @contador = Livro.all.count
-       @livros = Livro.paginate :all, :page => params[:page], :per_page => 50, :joins => :identificacao,:order => 'livro ASC'
+       @contador = Livro.all(:include => [:localizacao],:conditions => ["localizacoes.unidade_id = ?", current_user.unidade_id]).count
+       @livros = Livro.paginate(:all, :include => [:identificacao,:localizacao],:conditions => ["localizacoes.unidade_id = ?", current_user.unidade_id], :page => params[:page], :per_page => 50,:order => 'livro ASC')
        render :update do |page|
          page.replace_html 'livros', :partial => "livros"
        end
      end
    else
       if params[:type_of].to_i == 1
-          @contador = Livro.all(:joins => :identificacao, :conditions => ["livro like ?", "%" + params[:search].to_s + "%"]).count
-          @livros = Livro.paginate :all, :page => params[:page], :per_page => 50, :joins => :identificacao,  :conditions => ["livro like ? ", "%" + params[:search].to_s + "%"],:order => 'livro ASC'
+          @contador = Livro.all(:include => [:identificacao, :localizacao], :conditions => ["livro like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%", current_user.unidade_id]).count
+          @livros = Livro.paginate( :all,:page => params[:page], :per_page => 50, :include => [:identificacao, :localizacao],  :conditions => ["livro like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%", current_user.unidade_id],:order => 'livro ASC')
           render :update do |page|
             page.replace_html 'livros', :partial => "livros"
           end
           else if params[:type_of].to_i == 2
-            @contador = Livro.all(:joins => :area, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
-            @livros = Livro.paginate :all, :page => params[:page], :per_page => 50, :joins => :area,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+            @contador = Livro.all(:include => [:area,:localizacao], :conditions => ["nome like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+            @livros = Livro.paginate :all, :page => params[:page], :per_page => 50, :include => [:area,:localizacao],  :conditions => ["nome like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'nome ASC'
             render :update do |page|
               page.replace_html 'livros', :partial => "livros"
             end
             else if params[:type_of].to_i == 3
-              @contador = Livro.all(:joins => :autores, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
-              @livros = Livro.paginate :all, :page => params[:page], :per_page => 50, :joins => :autores,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+              @contador = Livro.all(:include => [:autores,:localizacao], :conditions => ["nome like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+              @livros = Livro.paginate :all, :page => params[:page], :per_page => 50, :include => [:autores,:localizacao],  :conditions => ["nome like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'nome ASC'
               render :update do |page|
                 page.replace_html 'livros', :partial => "livros"
               end
               else if params[:type_of].to_i == 4
-                @contador = Livro.all(:joins => :assuntos, :conditions => ["descricao like ?", "%" + params[:search].to_s + "%"]).count
-                @livros = Livro.paginate :page => params[:page], :per_page => 50, :joins => :assuntos,  :conditions => ["descricao like ? ", "%" + params[:search].to_s + "%"],:order => 'descricao ASC'
+                @contador = Livro.all(:include => [:assuntos,:localizacao], :conditions => ["descricao like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+                @livros = Livro.paginate(:all, :page => params[:page], :per_page => 50, :include => [:localizacao,:assuntos],  :conditions => ["descricao like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'descricao ASC')
                 render :update do |page|
                   page.replace_html 'livros', :partial => "livros"
                 end
                 else if params[:type_of].to_i == 5
-                  @contador = Livro.all(:joins => :editora, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
-                  @livros = Livro.paginate :page => params[:page], :per_page => 50, :joins => :editora,  :conditions => ["nome like ? ", "%" + params[:search].to_s + "%"],:order => 'nome ASC'
+                  @contador = Livro.all(:include => [:editora,:localizacao], :conditions => ["nome like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+                  @livros = Livro.paginate(:all, :page => params[:page], :per_page => 50, :joins => :editora,  :conditions => ["nome like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'nome ASC')
                   render :update do |page|
                     page.replace_html 'livros', :partial => "livros"
                   end
@@ -246,7 +246,7 @@ end
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)
     if @localizacao.save
-      @localizacoes = Localizacao.all
+      @localizacoes = Localizacao.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
       @livro = Livro.new
       render :update do |page|
         page.replace_html 'local', :partial => "shared/campos/campos_local"

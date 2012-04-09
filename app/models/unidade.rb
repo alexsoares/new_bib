@@ -9,4 +9,8 @@ class Unidade < ActiveRecord::Base
   has_many :emprestimos
   has_many :possuis
   has_many :dpus
+
+  def short_name
+    "as"
+  end
 end

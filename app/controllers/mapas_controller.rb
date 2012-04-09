@@ -31,7 +31,7 @@ def create_local
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)
     if @localizacao.save
-      @localizacoes = Localizacao.all
+      @localizacoes = Localizacao.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
       @mapas = Mapa.new
       render :update do |page|
         page.replace_html 'local', :partial => "shared/campos/campos_local"
@@ -65,22 +65,22 @@ def create_local
 def consultaMap
  unless params[:search].present?
    if params[:type_of].to_i == 3
-     @contador = Mapa.all.count
-     @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10,:order => 'titulo ASC'
+     @contador = Mapa.all(:include => [:localizacao],:conditions => ["unidade_id = ?", current_user.unidade_id]).count
+     @mapas = Mapa.paginate :all,:include => [:localizacao],:conditions => ["localizacoes.unidade_id = ?",current_user.unidade_id], :page => params[:page], :per_page => 10,:order => 'titulo ASC'
      render :update do |page|
        page.replace_html 'mapas', :partial => "mapas"
      end
    end
  else
     if params[:type_of].to_i == 1
-       @contador = Mapa.all(:conditions => ["titulo like ?", "%" + params[:search].to_s + "%"]).count
-       @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["titulo like ? ", "%" + params[:search].to_s + "%"],:order => 'titulo ASC'
+       @contador = Mapa.all(:include => [:localizacao],:conditions => ["titulo like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+       @mapas = Mapa.paginate(:all,:include => [:localizacao], :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'titulo ASC')
         render :update do |page|
           page.replace_html 'mapas', :partial => "mapas"
         end
       else if params[:type_of].to_i == 2
-           @contador = Mapa.all(:conditions => ["subtitulo like ?", "%" + params[:search].to_s + "%"]).count
-        @mapas = Mapa.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ? ", "%" + params[:search].to_s + "%"],:order => 'titulo ASC'
+        @contador = Mapa.all(:include => [:localizacao],:conditions => ["subtitulo like ?", "%" + params[:search].to_s + "%"]).count
+        @mapas = Mapa.paginate(:all, :include =>[:localizacao], :page => params[:page], :per_page => 10, :conditions => ["subtitulo like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%", current_user.unidade_id],:order => 'titulo ASC')
           render :update do |page|
             page.replace_html 'mapas', :partial => "mapas"
           end
@@ -93,7 +93,7 @@ end
 
   def load_resources
     @editoras = Editora.all(:order => 'nome ASC')
-    @localizacoes = Localizacao.all
+    @localizacoes = Localizacao.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
   end
 
 end

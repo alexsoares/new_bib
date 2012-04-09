@@ -33,7 +33,7 @@ class PeriodicosController < ApplicationController
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)
     if @localizacao.save
-      @localizacoes = Localizacao.all
+      @localizacoes = Localizacao.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
       @periodicos = Periodico.new
       render :update do |page|
         page.replace_html 'local', :partial => "shared/campos/campos_local"
@@ -83,6 +83,6 @@ def consultaPer
  end
 
   def load_resources
-    @localizacoes = Localizacao.all
+    @localizacoes = Localizacao.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
   end
 end

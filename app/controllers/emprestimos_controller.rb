@@ -44,10 +44,10 @@ class EmprestimosController < ApplicationController
     @emprestimo = Emprestimo.new(params[:emprestimo])
     @emprestimo.unidade_id = current_user.unidade_id
     @emprestimo.pessoa = session[:pessoa]
-    t = params[:type]
     @emprestimo.tipo_emprestimo = params[:type]
     if (session[:pessoa]).present?     
       if @emprestimo.save
+        Log.gera_log("CRIACAO", "EMPRESTIMO", current_user.id , @emprestimo.id)
         flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
         redirect_to @emprestimo
         session[:pessoa] = nil
@@ -63,13 +63,16 @@ class EmprestimosController < ApplicationController
 
   def edit
     @emprestimo = Emprestimo.find(params[:id])
-    @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null or dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+    @disponiveis = Dpu.all(:include => [{:livro =>[:identificacao]},{:dicionario_enciclopedia => [:identificacao]}],:conditions => ["(livro_id is not null or dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+    @dpus_selecionados = @emprestimo.dpus
+    @disponiveis =  @disponiveis - @dpus_selecionados
+
   end
 
   def update
     @emprestimo = Emprestimo.find(params[:id])
     if @emprestimo.update_attributes(params[:emprestimo])
-      flash[:notice] = "EMPRESTIMO REALIZADO COM SUCESSO."
+      flash[:notice] = "EMPRESTIMO ATUALIZADO COM SUCESSO."
       redirect_to @emprestimo
     else
       render :action => 'edit'
@@ -87,15 +90,15 @@ class EmprestimosController < ApplicationController
     if params[:pessoa].present?
       if params[:pessoa][:nome].present?
        if current_user.unidade.unidades_gpd_id == 15
-        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1))",session[:ano_letivo].to_i,params[:pessoa][:nome]])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1)) and id_classe = ?",session[:ano_letivo].to_i,params[:pessoa][:nome], session[:classe].to_i])
        else
-        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1)) and id_escola = ?",session[:ano_letivo].to_i,params[:pessoa][:nome], current_user.unidade.unidades_gpd_id])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome(?,1)) and id_escola = ? and id_classe = ?",session[:ano_letivo].to_i,params[:pessoa][:nome], current_user.unidade.unidades_gpd_id, session[:classe].to_i])
        end
       else
        if current_user.unidade.unidades_gpd_id == 15
-        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null)",session[:ano_letivo].to_i])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null) and id_classe = ?",session[:ano_letivo].to_i, session[:classe].to_i])
        else
-        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null and id_escola = ?)",session[:ano_letivo].to_i, current_user.unidade.unidades_gpd_id])
+        @pessoas = Aluno.all(:conditions => ["(classe_ano = ? or classe_ano is null and id_escola = ? and id_classe = ?)",session[:ano_letivo].to_i, current_user.unidade.unidades_gpd_id, session[:classe].to_i])
        end        
       end
       #@alunos = Aluno.all(:conditions => ["(classe_ano = 2011 or classe_ano is null) and (primeiro_nome(nome,1) = primeiro_nome('JOAO',1) and pes_dtnasc = '2002-01-06')",])
@@ -108,9 +111,11 @@ class EmprestimosController < ApplicationController
   def classe
     session[:classe] = params[:classe][:id_classe]
     session[:ano_letivo] = params[:classe][:ano_letivo]
+    @alunos = Aluno.all(:conditions => ["id_classe = ? and classe_ano = ?",params[:classe][:id_classe],params[:classe][:ano_letivo]])
     if params[:classe].present?
           render :update do |page|
             page.replace_html 'classe', :partial => "listagem"
+            page.replace_html 'qtde', :text => "Esta sala contém #{@alunos.count} alunos"
           end
     end
   end
@@ -178,11 +183,9 @@ class EmprestimosController < ApplicationController
 protected
   def load_resources
     if current_user.unidade_id == 53
-      @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011"], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
-      @funcionarios = Aluno.all(:conditions => ["matricula_funcionario is not null"])
+      @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = ?", Date.today.strftime("%Y").to_i], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
     else
-      @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = 2011 and id_escola = ?", current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
-      @funcionarios = Aluno.all(:conditions => ["id_escola = ?", current_user.unidade.unidades_gpd_id])
+      @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = ? and id_escola = ?", Date.today.strftime("%Y").to_i, current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
     end
     @disponiveis = Dpu.find(:all,:conditions => ["id =  0"])
   end

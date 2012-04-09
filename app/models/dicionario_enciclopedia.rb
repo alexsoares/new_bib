@@ -37,7 +37,7 @@ def qtd_dif_num?
     possui = Possui.new
     possui.unidade_id = self.unidade
     possui.tombo = "de-#{self.tombo_l}"
-    possui.enciclopedia_dicionario_id = self.id
+    possui.dicionario_enciclopedia_id = self.id
     possui.status = 1
     possui.save
   end
@@ -45,8 +45,8 @@ def qtd_dif_num?
   def cria_disponibiliza_de
     disp = Dpu.new
     disp.unidade_id = self.unidade
-    disp.tombo = "mp-#{self.tombo_l}"
-    disp.enciclopedia_dicionario_id = self.id
+    disp.tombo = "de-#{self.tombo_l}"
+    disp.dicionario_enciclopedia_id = self.id
     disp.status = 1
     disp.save
   end

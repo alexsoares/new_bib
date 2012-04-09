@@ -90,14 +90,13 @@
     <tr>
       <td>
         <b><%= f.label :editora_id %></b>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_editora", :class =>"inline"%>
         <div id="editora"><%= render "shared/campos/campos_editora"%></div>
       </td>
       <td colspan="2">
         <br />
         <%= f.text_field :edicao, :size => "1" %><b>ª<%= f.label :edicao, " Edição" %></b>
       </td>
-    <tr/>
+    </tr>
     <tr>
       <td>
         <b><%= f.label :local_edicao, "Local Edição:" %></b><br />

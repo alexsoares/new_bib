@@ -1,8 +1,17 @@
-<% title "Edit Emprestimo" %>
+<% title "ALTERAR EMPRÉSTIMOS".singularize %>
+<div class="tabs">
+ <div id="caixa_titulo">
+     <font size="3"><strong>EMPRÉSTIMO BIBLIOTECA</strong></font><br/>
+ </div>
+      <div class="tabs">
+      <%= render :partial => 'form' %>
+    </div>
+  <table>
+   <tr>
+    <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    <td><%= link_to "Show", @emprestimo %> |</td>
+    <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), :title => "Emprestados" %></td>
+   </tr>
+  </table>
+</div>
 
-<%= render :partial => 'form' %>
-
-<p>
-  <%= link_to "Show", @emprestimo %> |
-  <%= link_to "View All", emprestimos_path %>
-</p>

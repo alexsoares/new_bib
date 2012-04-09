@@ -16,46 +16,32 @@ class DicionarioEnciclopediasController < ApplicationController
     end
 
  def consultaDic
-   unless params[:search].present?
+   unless (params[:search].present?) or (params[:search].to_s == "Digite parte da busca")
      if params[:type_of].to_i == 6
-       @contador = DicionarioEnciclopedia.all.count
-       @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10, :joins => :identificacao,:order => 'livro ASC'
+       @contador = DicionarioEnciclopedia.all(:include => [:localizacao],:conditions =>["localizacoes.unidade_id = ?",current_user.unidade_id]).count
+       @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10, :joins => [:identificacao,:localizacao],:conditions =>["localizacoes.unidade_id = ?",current_user.unidade_id],:order => 'livro ASC'
        render :update do |page|
          page.replace_html 'dicionarios', :partial => "dicionarios"
        end
      end
    else
       if params[:type_of].to_i == 1
-          @contador = DicionarioEnciclopedia.all(:joins => :identificacao, :conditions => ["livro like ?", "%" + params[:search].to_s + "%"]).count
-          @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10,  :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","DICIONÁRIO"], :order => 'livro ASC'
+          @contador = DicionarioEnciclopedia.all(:include => [:localizacao,:identificacao], :conditions => ["identificacaos.livro like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+          @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10,  :joins => [:identificacao,:localizacao], :conditions => ["identificacaos.livro like ? and tipo =? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","DICIONÁRIO",current_user.unidade_id], :order => 'livro ASC'
           render :update do |page|
             page.replace_html 'dicionarios', :partial => "dicionarios"
           end
           else if params[:type_of].to_i == 2
-          @contador = DicionarioEnciclopedia.all(:joins => :identificacao, :conditions => ["livro like ?", "%" + params[:search].to_s + "%"]).count
-          @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10,  :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC'
+            @contador = DicionarioEnciclopedia.all(:joins => [:identificacao,:localizacao], :conditions => ["identificacaos.livro like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+            @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10,  :joins => [:localizacao,:identificacao], :conditions => ["identificacaos.livro like ? and tipo =? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA",current_user.unidade_id], :order => 'livro ASC'
             render :update do |page|
               page.replace_html 'dicionarios', :partial => "dicionarios"
             end
             else if params[:type_of].to_i == 3
-              @contador = DicionarioEnciclopedia.all(:joins => :identificacao, :conditions => ["livro like ?", "%" + params[:search].to_s + "%"]).count
-          @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10,  :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"], :order => 'livro ASC'
+              @contador = DicionarioEnciclopedia.all(:joins => [:identificacao,:localizacao], :conditions => ["identificacaos.livro like ? and unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+              @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10,  :joins => [:identificacao,:localizacao], :conditions => ["identificacaos.livro like ? and tipo =? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","OUTROS",current_user.unidade_id], :order => 'livro ASC'
               render :update do |page|
                 page.replace_html 'dicionarios', :partial => "dicionarios"
-              end
-              else if params[:type_of].to_i == 4
-                @contador = DicionarioEnciclopedia.all(:joins => :assuntos, :conditions => ["descricao like ?", "%" + params[:search].to_s + "%"]).count
-                @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10, :joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC'
-                render :update do |page|
-                  page.replace_html 'dicionarios', :partial => "dicionarios"
-                end
-                else if params[:type_of].to_i == 5
-                  @contador = DicionarioEnciclopedia.paginate.all(:joins => :editora, :conditions => ["nome like ?", "%" + params[:search].to_s + "%"]).count
-                  @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all,  :page => params[:page], :per_page => 10,:joins => :identificacao, :conditions => ["livro like ? and tipo =?", "%" + params[:search].to_s + "%","ENCICLOPÉDIA"], :order => 'livro ASC'
-                  render :update do |page|
-                    page.replace_html 'dicionarios', :partial => "dicionarios"
-                  end
-                end
               end
             end
           end
@@ -92,7 +78,7 @@ end
         @dicionario_enciclopedia.identificacao_id = session[:identificacao_id]
         @dicionario_enciclopedia.usuario = current_user.id
         @dicionario_enciclopedia.unidade = current_user.unidade_id
-        Log.gera_log("CRIACAO", "DICIONARIO", current_user.id,@dicionario_enciclopedia.id)
+#        Log.gera_log("CRIACAO", "DICIONARIO", current_user.id,@dicionario_enciclopedia.id)
         if params[:dicionario_enciclopedia][:qtde].to_i == 0
           @dicionario_enciclopedia.qtde = 1
         else
@@ -149,7 +135,7 @@ def create_local
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)
     if @localizacao.save
-      @localizacoes = Localizacao.all
+      @localizacoes = Localizacao.all(:conditions => ["unidade_id = ?", current_user.unidade_id])
       @dicionario_enciclopedia = DicionarioEnciclopedia.new
       render :update do |page|
         page.replace_html 'local', :partial => "shared/campos/campos_local"

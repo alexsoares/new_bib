@@ -1,36 +1,33 @@
 <% title "RELATÓRIO" %>
  <div class="tabs">
-   <div id="caixa_titulo">
-    <font size="3"><strong>LIVROS CADASTRADOS POR DIA</strong></font><br/>
-   </div>
   <div class="tabs">
-    <% atual_inicio = Date.today + 0.hours%>
-    <% anterior_inicio = atual_inicio - 1.day%>
- 
-    <table width="100%" align="center" border="1" frame="box" rules="all" bgcolor="#F5F5F5">
-    <% @users.each do |usuario| %>
-      <th colspan="3" align="center">
-        <%= "Login: #{usuario.login}" %>
-      </th>
-      <% busca = usuario.tombos.all(:include => [:livro],:conditions => ["(created_at between ? and ?) and dicionario_enciclopedia_id is null",atual_inicio,(atual_inicio + 23.hours + 59.minutes)]) %>
-      <% busca_anterior = usuario.tombos.all(:include => [:livro],:conditions => ["(created_at < ?) and dicionario_enciclopedia_id is null", atual_inicio]) %>
-      <tr>
-        <td width="30%"><b>Anterior: </b><%=  busca_anterior.count %></td>
-        <td width="30%"><b>Atual: </b><%= busca.count %></td>
-        <td width="40%"><b>Total: </b><%= busca.count + busca_anterior.count %></td>
-      </tr>
+    <% form_remote_tag :url => {:action => 'cad_livros_diario'}, :method => :get,:loading => "$('.status').show()" , :success => "$('.status').hide()" do %>
+         <table width="100%" align="center" bgcolor="#DCDCDC" >
+           <tr>
+             <th>Selecione a escola:</th>
+           </tr>
+           <tr>
+             <td><%= collection_select :unidade,:id, Unidade.all, :id, :nome %></td>
+           </tr>
+           <tr>
+             <td>
+               <%= submit_tag "Enviar"  %>
+             </td>
+           </tr>
+         </table>
+    <% end %>
 
-    <%end%>
-    </table>
-  <table>
+  <hr/>
+  <div id="livro_diario">
+    <div class='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div>
+  </div>
+    <div id="count"></div>
+  </div>
+    <table>
     <tr>
      <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
     </tr>
   </table>
-  </div>
 </div>
-
-
-
 
 

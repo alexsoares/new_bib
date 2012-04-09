@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319171700) do
+ActiveRecord::Schema.define(:version => 20120321135659) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
     t.text     "obs"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "status"
+    t.boolean  "status",           :default => true
   end
 
   create_table "dpus", :force => true do |t|
@@ -139,19 +139,6 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
     t.boolean  "status"
   end
 
-  create_table "emprestimos_livros", :id => false, :force => true do |t|
-    t.integer "autor_id", :null => false
-    t.integer "livro_id", :null => false
-  end
-
-  create_table "emprestimos_realizados", :force => true do |t|
-    t.integer  "emprestimo_id"
-    t.integer  "dpu_id"
-    t.boolean  "ativo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "funcionarios", :force => true do |t|
     t.string   "nome"
     t.integer  "matricula"
@@ -168,7 +155,7 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
   end
 
   create_table "identificacaos", :force => true do |t|
-    t.integer  "codigo"
+    t.string   "codigo"
     t.string   "livro"
     t.string   "subtitulo"
     t.text     "obs"
@@ -179,18 +166,6 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
   create_table "itens_assuntos", :force => true do |t|
     t.integer  "assunto_id"
     t.string   "sub_assunto"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "itens_emprestimos", :force => true do |t|
-    t.integer  "emprestimo_id"
-    t.integer  "audio_visual_id"
-    t.integer  "livro_id"
-    t.integer  "dicionario_enciclopedia_id"
-    t.integer  "mapas_id"
-    t.integer  "periodico_id"
-    t.integer  "jogo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -243,6 +218,7 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "configuracao_id"
+    t.integer  "find_id"
   end
 
   create_table "mapas", :force => true do |t|
@@ -361,6 +337,7 @@ ActiveRecord::Schema.define(:version => 20120319171700) do
     t.integer  "dicionario_enciclopedia_id"
     t.integer  "midia_id"
     t.integer  "jogo_id"
+    t.integer  "unidade_id"
   end
 
   create_table "unidades", :force => true do |t|

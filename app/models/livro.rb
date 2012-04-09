@@ -1,5 +1,5 @@
 class Livro < ActiveRecord::Base
-  after_create :multi_tombo, :auto_inc_tombo_seduc, :cria_possui_li
+  after_create :multi_tombo, :auto_inc_tombo_seduc, :cria_possui_li,:disponibiliza
   #attr_accessible :assunto, :identificacao, :area, :editora, :localizacao, :tombo_seduc, :tombo_l, :colecao, :edicao, :data_edicao, :local_edicao, :resumo, :obs
   has_and_belongs_to_many :assuntos
   has_and_belongs_to_many :autores
@@ -49,6 +49,7 @@ class Livro < ActiveRecord::Base
     disponivel.tipo = 1
     disponivel.tombo = "li-#{self.id}"
     disponivel.unidade_id = self.unidade
+    disponivel.status = 1
     disponivel.save
   end
 

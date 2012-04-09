@@ -134,7 +134,7 @@ class MidiasController < ApplicationController
     @localizacao = Localizacao.new(params[:localizacao])
     @localizacao.add_unidade(current_user.unidade_id)
     if @localizacao.save
-      @localizacoes = Localizacao.all
+      @localizacoes = Localizacao.all(:conditions => ["unidade_id = ?",current_user.unidade_id])
       @midia = Midia.new
       render :update do |page|
         page.replace_html 'local', :partial => "shared/campos/campos_local"
@@ -174,43 +174,36 @@ class MidiasController < ApplicationController
  def consultaMid
    unless params[:search].present?
      if params[:type_of].to_i == 6
-       @contador = Midia.all.count
-       @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:order => 'titulo ASC'
+       @contador = Midia.all(:include =>[:localizacao],:conditions =>["localizacoes.unidade_id = ?",current_user.unidade_id]).count
+       @midias = Midia.paginate(:all,:include =>[:localizacao],:conditions =>["localizacoes.unidade_id = ?",current_user.unidade_id], :page => params[:page], :per_page => 10,:order => 'titulo ASC')
        render :update do |page|
          page.replace_html 'midias', :partial => "midias"
        end
      end
    else
       if params[:type_of].to_i == 1
-          @contador = Midia.all(:conditions =>  ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","CD"]).count
-          @midias = Midia.paginate :all, :page => params[:page], :per_page => 10, :conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","CD"], :order => 'titulo ASC'
+          @contador = Midia.all(:include =>[:localizacao],:conditions =>  ["titulo like ? and tipo = ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","CD",current_user.unidade_id]).count
+          @midias = Midia.paginate(:all, :include => [:localizacao], :page => params[:page], :per_page => 10, :conditions => ["titulo like ? and tipo = ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","CD",current_user.unidade_id], :order => 'titulo ASC')
           render :update do |page|
             page.replace_html 'midias', :partial => "midias"
           end
           else if params[:type_of].to_i == 2
-          @contador = Midia.all(:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","DVD"]).count
-          @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","DVD"], :order => 'titulo ASC'
+          @contador = Midia.all(:include => [:localizacao],:conditions => ["titulo like ? and tipo = ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","DVD",current_user.unidade_id]).count
+          @midias = Midia.paginate(:all, :include =>[:localizacao], :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo = ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","DVD",current_user.unidade_id], :order => 'titulo ASC')
             render :update do |page|
               page.replace_html 'midias', :partial => "midias"
             end
             else if params[:type_of].to_i == 3
-              @contador = Midia.all(:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","VHS"]).count
-              @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","VHS"], :order => 'titulo ASC'
+              @contador = Midia.all(:include =>[:localizacao],:conditions => ["titulo like ? and tipo = ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","VHS",current_user.unidade_id]).count
+              @midias = Midia.paginate(:all, :include => [:localizacao], :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo = ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","VHS",current_user.unidade_id], :order => 'titulo ASC')
               render :update do |page|
                 page.replace_html 'midias', :partial => "midias"
               end
               else if params[:type_of].to_i == 4
-               @contador = Midia.all(:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"]).count
-               @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo =?", "%" + params[:search].to_s + "%","OUTROS"], :order => 'titulo ASC'
+               @contador = Midia.all(:include => [:localizacao],:conditions => ["titulo like ? and tipo = ? localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","OUTROS",current_user.unidade_id]).count
+               @midias = Midia.paginate(:all,:include => [:localizacao], :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and tipo = ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","OUTROS",current_user.unidade_id], :order => 'titulo ASC')
                 render :update do |page|
                   page.replace_html 'midias', :partial => "midias"
-                end
-                else if params[:type_of].to_i == 5
-                  @contador = Midia.all(:conditions => ["titulo like ? and genero_id =?", "%","17"]).count
-                  @midias = Midia.paginate :all, :page => params[:page], :per_page => 10,:conditions => ["titulo like ? and genero_id =?", "%" ,"17"], :order => 'titulo ASC'
-                  render :update do |page|
-                    page.replace_html 'midias', :partial => "midias"
-                  end
                 end
               end
             end

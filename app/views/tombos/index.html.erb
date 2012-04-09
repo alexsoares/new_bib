@@ -1,111 +1,25 @@
-
 <div id="tabs">
     <ul>
-        <li><a href="#fix">Relatório Geral</a></li>
-		<li><a href="tombos/usuario.html">Livros por usuário</a></li>
-		<li><a href="tombos/livros_diarios.html">Livros diarios</a></li>
-        <li><a href="tombos/de_diarios.html">Enciclopédias diarios</a></li>
-	</ul>
- <div id="fix">
-
-   <div id="quadro1">
-     <br/>
-     <div id="quadro2">
-       <br/>
-        <div id="quadro3">
-           <br/>
-
- <font size="6" color=#BDBF6B><i><b>RELATÓRIO</b></i></font>
- <br/><br/>
-  <div class="tabs">
-  <table width="100%" align="center"  bgcolor="#F5F5F5" border="1" >
-    <tr>
-      <th colspan="2" bgcolor=#E6E6FA> TOTAL DICIONÁRIOS E ENCICLOPÉDIAS </th>
-    </tr>
-    <tr>
-      <td><%= "Dicionarios e Enciclopédias cadastradas: #{@tombos_de}" %></td>
-      <td rowspan="2"  valign="center" align="center">
-          <%= @tombos_de + @de - @no_de_tombos %>
-      </td>
-    </tr>
-    <tr>
-       <td><%= "Dicionarios e Enciclopédias excluidas: #{}" %></td>
-    </tr>
-        <tr>
-      <th colspan="2" bgcolor=#E6E6FA> TOTAL JOGOS </th>
-    </tr>
-    <tr>
-      <td><%= "Jogos cadastrados: #{}" %></td>
-      <td rowspan="2"  valign="center" align="center">
-          <%=  %>
-      </td>
-    </tr>
-    <tr>
-       <td><%= "Jogos excluidos: #{}" %></td>
-    </tr>
-    <tr>
-      <th colspan="2" bgcolor=#E6E6FA>TOTAL LIVROS</th>
-    </tr>
-    <tr>
-      <td><%= "Livros cadastrados: #{@tombos_livros}" %></td>
-      <td rowspan="2"  valign="center" align="center">
-          <%= @tombos_livros + @livros - @no_livros_tombos %>
-      </td>
-    </tr>
-    <tr>
-       <td><%= "Livros excluídos: #{@no_livros_tombos}" %></td>
-    </tr>
-    <tr>
-      <th colspan="2" bgcolor=#E6E6FA> TOTAL MAPAS </th>
-    </tr>
-    <tr>
-      <td><%= "Mapas cadastrados: #{}" %></td>
-      <td rowspan="2"  valign="center" align="center">
-          <%=  %>
-      </td>
-    </tr>
-    <tr>
-       <td><%= "Mapas excluidos: #{}" %></td>
-    </tr>
-    <tr>
-      <th colspan="2" bgcolor=#E6E6FA> TOTAL MÍDIAS </th>
-    </tr>
-    <tr>
-      <td><%= "Mídias cadastradas: #{@de}" %></td>
-      <td rowspan="2"  valign="center" align="center">
-          <%=  %>
-      </td>
-    </tr>
-    <tr>
-       <td><%= "Mídias excluidas: #{}" %></td>
-    </tr>
-    <tr>
-      <th colspan="2" bgcolor=#E6E6FA> TOTAL PERIÓDICOS </th>
-    </tr>
-    <tr>
-      <td><%= "Periódicos cadastrados: #{@de}" %></td>
-      <td rowspan="2"  valign="center" align="center">
-          <%=  %>
-      </td>
-    </tr>
-    <tr>
-       <td><%= "Periódicos excluios: #{}" %></td>
-    </tr>
-    <tr>
-      <th colspan="2" bgcolor=#E6E6FA> TOTAL GERAL DE EXEMPLARES NA BIBLIOTÉCA: </th>
-    </tr>
-  </table>
-  <table>
-    <tr>
-     <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
-    </tr>
-  </table>
-  </div>
-
-
-   </div>
-  </div>
-  </div>
- </div>
+      <li><a href="#fix">Relatório Geral</a></li>
+      <li><a href="tombos/usuario.html">Livros por usuário</a></li>
+      <li><a href="tombos/livros_diarios.html">Livros diarios</a></li>
+      <li><a href="tombos/de_diarios.html">Enciclopédias diarios</a></li>
+    </ul>
+    <div id="fix">
+<% form_remote_tag :url => {:action => "geral", :controller => "tombos"}, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do |z|%>
+         <table width="100%" align="center" bgcolor="#DCDCDC" >
+          <tr>
+            <td>
+              <%= collection_select :unidade,:id, Unidade.all, :id, :nome %>
+            </td>
+           <td>
+             <%= submit_tag "Buscar" %>
+           </td>
+         </tr>
+        </table>
+    <% end %>
+    <br/>
+    <hr/>
+    <div id="geral"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
+    </div>
 </div>
-

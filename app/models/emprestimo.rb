@@ -14,15 +14,17 @@ class Emprestimo < ActiveRecord::Base
   
 
   def unico
-    if self.tipo_emprestimo == 0
-      encontrou = Emprestimo.find_by_aluno(self.pessoa, :conditions => ["status = 1"])
-    else
-      if self.tipo_emprestimo == 1
-        encontrou = Emprestimo.find_by_funcionario(self.pessoa, :conditions => ["status = 1"])
+    unless self.id.present?
+      if self.tipo_emprestimo == 0
+        encontrou = Emprestimo.find_by_aluno(self.pessoa, :conditions => ["status = 1"])
+      else
+        if self.tipo_emprestimo == 1
+          encontrou = Emprestimo.find_by_funcionario(self.pessoa, :conditions => ["status = 1"])
+        end
       end
-    end
-    if encontrou.present?
-      errors.add_to_base("Já existe um empréstimo em vigor. Efetue a devolução para realizar outro empréstimo.")
+      if encontrou.present?
+        errors.add_to_base("Já existe um empréstimo em vigor. Efetue a devolução para realizar outro empréstimo.")
+      end
     end
   end
 

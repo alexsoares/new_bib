@@ -15,6 +15,7 @@ class Jogo < ActiveRecord::Base
     disponivel.jogo_id = self.id
     disponivel.tombo = "jg-#{self.id}"
     disponivel.unidade_id = self.unidade
+    disponivel.status = 1
     disponivel.save
   end
 
