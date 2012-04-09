@@ -1,0 +1,64 @@
+<% title "LIVROS" %>
+<div class="tabs">
+  <font size="2"><strong>CADASTRO DE LIVROS</strong></font><br/>
+      <div class="tabs">
+
+
+  <% form_for @livro do |f| %>
+  <%= f.error_messages %>
+  <table  align="center" bgcolor="#F5F5F5">
+      <tr>
+        <td colspan="3" >
+          <b>Tombo Seduc:</b> <%=h @livro.id %> -
+          <b>Tombo Local:</b>   <%=h @livro.tombo_l %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <b>Título:</b><%=h "#{@livro.identificacao.livro}" %>
+        </td>
+       </tr>
+       <tr>
+          <td colspan="3">
+            <b>SubTítulo:</b><%=h "#{@livro.identificacao.subtitulo}" %>
+           </td>
+       </tr>
+       <tr>
+          <td colspan="3">
+              <b>Autor(es):</b><br/>
+                  <% @livro.autores.each do |autor| %>
+                        <b>-</b> <%="#{autor.nome}" %><br/>
+                   <%end%>
+           </td>
+       </tr>
+       <tr>
+          <td colspan="3">
+              <b>Assuntos:</b><br/>
+                  <% @livro.assuntos.each do |assunto| %>
+                       <b>-</b> <%="#{ assunto.descricao}" %><br/>
+                 <%end%>
+           </td>
+       </tr>
+       <tr>
+          <td>
+            <b><%= f.label :resumo, 'Resumo:' %></b><br />
+            <%= f.text_area :resumo, :size => "30x3" %>
+          </td>
+          <td colspan="2">
+            <b><%= f.label :obs, 'Observação:' %></b><br />
+            <%= f.text_area :obs, :size => "30x3" %>
+          </td>
+        </tr>
+        <tr>
+            <td colspan="3"><%= f.submit "Salvar" %></td>
+        </tr>
+      </table>
+     <% end %>
+  </div>
+  <table>
+   <tr>
+    <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
+    <td><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), livros_path, :title => "Livros Cadastrados" %></td>
+   </tr>
+  </table>
+</div>

@@ -27,7 +27,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :mapas
   map.resources :mapas
   map.resources :dicionario_enciclopedias, :collection => {:de_cadastrados => :get}
-  map.resources :livros, :collection => {:livros_cadastrados => :get}
+  map.resources :livros,:collection => {:livros_cadastrados => :get}
+
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
@@ -43,6 +44,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :password
   map.reset_password '/reset_password/:id', :controller => 'passwords', :action => 'edit'
   map.resources :users
+  map.resumo '/resumo/:livro', :controller => 'livros', :action => 'resumo'
 
   map.consultaDic '/consultaDic', :controller => 'dicionario_enciclopedias', :action => 'consultaDic'
   map.consultaLiv '/consultaLiv', :controller => 'livros', :action => 'consultaLiv'

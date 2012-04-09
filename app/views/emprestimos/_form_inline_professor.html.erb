@@ -3,6 +3,7 @@
                 <table width="100%">
                   <h2>FUNCIONÁRIOS & PROFESSORES - <%= current_user.unidade.nome %></h2>
                   <hr/>
+                  <b>Nome:</b>
 
                   <% form_remote_for :funcionario, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()",
                     :url => {:controller => :emprestimos,

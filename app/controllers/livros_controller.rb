@@ -122,10 +122,16 @@ class LivrosController < ApplicationController
     @assuntos = @assuntos - @assuntos_selecionados
   end
 
+
+  def resumo
+    @livro = Livro.find(params[:livro])
+  end
+
+
   def update
     @livro = Livro.find(params[:id])
     if @livro.update_attributes(params[:livro])
-      flash[:notice] = "CADASTRADO COM SUCESSO."
+      flash[:notice] = "ATUALIZADO COM SUCESSO."
       redirect_to @livro
     else
       render :action => 'edit'

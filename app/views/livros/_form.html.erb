@@ -64,7 +64,7 @@
       <td colspan="3">
         <b><%= f.label :autor_id, "Autor(es). " %></b><br/>
         <b><i><font color="red" size="1">
-         (Caso não conste o nome do autor na lista abaixo, favor entrar em contato com a Informática SEDUC e solicitar a inclusão - Fone: 3475-7515)
+         (Caso não conste o nome do autor na lista abaixo, favor entrar em contato com a Informática SEDUC e solicitar a inclusão)
       </font></i></b>
         <div id="autor"><%= render "shared/campos/campos_autor"%></div>
       </td>
@@ -74,7 +74,7 @@
         <b><%= f.label :area_id,"Area: " %></b>
         <b><i><font color="red" size="1">
          (Caso não conste a Área na lista abaixo, favor entrar em contato com a Informática SEDUC e solicitar a inclusão)
-         </font></i></b>
+         </font></i></b><br/>
         <%= f.collection_select :area_id ,@areas,:id,:nome, :include_blank => "--Selecionar--" %>
       </td>
     </tr>
@@ -89,7 +89,8 @@
     </tr>
     <tr>
       <td>
-        <b><%= f.label :editora_id %></b>
+<<<<<<< HEAD
+        <b><%= f.label :editora_id, "Editora: " %></b>
         <div id="editora"><%= render "shared/campos/campos_editora"%></div>
       </td>
       <td colspan="2">
@@ -118,11 +119,11 @@
     <tr>
       <td>
         <b><%= f.label :resumo, 'Resumo:' %></b><br />
-        <%= f.text_area :resumo, :size => "30x3" %>
+        <%= f.text_area :resumo, :size => "35x3" %>
       </td>
       <td colspan="2">
         <b><%= f.label :obs, 'Observação:' %></b><br />
-        <%= f.text_area :obs, :size => "30x3" %>
+        <%= f.text_area :obs, :size => "35x3" %>
       </td>
     </tr>
     <tr>
