@@ -14,21 +14,7 @@
                 </td>
               </tr>
               <tr>
-                <td>
-                  <%= f.label :aquisicao, 'Forma Aquisição:' %>
-                </td>
-                <td colspan="2">
-                  <%= f.select :aquisicao, Localizacao::FORMAAQUISICAO, :include_blank => '--Selecionar--'%>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= f.label :data_aquisicao,'Data Aquisição' %>
-                </td>
-                <td>
-                  <%= f.text_field :data_aquisicao, :size => 15%>
-                </td>
-                <td><div class="botao"><%= submit_tag 'Criar'  %></div>
+                  <td><div class="botao"><%= submit_tag 'Criar'  %></div>
                 </td>
               </tr>
             </table>

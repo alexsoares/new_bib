@@ -10,15 +10,15 @@
          </tr>
          <tr>
             <td><b><%= f.label :livro, "Título" %>:</b><br/>
-            <%= f.text_field :livro %></td>
+            <%= f.text_field :livro ,:size => "80"%></td>
          </tr>
          <tr>
             <td><b><%= f.label :subtitulo,'Subtítulo:' %></b><br/>
-            <%= f.text_field :subtitulo %></td>
+            <%= f.text_field :subtitulo,:size => "80" %></td>
          </tr>
          <tr>
             <td><b><%= f.label :obs, 'Observação:' %></b><br/>
-                   <%= f.text_area(:obs, :cols =>28, :rows => "2") %></td>
+                   <%= f.text_area(:obs, :cols =>79, :rows => "2") %></td>
          </tr>
          <tr>
             <td colspan="2"><%= f.submit "Salvar" %></td>

@@ -27,6 +27,11 @@
                             <b>-</b> <%="#{ assunto.descricao}" %><br/>
                         <%end%>
                   <strong>Resumo:</strong>   <%=h @livro.resumo %>
+                    <% if current_user.has_role?('admin') and current_user.has_role?('escola') or  current_user.has_role?('professores')%>
+                        <br/>
+                       <%= link_to image_tag("/stylesheets/images/cadastrar.gif", :size => "25x25"), resumo_path(:livro => @livro), :title => "Escrever Resumo" %>
+                    <%end%>
+
                 </div>
                 <div id="colunaDireita">
                   <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>

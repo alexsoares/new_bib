@@ -28,10 +28,6 @@
          <b><%= f.label :formato,'Formato:' %></b><br />
         <%= f.select :formato, Mapa::FORMATO_MAPA, :include_blank => '--Selecionar--'%>
       </td>
-      <td align="lef">
-         <b><%= f.label :ano, 'Ano:' %></b><br />
-        <%= f.date_select(:ano, :order => [:year], :start_year => (Date.today.year)-20) %>
-      </td>
 
     </tr>
     <tr>
@@ -40,18 +36,15 @@
         <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "--Selecionar--" %>
       </td>
       <td align="lef">
-        <b><%= f.label :local_edicao,'Local Edição:' %></b><br />
-        <%= f.text_field :local_edicao, :size => "20" %>
-      </td>
-      <td align="lef">
-        <b>Edição:</b><br />
-       <%= f.text_field :edicao, :size=>"1" %>ª 
+        <%= f.text_field :edicao, :size=>"1" %><b>ª Edição</b>
+         - <b><%= f.label :ano, 'Ano:' %></b>
+        <%= f.date_select(:ano, :order => [:year], :start_year => (Date.today.year)-20) %>
       </td>
 
     </tr>
     <tr>
       <td align="lef" colspan="3">
-        <b><%= f.label :localizacao_id,"Selecionar a localização: " %></b>
+        <b><%= f.label :localizacao_id,"Localização: " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_local", :class =>"inline"%>
         <div id="local"><%= render "shared/campos/campos_local"%></div>
 
@@ -60,7 +53,7 @@
     <tr>
       <td align="lef" colspan="3">
           <b><%= f.label :obs, 'Observação:' %></b><br />
-          <%= f.text_area :obs,:size => "30x3" %>
+          <%= f.text_area :obs,:size => "35x3" %>
       </td>
     </tr>
     <tr>

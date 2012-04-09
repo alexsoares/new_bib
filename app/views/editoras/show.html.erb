@@ -23,6 +23,7 @@
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), editoras_path, :title => "Editoras Cadastradas" %></td>
             <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
+               <td width="6%" align="left"><%= link_to image_tag("/stylesheets/images/consulta.png", :size => "40x40"), consultaEdi_path, :title => "Nova Consulta" %></td>
                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_editora_path(@editora), :title => "Editar Editora" %></td>
                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @editora, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Editora" %></td>
                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_editora_path, :title => "Cadastrar Título" %></td>

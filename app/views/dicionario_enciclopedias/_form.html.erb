@@ -75,21 +75,14 @@
     </tr>
     <tr>
      <td>
-        <b><%= f.label :editora_id%></b>
-        <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_editora", :class =>"inline"%><br />
+        <b><%= f.label :editora_id%>:</b><br />
         <%= f.collection_select :editora_id ,@editoras,:id,:nome, :include_blank => "--Selecionar--" %>
       </td>
-      <td colspan="2">
+      <td>
         <b><%= f.label :tipo,"Tipo: " %></b><br/>
         <%= f.select :tipo, DicionarioEnciclopedia::TIPO_DIC_ENC, :include_blank => '--Selecionar--'%>
       </td>
-    </tr>
-    <tr>
       <td>
-        <b><%= f.label :local_edicao, "Local Edição:" %></b><br/>
-        <%= f.text_field :local_edicao, :size => "30" %>
-      </td>
-      <td colspan="2">
         <b><%= f.label :data_edicao, "Data:" %></b><br/>
         <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
      </td>
@@ -97,7 +90,7 @@
     <tr>
       <td colspan="3">
         <b><%= f.label :obs, 'Observação:' %></b><br/>
-        <%= f.text_area :obs, :size => "30x3" %>
+        <%= f.text_area :obs, :size => "35x3" %>
       </td>
     </tr>
     <tr>
