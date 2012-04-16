@@ -1,2 +1,2 @@
-Usuario corrente: <%= link_to h(current_user.login.capitalize), edit_user_path(current_user)%>
-Usuario GPD: <%= current_user.unidade.unidades_gpd_id %>
+<b>Usuario corrente:</b> <%= link_to h(current_user.login.capitalize), edit_user_path(current_user)%>
+<b>Usuario GPD: </b><%= current_user.unidade.unidades_gpd_id %> - <%= current_user.unidade.unidades_gpd.nome %>

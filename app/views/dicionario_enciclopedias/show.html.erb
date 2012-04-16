@@ -14,7 +14,12 @@
                   <hr>
                      <strong>Tipo:</strong>  <%=h @dicionario_enciclopedia.tipo %><br/>
                      <strong>Coleção:</strong>  <%=h @dicionario_enciclopedia.colecao %><br/>
-                     <strong>Volume:</strong>  <%=h @dicionario_enciclopedia.volume %><br/>
+                     <strong>Empréstimo:</strong>  <% if @dicionario_enciclopedia.status == true %>
+                                                        <strong><font color ="blue"> - LIVRO DISPONÍVEL</strong></font><br/>
+                                                    <%else%>
+                                                        <strong><font color ="red"> - LIVRO INDISPONÍVEL</font></strong><br/>
+                                                     <%end%>
+
                      <strong>Editora:</strong>   <%=h @dicionario_enciclopedia.editora.nome %><br/>
                      <strong>Data Edição:</strong>  <%if !@dicionario_enciclopedia.data_edicao.nil?%>
                                                       <%=h @dicionario_enciclopedia.data_edicao.strftime("%Y") %><br/>

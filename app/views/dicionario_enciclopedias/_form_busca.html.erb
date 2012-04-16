@@ -3,7 +3,7 @@
           <h2>DICIONÁRIOS & ENCICLOPÉDIAS</h2>
           <% form_remote_for(:busca,:url => { :action => 'filtrar' },:loading => "$('#status').show()", :success => "$('#status').hide()" ) do |f|%>
             <%= error_messages_for 'contact' %>
-            <table>
+          <table>
               <tr>
                 <td colspan="2">
                    Digitar uma palavra do <b>Título</b> e clicar em <b>Filtrar</b> e <b>Selecionar</b>
@@ -11,11 +11,11 @@
                 
               </tr>
               <tr>
-                <th width="20%">
-                  <div class="botao">Título:</div>
+                <th width="5%">
+                  <b>Título:</b>
                 </th>
-                <td width="20%" align="center">
-                  <%= f.text_field :busca %>
+                <td width="40%" align="left">
+                  <%= f.text_field :busca, :size => 60 %>
                 </td>
                 <td><div class="botao"><%= submit_tag 'Filtrar'  %></div></td>
               </tr>

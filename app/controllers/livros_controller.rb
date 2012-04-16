@@ -71,6 +71,7 @@ class LivrosController < ApplicationController
 
   def show
     @livro = Livro.find(params[:id])
+    $teste = @livro.status
   end
 
   def new

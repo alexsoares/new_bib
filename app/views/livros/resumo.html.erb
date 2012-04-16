@@ -6,7 +6,7 @@
 
   <% form_for @livro do |f| %>
   <%= f.error_messages %>
-  <table  align="center" bgcolor="#F5F5F5">
+        <table  align="center" width="100%" bgcolor="#F5F5F5">
       <tr>
         <td colspan="3" >
           <b>Tombo Seduc:</b> <%=h @livro.id %> -
@@ -40,15 +40,17 @@
            </td>
        </tr>
        <tr>
-          <td>
-            <b><%= f.label :resumo, 'Resumo:' %></b><br />
-            <%= f.text_area :resumo, :size => "30x3" %>
-          </td>
-          <td colspan="2">
+         <td colspan="3">
             <b><%= f.label :obs, 'Observação:' %></b><br />
-            <%= f.text_area :obs, :size => "30x3" %>
+            <%= f.text_field :obs, :size => "75" %>
           </td>
         </tr>
+       <tr>
+          <td>
+            <b><%= f.label :resumo, 'Resumo:' %><font size ="1"> ( Utilizar até 255 caracteres )</b></font><br />
+            <%= f.text_area :resumo, :size => "75x3" %>
+          </td>
+       </tr>
         <tr>
             <td colspan="3"><%= f.submit "Salvar" %></td>
         </tr>

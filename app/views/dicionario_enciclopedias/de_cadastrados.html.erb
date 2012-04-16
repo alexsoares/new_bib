@@ -1,4 +1,4 @@
-<% title "LIVROS" %>
+<% title "DICIONÁRIOS & ENCICLOPÉDIAS" %>
 <% if @de_cad.present?%>
   <%if @de_cad.count > 1%>
     <%kind = "Multi-Tombos"%>
@@ -14,7 +14,7 @@
     <div class="tabs">
     <table width="100%" bgcolor="#DCDCDC">
        <tr>
-         <td  align="left"><strong>Tombo / D&E</strong> </td>
+         <td  align="left"><strong>Tombo / Dicionário & Enciclopédia</strong> </td>
          <td  align="left"><strong>Administração</strong> </td>
        </tr>
        <%@de_cad.each do |de_cad| %>
@@ -29,7 +29,7 @@
             <td width="6%"align="left" > <%= link_to image_tag("/stylesheets/images/voltar.png", :size => "35x35"), root_path, :title => "Voltar" %></td>
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), dicionario_enciclopedias_path, :title => "Livros Cadastrados" %></td>
             <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
-                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_livro_path, :title => "Cadastrar Livro" %></td>
+                <td><%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "22x22"), new_dicionario_enciclopedia_path, :title => "Cadastrar Dic & Enc" %></td>
             <%else%>
                 <td align="center"> </td>
             <%end%>

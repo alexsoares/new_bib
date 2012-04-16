@@ -101,13 +101,13 @@
 #unidade_corrente {
        position:absolute;
        width:340px;
-       top:50px;
-       left:15px;
-       text-align:center;
-       border: solid 1px;
-       height:20px;
-       width:100px;
-       background-color:white;
+       top:40px;
+       left:13px;
+       text-align:right;
+       height:24px;
+       width:615px;
+
+       font-weight: bold
 }
 .musica{
     display:none;

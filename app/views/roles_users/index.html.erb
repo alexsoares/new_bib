@@ -1,7 +1,7 @@
 <% title "USUÁRIOS", :id =>"usuarios" %>
 <div class="tabs">
     <% form_remote_tag :url => {:action => "lista_users"} , :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
-         <table width="100%" align="center" bgcolor="#DCDCDC" >
+  <table width="100%" align="center" bgcolor="#DCDCDC" >
           <tr>
             <td>
                <a href="#" class="sem_filtro" id="unidade"><%= radio_button_tag(:type_of, "1") %></a>Minha Unidade

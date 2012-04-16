@@ -25,7 +25,7 @@
                     <%= f.text_field :qtde_livros, :size => "2" %>
                   </td>
                   <td>
-                   <%= f.text_field :lista_tombos, :size => "68"%>
+                   <%= f.text_field :lista_tombos, :size => "70"%>
                   </td>
                 </tr>
               </table>
@@ -89,22 +89,13 @@
     </tr>
     <tr>
       <td>
-<<<<<<< HEAD
-        <b><%= f.label :editora_id, "Editora: " %></b>
+          <b><%= f.label :editora_id, "Editora: " %></b>
         <div id="editora"><%= render "shared/campos/campos_editora"%></div>
       </td>
       <td colspan="2">
         <br />
         <%= f.text_field :edicao, :size => "1" %><b>ª<%= f.label :edicao, " Edição" %></b>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b><%= f.label :local_edicao, "Local Edição:" %></b><br />
-        <%= f.text_field :local_edicao, :size => "30" %>
-      </td>
-      <td colspan="2">
-        <b><%= f.label :data_edicao, "Data:" %></b><br />
+        - <b><%= f.label :data_edicao, "Data:" %></b>
         <%= f.date_select(:data_edicao, :order => [:year], :start_year => (Date.today.year)-50) %>
      </td>
     </tr>
@@ -119,11 +110,11 @@
     <tr>
       <td>
         <b><%= f.label :resumo, 'Resumo:' %></b><br />
-        <%= f.text_area :resumo, :size => "35x3" %>
+        <%= f.text_area :resumo, :size => "34x3" %>
       </td>
       <td colspan="2">
         <b><%= f.label :obs, 'Observação:' %></b><br />
-        <%= f.text_area :obs, :size => "35x3" %>
+        <%= f.text_area :obs, :size => "34x3" %>
       </td>
     </tr>
     <tr>

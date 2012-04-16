@@ -26,23 +26,23 @@
                     </ul>
                   </div>
                 </li>
+                 <% if current_user.has_role?('admin') and current_user.has_role?('escola') or  current_user.has_role?('responsavel')%>
                 <li><a href="#"><b>Cadastros</b></a>
                   <div class="select_sub">
                     <ul class="sub">
-                      <% if current_user.has_role?('admin') and current_user.has_role?('escola') or  current_user.has_role?('responsavel')%>
                         <li><%= link_to "Dicio. & Enciclo.", new_dicionario_enciclopedia_path %></li>
                         <li><%= link_to "Jogos", new_jogo_path %></li>
                         <li><%= link_to "Livros", new_livro_path %></li>
                         <li><%= link_to "Mapas", new_mapa_path %></li>
                         <li><%= link_to "Mídias", new_midia_path %></li>
                         <li><%= link_to "Periodicos" %></li>
-                      <%end%>
-                      <% if current_user.has_role?('admin') %>
-                        <li><%= link_to "Autores", new_autor_path %></li>
-                        <li><%= link_to "Autores", new_assunto_path %></li>
-                      <%end%>
+                        <% if current_user.has_role?('admin') %>
+                          <li><%= link_to "Autores", new_autor_path %></li>
+                          <li><%= link_to "Autores", new_assunto_path %></li>
+                        <%end%>
                     </ul>
                   </div>
+                  <%end%>
                 </li>
                 <li><a href="#"><b>Consulta</b></a>
                   <div class="select_sub">
@@ -63,6 +63,7 @@
                     </ul>
                   </div>
                 </li>
+                <% if current_user.has_role?('admin') and current_user.has_role?('escola') or  current_user.has_role?('responsavel')%>
                 <li><a href="#"><b>Emprestimos</b></a>
                   <div class="select_sub">
                     <ul class="sub">
@@ -72,6 +73,7 @@
                     </ul>
                   </div>
                 </li>
+                <%end%>
                 <% if current_user.has_role?('admin') or current_user.has_role?('escola')  %>
                 <li><a href="#"><b>Gerenciamento</b></a>
                   <div class="select_sub">

@@ -1,7 +1,7 @@
 <% title "LIVRO" %>
 <div class ="tabs">
   <div id="topoShow"></div>
-    <font size="5"><strong><%=h "#{@livro.identificacao.livro}" %></strong></font><br/>
+    <font size="5"><strong><%=h "#{@livro.identificacao.livro}" %></strong></font></br>
      <font size="4"><strong><%=h "#{@livro.identificacao.subtitulo}" %></strong></font><br/>
      <div id="telaShow">
          <div id="linhaCentral">
@@ -10,6 +10,12 @@
                   <hr>
                     <strong>Coleção:</strong>  <%=h @livro.colecao %><br/>
                     <strong>Area:</strong>  <%=h @livro.area.nome %><br/>
+                    <strong>Empréstimo:</strong>  <% if @livro.status == true %>
+                                               <strong><font color ="blue"> - LIVRO DISPONÍVEL</strong></font><br/>
+                                             <%else%>
+                                                <strong><font color ="red"> - LIVRO INDISPONÍVEL</font></strong><br/>
+                                             <%end%>
+
                     <strong>Autor(es):</strong><br/>
                         <% @livro.autores.each do |autor| %>
                              <b>-</b> <%="#{autor.nome}" %><br/>
@@ -26,30 +32,25 @@
                         <% @livro.assuntos.each do |assunto| %>
                             <b>-</b> <%="#{ assunto.descricao}" %><br/>
                         <%end%>
-                  <strong>Resumo:</strong>   <%=h @livro.resumo %>
-                    <% if current_user.has_role?('admin') and current_user.has_role?('escola') or  current_user.has_role?('professores')%>
-                        <br/>
-                       <%= link_to image_tag("/stylesheets/images/cadastrar.gif", :size => "25x25"), resumo_path(:livro => @livro), :title => "Escrever Resumo" %>
-                    <%end%>
-
                 </div>
                 <div id="colunaDireita">
                   <h3><font color="DimGrey"><b><i>Informações sobre localização</i></b></font></h3>
                   <hr>
                      <strong>Tombo Seduc:</strong>   <%=h @livro.id %><br/>
                      <strong>Tombo Local:</strong>   <%=h @livro.tombo_l %><br/>
-                     <strong>Tipo de aquisição:</strong>   <%=h @livro.localizacao.aquisicao%><br/>
-
-                     <% if @livro.localizacao.data_aquisicao.nil? %><br/>
-                         <strong>Data Aquisição:</strong>
+                     <% if @livro.localizacao.data_aquisicao.nil? %>
+                         <strong></strong>
                      <%else%>
                         <strong>Data Aquisição:</strong>   <%=h @livro.localizacao.data_aquisicao.strftime("%d / %b / %Y")%><br/>
                      <%end%>
-
-
                      <strong>Localização:</strong>   <%=h @livro.localizacao.local_guardado %><br/>
                      <strong>Unidade:</strong>   <%=h @livro.localizacao.unidade.nome %><br/>
                      <strong>Observação:</strong>   <%=h @livro.obs%><br/>
+                     <strong>Resumo:</strong>   <%=h @livro.resumo %>
+                    <% if current_user.has_role?('admin') and current_user.has_role?('escola') or  current_user.has_role?('professores')%>
+                        <br/><aligment= "left"><%= link_to image_tag("/stylesheets/images/cadastrar.gif", :size => "25x25"), resumo_path(:livro => @livro), :title => "Escrever Resumo" %>
+                    <%end%>
+
                 </div>
 
               </div>

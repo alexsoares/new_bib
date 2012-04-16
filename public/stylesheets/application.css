@@ -5,11 +5,11 @@ body {
     height:500px;
     }
   select.lista_assuntos {
-   width:350px;
+   width:330px;
    height: 100px;
   }
   select.lista_autores {
-   width:350px;
+   width:330px;
    height: 100px;
   }
 
