@@ -54,8 +54,8 @@ class MidiasController < ApplicationController
       qtd.times do
         @midia = Midia.new(params[:midia])
         @midia.usuario = current_user.id
-        @midia.unidade = current_user.unidade_idid
-        Log.gera_log("CRIACAO", "MIDIAS", current_user.id,@midias.id)
+        @midia.unidade = current_user.unidade_id
+
         if params[:midia][:qtde_midias].to_i == 0
           @midia.qtde_midias = 1
         else

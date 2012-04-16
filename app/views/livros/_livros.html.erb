@@ -23,9 +23,12 @@
                 <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), livro, :title => "Exibir Periódico" %></td>
                 <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
                     <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(livro), :title => "Editar Livro" %></td>
-                    <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), livro, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Livro" %></td>
                 <%else%>
                     <td align="center"> --- </td>
+                <%end%>
+                <% if current_user.has_role?('admin') or current_user.has_role?('escola')%>
+                    <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), livro, :confirm => 'Confirma?', :method => :delete, :title => "Excluir Livro" %></td>
+                <%else%>
                     <td align="center"> --- </td>
                 <%end%>
               </tr>

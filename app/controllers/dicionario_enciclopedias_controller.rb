@@ -27,6 +27,7 @@ class DicionarioEnciclopediasController < ApplicationController
    else
       if params[:type_of].to_i == 1
           @contador = DicionarioEnciclopedia.all(:include => [:localizacao,:identificacao], :conditions => ["identificacaos.livro like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+          @contador = DicionarioEnciclopedia.all(:include => [:localizacao],:conditions =>["localizacoes.unidade_id = ?",current_user.unidade_id]).count
           @dicionario_enciclopedias = DicionarioEnciclopedia.paginate :all, :page => params[:page], :per_page => 10,  :joins => [:identificacao,:localizacao], :conditions => ["identificacaos.livro like ? and tipo =? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%","DICIONÁRIO",current_user.unidade_id], :order => 'livro ASC'
           render :update do |page|
             page.replace_html 'dicionarios', :partial => "dicionarios"

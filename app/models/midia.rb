@@ -36,7 +36,7 @@ class Midia < ActiveRecord::Base
     possui = Possui.new
     possui.unidade_id = self.unidade
     possui.tombo = "md-#{self.tombo_l}"
-    possui.midia_id = self.id
+    #possui.midia_id = self.id
     possui.status = 1
     possui.save
   end
@@ -45,7 +45,7 @@ class Midia < ActiveRecord::Base
     disp = Dpu.new
     disp.unidade_id = self.unidade
     disp.tombo = "md-#{self.tombo_l}"
-    disp.midia_id = self.id
+    #disp.midia_id = self.id
     disp.status = 1
     disp.save
   end
