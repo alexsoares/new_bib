@@ -4,14 +4,22 @@ class Emprestimo < ActiveRecord::Base
   has_and_belongs_to_many :dpus
   Tipo = {'Funcionário' => 0, 'Aluno' => 1}
   Kind = {'Livro' => 0, 'Dicionario / enciclopedia' => 1}
-  before_create :kind_of
+  
+  before_create :kind_of, :inabilita
   #after_create :cria_emprestimos_realizados,:kind_of
   validate :unico
   belongs_to :unidade
   # :dpu => Disponiveis para empréstimos por unidade
   #accepts_nested_attributes_for :dpus, :reject_if => lambda {|a| a[:conteudo].blank?}, :allow_destroy => true
   attr_accessor :dpu, :pessoa, :type, :filtro,:filtro_ambos
-  
+
+  def inabilita
+    dpu = Dpu.find(self.dpus)
+    dpu.each do |z|
+      z.status = 0
+      z.save
+    end
+  end
 
   def unico
     unless self.id.present?

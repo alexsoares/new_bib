@@ -11,8 +11,8 @@ class TombosController < ApplicationController
     @tombos_livros = Tombo.all(:include => [{:livro =>[:identificacao,:localizacao]}],:conditions => ["livro_id is not null and localizacoes.unidade_id = ?",unidade]).count
     @livros = Livro.all(:include => [[:identificacao,:localizacao]],:conditions => ["livros.id not in (select livro_id from tombos where livro_id is not null) and localizacoes.unidade_id = ?",unidade]).count
     @no_livros_tombos = Tombo.all(:include => [{:livro =>[:identificacao,:localizacao]}],:conditions => ["(livro_id not in (select id from livros) and dicionario_enciclopedia_id is null) and localizacoes.unidade_id = ?",unidade]).count
-    @tombos_de = Tombo.all(:include => [{:livro =>[:identificacao,:localizacao]}],:conditions => ["dicionario_enciclopedia_id is not null and localizacoes.unidade_id = ?", unidade]).count
-    @de = DicionarioEnciclopedia.all(:include => [{:livro =>[:identificacao,:localizacao]}],:conditions => ["dicionario_enciclopedia_id is not null and localizacoes.unidade_id = ?",unidade]).count
+    @tombos_de = Tombo.all(:include => [{:dicionario_enciclopedia =>[:identificacao,:localizacao]}],:conditions => ["dicionario_enciclopedia_id is not null and localizacoes.unidade_id = ?", unidade]).count
+    @de = DicionarioEnciclopedia.all(:include => [:identificacao,:localizacao],:conditions => ["dicionario_enciclopedias.id not in (select dicionario_enciclopedia_id from tombos where dicionario_enciclopedia_id is not null) and localizacoes.unidade_id = ?",unidade]).count
     @no_de_tombos = 0#Tombo.all(:conditions => ["dicionario_enciclopedia_id not in (select id from dicionario_enciclopedias) and (dicionario_enciclopedia_id is null)"]).count
     render :update do |page|
       page.replace_html 'geral', :partial => "geral"

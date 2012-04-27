@@ -47,7 +47,7 @@ class EmprestimosController < ApplicationController
     @emprestimo.tipo_emprestimo = params[:type]
     if (session[:pessoa]).present?     
       if @emprestimo.save
-        Log.gera_log("CRIACAO", "EMPRESTIMO", current_user.id , @emprestimo.id)
+#        Log.gera_log("CRIACAO", "EMPRESTIMO", current_user.id , @emprestimo.id)
         flash[:notice] = "EMPRÉSTIMO REALIZADO COM SUCESSO."
         redirect_to @emprestimo
         session[:pessoa] = nil
