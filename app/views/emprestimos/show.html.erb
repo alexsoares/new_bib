@@ -35,6 +35,10 @@
          <%end%>
       </td>
       </tr>
+      <tr>
+        <td><b>Estado</b></td>
+        <td><%= @emprestimo.seu_status? %></td>
+      </tr>
     </table>
         <table>
           <tr>
@@ -42,6 +46,9 @@
             <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/listar.png", :size => "25x25"), emprestimos_path, :title => "Empréstimos Cadastradas" %></td>
             <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/edit.png", :size => "25x25"), edit_emprestimo_path(@emprestimo), :title => "Editar Empréstimo" %></td>
+               <%if @emprestimo.status != false%>
+                <td width="6%"align="left" ><%= link_to image_tag("/stylesheets/images/transferencia.gif", :size => "25x25"), devolucao_emprestimo_path(@emprestimo), :title => "Devolver Empréstimo" %></td>
+               <%end%>
                <td align="left" ><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "25x25"), @emprestimo, :confirm => 'Confirma Exclusão?', :method => :delete, :title => "Excluir Emprestimo" %></td>
             <%end%>
           </tr>

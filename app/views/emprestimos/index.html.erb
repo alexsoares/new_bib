@@ -20,6 +20,7 @@
             <td align="left"><%=h emprestimo.data_emprestimo.strftime("%d/%m/%Y") %></td>
             <td align="left"><%=h emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
             <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), emprestimo, :title => "Visualizar Editora" %></td>
+            <td align="center"><%= link_to image_tag("/stylesheets/images/transferencia.gif", :size => "15x15"), devolucao_emprestimo_path(emprestimo),  :title => "Devolver Emprestimo" %></td>
             <% if current_user.has_role?('admin') %>
                <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_emprestimo_path(emprestimo),  :title => "Editar Emprestimo" %></td>
                <td align="center"><%= link_to image_tag("/stylesheets/images/excluir.png", :size => "15x15"), emprestimo, :confirm => 'Tem certeza?', :method => :delete,  :title => "Excluir Editora" %></td>

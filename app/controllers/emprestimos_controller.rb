@@ -1,7 +1,7 @@
 class EmprestimosController < ApplicationController
   before_filter :load_resources
   def index
-    @emprestimos = Emprestimo.all(:conditions => ["unidade_id = ? and data_emprestimo < data_devolucao", current_user.unidade_id])
+    @emprestimos = Emprestimo.all(:conditions => ["unidade_id = ? and status = 1", current_user.unidade_id])
   end
 
   def show
@@ -179,7 +179,18 @@ class EmprestimosController < ApplicationController
       end
   end
 
+  def devolucao
+    @devolucao = Emprestimo.find(params[:id])
+  end
 
+  def efetiva_devolver
+    @devolucao = Emprestimo.find(params[:id])
+    @devolucao.status = 0
+    if @devolucao.save      
+      flash[:notice] = "DEVOLUÇÃO EFETUADA COM SUCESSO."
+      redirect_to @devolucao
+    end
+  end
 protected
   def load_resources
     if current_user.unidade_id == 53

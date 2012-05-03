@@ -1,2 +1,6 @@
 <b>Usuario corrente:</b> <%= link_to h(current_user.login.capitalize), edit_user_path(current_user)%>
-<b>Usuario GPD: </b><%= current_user.unidade.unidades_gpd_id %> - <%= current_user.unidade.unidades_gpd.nome %>
+<b>Usuario GPD: </b><%= current_user.unidade.unidades_gpd.nome %>
+<br/>
+<br/>
+<h2>Emprestimos Realizados pela escola</h2>
+<div id="emprestimos"><%= render "emprestimos" %></div>

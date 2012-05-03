@@ -6,6 +6,7 @@ class Emprestimo < ActiveRecord::Base
   Kind = {'Livro' => 0, 'Dicionario / enciclopedia' => 1}
   
   before_create :kind_of, :inabilita
+  after_update :habilita
   #after_create :cria_emprestimos_realizados,:kind_of
   validate :unico
   belongs_to :unidade
@@ -14,13 +15,19 @@ class Emprestimo < ActiveRecord::Base
   attr_accessor :dpu, :pessoa, :type, :filtro,:filtro_ambos
 
   def inabilita
-    dpu = Dpu.find(self.dpus)
-    dpu.each do |z|
+    dpu_emprestada = Dpu.find(self.dpus)
+    dpu_emprestada.each do |z|
       z.status = 0
       z.save
     end
   end
-
+  def habilita
+    dpu_devolvida = Dpu.find(self.dpus)
+    dpu_devolvida.each do |z|
+      z.status = 1
+      z.save
+    end
+  end
   def unico
     unless self.id.present?
       if self.tipo_emprestimo == 0
@@ -33,6 +40,14 @@ class Emprestimo < ActiveRecord::Base
       if encontrou.present?
         errors.add_to_base("Já existe um empréstimo em vigor. Efetue a devolução para realizar outro empréstimo.")
       end
+    end
+  end
+
+  def seu_status?
+    if self.status == false
+      "Emprestimo encerrado"
+    else
+      "Emprestimo em vigência"
     end
   end
 

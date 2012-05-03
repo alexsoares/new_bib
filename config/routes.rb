@@ -13,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :roles_users, :collection => {:lista_users => :get}
   map.resources :configuracoes
   map.resources :importar
-  map.resources :emprestimos, :collection => {:funcionario => :get, :alunos => :get,:classe => :get, :dpu => :get, :busca => :get}
+  map.resources :emprestimos, :member => [:devolucao],:collection => {:funcionario => :get, :alunos => :get,:classe => :get, :dpu => :get, :busca => :get}
   map.resources :itens_emprestimos
   map.resources :funcionarios
   map.resources :tipos
