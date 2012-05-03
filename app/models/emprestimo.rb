@@ -1,19 +1,16 @@
 class Emprestimo < ActiveRecord::Base
-  #has_many :emprestimos_realizados
-  #has_many :dpus, :through => :emprestimos_realizados
+  before_create :kind_of, :inabilita
+  after_create :libera_variavel_sessao
+  after_update :habilita
+  has_one :devolucao
   has_and_belongs_to_many :dpus
+  belongs_to :unidade
+  validate :unico
+  attr_accessor :dpu, :pessoa, :type, :filtro,:filtro_ambos
+
   Tipo = {'Funcionário' => 0, 'Aluno' => 1}
   Kind = {'Livro' => 0, 'Dicionario / enciclopedia' => 1}
   
-  before_create :kind_of, :inabilita
-  after_update :habilita
-  #after_create :cria_emprestimos_realizados,:kind_of
-  validate :unico
-  belongs_to :unidade
-  # :dpu => Disponiveis para empréstimos por unidade
-  #accepts_nested_attributes_for :dpus, :reject_if => lambda {|a| a[:conteudo].blank?}, :allow_destroy => true
-  attr_accessor :dpu, :pessoa, :type, :filtro,:filtro_ambos
-
   def inabilita
     dpu_emprestada = Dpu.find(self.dpus)
     dpu_emprestada.each do |z|
@@ -21,13 +18,23 @@ class Emprestimo < ActiveRecord::Base
       z.save
     end
   end
+
   def habilita
     dpu_devolvida = Dpu.find(self.dpus)
     dpu_devolvida.each do |z|
       z.status = 1
       z.save
     end
+    cria_dev(self.id, self.data_devolucao)
   end
+
+  def cria_dev(emprestimo, data_devolucao)
+    devolucao = Devolucao.new
+    devolucao.emprestimo_id = emprestimo
+    devolucao.data_devolucao = data_devolucao
+    devolucao.save
+  end
+
   def unico
     unless self.id.present?
       if self.tipo_emprestimo == 0
@@ -38,7 +45,8 @@ class Emprestimo < ActiveRecord::Base
         end
       end
       if encontrou.present?
-        errors.add_to_base("Já existe um empréstimo em vigor. Efetue a devolução para realizar outro empréstimo.")
+        errors.add_to_base("Já existe um empréstimo em vigor.")
+        errors.add_to_base(" Efetue a devolução para realizar outro empréstimo.")
       end
     end
   end
@@ -63,41 +71,27 @@ class Emprestimo < ActiveRecord::Base
     if config.present?
       config.dias_posse
     else
-      default = 3
+      default = 7
     end
   end
 
   def kind_of
     if self.tipo_emprestimo == 1
       self.funcionario = self.pessoa
+      session[:funcionario] = self.pessoa
     else
       self.aluno = self.pessoa
+      session[:aluno] = self.pessoa
     end
     inclui_data
   end
 
-  #def cria_emprestimos_realizados
-  #  er = EmprestimosRealizados.new
-  #  er.ativo = 1
-  #  er.dpu_id = self.dpu
-  #  er.emprestimo_id = self.id
-  #  er.save
-  #  update_dpu
-  #end
-
-  #def update_dpu
-  #  self.dpu.each do |z|
-  #    disponibilidade = Dpu.find((z).to_i)
-  #    disponibilidade.status = 0
-  #    disponibilidade.save
-  #  end
- # end
-
   def emprestado_para
     if self.tipo_emprestimo == 1
-      " #{Aluno.find((self.funcionario).to_i).nome} (Professor)"
+
+      " #{Aluno.find((self.funcionario.present? ? self.funcionario : self.pessoa ).to_i).nome} (Professor)"
     else
-      " #{Aluno.find((self.aluno).to_i).nome} (Aluno)"
+      " #{Aluno.find((self.aluno.present? ? self.aluno : self.pessoa).to_i).nome} (Aluno)"
     end
   end
 
@@ -108,5 +102,10 @@ class Emprestimo < ActiveRecord::Base
       Aluno.find((self.aluno).to_i).aluno_ra
     end
   end
-  
+
+  def libera_variavel_sessao
+    session[:funcionario] = nil
+    session[:aluno] = nil
+  end
+
 end

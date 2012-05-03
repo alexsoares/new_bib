@@ -69,7 +69,7 @@
       </div>
       <tr>
         <% dt_emprestimo =  Date.today%>
-        <% dt_devolucao = dt_emprestimo + 3.days %>
+        <% dt_devolucao = dt_emprestimo + 7.days %>
         <td><b>Data de Empréstimo:</b><%= @emprestimo.data_devolucao.present? ? @emprestimo.data_emprestimo.strftime("%d/%m/%Y") : dt_emprestimo.strftime("%d/%m/%Y") %></td>
         <td><b>Data de Devolução:</b><%= @emprestimo.data_devolucao.present? ? @emprestimo.data_devolucao.strftime("%d/%m/%Y") : dt_devolucao.strftime("%d/%m/%Y") %></td>
       </tr>

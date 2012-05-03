@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  emprestimo: 
+  data_devolucao: 2012-05-03
+
+two:
+  emprestimo: 
+  data_devolucao: 2012-05-03

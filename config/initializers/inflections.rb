@@ -15,4 +15,5 @@
   inflect.irregular 'item','itens'
   inflect.irregular 'autor','autores'
   inflect.irregular 'configuracao', 'configuracoes'
+  inflect.irregular 'devolucao', 'devolucoes'
  end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120321135659) do
+ActiveRecord::Schema.define(:version => 20120503113020) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -70,12 +70,20 @@ ActiveRecord::Schema.define(:version => 20120321135659) do
     t.integer  "user_id"
     t.integer  "dias_posse"
     t.integer  "dias_para_aviso"
+    t.integer  "unidade"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "unidade_id"
   end
 
   create_table "data_files", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "devolucoes", :force => true do |t|
+    t.integer  "emprestimo_id"
+    t.date     "data_devolucao"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -135,8 +143,21 @@ ActiveRecord::Schema.define(:version => 20120321135659) do
     t.datetime "updated_at"
     t.date     "data_emprestimo"
     t.date     "data_devolucao"
-    t.integer  "dias_atrasados"
+    t.integer  "dias_atrasados",  :default => 0
     t.boolean  "status"
+  end
+
+  create_table "emprestimos_livros", :id => false, :force => true do |t|
+    t.integer "autor_id", :null => false
+    t.integer "livro_id", :null => false
+  end
+
+  create_table "emprestimos_realizados", :force => true do |t|
+    t.integer  "emprestimo_id"
+    t.integer  "dpu_id"
+    t.boolean  "ativo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "funcionarios", :force => true do |t|
@@ -166,6 +187,18 @@ ActiveRecord::Schema.define(:version => 20120321135659) do
   create_table "itens_assuntos", :force => true do |t|
     t.integer  "assunto_id"
     t.string   "sub_assunto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "itens_emprestimos", :force => true do |t|
+    t.integer  "emprestimo_id"
+    t.integer  "audio_visual_id"
+    t.integer  "livro_id"
+    t.integer  "dicionario_enciclopedia_id"
+    t.integer  "mapas_id"
+    t.integer  "periodico_id"
+    t.integer  "jogo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -337,7 +370,6 @@ ActiveRecord::Schema.define(:version => 20120321135659) do
     t.integer  "dicionario_enciclopedia_id"
     t.integer  "midia_id"
     t.integer  "jogo_id"
-    t.integer  "unidade_id"
   end
 
   create_table "unidades", :force => true do |t|
