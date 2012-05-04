@@ -1,6 +1,6 @@
 class Midia < ActiveRecord::Base
-  has_many :possuis
-  has_many :dpus
+  has_many :possuis, :dependent => :destroy
+  has_many :dpus, :dependent => :destroy
   belongs_to :genero
   belongs_to :localizacao
   has_many :tombos

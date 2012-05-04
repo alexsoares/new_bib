@@ -2,10 +2,10 @@ class Jogo < ActiveRecord::Base
   after_create :multi_tombo, :auto_inc_tombo_seduc, :cria_possui_jg,:cria_disponibiliza_jg
   #attr_accessible :localizacao, :tombo_seduc, :tombo_l, :nome, :faixa_etaria, :tipo, :fabricante, :obs
   attr_accessor :qtde_jogos, :lista_tombos, :usuario, :unidade
-    has_many :possuis
-    has_many :dpus
+    has_many :possuis, :dependent => :destroy
+    has_many :dpus, :dependent => :destroy
     belongs_to :localizacao
-    has_many :tombos
+    has_many :tombos, :dependent => :destroy
     validates_presence_of :localizacao_id,:tombo_l, :nome, :faixa_etaria, :fabricante
 
   FAIXA_ETARIA = %w(3_ANOS 5_ANOS 6_ANOS  10_ANOS 14_ANOS 18_ANOS TODAS_IDADES)

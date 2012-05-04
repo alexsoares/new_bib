@@ -1,6 +1,5 @@
 class Emprestimo < ActiveRecord::Base
   before_create :kind_of, :inabilita
-  after_create :libera_variavel_sessao
   after_update :habilita
   has_one :devolucao
   has_and_belongs_to_many :dpus
@@ -25,7 +24,7 @@ class Emprestimo < ActiveRecord::Base
       z.status = 1
       z.save
     end
-    cria_dev(self.id, self.data_devolucao)
+    cria_dev(self.id, Date.today)
   end
 
   def cria_dev(emprestimo, data_devolucao)
@@ -58,6 +57,10 @@ class Emprestimo < ActiveRecord::Base
       "Emprestimo em vigência"
     end
   end
+  def sua_data_entrega?
+    entregue = Devolucao.find_by_emprestimo_id(self.id)
+    entregue.data_devolucao.strftime("%d/%m/%Y") if entregue.present?
+  end
 
   def inclui_data
     self.data_emprestimo = Date.today
@@ -78,10 +81,8 @@ class Emprestimo < ActiveRecord::Base
   def kind_of
     if self.tipo_emprestimo == 1
       self.funcionario = self.pessoa
-      session[:funcionario] = self.pessoa
     else
       self.aluno = self.pessoa
-      session[:aluno] = self.pessoa
     end
     inclui_data
   end
@@ -89,7 +90,7 @@ class Emprestimo < ActiveRecord::Base
   def emprestado_para
     if self.tipo_emprestimo == 1
 
-      " #{Aluno.find((self.funcionario.present? ? self.funcionario : self.pessoa ).to_i).nome} (Professor)"
+      " #{Aluno.find((self.funcionario.present? ? self.funcionario : self.pessoa ).to_i).nome} (Funcionário)"
     else
       " #{Aluno.find((self.aluno.present? ? self.aluno : self.pessoa).to_i).nome} (Aluno)"
     end
@@ -104,8 +105,6 @@ class Emprestimo < ActiveRecord::Base
   end
 
   def libera_variavel_sessao
-    session[:funcionario] = nil
-    session[:aluno] = nil
   end
 
 end

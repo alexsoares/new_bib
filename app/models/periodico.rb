@@ -1,7 +1,7 @@
 class Periodico < ActiveRecord::Base
   #attr_accessible :localizacao, :tombo_seduc, :tombo_l, :tipo, :titulo, :subtitulo, :colecao, :producao, :periodicidade, :issn, :local_producao, :data_producao, :obs
-  has_many :possuis
-  has_many :dpus
+  has_many :possuis, :dependent => :destroy
+  has_many :dpus, :dependent => :destroy
   belongs_to :localizacao
   after_create :cria_possui_pd, :auto_inc_tombo_seduc, :disponibiliza_pd
   attr_accessor :usuario,:unidade

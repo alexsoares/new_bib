@@ -1,6 +1,6 @@
 class Mapa < ActiveRecord::Base
-  has_many :possuis
-  has_many :dpus
+  has_many :possuis, :dependent => :destroy
+  has_many :dpus, :dependent => :destroy
   #attr_accessible :editora, :localizacao, :tombo_seduc, :tombo_l, :tipo,:titulo, :subtitulo, :ano, :formato, :data_edicao, :local_edicao, :edicao, :obs
   attr_accessor :check, :usuario, :unidade
   belongs_to :editora

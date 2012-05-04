@@ -4,9 +4,9 @@ class DicionarioEnciclopedia < ActiveRecord::Base
   after_create :auto_inc_tombo_seduc, :multi_tombo, :cria_possui_de,:cria_disponibiliza_de
   has_and_belongs_to_many :autores
   attr_accessor :qtde, :lista_tombos, :usuario,:unidade
-  has_many :tombos
-  has_many :possuis
-  has_many :dpus
+  has_many :tombos, :dependent => :destroy
+  has_many :possuis, :dependent => :destroy
+  has_many :dpus, :dependent => :destroy
   belongs_to :area
   belongs_to :editora
   belongs_to :localizacao
