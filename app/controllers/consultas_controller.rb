@@ -3,6 +3,17 @@ class ConsultasController < ApplicationController
   def index
   end
 
+  def global
+  end
+
+  def busca_global
+    @livros = Livro.paginate(:all,:include => [:identificacao, :localizacao], :conditions => ["identificacaos.livro like ?", "%" + params[:search].to_s + "%"], :page => params[:page], :per_page =>30)
+    @contador = @livros.count
+    render :update do |page|
+      page.replace_html 'livros', :partial => "livros"
+    end
+  end
+
   def gerar_tombos
   end
 

@@ -1,0 +1,23 @@
+<div class="tabs">
+    
+    <table class="tabelas" width="100%">
+      <tr><td><%= "Na rede existem #{@contador} exemplares"  %></td></tr>
+        <tr>
+          <th>Identificacao</th>
+            <th>Area</th>
+            <th>Pertence a</th>
+        </tr>
+         <% for livro in @livros %>
+            <tr>
+              <td align="left"  width="50%"><span id="fancy" title="<%=h livro.identificacao.subtitulo %>"><%=h livro.identificacao.livro%></span></td>
+                <td align="left" ><%=h livro.area.nome %></td>
+                <td align="left" ><%=h livro.localizacao.unidade.simplificada %></td>
+            </tr>
+          <% end %>
+     </table>
+     <table bgcolor="#DCDCDC" width="100%">
+      <tr >
+        <td align="left" colspan="4"><%if @livros.present?%><%= will_paginate @livros, :update => "livros" %><%end%></td>
+      </tr>
+    </table>
+  </div>

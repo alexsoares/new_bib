@@ -333,3 +333,7 @@ border: 1px solid #eee;
 color: #ddd;
 background-color:white;
 }
+
+#status{
+    text-align: center;
+}

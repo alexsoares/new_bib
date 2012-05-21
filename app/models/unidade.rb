@@ -1,4 +1,5 @@
 class Unidade < ActiveRecord::Base
+  include ActionView::Helpers::TextHelper
   attr_accessible :nome, :tipo
   has_many :configuracoes
   has_many :users
@@ -10,7 +11,7 @@ class Unidade < ActiveRecord::Base
   has_many :possuis
   has_many :dpus
 
-  def short_name
-    "as"
+  def simplificada
+    truncate(self.nome, :length=> 50)
   end
 end

@@ -1,0 +1,22 @@
+  <%= "Este livro foi emprestado #{@emprestimo_ativo.count} vezes" %>
+  <%if @emprestimo_ativo.present?%>
+    <table class="tabelas">
+      <tr>
+        <th>Emprestado para</th>
+        <th>Unidade</th>
+        <th>Status</th>
+        <th>Livros</th>
+        <th>Adm</th>
+      </tr>
+      <% @emprestimo_ativo.each do |ativo| %>
+        <tr>
+          <td><%= ativo.emprestado_para %></td>
+          <td><%= ativo.unidade.nome %></td>
+          <td><%= ativo.status %></td>
+          <td><a class="t">Testes</a></td>
+          <td align="center"><%= link_to image_tag("/stylesheets/images/transferencia.gif", :size => "15x15"), devolucao_emprestimo_path(ativo),  :title => "Devolver Emprestimo" %></td>
+        </tr>
+        <%= render "shared/forms/form_emprestados", :f => ativo%>
+      <%end%>
+    </table>
+  <%end%>

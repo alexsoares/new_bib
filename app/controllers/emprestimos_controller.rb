@@ -85,7 +85,24 @@ class EmprestimosController < ApplicationController
     flash[:notice] = "EXCLUIDO COM SUCESSO."
     redirect_to emprestimos_url
   end
-  
+
+  def busca_emprestimo
+  end
+
+  def realiza_busca
+
+    if params[:busca_por].to_i == 1
+      unless params[:search].nil?
+        @emprestimo_ativo = Emprestimo.all(:joins => [:dpus => [:livro]] ,:conditions => ["livros.tombo_l = ? and dpus.unidade_id = ? and emprestimos.status = 1", params[:search],current_user.unidade_id])
+      end
+    end
+      render :update do |page|
+        page.replace_html 'devolucao', :partial => "emprestimo_ativo"
+      end
+
+      
+  end
+
   def busca
     if params[:pessoa].present?
       if params[:pessoa][:nome].present?

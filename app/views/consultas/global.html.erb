@@ -1,0 +1,20 @@
+<table width="100%" align="center" >
+  <tr>
+    <td>
+      <h1>Pesquisar na rede</h1>
+      <br/>
+      <br/>
+    </td>
+  </tr>
+  <br/>
+  <% form_remote_tag(:url =>{:controller => "consultas", :action => "busca_global"}, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()") do -%>
+   <tr>
+     <td colspan="2"align="right"><font size="4"> <b class="label_busca">Digitar dado para consulta:</b></font>
+         <%= text_field_tag :search, params[:search], :class=> "txt_busca" %>
+         <div id="unidade_corrente" style="display:none"><%= (current_user.unidade.nome).capitalize %></div>
+         <%= submit_tag "Filtrar", :class => "btn_filtrar" %>
+     </td>
+   </tr>
+   <%end%>
+  </table>
+<div id="livros"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>

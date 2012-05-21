@@ -1,10 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :tombos,:only => [:index], :collection => {:usuario => :get, :livros_diarios => :get,:de_diarios => :get}
-
   map.resources :logs
-
-
-  map.resources :consultas ,:only => [:index], :collection => {:gerar_tombos => :get,:criar_consulta => :get, :lista_tombo => :get}
+  map.resources :consultas,:only => [:index] , :collection => {:global => :get,:gerar_tombos => :get,:criar_consulta => :get, :lista_tombo => :get}
   map.resources :midias, :collection => {:midias_cadastradas => :get}
 
   map.resources :musicas
@@ -13,8 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :roles_users, :collection => {:lista_users => :get}
   map.resources :configuracoes
   map.resources :importar
-  map.resources :emprestimos, :member => [:devolucao],:collection => {:funcionario => :get, :alunos => :get,:classe => :get, :dpu => :get, :busca => :get}
-  map.resources :itens_emprestimos
+  map.resources :emprestimos, :member => [:devolucao],:collection => {:realiza_busca => :get,:busca_emprestimo => :get,:funcionario => :get, :alunos => :get,:classe => :get, :dpu => :get, :busca => :get}
   map.resources :funcionarios
   map.resources :tipos
   map.resources :unidades

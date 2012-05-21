@@ -384,6 +384,30 @@ function add_fields(link, association, content) {
 function hide_field(link,div) {
   $(div).toggle();
 }
+$(function() {
+$("#fancy, #fancy2").tooltip({
+	track: true,
+	delay: 0,
+	showURL: false,
+	fixPNG: true,
+	showBody: " - ",
+	extraClass: "pretty fancy",
+	top: -15,
+	left: 5
+});
+
+$('#pretty').tooltip({
+	track: true,
+	delay: 0,
+	showURL: false,
+	showBody: " - ",
+	extraClass: "pretty",
+	fixPNG: true,
+	left: -120
+});
+
+});
+
 });
 
 

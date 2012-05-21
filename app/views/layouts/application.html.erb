@@ -5,8 +5,8 @@
     <title><%= "Sistema de Biblioteca - BibliOS. Você está em: #{h(yield(:title) || 'Sem titulo')}" %></title>
     <%= stylesheet_link_tag 'application','menu_css' %>
         <%= stylesheet_link_tag '/javascripts/plugins/flexigrid/css/flexigrid.css' %>
-     <%= stylesheet_link_tag 'colorbox','geral',"pepper-grinder/jquery-ui-1.8.16.custom","jquery.multiselect","ui.selectmenu" %>
-    <%= javascript_include_tag 'jquery-1.7','jquery-ui-1.8.16.custom.min',"jquery.ui.datetimepicker.min","jquery-ui-i18n.min",'jrails',"jquery.colorbox","colorbox.js","jquery.multiselect.min","ui.selectmenu",'plugins/flexigrid/js/flexigrid.pack','application.js' %>
+     <%= stylesheet_link_tag 'colorbox','geral',"jquery.tooltip.css","pepper-grinder/jquery-ui-1.8.16.custom","jquery.multiselect","ui.selectmenu" %>
+    <%= javascript_include_tag 'jquery-1.7','jquery.bgiframe.js','jquery.dimensions.js','jquery.tooltip.js','jquery-ui-1.8.16.custom.min',"jquery.ui.datetimepicker.min","jquery-ui-i18n.min",'jrails',"jquery.colorbox","colorbox.js","jquery.multiselect.min","ui.selectmenu",'plugins/flexigrid/js/flexigrid.pack','application.js' %>
     <%= yield(:head) %>
   </head>
   <body>
@@ -64,12 +64,10 @@
                   </div>
                 </li>
                 <% if current_user.has_role?('admin') and current_user.has_role?('escola') or  current_user.has_role?('responsavel')%>
-                <li><a href="#"><b>Emprestimos</b></a>
+                <li><a href="#"><b>Procedimentos</b></a>
                   <div class="select_sub">
                     <ul class="sub">
                       <li><%= link_to "Empréstimo", new_emprestimo_path %></li>
-                      <li><%= link_to "Devolução", emprestimos_path  %></li>
-
                     </ul>
                   </div>
                 </li>
