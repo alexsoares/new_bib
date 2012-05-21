@@ -13,7 +13,7 @@
           <td><%= ativo.emprestado_para %></td>
           <td><%= ativo.unidade.nome %></td>
           <td><%= ativo.status %></td>
-          <td><a class="t">Testes</a></td>
+          <td><%= link_to ativo.dpus.count,"#inline_emprestados", :class => "inline"  %></td>
           <td align="center"><%= link_to image_tag("/stylesheets/images/transferencia.gif", :size => "15x15"), devolucao_emprestimo_path(ativo),  :title => "Devolver Emprestimo" %></td>
         </tr>
         <%= render "shared/forms/form_emprestados", :f => ativo%>

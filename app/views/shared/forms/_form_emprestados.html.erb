@@ -1,5 +1,22 @@
-	<div style='display:none'>
-        <div id='inline_i' style='padding:10px; background:#EEE9E9;'>
-          <h2>LOCALIZAÇÃO - Unidade:<%= current_user.unidade.nome %></h2>
+    <script type="text/javascript">
+      $(".inline").colorbox({inline:true ,width:"50%"});
+    </script>
+        <div style='display:none'>
+        <div class="inline" id='inline_emprestados' style='padding:10px; background:#EEE9E9;'>
+          <h3>Livros deste empréstimo</h3>
+              <ul>
+               <% f.dpus.each do |dpu|%>
+                 <% form_remote_for(:emprestimos,:url => { :action => 'devolve_unit' }, :success => "$.fn.colorbox.close()") do |f|%>
+                  <%= error_messages_for 'local' %>
+                    <% if dpu.livro_id.present? %>
+                      <li><%= dpu.livro.identificacao.livro %> (Livro)</li>
+                    <%else%>
+                       <% if dpu.dicionario_enciclopedia_id.present? %>
+                          <li><%= dpu.dicionario_enciclopedia.identificacao.livro %> (Dicionário)<br/></li>
+                       <%end%>
+                    <%end%>
+                  <%end%>
+               <%end%>
+              </ul>
         </div>
 	</div>

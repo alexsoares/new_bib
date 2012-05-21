@@ -1,8 +1,8 @@
- <div class="tabs">
+<div class="tabs">
    <ul>
      <li>Buscar Emprestimo por tombos</li>
    </ul>
-   <% form_remote_tag :url => realiza_busca_emprestimos_path, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide()" do %>
+   <% form_remote_tag :url => realiza_busca_emprestimos_path, :method => :get,:loading => "$('#status').show()" , :success => "$('#status').hide();" do %>
          <table width="100%" align="center" bgcolor="#DCDCDC" >
           <tr>
             <td>
@@ -19,5 +19,3 @@
     <hr/>
     <div id="devolucao"><div id='status' style='display:none;'><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
 </div>
-<a class="t">Testes 4</a>
-        <%= render "shared/forms/form_emprestados"%>
