@@ -1,29 +1,31 @@
-<%if @emprestimos.present?%>
-  <div class="tabs">
-      <table class="tabelas" width="100%">
-          <tr>
-              <th>Emprestimo ID</th>
-              <th>Para</th>
-              <th>Atrasado</th>
-              <th>Devolver em</th>
-              <th>Status</th>
-              <th>Adm</th>
-          </tr>
-          <% for emprestimo in @emprestimos %>
-            <tr>
-              <td align="left"><%=h emprestimo.id%></td>
-              <td align="left"><%=h emprestimo.emprestado_para %></td>
-              <td align="left"><%=h "#{emprestimo.data_validade_expirada?.abs} dias" %></td>
-              <td align="left"><%=h emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
-              <td align="left"><%=h emprestimo.seu_status? %></td>
-              <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), emprestimo, :title => "Exibir Emprestimo" %></td>
-            </tr>
-          <% end %>
-       </table>
-       <table width="100%">
-        <tr >
-          <td align="left" colspan="4"><%if @emprestimos.present?%><%= will_paginate @emprestimos, :update => "emprestimos" %><%end%></td>
+ <div class="tabs">
+    <table class="tabelas" width="100%">
+        <tr>
+            <th>Emprestimo ID</th>
+            <th>Para</th>
+            <th>Atrasado</th>
+            <th>Devolução</th>
+            <th>Status</th>
+            <th>Adm</th>
         </tr>
-      </table>
-    </div>
-<%end%>
+         <% for emprestimo in @emprestimos %>
+           <%if emprestimo.status == true %>
+              <tr>
+                <td align="left"><%=h emprestimo.id%></td>
+                <td align="left"><%=h emprestimo.emprestado_para %></td>
+                <td align="left"><%=h "#{emprestimo.dias_atrasados} dias" %></td>
+                <td align="left"><%=h emprestimo.data_devolucao.strftime("%d/%m/%Y") %></td>
+                <td align="left"><%=h emprestimo.seu_status? %></td>
+                <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), emprestimo, :title => "Exibir Emprestimo" %></td>
+              </tr>
+            <% end %>
+           <% end %>
+     </table>
+     <table width="100%">
+      <tr >
+        <td align="left" colspan="4"><%if @emprestimos.present?%><%= will_paginate @emprestimos, :update => "emprestimos" %><%end%></td>
+      </tr>
+    </table>
+  </div>
+
+
