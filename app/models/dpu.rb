@@ -23,4 +23,17 @@ class Dpu < ActiveRecord::Base
       end
     end
   end
+  def verifica_estado
+    
+  end
+  def devolve_livro(contador,emprestimo)
+    emp = Emprestimo.find(emprestimo)
+    if contador == 1
+      emp.status = 0
+      emp.save
+    end
+    self.status = 1
+    self.save
+  end
+
 end

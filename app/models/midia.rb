@@ -3,7 +3,7 @@ class Midia < ActiveRecord::Base
   has_many :dpus, :dependent => :destroy
   belongs_to :genero
   belongs_to :localizacao
-  has_many :tombos
+  has_many :tombos, :dependent => :destroy
   after_create :multi_tombo, :cria_possui_md, :auto_inc_tombo_seduc, :cria_disponibiliza_md
   attr_accessor :qtde_midias, :lista_tombos, :usuario, :unidade
 

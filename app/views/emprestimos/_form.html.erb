@@ -5,7 +5,7 @@
       <td colspan="3" >
         <b>Emprestimo para:</b>
         <% unless @emprestimo.tipo_emprestimo.present? %>
-          <%= radio_button_tag(:type,"0") %> Alunos
+          <%= radio_button_tag(:type,"0",1) %> Alunos
           <%= radio_button_tag(:type,"1") %>Funcionários
         <%end%>
       </td>
@@ -18,7 +18,7 @@
           <%= @emprestimo.emprestado_para %>
         <%end%>
       </td>
-      <td id="aluno" class="aluno" style="display:none">
+      <td id="aluno" class="aluno">
         <%= link_to image_tag("/stylesheets/images/buscar.png", :size => "28x22"), "#inline_content", :class =>"inline" %>
       </td>
       <td id="funcionario" class="professor" style="display:none">
@@ -28,7 +28,7 @@
     <tr>
       <td colspan="3"><b>Tipo:</b>
 
-        <%= radio_button_tag(:filtro,"0") %>Livros
+        <%= radio_button_tag(:filtro,"0",1) %>Livros
         <%= radio_button_tag(:filtro,"1") %>Dicionario / Enciclopedias
         <%= check_box_tag :filtro_ambos,2 %>Ambos
         <%= observe_field 'filtro_0',
@@ -54,7 +54,7 @@
       <div class="fields">
         <tr><td colspan="2"><b>Livros & Dicionarios e Enciclopedias Selecionados</b></td></tr>
         <tr id="fields">
-          <td><%= select_tag("todos_dpu", options_for_select(@disponiveis.collect { |ff| [truncate(ff.lista , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
+          <td id="todos"><%= select_tag("todos_dpu", options_for_select(@disponiveis.collect { |ff| [truncate(ff.lista , :length => 40, :omission => "..."), ff.id] }, @emprestimo.dpus.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_dpus", :size => 5, :class => "lista_dpus"}) %></td>
           <%if @dpus_selecionados.present?%>
             <td><%= select_tag("emprestimo[dpu_ids][]", options_for_select(@dpus_selecionados.collect { |ff| [truncate(ff.lista, :length => 40, :omission => "..."), ff.id] }), {:multiple=>true, :id => "emprestimo_dpu_ids", :size => 5, :class => "lista_dpus"}) %></td>
           <%else%>

@@ -21,13 +21,13 @@ class EmprestimosController < ApplicationController
     end
   end
    if (filtro.to_i == 2)
-     @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(dicionario_enciclopedia_id is not null or livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+     @disponiveis = Dpu.all(:include => [{:dicionario_enciclopedia =>[:identificacao],:livro =>[:identificacao]}],:conditions => ["(dicionario_enciclopedia_id is not null or livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
    else
      if filtro.to_i == 0
        @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
      else
        if filtro.to_i == 1
-         @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+         @disponiveis = Dpu.all(:include => [:dicionario_enciclopedia =>[:identificacao]],:conditions => ["(dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
        end
      end
    end
@@ -90,17 +90,18 @@ class EmprestimosController < ApplicationController
   end
 
   def realiza_busca
-
+    session[:busca_por] = params[:busca_por]
     if params[:busca_por].to_i == 1
       unless params[:search].nil?
+        session[:search] = params[:search]
         @emprestimo_ativo = Emprestimo.all(:joins => [:dpus => [:livro]] ,:conditions => ["livros.tombo_l = ? and dpus.unidade_id = ? and emprestimos.status = 1", params[:search],current_user.unidade_id])
       end
+    else
+      @emprestimo_ativo = Emprestimo.all(:joins => [:dpus],:conditions => ["dpus.unidade_id = ? and emprestimos.status = 1", current_user.unidade_id])
     end
-      render :update do |page|
-        page.replace_html 'devolucao', :partial => "emprestimo_ativo"
-      end
-
-      
+    render :update do |page|
+      page.replace_html 'devolucao', :partial => "emprestimo_ativo"
+    end 
   end
 
   def busca
@@ -189,13 +190,6 @@ class EmprestimosController < ApplicationController
       end
   end
 
-  def funcionario
-      @pessoas = Aluno.all(:conditions => ["nome like ? and matricula_funcionario is not null",params[:funcionario][:nome] + "%"])
-      render :update do |page|
-        page.replace_html 'pessoas', :partial => "pessoas"
-      end
-  end
-
   def devolucao
     @devolucao = Emprestimo.find(params[:id])
   end
@@ -208,13 +202,35 @@ class EmprestimosController < ApplicationController
       redirect_to @devolucao
     end
   end
-protected
+
+  def devolve_unit
+    e = Dpu.find(params[:id])
+    if e.devolve_livro(params[:contador].to_i,params[:emprestimo].to_i)
+      if session[:busca_por].to_i == 1
+        unless session[:search].nil?
+          @emprestimo_ativo = Emprestimo.all(:joins => [:dpus => [:livro]] ,:conditions => ["livros.tombo_l = ? and dpus.unidade_id = ? and emprestimos.status = 1", session[:search],current_user.unidade_id])
+        end
+      else
+        @emprestimo_ativo = Emprestimo.all(:joins => [:dpus],:conditions => ["dpus.unidade_id = ? and emprestimos.status = 1", current_user.unidade_id])
+      end
+      render :update do |page|
+        page.replace_html "stat_dev_#{params[:id]}", :text => ""
+        page.replace_html 'devolucao', :partial => "emprestimo_ativo"
+      end
+    end
+  end
+
+  def ativos
+    @emprestimos = Emprestimo.paginate(:all,:conditions => ["status = 1 and unidade_id = ?",current_user.unidade], :per_page => 15, :page => params[:page], :order => "id Desc")
+  end
+
+  protected
   def load_resources
     if current_user.unidade_id == 53
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = ?", Date.today.strftime("%Y").to_i], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
     else
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = ? and id_escola = ?", Date.today.strftime("%Y").to_i, current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
     end
-    @disponiveis = Dpu.find(:all,:conditions => ["id =  0"])
+    @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
   end
 end

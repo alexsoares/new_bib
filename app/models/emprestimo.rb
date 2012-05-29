@@ -104,7 +104,7 @@ class Emprestimo < ActiveRecord::Base
     end
   end
 
-  def libera_variavel_sessao
+  def data_validade_expirada?
+    diferenca = (self.data_devolucao.to_date - Time.now.to_date).to_i
   end
-
 end

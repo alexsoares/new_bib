@@ -1,22 +1,25 @@
     <script type="text/javascript">
-      $(".inline").colorbox({inline:true ,width:"50%"});
+      $(".emprestimo").colorbox({inline:true,width:"50%"});
     </script>
         <div style='display:none'>
-        <div class="inline" id='inline_emprestados' style='padding:10px; background:#EEE9E9;'>
+        <div id='inline_emprestados' style='padding:10px; background:#EEE9E9;'>
           <h3>Livros deste empréstimo</h3>
-              <ul>
-               <% f.dpus.each do |dpu|%>
-                 <% form_remote_for(:emprestimos,:url => { :action => 'devolve_unit' }, :success => "$.fn.colorbox.close()") do |f|%>
-                  <%= error_messages_for 'local' %>
-                    <% if dpu.livro_id.present? %>
-                      <li><%= dpu.livro.identificacao.livro %> (Livro)</li>
-                    <%else%>
-                       <% if dpu.dicionario_enciclopedia_id.present? %>
-                          <li><%= dpu.dicionario_enciclopedia.identificacao.livro %> (Dicionário)<br/></li>
-                       <%end%>
-                    <%end%>
+          <ul>
+            <% t = f.dpus.all(:conditions => {:status => 1}).count %>
+              <% f.dpus.each do |dpu|%>
+                <% if dpu.livro_id.present? %>
+                  <%unless dpu.status == false%>
+                    <% test = "" %>
+                  <%else%>
+                    <% test =  link_to_remote("Devolver",{:url => {:action => "devolve_unit", :id => dpu, :contador => t, :emprestimo => f }},{:id => "stat_dev_#{dpu.id}"})%>
                   <%end%>
-               <%end%>
-              </ul>
+                  <li><%= "#{dpu.livro.identificacao.livro} (Livro) #{test}"%></li>
+                <%else%>
+                  <% if dpu.dicionario_enciclopedia_id.present? %>
+                    <li><%= "#{dpu.dicionario_enciclopedia.identificacao.livro} (Dicionário) #{check_box_tag(:devolver,1)}" %> <br/></li>
+                  <%end%>
+                <%end%>
+              <%end%>
+          </ul>
         </div>
 	</div>
