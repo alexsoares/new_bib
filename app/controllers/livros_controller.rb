@@ -154,7 +154,7 @@ class LivrosController < ApplicationController
 
 def consultaLiv
    unless params[:search].present?
-     if params[:type_of].to_i == 6
+     if params[:type_of].to_i == 7
        @contador = Livro.all(:include => [:localizacao],:conditions => ["localizacoes.unidade_id = ?", current_user.unidade_id]).count
        @livros = Livro.paginate(:all, :include => [:identificacao,:localizacao],:conditions => ["localizacoes.unidade_id = ?", current_user.unidade_id], :page => params[:page], :per_page => 50,:order => 'livro ASC')
        render :update do |page|
@@ -191,6 +191,13 @@ def consultaLiv
                   @livros = Livro.paginate(:all, :page => params[:page], :per_page => 50, :include => [:editora,:localizacao],  :conditions => ["editoras.nome like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'nome ASC')
                   render :update do |page|
                     page.replace_html 'livros', :partial => "livros"
+                  end
+                  else if params[:type_of].to_i == 6
+                    @contador = Livro.all(:include => :localizacao, :conditions => ["livros.tombo_l like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+                    @livros = Livro.paginate(:all, :page => params[:page], :per_page => 50, :include => :localizacao,  :conditions => ["livros.tombo_l like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'tombo_l ASC')
+                    render :update do |page|
+                      page.replace_html 'livros', :partial => "livros"
+                    end
                   end
                 end
               end

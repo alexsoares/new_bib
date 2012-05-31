@@ -6,11 +6,20 @@
           <% form_remote_for(:busca,:url => { :action => 'filtrar' },:loading => "$('#status').show()", :success => "$('#status').hide()" ) do |f|%>
             <%= error_messages_for 'contact' %>
             <table>
+            <tr>
+              <td colspan="3"><font  color="red"><b><u> OBSERVAÇÕES:</u></b></font>
+                <b> Para consultar se o título já está cadastrados: </b><br/></td>
+             </tr>
+            <tr>
+                <td colspan="3">
+                  <b>1) Digitar <u>SOMENTE</u> as duas primeiras palavras do título</b>. <br/> Ex: O título<u>"OS DOIS CASOS DA VIDA"</u>, digitar <u>"DOIS CASOS"</u>
+                </td>
+            </tr>
               <tr>
                 <td colspan="3">
-                   Digitar uma palavra do <b>Título</b> e clicar em <b>Filtrar</b> e <b>Selecionar</b> o Título
+                  <b>2) NÃO considerar as letras O(S), A(S), UM(S), UMA(S) dos títulos.</b><br/> Ex: O Título <u>"OS DIÁRIOS"</u>, digitar somente <u>"DIÁRIOS"</u>
                 </td>
-                
+
               </tr>
               <tr>
                 <th width="5%">
@@ -19,16 +28,15 @@
                 <td width="40%" align="center">
                   <%= f.text_field :busca, :size => 60 %>
                 </td>
-                <td><div class="botao"><%= submit_tag 'Filtrar'  %></div></td>
+                <td><%= submit_tag 'Filtrar'  %></td>
               </tr>
             </table>
           <%end%>
            <font  color="red" size="1">
-             <b>Caso o <i>Título</i> não esteja cadastrado clicar </font> </b>
+             <b>Caso o <i>Título</i> não esteja cadastrado clicar </font> </b>  
            </font>
           <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_titulo", :class =>"inline" %>
           <br/>
             <div id="lista_livros"><div id='status' style='display:none;' align="center" ><%= image_tag("/stylesheets/images/loading.gif") %></div></div>
         </div>
 	</div>
- 

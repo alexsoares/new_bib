@@ -1,20 +1,20 @@
 	<div style='display:none'>
 		<div id='inline_musica' style='padding:10px; background:#EEE9E9;'>
-          <h2>MUSICAS</h2>
+          <h2>MÚSICAS</h2>
           <% form_remote_for(:musica,:url => { :action => 'create_musica' }, :success => "$.fn.colorbox.close();$('.musica').hide();") do |f|%>
             <%= error_messages_for 'contact' %>
-            <table>
+          <table>
               <tr>
-                <th width="30%">
-                  <div class="botao">Musica:</div>
-                </th>
+                <th width="10%">Música:</th>
                 <td width="20%" align="center">
-                  <%= f.text_field :nome,:size => "80" %>
+                  <%= f.text_field :nome,:size => "60" %>
                 </td>
-                <td><div class="botao"><%= submit_tag 'Criar'  %></div></td>
+                <td><%= submit_tag 'Criar'  %></td>
               </tr>
             </table>
           <%end%>
+          
           <hr>
+
         </div>
 	</div>

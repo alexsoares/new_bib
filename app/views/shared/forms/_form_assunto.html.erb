@@ -5,13 +5,11 @@
             <%= error_messages_for 'contact' %>
             <table>
               <tr>
-                <th width="30%">
-                  <div class="botao">Assunto:</div>
-                </th>
+                <th width="15%">Assunto:</th>
                 <td width="20%" align="center">
                   <%= f.text_field :descricao %>
                 </td>
-                <td><div class="botao"><%= submit_tag 'Criar', :id => "btn_criar"  %></div></td>
+                <td><%= submit_tag 'Criar', :id => "btn_criar"  %></td>
               </tr>
             </table>
           <%end%>

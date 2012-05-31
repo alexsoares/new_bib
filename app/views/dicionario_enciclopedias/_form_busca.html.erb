@@ -1,14 +1,24 @@
 	<div style='display:none'>
 		<div id='inline_busca' style='padding:10px; background:#EEE9E9;'>
           <h2>DICIONÁRIOS & ENCICLOPÉDIAS</h2>
+          <hr>
           <% form_remote_for(:busca,:url => { :action => 'filtrar' },:loading => "$('#status').show()", :success => "$('#status').hide()" ) do |f|%>
             <%= error_messages_for 'contact' %>
           <table>
-              <tr>
-                <td colspan="2">
-                   Digitar uma palavra do <b>Título</b> e clicar em <b>Filtrar</b> e <b>Selecionar</b>
+            <tr>
+              <td colspan="3"><font  color="red"><b><u> OBSERVAÇÕES:</u> </b></font>
+                <b>  Para consultar se o título já está cadastrados: </b><br/></td>
+             </tr>
+            <tr>
+                <td colspan="3">
+                  <b>1) Digitar <u>SOMENTE</u> as duas primeiras palavras do título</b>.<br/> Ex: O titulo<u>"O MEU PRIMEIRO DICIONÁRIO"</u>, digitar  <u>"MEU PRIMEIRO"</u>.
                 </td>
-                
+            </tr>
+              <tr>
+                <td colspan="3">
+                  <b>2) NÃO considerar as letras O(S), A(S), UM(S), UMA(S) dos títulos.</b> <br/> Ex: O titulo <u>"O DICIONÁRIO"</u>, digitar somente <u>"DICIONÁRIO"</u>
+                </td>
+
               </tr>
               <tr>
                 <th width="5%">
@@ -17,7 +27,7 @@
                 <td width="40%" align="left">
                   <%= f.text_field :busca, :size => 60 %>
                 </td>
-                <td><div class="botao"><%= submit_tag 'Filtrar'  %></div></td>
+                <td><%= submit_tag 'Filtrar'  %></td>
               </tr>
             </table>
           <%end%>

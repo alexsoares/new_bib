@@ -1,17 +1,15 @@
 	<div style='display:none'>
 		<div id='inline_cantor' style='padding:10px; background:#EEE9E9;'>
-          <h2>CANTORES</h2>
+          <h2>INTERPRETES</h2>
           <% form_remote_for(:cantor,:url => { :action => 'create_cantor' }, :success => "$.fn.colorbox.close();$('select').multiselect('refresh')") do |f|%>
             <%= error_messages_for 'contact' %>
             <table>
               <tr>
-                <th width="30%">
-                  <div class="botao">Cantor:</div>
-                </th>
+                <th width="10%">Cantor:</th>
                 <td width="20%" align="center">
-                  <%= f.text_field :nome,:size => "80" %>
+                  <%= f.text_field :nome,:size => "60" %>
                 </td>
-                <td><div class="botao"><%= submit_tag 'Criar'  %></div></td>
+                <td><%= submit_tag 'Criar'  %></td>
               </tr>
             </table>
           <%end%>
