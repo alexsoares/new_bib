@@ -163,7 +163,7 @@ class MidiasController < ApplicationController
       @musicas = Musica.all
       @midia = Midia.new
       render :update do |page|
-        page.replace_html 'musica', :partial => "shared/campos/campos_musica"
+        page.replace_html 'lista_musicas', :partial => "shared/campos/musica"
         page.replace_html 'aviso', :text => "MÚSICA CADASTRADA, SELECIOINAR A MUSICA E CONTINUAR O CADASTRO"
       end
 

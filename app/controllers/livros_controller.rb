@@ -293,8 +293,6 @@ end
       @localizacoes = Localizacao.all(:include => :unidade,:order => 'local_guardado ASC')
     else
       @localizacoes = Localizacao.all(:include => :unidade, :conditions => ['unidade_id = ?', current_user.unidade_id], :order => 'local_guardado ASC')
-    end
-    
-
+    end    
   end
 end

@@ -1,7 +1,6 @@
 <div class="fields">
-  <tr class="musica"><td colspan="2"><b>Total de Músicas cadastradas: <%= @musicas.count %></b></td></tr>
   <tr class="musica">
-    <td><%= select_tag("todas_musicas", options_for_select(@musicas.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.musicas.collect { |fs| fs.id }), {:multiple=>true, :id => "todas_musicas", :size => 5, :class => "lista_musicas"}) %></td>
+    <td id="lista_musicas"><%= select_tag("todas_musicas", options_for_select(@musicas.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.musicas.collect { |fs| fs.id }), {:multiple=>true, :id => "todas_musicas", :size => 5, :class => "lista_musicas"}) %></td>
     <%if @musicas_selecionadas.present?%>
       <td><%= select_tag("midia[musica_ids][]", options_for_select(@musicas_selecionadas.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.musicas.collect { |fs| fs.id }), {:multiple=>true, :id => "midia_musica_ids", :size => 5, :class => "lista_musicas"}) %></td>
     <%else%>

@@ -56,16 +56,11 @@
     <tr class="musica">
       <td colspan="2"> <b> Musica(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_musica", :class =>"inline" %>
-        <div id="musica"><%= render "shared/campos/campos_musica"%></div>
+        <%= render "shared/campos/campos_musica"%>
       </td>
       <td class="musica"> <b> Interprete(s):</b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_cantor", :class =>"inline" %>
         <div id="cantor"><%= render "shared/campos/campos_cantor"%></div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        <div id= "musica" style="margin-left: 0px"></div>
       </td>
     </tr>
     <tr>
@@ -105,4 +100,3 @@
     <%= render "shared/forms/form_local" %>
     <%= render "shared/forms/form_musica" %>
     <%= render "shared/forms/form_cantor" %>
-

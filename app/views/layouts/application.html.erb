@@ -38,7 +38,7 @@
                         <li><%= link_to "Periodicos" %></li>
                         <% if current_user.has_role?('admin') %>
                           <li><%= link_to "Autores", new_autor_path %></li>
-                          <li><%= link_to "Autores", new_assunto_path %></li>
+                          <li><%= link_to "Assuntos", new_assunto_path %></li>
                         <%end%>
                     </ul>
                   </div>
@@ -52,7 +52,7 @@
                       <li><%= link_to "Livros", consultaLiv_path %></li>
                       <li><%= link_to "Mapas", consultaMap_path %></li>
                       <li><%= link_to "Mídias", consultaMid_path %></li>
-                      <li> __ </li>
+                      <li> | </li>
                       <li><%= link_to "Autores/Livros", consultaAutLiv_path %></li>
                       <li><%= link_to "Áreas/Livros", consultaAreLiv_path %></li>
                       <li><%= link_to "Assuntos/Livros", consultaAsuLiv_path %></li>
