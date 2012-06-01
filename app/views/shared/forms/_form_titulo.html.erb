@@ -5,11 +5,11 @@
         <%= error_messages_for 'contact' %>
         <table  width="100%" bgcolor="#F5F5F5">
           <tr>
-            <td><b><%= f.label :codigo, 'Código:' %></b><br/>
+            <td><b><%= f.label :codigo, 'Código:' %></b><font color="red" size="1"><b> ( Nº ISBN (Campo não obrigatório))</b></font><br/>
             <%= f.text_field :codigo %></td>
          </tr>
          <tr>
-            <td><b><%= f.label :livro, "Título" %>:</b><br/>
+            <td><b><%= f.label :livro, "Título" %>:</b><font color="red" size="1"><b> ( Quando o título iniciar as letras O(S), A(S), UM(S), UMA(S) desloca-las para o final após vírgula.)</b> <br/>( Ex: <u>"OS DIÁRIOS AZUIS"</u>, digitar <u>"DIÁRIOS AZUIS, OS"</u>)</font><br/>
             <%= f.text_field :livro ,:size => "80"%></td>
          </tr>
          <tr>

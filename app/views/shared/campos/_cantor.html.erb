@@ -1,0 +1,1 @@
+<%= select_tag("todos_cantores", options_for_select(@cantores.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.cantores.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_cantores", :size => 5, :class => "lista_cantores"}) %>

@@ -1,6 +1,6 @@
 <% form_for @livro do |f| %>
   <%= f.error_messages %>
-  <table border="1" align="center" bgcolor="#F5F5F5">
+  <table  align="center" bgcolor="#F5F5F5">
     <tr>
       <td colspan="3" >
         <b>Tombo Local:</b>
@@ -8,7 +8,7 @@
         <%= radio_button_tag(:type,"1") %>Único
       </td>
     </tr>
-    <tr>
+      <tr>
           <td colspan="3">
             <div id="tipo_tombo" style="display:none">
               <table>
@@ -104,9 +104,7 @@
         <b><%= f.label :assunto_id, "Assunto(s). " %></b>
         <%= link_to image_tag("/stylesheets/images/adicionar.png", :size => "12x12"), "#inline_assunto", :class =>"inline"%>
       </td>
-    </tr>
-    <tr id="assuntos">
-      <td><%= render "shared/campos/campos_assunto"%></td>
+      <div id="assuntos"><%= render "shared/campos/campos_assunto"%></div>
     </tr>
     <tr>
       <td>
