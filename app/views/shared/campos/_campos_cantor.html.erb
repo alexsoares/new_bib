@@ -1,7 +1,7 @@
 
 <div class="fields">
   <tr class="musica">
-    <td><%= select_tag("todos_cantores", options_for_select(@cantores.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.cantores.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_cantores", :size => 5, :class => "lista_cantores"}) %></td>
+    <td id="cantores"><%= select_tag("todos_cantores", options_for_select(@cantores.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.cantores.collect { |fs| fs.id }), {:multiple=>true, :id => "todos_cantores", :size => 5, :class => "lista_cantores"}) %></td>
     <%if @cantores_selecionados.present?%>
       <td><%= select_tag("midia[cantor_ids][]", options_for_select(@cantores_selecionados.collect { |ff| [truncate(ff.nome, :length => 30, :omission => "..."), ff.id] }, @midia.cantores.collect { |fs| fs.id }), {:multiple=>true, :id => "midia_cantor_ids", :size => 5, :class => "lista_cantores"}) %></td>
     <%else%>

@@ -242,7 +242,8 @@ end
       @assuntos = Assunto.all
       @livro = Livro.new
       render :update do |page|
-        page.replace_html 'assuntos', :partial => "shared/campos/campos_assunto"
+        #page.replace_html 'assuntos', :partial => "shared/campos/campos_assunto"
+        page.replace_html '#test', :partial => "shared/campos/assunto"
         page.replace_html 'aviso', :text => "ASSUNTO CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O ASSUNTO"
       end
 

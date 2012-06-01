@@ -151,7 +151,7 @@ class MidiasController < ApplicationController
       @cantores = Cantor.all
       @midia = Midia.new
       render :update do |page|
-        page.replace_html 'cantores', :partial => "shared/campos/campos_cantor"
+        page.replace_html '#cantores', :partial => "shared/campos/cantor"
         page.replace_html 'aviso', :text => "CANTOR CADASTRADO, CONTINUE O CADASTRO. LEMBRE-SE DE SELECIONAR O AUTOR"
       end
 

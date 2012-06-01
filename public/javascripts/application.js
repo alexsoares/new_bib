@@ -256,10 +256,10 @@ $("#search").focusout(function(){
 //Cadastro Musica
     $('select#midia_genero_id').change(function(){
       if ($(this).val() == 17){
-        $(".musica").show();
+        $(".musicas").show();
       }
       else {
-        $(".musica").hide();
+        $(".musicas").hide();
       }
     });
 
