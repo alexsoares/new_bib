@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/home/analistas/new_bib/app/views/emprestimos/_form.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/controllers/emprestimos_controller.rb</file>
-        <file>file:/home/analistas/new_bib/public/javascripts/application.js</file>
-        <file>file:/home/analistas/new_bib/app/views/tombos/usuario.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/views/livros/_livros.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/views/livros/consultaLiv.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/views/emprestimos/show.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/models/dpu.rb</file>
-        <file>file:/home/analistas/new_bib/app/models/emprestimo.rb</file>
-        <file>file:/home/analistas/new_bib/app/views/emprestimos/new.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/views/emprestimos/edit.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/views/livros/new.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/views/livros/edit.html.erb</file>
-        <file>file:/home/analistas/new_bib/app/controllers/livros_controller.rb</file>
-        <file>file:/home/analistas/new_bib/app/views/livros/show.html.erb</file>
-    </open-files>
 </project-private>

@@ -21,13 +21,13 @@ class EmprestimosController < ApplicationController
     end
   end
    if (filtro.to_i == 2)
-     @disponiveis = Dpu.all(:include => [{:dicionario_enciclopedia =>[:identificacao],:livro =>[:identificacao]}],:conditions => ["(dicionario_enciclopedia_id is not null or livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+     @disponiveis = Dpu.all(:include => [{:dicionario_enciclopedia =>[:identificacao],:livro =>[:identificacao]}],:conditions => ["(dicionario_enciclopedia_id is not null or livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id],:order => 'livro ASC')
    else
      if filtro.to_i == 0
-       @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+       @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id], :order => 'livro ASC')
      else
        if filtro.to_i == 1
-         @disponiveis = Dpu.all(:include => [:dicionario_enciclopedia =>[:identificacao]],:conditions => ["(dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+         @disponiveis = Dpu.all(:include => [:dicionario_enciclopedia =>[:identificacao]],:conditions => ["(dicionario_enciclopedia_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id],:order => 'livro ASC')
        end
      end
    end
@@ -231,6 +231,6 @@ class EmprestimosController < ApplicationController
     else
       @classes = Aluno.all(:select => "id_classe, classe_descricao, classe_ano, id_escola",:conditions => ["classe_ano = ? and id_escola = ?", Date.today.strftime("%Y").to_i, current_user.unidade.unidades_gpd_id], :group => ["id_classe,classe_descricao, classe_ano,id_escola"] , :order => "classe_descricao")
     end
-    @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(livro_id is not null) and status = 1 and unidade_id = ?", current_user.unidade_id])
+     @disponiveis = Dpu.all(:include => [:livro =>[:identificacao]],:conditions => ["(dpus.livro_id is not null) and dpus.status = 1 and dpus.unidade_id = ?", current_user.unidade_id],:order => "identificacaos.livro ASC")
   end
 end

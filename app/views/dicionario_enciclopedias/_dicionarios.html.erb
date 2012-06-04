@@ -8,18 +8,16 @@
   <div class="tabs">
     <table bgcolor="#DCDCDC" width="100%">
        <tr bgcolor="#DCDCDC" >
-           <th width="40%">Titulo</th>
-           <th width="25%">Subitítulo</th>
-           <th width="20%">Coleção</th>
-           <th align="center">Vol.</th>
+         <th width="10%">Nº Tombo</th>
+         <th width="40%">Titulo</th>
+           <th width="50%">Subitítulo</th>
            <th colspan="3">Administração</th>
          </tr>
         <% for dicionario_enciclopedia in @dicionario_enciclopedias %>
           <tr  bgcolor="#F5F5F5">
+            <td align="left"><%=h dicionario_enciclopedia.id %></td>
             <td align="left"><%=h dicionario_enciclopedia.identificacao.livro %></td>
             <td align="left"><%=h dicionario_enciclopedia.identificacao.subtitulo %></td>
-            <td align="left"><%=h dicionario_enciclopedia.colecao %></td>
-            <td align="center"><%=h dicionario_enciclopedia.volume %></td>
             <td align="center"><%= link_to image_tag("/stylesheets/images/exibir.gif", :size => "15x15"), dicionario_enciclopedia, :title => "Exibir livro" %></td>
             <% if current_user.has_role?('admin') or current_user.has_role?('escola') or current_user.has_role?('responsavel')%>
                 <td align="center"><%= link_to image_tag("/stylesheets/images/edit.png", :size => "15x15"), edit_livro_path(dicionario_enciclopedia), :title => "Editar livro" %></td>

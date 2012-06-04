@@ -44,6 +44,13 @@ class DicionarioEnciclopediasController < ApplicationController
               render :update do |page|
                 page.replace_html 'dicionarios', :partial => "dicionarios"
               end
+                 else if params[:type_of].to_i == 4
+                    @contador = DicionarioEnciclopedia.all(:include => :localizacao, :conditions => ["dicionario_enciclopedias.tombo_l like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id]).count
+                    @dicionario_enciclopedias = DicionarioEnciclopedia.paginate(:all, :page => params[:page], :per_page => 50, :include => :localizacao,  :conditions => ["dicionario_enciclopedias.tombo_l like ? and localizacoes.unidade_id = ?", "%" + params[:search].to_s + "%",current_user.unidade_id],:order => 'tombo_l ASC')
+                    render :update do |page|
+                      page.replace_html 'livros', :partial => "livros"
+                    end
+                  end
             end
           end
       end
